@@ -4,6 +4,8 @@ An open-source, interactive GIS web application that aggregates and visualizes g
 
 Built entirely on open data and open-source technology.
 
+🌐 **Live:** [ceylon-hub.pages.dev](https://ceylon-hub.pages.dev)
+
 ## Goals
 
 - Provide a single, beautiful interface to explore Sri Lanka's geospatial and statistical data.
@@ -47,6 +49,15 @@ Then open http://localhost:5173.
 - `npm run lint` — run ESLint
 - `npm run format` — format with Prettier
 - `npm run typecheck` — TypeScript-only check
+- `npm run deploy` — build and deploy to Cloudflare Pages
+
+## Deployment
+
+Hosted on [Cloudflare Pages](https://pages.cloudflare.com/). After authenticating Wrangler once (`npx wrangler login`), run:
+
+```bash
+npm run deploy
+```
 
 ## Status
 
