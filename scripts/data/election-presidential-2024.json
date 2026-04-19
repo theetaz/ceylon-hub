@@ -1,0 +1,9679 @@
+{
+  "source": {
+    "name": "Election Commission of Sri Lanka via nuuuwan/lk_elections",
+    "url": "https://raw.githubusercontent.com/nuuuwan/lk_elections/master/public/data/elections/government-elections-presidential.regions-ec.2024.tsv",
+    "license": "Open data"
+  },
+  "election": "Presidential 2024",
+  "electionDate": "2024-09-21",
+  "fetchedAt": "2026-04-19T23:17:55.668Z",
+  "parties": {
+    "NPP": {
+      "name": "National People's Power",
+      "candidate": "Anura Kumara Dissanayake",
+      "color": "#dc2626"
+    },
+    "SJB": {
+      "name": "Samagi Jana Balawegaya",
+      "candidate": "Sajith Premadasa",
+      "color": "#16a34a"
+    },
+    "IND16": {
+      "name": "New Democratic Front (Ranil Wickremesinghe)",
+      "candidate": "Ranil Wickremesinghe",
+      "color": "#0ea5e9"
+    },
+    "SLPP": {
+      "name": "Sri Lanka Podujana Peramuna",
+      "candidate": "Namal Rajapaksa",
+      "color": "#b45309"
+    },
+    "IND9": {
+      "name": "Independent (Dilith Jayaweera)",
+      "candidate": "Dilith Jayaweera",
+      "color": "#7c3aed"
+    },
+    "OTHER": {
+      "name": "Other",
+      "candidate": "Other candidates",
+      "color": "#94a3b8"
+    }
+  },
+  "entities": {
+    "EC-01": {
+      "valid": 1334390,
+      "rejected": 31796,
+      "polled": 1366186,
+      "electors": 1765351,
+      "turnoutPct": 77.4,
+      "rejectedPct": 2.33,
+      "winner": {
+        "party": "NPP",
+        "votes": 629963,
+        "pct": 47.21
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 342108,
+        "pct": 25.64
+      },
+      "margin": 21.57,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 629963,
+          "pct": 47.21
+        },
+        {
+          "party": "SJB",
+          "votes": 342108,
+          "pct": 25.64
+        },
+        {
+          "party": "IND16",
+          "votes": 281436,
+          "pct": 21.09
+        },
+        {
+          "party": "SLPP",
+          "votes": 30432,
+          "pct": 2.28
+        },
+        {
+          "party": "SLCP",
+          "votes": 26356,
+          "pct": 1.98
+        }
+      ],
+      "otherVotes": 24095
+    },
+    "EC-01A": {
+      "valid": 69243,
+      "rejected": 2276,
+      "polled": 71519,
+      "electors": 97620,
+      "turnoutPct": 73.3,
+      "rejectedPct": 3.18,
+      "winner": {
+        "party": "SJB",
+        "votes": 32289,
+        "pct": 46.63
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 17978,
+        "pct": 25.96
+      },
+      "margin": 20.67,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 32289,
+          "pct": 46.63
+        },
+        {
+          "party": "NPP",
+          "votes": 17978,
+          "pct": 25.96
+        },
+        {
+          "party": "IND16",
+          "votes": 15692,
+          "pct": 22.66
+        },
+        {
+          "party": "SLPP",
+          "votes": 954,
+          "pct": 1.38
+        },
+        {
+          "party": "IND9",
+          "votes": 585,
+          "pct": 0.84
+        }
+      ],
+      "otherVotes": 1745
+    },
+    "EC-01B": {
+      "valid": 88982,
+      "rejected": 2522,
+      "polled": 91504,
+      "electors": 118986,
+      "turnoutPct": 76.9,
+      "rejectedPct": 2.76,
+      "winner": {
+        "party": "SJB",
+        "votes": 46063,
+        "pct": 51.77
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 20220,
+        "pct": 22.72
+      },
+      "margin": 29.04,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 46063,
+          "pct": 51.77
+        },
+        {
+          "party": "NPP",
+          "votes": 20220,
+          "pct": 22.72
+        },
+        {
+          "party": "IND16",
+          "votes": 19397,
+          "pct": 21.8
+        },
+        {
+          "party": "SLPP",
+          "votes": 1123,
+          "pct": 1.26
+        },
+        {
+          "party": "SLCP",
+          "votes": 367,
+          "pct": 0.41
+        }
+      ],
+      "otherVotes": 1812
+    },
+    "EC-01C": {
+      "valid": 45486,
+      "rejected": 1078,
+      "polled": 46564,
+      "electors": 62623,
+      "turnoutPct": 74.4,
+      "rejectedPct": 2.32,
+      "winner": {
+        "party": "NPP",
+        "votes": 17290,
+        "pct": 38.01
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 15497,
+        "pct": 34.07
+      },
+      "margin": 3.94,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 17290,
+          "pct": 38.01
+        },
+        {
+          "party": "SJB",
+          "votes": 15497,
+          "pct": 34.07
+        },
+        {
+          "party": "IND16",
+          "votes": 10188,
+          "pct": 22.4
+        },
+        {
+          "party": "SLPP",
+          "votes": 1101,
+          "pct": 2.42
+        },
+        {
+          "party": "SLCP",
+          "votes": 659,
+          "pct": 1.45
+        }
+      ],
+      "otherVotes": 751
+    },
+    "EC-01D": {
+      "valid": 47513,
+      "rejected": 1215,
+      "polled": 48728,
+      "electors": 67112,
+      "turnoutPct": 72.6,
+      "rejectedPct": 2.49,
+      "winner": {
+        "party": "NPP",
+        "votes": 18523,
+        "pct": 38.99
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 13637,
+        "pct": 28.7
+      },
+      "margin": 10.28,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 18523,
+          "pct": 38.99
+        },
+        {
+          "party": "SJB",
+          "votes": 13637,
+          "pct": 28.7
+        },
+        {
+          "party": "IND16",
+          "votes": 12566,
+          "pct": 26.45
+        },
+        {
+          "party": "SLPP",
+          "votes": 825,
+          "pct": 1.74
+        },
+        {
+          "party": "SLCP",
+          "votes": 706,
+          "pct": 1.49
+        }
+      ],
+      "otherVotes": 1256
+    },
+    "EC-01E": {
+      "valid": 27558,
+      "rejected": 731,
+      "polled": 28289,
+      "electors": 42048,
+      "turnoutPct": 67.3,
+      "rejectedPct": 2.58,
+      "winner": {
+        "party": "SJB",
+        "votes": 9697,
+        "pct": 35.19
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 8382,
+        "pct": 30.42
+      },
+      "margin": 4.77,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 9697,
+          "pct": 35.19
+        },
+        {
+          "party": "IND16",
+          "votes": 8382,
+          "pct": 30.42
+        },
+        {
+          "party": "NPP",
+          "votes": 7778,
+          "pct": 28.22
+        },
+        {
+          "party": "IND9",
+          "votes": 783,
+          "pct": 2.84
+        },
+        {
+          "party": "SLPP",
+          "votes": 348,
+          "pct": 1.26
+        }
+      ],
+      "otherVotes": 570
+    },
+    "EC-01F": {
+      "valid": 46342,
+      "rejected": 1172,
+      "polled": 47514,
+      "electors": 66062,
+      "turnoutPct": 71.9,
+      "rejectedPct": 2.47,
+      "winner": {
+        "party": "NPP",
+        "votes": 19338,
+        "pct": 41.73
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 12505,
+        "pct": 26.98
+      },
+      "margin": 14.74,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 19338,
+          "pct": 41.73
+        },
+        {
+          "party": "SJB",
+          "votes": 12505,
+          "pct": 26.98
+        },
+        {
+          "party": "IND16",
+          "votes": 11565,
+          "pct": 24.96
+        },
+        {
+          "party": "SLPP",
+          "votes": 1163,
+          "pct": 2.51
+        },
+        {
+          "party": "SLCP",
+          "votes": 753,
+          "pct": 1.62
+        }
+      ],
+      "otherVotes": 1018
+    },
+    "EC-01G": {
+      "valid": 49927,
+      "rejected": 1274,
+      "polled": 51201,
+      "electors": 70250,
+      "turnoutPct": 72.9,
+      "rejectedPct": 2.49,
+      "winner": {
+        "party": "NPP",
+        "votes": 23282,
+        "pct": 46.63
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 12212,
+        "pct": 24.46
+      },
+      "margin": 22.17,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 23282,
+          "pct": 46.63
+        },
+        {
+          "party": "SJB",
+          "votes": 12212,
+          "pct": 24.46
+        },
+        {
+          "party": "IND16",
+          "votes": 11091,
+          "pct": 22.21
+        },
+        {
+          "party": "SLPP",
+          "votes": 1422,
+          "pct": 2.85
+        },
+        {
+          "party": "SLCP",
+          "votes": 924,
+          "pct": 1.85
+        }
+      ],
+      "otherVotes": 996
+    },
+    "EC-01H": {
+      "valid": 108242,
+      "rejected": 2431,
+      "polled": 110673,
+      "electors": 142482,
+      "turnoutPct": 77.7,
+      "rejectedPct": 2.2,
+      "winner": {
+        "party": "NPP",
+        "votes": 49239,
+        "pct": 45.49
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 33127,
+        "pct": 30.6
+      },
+      "margin": 14.89,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 49239,
+          "pct": 45.49
+        },
+        {
+          "party": "SJB",
+          "votes": 33127,
+          "pct": 30.6
+        },
+        {
+          "party": "IND16",
+          "votes": 20069,
+          "pct": 18.54
+        },
+        {
+          "party": "SLPP",
+          "votes": 2350,
+          "pct": 2.17
+        },
+        {
+          "party": "SLCP",
+          "votes": 1730,
+          "pct": 1.6
+        }
+      ],
+      "otherVotes": 1727
+    },
+    "EC-01I": {
+      "valid": 54258,
+      "rejected": 1360,
+      "polled": 55618,
+      "electors": 75810,
+      "turnoutPct": 73.4,
+      "rejectedPct": 2.45,
+      "winner": {
+        "party": "NPP",
+        "votes": 25123,
+        "pct": 46.3
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 13725,
+        "pct": 25.3
+      },
+      "margin": 21.01,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 25123,
+          "pct": 46.3
+        },
+        {
+          "party": "IND16",
+          "votes": 13725,
+          "pct": 25.3
+        },
+        {
+          "party": "SJB",
+          "votes": 11979,
+          "pct": 22.08
+        },
+        {
+          "party": "SLCP",
+          "votes": 1312,
+          "pct": 2.42
+        },
+        {
+          "party": "SLPP",
+          "votes": 1239,
+          "pct": 2.28
+        }
+      ],
+      "otherVotes": 880
+    },
+    "EC-01J": {
+      "valid": 150692,
+      "rejected": 3097,
+      "polled": 153789,
+      "electors": 198793,
+      "turnoutPct": 77.4,
+      "rejectedPct": 2.01,
+      "winner": {
+        "party": "NPP",
+        "votes": 84299,
+        "pct": 55.94
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 30670,
+        "pct": 20.35
+      },
+      "margin": 35.59,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 84299,
+          "pct": 55.94
+        },
+        {
+          "party": "IND16",
+          "votes": 30670,
+          "pct": 20.35
+        },
+        {
+          "party": "SJB",
+          "votes": 26538,
+          "pct": 17.61
+        },
+        {
+          "party": "SLCP",
+          "votes": 3771,
+          "pct": 2.5
+        },
+        {
+          "party": "SLPP",
+          "votes": 3095,
+          "pct": 2.05
+        }
+      ],
+      "otherVotes": 2319
+    },
+    "EC-01K": {
+      "valid": 102604,
+      "rejected": 2385,
+      "polled": 104989,
+      "electors": 129439,
+      "turnoutPct": 81.1,
+      "rejectedPct": 2.27,
+      "winner": {
+        "party": "NPP",
+        "votes": 47219,
+        "pct": 46.02
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 28767,
+        "pct": 28.04
+      },
+      "margin": 17.98,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 47219,
+          "pct": 46.02
+        },
+        {
+          "party": "SJB",
+          "votes": 28767,
+          "pct": 28.04
+        },
+        {
+          "party": "IND16",
+          "votes": 19669,
+          "pct": 19.17
+        },
+        {
+          "party": "SLPP",
+          "votes": 2929,
+          "pct": 2.85
+        },
+        {
+          "party": "SLCP",
+          "votes": 1818,
+          "pct": 1.77
+        }
+      ],
+      "otherVotes": 2202
+    },
+    "EC-01L": {
+      "valid": 161728,
+      "rejected": 3689,
+      "polled": 165417,
+      "electors": 207235,
+      "turnoutPct": 79.8,
+      "rejectedPct": 2.23,
+      "winner": {
+        "party": "NPP",
+        "votes": 91770,
+        "pct": 56.74
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 29912,
+        "pct": 18.5
+      },
+      "margin": 38.25,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 91770,
+          "pct": 56.74
+        },
+        {
+          "party": "SJB",
+          "votes": 29912,
+          "pct": 18.5
+        },
+        {
+          "party": "IND16",
+          "votes": 29348,
+          "pct": 18.15
+        },
+        {
+          "party": "SLCP",
+          "votes": 4304,
+          "pct": 2.66
+        },
+        {
+          "party": "SLPP",
+          "votes": 3979,
+          "pct": 2.46
+        }
+      ],
+      "otherVotes": 2415
+    },
+    "EC-01M": {
+      "valid": 105675,
+      "rejected": 2380,
+      "polled": 108055,
+      "electors": 140699,
+      "turnoutPct": 76.8,
+      "rejectedPct": 2.2,
+      "winner": {
+        "party": "NPP",
+        "votes": 58692,
+        "pct": 55.54
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 22782,
+        "pct": 21.56
+      },
+      "margin": 33.98,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 58692,
+          "pct": 55.54
+        },
+        {
+          "party": "IND16",
+          "votes": 22782,
+          "pct": 21.56
+        },
+        {
+          "party": "SJB",
+          "votes": 17174,
+          "pct": 16.25
+        },
+        {
+          "party": "SLCP",
+          "votes": 3020,
+          "pct": 2.86
+        },
+        {
+          "party": "SLPP",
+          "votes": 2424,
+          "pct": 2.29
+        }
+      ],
+      "otherVotes": 1583
+    },
+    "EC-01N": {
+      "valid": 147160,
+      "rejected": 3181,
+      "polled": 150341,
+      "electors": 190053,
+      "turnoutPct": 79.1,
+      "rejectedPct": 2.12,
+      "winner": {
+        "party": "NPP",
+        "votes": 83049,
+        "pct": 56.43
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 29622,
+        "pct": 20.13
+      },
+      "margin": 36.31,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 83049,
+          "pct": 56.43
+        },
+        {
+          "party": "IND16",
+          "votes": 29622,
+          "pct": 20.13
+        },
+        {
+          "party": "SJB",
+          "votes": 24312,
+          "pct": 16.52
+        },
+        {
+          "party": "SLPP",
+          "votes": 4076,
+          "pct": 2.77
+        },
+        {
+          "party": "SLCP",
+          "votes": 4053,
+          "pct": 2.75
+        }
+      ],
+      "otherVotes": 2048
+    },
+    "EC-01O": {
+      "valid": 94790,
+      "rejected": 1946,
+      "polled": 96736,
+      "electors": 120503,
+      "turnoutPct": 80.3,
+      "rejectedPct": 2.01,
+      "winner": {
+        "party": "NPP",
+        "votes": 45299,
+        "pct": 47.79
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 24319,
+        "pct": 25.66
+      },
+      "margin": 22.13,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 45299,
+          "pct": 47.79
+        },
+        {
+          "party": "SJB",
+          "votes": 24319,
+          "pct": 25.66
+        },
+        {
+          "party": "IND16",
+          "votes": 19025,
+          "pct": 20.07
+        },
+        {
+          "party": "SLPP",
+          "votes": 2843,
+          "pct": 3
+        },
+        {
+          "party": "SLCP",
+          "votes": 1712,
+          "pct": 1.81
+        }
+      ],
+      "otherVotes": 1592
+    },
+    "EC-01P": {
+      "valid": 34190,
+      "rejected": 1059,
+      "polled": 35249,
+      "electors": 35636,
+      "turnoutPct": 98.9,
+      "rejectedPct": 3,
+      "winner": {
+        "party": "NPP",
+        "votes": 20864,
+        "pct": 61.02
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 7645,
+        "pct": 22.36
+      },
+      "margin": 38.66,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 20864,
+          "pct": 61.02
+        },
+        {
+          "party": "IND16",
+          "votes": 7645,
+          "pct": 22.36
+        },
+        {
+          "party": "SJB",
+          "votes": 4080,
+          "pct": 11.93
+        },
+        {
+          "party": "SLPP",
+          "votes": 561,
+          "pct": 1.64
+        },
+        {
+          "party": "SLCP",
+          "votes": 552,
+          "pct": 1.61
+        }
+      ],
+      "otherVotes": 488
+    },
+    "EC-02": {
+      "valid": 1458389,
+      "rejected": 29381,
+      "polled": 1487770,
+      "electors": 1881129,
+      "turnoutPct": 79.1,
+      "rejectedPct": 1.97,
+      "winner": {
+        "party": "NPP",
+        "votes": 809410,
+        "pct": 55.5
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 349550,
+        "pct": 23.97
+      },
+      "margin": 31.53,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 809410,
+          "pct": 55.5
+        },
+        {
+          "party": "SJB",
+          "votes": 349550,
+          "pct": 23.97
+        },
+        {
+          "party": "IND16",
+          "votes": 216028,
+          "pct": 14.81
+        },
+        {
+          "party": "SLPP",
+          "votes": 41193,
+          "pct": 2.82
+        },
+        {
+          "party": "SLCP",
+          "votes": 17143,
+          "pct": 1.18
+        }
+      ],
+      "otherVotes": 25065
+    },
+    "EC-02A": {
+      "valid": 102774,
+      "rejected": 2526,
+      "polled": 105300,
+      "electors": 138957,
+      "turnoutPct": 75.8,
+      "rejectedPct": 2.4,
+      "winner": {
+        "party": "NPP",
+        "votes": 47505,
+        "pct": 46.22
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 32391,
+        "pct": 31.52
+      },
+      "margin": 14.71,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 47505,
+          "pct": 46.22
+        },
+        {
+          "party": "SJB",
+          "votes": 32391,
+          "pct": 31.52
+        },
+        {
+          "party": "IND16",
+          "votes": 18094,
+          "pct": 17.61
+        },
+        {
+          "party": "SLPP",
+          "votes": 1719,
+          "pct": 1.67
+        },
+        {
+          "party": "SLCP",
+          "votes": 1116,
+          "pct": 1.09
+        }
+      ],
+      "otherVotes": 1949
+    },
+    "EC-02B": {
+      "valid": 82306,
+      "rejected": 1690,
+      "polled": 83996,
+      "electors": 115968,
+      "turnoutPct": 72.4,
+      "rejectedPct": 2.01,
+      "winner": {
+        "party": "NPP",
+        "votes": 45206,
+        "pct": 54.92
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 24484,
+        "pct": 29.75
+      },
+      "margin": 25.18,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 45206,
+          "pct": 54.92
+        },
+        {
+          "party": "SJB",
+          "votes": 24484,
+          "pct": 29.75
+        },
+        {
+          "party": "IND16",
+          "votes": 9284,
+          "pct": 11.28
+        },
+        {
+          "party": "SLPP",
+          "votes": 1112,
+          "pct": 1.35
+        },
+        {
+          "party": "SLCP",
+          "votes": 429,
+          "pct": 0.52
+        }
+      ],
+      "otherVotes": 1791
+    },
+    "EC-02C": {
+      "valid": 126599,
+      "rejected": 2412,
+      "polled": 129011,
+      "electors": 167689,
+      "turnoutPct": 76.9,
+      "rejectedPct": 1.87,
+      "winner": {
+        "party": "NPP",
+        "votes": 69944,
+        "pct": 55.25
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 33262,
+        "pct": 26.27
+      },
+      "margin": 28.97,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 69944,
+          "pct": 55.25
+        },
+        {
+          "party": "SJB",
+          "votes": 33262,
+          "pct": 26.27
+        },
+        {
+          "party": "IND16",
+          "votes": 15984,
+          "pct": 12.63
+        },
+        {
+          "party": "SLPP",
+          "votes": 4030,
+          "pct": 3.18
+        },
+        {
+          "party": "SLCP",
+          "votes": 1144,
+          "pct": 0.9
+        }
+      ],
+      "otherVotes": 2235
+    },
+    "EC-02D": {
+      "valid": 94127,
+      "rejected": 1763,
+      "polled": 95890,
+      "electors": 118718,
+      "turnoutPct": 80.8,
+      "rejectedPct": 1.84,
+      "winner": {
+        "party": "NPP",
+        "votes": 46362,
+        "pct": 49.25
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 28540,
+        "pct": 30.32
+      },
+      "margin": 18.93,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 46362,
+          "pct": 49.25
+        },
+        {
+          "party": "SJB",
+          "votes": 28540,
+          "pct": 30.32
+        },
+        {
+          "party": "IND16",
+          "votes": 11013,
+          "pct": 11.7
+        },
+        {
+          "party": "SLPP",
+          "votes": 5485,
+          "pct": 5.83
+        },
+        {
+          "party": "SLCP",
+          "votes": 978,
+          "pct": 1.04
+        }
+      ],
+      "otherVotes": 1749
+    },
+    "EC-02E": {
+      "valid": 105288,
+      "rejected": 2072,
+      "polled": 107360,
+      "electors": 132932,
+      "turnoutPct": 80.8,
+      "rejectedPct": 1.93,
+      "winner": {
+        "party": "NPP",
+        "votes": 56245,
+        "pct": 53.42
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 28642,
+        "pct": 27.2
+      },
+      "margin": 26.22,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 56245,
+          "pct": 53.42
+        },
+        {
+          "party": "SJB",
+          "votes": 28642,
+          "pct": 27.2
+        },
+        {
+          "party": "IND16",
+          "votes": 14455,
+          "pct": 13.73
+        },
+        {
+          "party": "SLPP",
+          "votes": 2975,
+          "pct": 2.83
+        },
+        {
+          "party": "SLCP",
+          "votes": 951,
+          "pct": 0.9
+        }
+      ],
+      "otherVotes": 2020
+    },
+    "EC-02F": {
+      "valid": 118228,
+      "rejected": 2222,
+      "polled": 120450,
+      "electors": 149482,
+      "turnoutPct": 80.6,
+      "rejectedPct": 1.84,
+      "winner": {
+        "party": "NPP",
+        "votes": 66829,
+        "pct": 56.53
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 28968,
+        "pct": 24.5
+      },
+      "margin": 32.02,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 66829,
+          "pct": 56.53
+        },
+        {
+          "party": "SJB",
+          "votes": 28968,
+          "pct": 24.5
+        },
+        {
+          "party": "IND16",
+          "votes": 16480,
+          "pct": 13.94
+        },
+        {
+          "party": "SLPP",
+          "votes": 2761,
+          "pct": 2.34
+        },
+        {
+          "party": "SLCP",
+          "votes": 1150,
+          "pct": 0.97
+        }
+      ],
+      "otherVotes": 2040
+    },
+    "EC-02G": {
+      "valid": 114974,
+      "rejected": 2159,
+      "polled": 117133,
+      "electors": 145602,
+      "turnoutPct": 80.4,
+      "rejectedPct": 1.84,
+      "winner": {
+        "party": "NPP",
+        "votes": 63916,
+        "pct": 55.59
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 28714,
+        "pct": 24.97
+      },
+      "margin": 30.62,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 63916,
+          "pct": 55.59
+        },
+        {
+          "party": "SJB",
+          "votes": 28714,
+          "pct": 24.97
+        },
+        {
+          "party": "IND16",
+          "votes": 16223,
+          "pct": 14.11
+        },
+        {
+          "party": "SLPP",
+          "votes": 2840,
+          "pct": 2.47
+        },
+        {
+          "party": "SLCP",
+          "votes": 1188,
+          "pct": 1.03
+        }
+      ],
+      "otherVotes": 2093
+    },
+    "EC-02H": {
+      "valid": 126790,
+      "rejected": 2286,
+      "polled": 129076,
+      "electors": 163087,
+      "turnoutPct": 79.1,
+      "rejectedPct": 1.77,
+      "winner": {
+        "party": "NPP",
+        "votes": 78778,
+        "pct": 62.13
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 22130,
+        "pct": 17.45
+      },
+      "margin": 44.68,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 78778,
+          "pct": 62.13
+        },
+        {
+          "party": "SJB",
+          "votes": 22130,
+          "pct": 17.45
+        },
+        {
+          "party": "IND16",
+          "votes": 18138,
+          "pct": 14.31
+        },
+        {
+          "party": "SLPP",
+          "votes": 3709,
+          "pct": 2.93
+        },
+        {
+          "party": "SLCP",
+          "votes": 1909,
+          "pct": 1.51
+        }
+      ],
+      "otherVotes": 2126
+    },
+    "EC-02I": {
+      "valid": 121990,
+      "rejected": 2384,
+      "polled": 124374,
+      "electors": 163461,
+      "turnoutPct": 76.1,
+      "rejectedPct": 1.92,
+      "winner": {
+        "party": "NPP",
+        "votes": 71351,
+        "pct": 58.49
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 27567,
+        "pct": 22.6
+      },
+      "margin": 35.89,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 71351,
+          "pct": 58.49
+        },
+        {
+          "party": "SJB",
+          "votes": 27567,
+          "pct": 22.6
+        },
+        {
+          "party": "IND16",
+          "votes": 16907,
+          "pct": 13.86
+        },
+        {
+          "party": "SLPP",
+          "votes": 2917,
+          "pct": 2.39
+        },
+        {
+          "party": "SLCP",
+          "votes": 1550,
+          "pct": 1.27
+        }
+      ],
+      "otherVotes": 1698
+    },
+    "EC-02J": {
+      "valid": 131741,
+      "rejected": 2571,
+      "polled": 134312,
+      "electors": 169884,
+      "turnoutPct": 79.1,
+      "rejectedPct": 1.91,
+      "winner": {
+        "party": "NPP",
+        "votes": 76417,
+        "pct": 58.01
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 26979,
+        "pct": 20.48
+      },
+      "margin": 37.53,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 76417,
+          "pct": 58.01
+        },
+        {
+          "party": "SJB",
+          "votes": 26979,
+          "pct": 20.48
+        },
+        {
+          "party": "IND16",
+          "votes": 20818,
+          "pct": 15.8
+        },
+        {
+          "party": "SLPP",
+          "votes": 3548,
+          "pct": 2.69
+        },
+        {
+          "party": "SLCP",
+          "votes": 1886,
+          "pct": 1.43
+        }
+      ],
+      "otherVotes": 2093
+    },
+    "EC-02K": {
+      "valid": 102669,
+      "rejected": 2226,
+      "polled": 104895,
+      "electors": 127767,
+      "turnoutPct": 82.1,
+      "rejectedPct": 2.12,
+      "winner": {
+        "party": "NPP",
+        "votes": 55130,
+        "pct": 53.7
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 24009,
+        "pct": 23.38
+      },
+      "margin": 30.31,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 55130,
+          "pct": 53.7
+        },
+        {
+          "party": "SJB",
+          "votes": 24009,
+          "pct": 23.38
+        },
+        {
+          "party": "IND16",
+          "votes": 16750,
+          "pct": 16.31
+        },
+        {
+          "party": "SLPP",
+          "votes": 3595,
+          "pct": 3.5
+        },
+        {
+          "party": "SLCP",
+          "votes": 1335,
+          "pct": 1.3
+        }
+      ],
+      "otherVotes": 1850
+    },
+    "EC-02L": {
+      "valid": 109045,
+      "rejected": 1947,
+      "polled": 110992,
+      "electors": 138720,
+      "turnoutPct": 80,
+      "rejectedPct": 1.75,
+      "winner": {
+        "party": "NPP",
+        "votes": 61452,
+        "pct": 56.35
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 20439,
+        "pct": 18.74
+      },
+      "margin": 37.61,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 61452,
+          "pct": 56.35
+        },
+        {
+          "party": "SJB",
+          "votes": 20439,
+          "pct": 18.74
+        },
+        {
+          "party": "IND16",
+          "votes": 20314,
+          "pct": 18.63
+        },
+        {
+          "party": "SLPP",
+          "votes": 3212,
+          "pct": 2.95
+        },
+        {
+          "party": "SLCP",
+          "votes": 1906,
+          "pct": 1.75
+        }
+      ],
+      "otherVotes": 1722
+    },
+    "EC-02M": {
+      "valid": 71269,
+      "rejected": 1707,
+      "polled": 72976,
+      "electors": 96376,
+      "turnoutPct": 75.7,
+      "rejectedPct": 2.34,
+      "winner": {
+        "party": "NPP",
+        "votes": 37049,
+        "pct": 51.98
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 17042,
+        "pct": 23.91
+      },
+      "margin": 28.07,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 37049,
+          "pct": 51.98
+        },
+        {
+          "party": "SJB",
+          "votes": 17042,
+          "pct": 23.91
+        },
+        {
+          "party": "IND16",
+          "votes": 12452,
+          "pct": 17.47
+        },
+        {
+          "party": "SLPP",
+          "votes": 2347,
+          "pct": 3.29
+        },
+        {
+          "party": "SLCP",
+          "votes": 1160,
+          "pct": 1.63
+        }
+      ],
+      "otherVotes": 1219
+    },
+    "EC-02P": {
+      "valid": 50589,
+      "rejected": 1416,
+      "polled": 52005,
+      "electors": 52486,
+      "turnoutPct": 99.1,
+      "rejectedPct": 2.72,
+      "winner": {
+        "party": "NPP",
+        "votes": 33226,
+        "pct": 65.68
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 9116,
+        "pct": 18.02
+      },
+      "margin": 47.66,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 33226,
+          "pct": 65.68
+        },
+        {
+          "party": "IND16",
+          "votes": 9116,
+          "pct": 18.02
+        },
+        {
+          "party": "SJB",
+          "votes": 6383,
+          "pct": 12.62
+        },
+        {
+          "party": "SLPP",
+          "votes": 943,
+          "pct": 1.86
+        },
+        {
+          "party": "SLCP",
+          "votes": 441,
+          "pct": 0.87
+        }
+      ],
+      "otherVotes": 480
+    },
+    "EC-03": {
+      "valid": 817518,
+      "rejected": 16243,
+      "polled": 833761,
+      "electors": 1024244,
+      "turnoutPct": 81.4,
+      "rejectedPct": 1.95,
+      "winner": {
+        "party": "NPP",
+        "votes": 387764,
+        "pct": 47.43
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 236307,
+        "pct": 28.91
+      },
+      "margin": 18.53,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 387764,
+          "pct": 47.43
+        },
+        {
+          "party": "SJB",
+          "votes": 236307,
+          "pct": 28.91
+        },
+        {
+          "party": "IND16",
+          "votes": 143285,
+          "pct": 17.53
+        },
+        {
+          "party": "SLPP",
+          "votes": 22727,
+          "pct": 2.78
+        },
+        {
+          "party": "SLCP",
+          "votes": 10261,
+          "pct": 1.26
+        }
+      ],
+      "otherVotes": 17174
+    },
+    "EC-03A": {
+      "valid": 97478,
+      "rejected": 2056,
+      "polled": 99534,
+      "electors": 125088,
+      "turnoutPct": 79.6,
+      "rejectedPct": 2.07,
+      "winner": {
+        "party": "NPP",
+        "votes": 48586,
+        "pct": 49.84
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 25032,
+        "pct": 25.68
+      },
+      "margin": 24.16,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 48586,
+          "pct": 49.84
+        },
+        {
+          "party": "SJB",
+          "votes": 25032,
+          "pct": 25.68
+        },
+        {
+          "party": "IND16",
+          "votes": 17641,
+          "pct": 18.1
+        },
+        {
+          "party": "SLPP",
+          "votes": 2666,
+          "pct": 2.73
+        },
+        {
+          "party": "SLCP",
+          "votes": 1891,
+          "pct": 1.94
+        }
+      ],
+      "otherVotes": 1662
+    },
+    "EC-03B": {
+      "valid": 124017,
+      "rejected": 2403,
+      "polled": 126420,
+      "electors": 154272,
+      "turnoutPct": 81.9,
+      "rejectedPct": 1.9,
+      "winner": {
+        "party": "NPP",
+        "votes": 60752,
+        "pct": 48.99
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 33363,
+        "pct": 26.9
+      },
+      "margin": 22.08,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 60752,
+          "pct": 48.99
+        },
+        {
+          "party": "SJB",
+          "votes": 33363,
+          "pct": 26.9
+        },
+        {
+          "party": "IND16",
+          "votes": 21996,
+          "pct": 17.74
+        },
+        {
+          "party": "SLPP",
+          "votes": 3573,
+          "pct": 2.88
+        },
+        {
+          "party": "SLCP",
+          "votes": 1876,
+          "pct": 1.51
+        }
+      ],
+      "otherVotes": 2457
+    },
+    "EC-03C": {
+      "valid": 111516,
+      "rejected": 2437,
+      "polled": 113953,
+      "electors": 140590,
+      "turnoutPct": 81.1,
+      "rejectedPct": 2.14,
+      "winner": {
+        "party": "NPP",
+        "votes": 54322,
+        "pct": 48.71
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 27090,
+        "pct": 24.29
+      },
+      "margin": 24.42,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 54322,
+          "pct": 48.71
+        },
+        {
+          "party": "SJB",
+          "votes": 27090,
+          "pct": 24.29
+        },
+        {
+          "party": "IND16",
+          "votes": 23064,
+          "pct": 20.68
+        },
+        {
+          "party": "SLPP",
+          "votes": 3024,
+          "pct": 2.71
+        },
+        {
+          "party": "SLCP",
+          "votes": 1786,
+          "pct": 1.6
+        }
+      ],
+      "otherVotes": 2230
+    },
+    "EC-03D": {
+      "valid": 69098,
+      "rejected": 1734,
+      "polled": 70832,
+      "electors": 86639,
+      "turnoutPct": 81.8,
+      "rejectedPct": 2.45,
+      "winner": {
+        "party": "NPP",
+        "votes": 28025,
+        "pct": 40.56
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 23773,
+        "pct": 34.4
+      },
+      "margin": 6.15,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 28025,
+          "pct": 40.56
+        },
+        {
+          "party": "SJB",
+          "votes": 23773,
+          "pct": 34.4
+        },
+        {
+          "party": "IND16",
+          "votes": 11903,
+          "pct": 17.23
+        },
+        {
+          "party": "SLPP",
+          "votes": 2693,
+          "pct": 3.9
+        },
+        {
+          "party": "SLCP",
+          "votes": 729,
+          "pct": 1.06
+        }
+      ],
+      "otherVotes": 1975
+    },
+    "EC-03E": {
+      "valid": 93120,
+      "rejected": 1792,
+      "polled": 94912,
+      "electors": 117866,
+      "turnoutPct": 80.5,
+      "rejectedPct": 1.89,
+      "winner": {
+        "party": "NPP",
+        "votes": 43598,
+        "pct": 46.82
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 27738,
+        "pct": 29.79
+      },
+      "margin": 17.03,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 43598,
+          "pct": 46.82
+        },
+        {
+          "party": "SJB",
+          "votes": 27738,
+          "pct": 29.79
+        },
+        {
+          "party": "IND16",
+          "votes": 16046,
+          "pct": 17.23
+        },
+        {
+          "party": "SLPP",
+          "votes": 2580,
+          "pct": 2.77
+        },
+        {
+          "party": "SLCP",
+          "votes": 890,
+          "pct": 0.96
+        }
+      ],
+      "otherVotes": 2268
+    },
+    "EC-03F": {
+      "valid": 99798,
+      "rejected": 1859,
+      "polled": 101657,
+      "electors": 127561,
+      "turnoutPct": 79.7,
+      "rejectedPct": 1.83,
+      "winner": {
+        "party": "NPP",
+        "votes": 52607,
+        "pct": 52.71
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 25006,
+        "pct": 25.06
+      },
+      "margin": 27.66,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 52607,
+          "pct": 52.71
+        },
+        {
+          "party": "SJB",
+          "votes": 25006,
+          "pct": 25.06
+        },
+        {
+          "party": "IND16",
+          "votes": 17078,
+          "pct": 17.11
+        },
+        {
+          "party": "SLPP",
+          "votes": 1997,
+          "pct": 2
+        },
+        {
+          "party": "SLCP",
+          "votes": 1293,
+          "pct": 1.3
+        }
+      ],
+      "otherVotes": 1817
+    },
+    "EC-03G": {
+      "valid": 102804,
+      "rejected": 1751,
+      "polled": 104555,
+      "electors": 130456,
+      "turnoutPct": 80.1,
+      "rejectedPct": 1.67,
+      "winner": {
+        "party": "NPP",
+        "votes": 44146,
+        "pct": 42.94
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 39007,
+        "pct": 37.94
+      },
+      "margin": 5,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 44146,
+          "pct": 42.94
+        },
+        {
+          "party": "SJB",
+          "votes": 39007,
+          "pct": 37.94
+        },
+        {
+          "party": "IND16",
+          "votes": 14583,
+          "pct": 14.19
+        },
+        {
+          "party": "SLPP",
+          "votes": 2414,
+          "pct": 2.35
+        },
+        {
+          "party": "SLCP",
+          "votes": 510,
+          "pct": 0.5
+        }
+      ],
+      "otherVotes": 2144
+    },
+    "EC-03H": {
+      "valid": 83728,
+      "rejected": 1448,
+      "polled": 85176,
+      "electors": 104424,
+      "turnoutPct": 81.6,
+      "rejectedPct": 1.7,
+      "winner": {
+        "party": "NPP",
+        "votes": 34139,
+        "pct": 40.77
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 29833,
+        "pct": 35.63
+      },
+      "margin": 5.14,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 34139,
+          "pct": 40.77
+        },
+        {
+          "party": "SJB",
+          "votes": 29833,
+          "pct": 35.63
+        },
+        {
+          "party": "IND16",
+          "votes": 13518,
+          "pct": 16.15
+        },
+        {
+          "party": "SLPP",
+          "votes": 3117,
+          "pct": 3.72
+        },
+        {
+          "party": "SLCP",
+          "votes": 896,
+          "pct": 1.07
+        }
+      ],
+      "otherVotes": 2225
+    },
+    "EC-03P": {
+      "valid": 35959,
+      "rejected": 763,
+      "polled": 36722,
+      "electors": 37348,
+      "turnoutPct": 98.3,
+      "rejectedPct": 2.08,
+      "winner": {
+        "party": "NPP",
+        "votes": 21589,
+        "pct": 60.04
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 7456,
+        "pct": 20.73
+      },
+      "margin": 39.3,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 21589,
+          "pct": 60.04
+        },
+        {
+          "party": "IND16",
+          "votes": 7456,
+          "pct": 20.73
+        },
+        {
+          "party": "SJB",
+          "votes": 5465,
+          "pct": 15.2
+        },
+        {
+          "party": "SLPP",
+          "votes": 663,
+          "pct": 1.84
+        },
+        {
+          "party": "SLCP",
+          "votes": 390,
+          "pct": 1.08
+        }
+      ],
+      "otherVotes": 396
+    },
+    "EC-04": {
+      "valid": 933516,
+      "rejected": 24153,
+      "polled": 957669,
+      "electors": 1191399,
+      "turnoutPct": 80.4,
+      "rejectedPct": 2.52,
+      "winner": {
+        "party": "NPP",
+        "votes": 394534,
+        "pct": 42.26
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 323998,
+        "pct": 34.71
+      },
+      "margin": 7.56,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 394534,
+          "pct": 42.26
+        },
+        {
+          "party": "SJB",
+          "votes": 323998,
+          "pct": 34.71
+        },
+        {
+          "party": "IND16",
+          "votes": 162707,
+          "pct": 17.43
+        },
+        {
+          "party": "SLPP",
+          "votes": 19403,
+          "pct": 2.08
+        },
+        {
+          "party": "SLCP",
+          "votes": 9098,
+          "pct": 0.97
+        }
+      ],
+      "otherVotes": 23776
+    },
+    "EC-04A": {
+      "valid": 42603,
+      "rejected": 895,
+      "polled": 43498,
+      "electors": 54236,
+      "turnoutPct": 80.2,
+      "rejectedPct": 2.06,
+      "winner": {
+        "party": "NPP",
+        "votes": 18232,
+        "pct": 42.8
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 15568,
+        "pct": 36.54
+      },
+      "margin": 6.25,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 18232,
+          "pct": 42.8
+        },
+        {
+          "party": "SJB",
+          "votes": 15568,
+          "pct": 36.54
+        },
+        {
+          "party": "IND16",
+          "votes": 5982,
+          "pct": 14.04
+        },
+        {
+          "party": "SLPP",
+          "votes": 1224,
+          "pct": 2.87
+        },
+        {
+          "party": "SLCP",
+          "votes": 386,
+          "pct": 0.91
+        }
+      ],
+      "otherVotes": 1211
+    },
+    "EC-04B": {
+      "valid": 134611,
+      "rejected": 3067,
+      "polled": 137678,
+      "electors": 173626,
+      "turnoutPct": 79.3,
+      "rejectedPct": 2.23,
+      "winner": {
+        "party": "NPP",
+        "votes": 59456,
+        "pct": 44.17
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 50539,
+        "pct": 37.54
+      },
+      "margin": 6.62,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 59456,
+          "pct": 44.17
+        },
+        {
+          "party": "SJB",
+          "votes": 50539,
+          "pct": 37.54
+        },
+        {
+          "party": "IND16",
+          "votes": 17182,
+          "pct": 12.76
+        },
+        {
+          "party": "SLPP",
+          "votes": 2732,
+          "pct": 2.03
+        },
+        {
+          "party": "SLCP",
+          "votes": 1167,
+          "pct": 0.87
+        }
+      ],
+      "otherVotes": 3535
+    },
+    "EC-04C": {
+      "valid": 71337,
+      "rejected": 1796,
+      "polled": 73133,
+      "electors": 93042,
+      "turnoutPct": 78.6,
+      "rejectedPct": 2.46,
+      "winner": {
+        "party": "SJB",
+        "votes": 29760,
+        "pct": 41.72
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 26788,
+        "pct": 37.55
+      },
+      "margin": 4.17,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 29760,
+          "pct": 41.72
+        },
+        {
+          "party": "NPP",
+          "votes": 26788,
+          "pct": 37.55
+        },
+        {
+          "party": "IND16",
+          "votes": 10539,
+          "pct": 14.77
+        },
+        {
+          "party": "SLPP",
+          "votes": 1367,
+          "pct": 1.92
+        },
+        {
+          "party": "SLCP",
+          "votes": 589,
+          "pct": 0.83
+        }
+      ],
+      "otherVotes": 2294
+    },
+    "EC-04D": {
+      "valid": 50022,
+      "rejected": 981,
+      "polled": 51003,
+      "electors": 61289,
+      "turnoutPct": 83.2,
+      "rejectedPct": 1.92,
+      "winner": {
+        "party": "SJB",
+        "votes": 22336,
+        "pct": 44.65
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 17226,
+        "pct": 34.44
+      },
+      "margin": 10.22,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 22336,
+          "pct": 44.65
+        },
+        {
+          "party": "NPP",
+          "votes": 17226,
+          "pct": 34.44
+        },
+        {
+          "party": "IND16",
+          "votes": 6280,
+          "pct": 12.55
+        },
+        {
+          "party": "SLPP",
+          "votes": 2386,
+          "pct": 4.77
+        },
+        {
+          "party": "IND4",
+          "votes": 269,
+          "pct": 0.54
+        }
+      ],
+      "otherVotes": 1525
+    },
+    "EC-04E": {
+      "valid": 39930,
+      "rejected": 1301,
+      "polled": 41231,
+      "electors": 50662,
+      "turnoutPct": 81.4,
+      "rejectedPct": 3.16,
+      "winner": {
+        "party": "SJB",
+        "votes": 15332,
+        "pct": 38.4
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 14817,
+        "pct": 37.11
+      },
+      "margin": 1.29,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 15332,
+          "pct": 38.4
+        },
+        {
+          "party": "NPP",
+          "votes": 14817,
+          "pct": 37.11
+        },
+        {
+          "party": "IND16",
+          "votes": 7192,
+          "pct": 18.01
+        },
+        {
+          "party": "SLPP",
+          "votes": 795,
+          "pct": 1.99
+        },
+        {
+          "party": "SLCP",
+          "votes": 427,
+          "pct": 1.07
+        }
+      ],
+      "otherVotes": 1367
+    },
+    "EC-04F": {
+      "valid": 82768,
+      "rejected": 2100,
+      "polled": 84868,
+      "electors": 106339,
+      "turnoutPct": 79.8,
+      "rejectedPct": 2.47,
+      "winner": {
+        "party": "NPP",
+        "votes": 38452,
+        "pct": 46.46
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 27999,
+        "pct": 33.83
+      },
+      "margin": 12.63,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 38452,
+          "pct": 46.46
+        },
+        {
+          "party": "SJB",
+          "votes": 27999,
+          "pct": 33.83
+        },
+        {
+          "party": "IND16",
+          "votes": 11628,
+          "pct": 14.05
+        },
+        {
+          "party": "SLPP",
+          "votes": 1933,
+          "pct": 2.34
+        },
+        {
+          "party": "SLCP",
+          "votes": 914,
+          "pct": 1.1
+        }
+      ],
+      "otherVotes": 1842
+    },
+    "EC-04G": {
+      "valid": 57514,
+      "rejected": 1704,
+      "polled": 59218,
+      "electors": 74173,
+      "turnoutPct": 79.8,
+      "rejectedPct": 2.88,
+      "winner": {
+        "party": "SJB",
+        "votes": 23658,
+        "pct": 41.13
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 19457,
+        "pct": 33.83
+      },
+      "margin": 7.3,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 23658,
+          "pct": 41.13
+        },
+        {
+          "party": "NPP",
+          "votes": 19457,
+          "pct": 33.83
+        },
+        {
+          "party": "IND16",
+          "votes": 10729,
+          "pct": 18.65
+        },
+        {
+          "party": "SLPP",
+          "votes": 1469,
+          "pct": 2.55
+        },
+        {
+          "party": "SLCP",
+          "votes": 406,
+          "pct": 0.71
+        }
+      ],
+      "otherVotes": 1795
+    },
+    "EC-04H": {
+      "valid": 64635,
+      "rejected": 1694,
+      "polled": 66329,
+      "electors": 87760,
+      "turnoutPct": 75.6,
+      "rejectedPct": 2.55,
+      "winner": {
+        "party": "NPP",
+        "votes": 30655,
+        "pct": 47.43
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 17851,
+        "pct": 27.62
+      },
+      "margin": 19.81,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 30655,
+          "pct": 47.43
+        },
+        {
+          "party": "SJB",
+          "votes": 17851,
+          "pct": 27.62
+        },
+        {
+          "party": "IND16",
+          "votes": 13139,
+          "pct": 20.33
+        },
+        {
+          "party": "SLPP",
+          "votes": 1018,
+          "pct": 1.57
+        },
+        {
+          "party": "SLCP",
+          "votes": 849,
+          "pct": 1.31
+        }
+      ],
+      "otherVotes": 1123
+    },
+    "EC-04I": {
+      "valid": 30109,
+      "rejected": 534,
+      "polled": 30643,
+      "electors": 41303,
+      "turnoutPct": 74.2,
+      "rejectedPct": 1.74,
+      "winner": {
+        "party": "NPP",
+        "votes": 13336,
+        "pct": 44.29
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 9083,
+        "pct": 30.17
+      },
+      "margin": 14.13,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 13336,
+          "pct": 44.29
+        },
+        {
+          "party": "SJB",
+          "votes": 9083,
+          "pct": 30.17
+        },
+        {
+          "party": "IND16",
+          "votes": 6361,
+          "pct": 21.13
+        },
+        {
+          "party": "SLCP",
+          "votes": 416,
+          "pct": 1.38
+        },
+        {
+          "party": "SLPP",
+          "votes": 380,
+          "pct": 1.26
+        }
+      ],
+      "otherVotes": 533
+    },
+    "EC-04J": {
+      "valid": 67192,
+      "rejected": 1550,
+      "polled": 68742,
+      "electors": 85893,
+      "turnoutPct": 80,
+      "rejectedPct": 2.25,
+      "winner": {
+        "party": "NPP",
+        "votes": 32909,
+        "pct": 48.98
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 19374,
+        "pct": 28.83
+      },
+      "margin": 20.14,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 32909,
+          "pct": 48.98
+        },
+        {
+          "party": "SJB",
+          "votes": 19374,
+          "pct": 28.83
+        },
+        {
+          "party": "IND16",
+          "votes": 11196,
+          "pct": 16.66
+        },
+        {
+          "party": "SLPP",
+          "votes": 1409,
+          "pct": 2.1
+        },
+        {
+          "party": "SLCP",
+          "votes": 927,
+          "pct": 1.38
+        }
+      ],
+      "otherVotes": 1377
+    },
+    "EC-04K": {
+      "valid": 70827,
+      "rejected": 1573,
+      "polled": 72400,
+      "electors": 89918,
+      "turnoutPct": 80.5,
+      "rejectedPct": 2.17,
+      "winner": {
+        "party": "NPP",
+        "votes": 33232,
+        "pct": 46.92
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 23326,
+        "pct": 32.93
+      },
+      "margin": 13.99,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 33232,
+          "pct": 46.92
+        },
+        {
+          "party": "SJB",
+          "votes": 23326,
+          "pct": 32.93
+        },
+        {
+          "party": "IND16",
+          "votes": 10383,
+          "pct": 14.66
+        },
+        {
+          "party": "SLPP",
+          "votes": 1367,
+          "pct": 1.93
+        },
+        {
+          "party": "SLCP",
+          "votes": 845,
+          "pct": 1.19
+        }
+      ],
+      "otherVotes": 1674
+    },
+    "EC-04L": {
+      "valid": 87198,
+      "rejected": 2750,
+      "polled": 89948,
+      "electors": 113385,
+      "turnoutPct": 79.3,
+      "rejectedPct": 3.06,
+      "winner": {
+        "party": "SJB",
+        "votes": 31503,
+        "pct": 36.13
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 28750,
+        "pct": 32.97
+      },
+      "margin": 3.16,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 31503,
+          "pct": 36.13
+        },
+        {
+          "party": "NPP",
+          "votes": 28750,
+          "pct": 32.97
+        },
+        {
+          "party": "IND16",
+          "votes": 21991,
+          "pct": 25.22
+        },
+        {
+          "party": "SLPP",
+          "votes": 1652,
+          "pct": 1.89
+        },
+        {
+          "party": "SLCP",
+          "votes": 859,
+          "pct": 0.99
+        }
+      ],
+      "otherVotes": 2443
+    },
+    "EC-04M": {
+      "valid": 81070,
+      "rejected": 2714,
+      "polled": 83784,
+      "electors": 103976,
+      "turnoutPct": 80.6,
+      "rejectedPct": 3.24,
+      "winner": {
+        "party": "NPP",
+        "votes": 28929,
+        "pct": 35.68
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 28535,
+        "pct": 35.2
+      },
+      "margin": 0.49,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 28929,
+          "pct": 35.68
+        },
+        {
+          "party": "SJB",
+          "votes": 28535,
+          "pct": 35.2
+        },
+        {
+          "party": "IND16",
+          "votes": 19470,
+          "pct": 24.02
+        },
+        {
+          "party": "SLPP",
+          "votes": 969,
+          "pct": 1.2
+        },
+        {
+          "party": "SLCP",
+          "votes": 687,
+          "pct": 0.85
+        }
+      ],
+      "otherVotes": 2480
+    },
+    "EC-04P": {
+      "valid": 53700,
+      "rejected": 1494,
+      "polled": 55194,
+      "electors": 55797,
+      "turnoutPct": 98.9,
+      "rejectedPct": 2.71,
+      "winner": {
+        "party": "NPP",
+        "votes": 32295,
+        "pct": 60.14
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 10635,
+        "pct": 19.8
+      },
+      "margin": 40.34,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 32295,
+          "pct": 60.14
+        },
+        {
+          "party": "IND16",
+          "votes": 10635,
+          "pct": 19.8
+        },
+        {
+          "party": "SJB",
+          "votes": 9134,
+          "pct": 17.01
+        },
+        {
+          "party": "SLPP",
+          "votes": 702,
+          "pct": 1.31
+        },
+        {
+          "party": "SLCP",
+          "votes": 426,
+          "pct": 0.79
+        }
+      ],
+      "otherVotes": 508
+    },
+    "EC-05": {
+      "valid": 339734,
+      "rejected": 7921,
+      "polled": 347655,
+      "electors": 429991,
+      "turnoutPct": 80.9,
+      "rejectedPct": 2.28,
+      "winner": {
+        "party": "NPP",
+        "votes": 140544,
+        "pct": 41.37
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 121803,
+        "pct": 35.85
+      },
+      "margin": 5.52,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 140544,
+          "pct": 41.37
+        },
+        {
+          "party": "SJB",
+          "votes": 121803,
+          "pct": 35.85
+        },
+        {
+          "party": "IND16",
+          "votes": 53829,
+          "pct": 15.84
+        },
+        {
+          "party": "SLPP",
+          "votes": 10327,
+          "pct": 3.04
+        },
+        {
+          "party": "SLCP",
+          "votes": 2835,
+          "pct": 0.83
+        }
+      ],
+      "otherVotes": 10396
+    },
+    "EC-05A": {
+      "valid": 113904,
+      "rejected": 2104,
+      "polled": 116008,
+      "electors": 143731,
+      "turnoutPct": 80.7,
+      "rejectedPct": 1.81,
+      "winner": {
+        "party": "NPP",
+        "votes": 53299,
+        "pct": 46.79
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 36684,
+        "pct": 32.21
+      },
+      "margin": 14.59,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 53299,
+          "pct": 46.79
+        },
+        {
+          "party": "SJB",
+          "votes": 36684,
+          "pct": 32.21
+        },
+        {
+          "party": "IND16",
+          "votes": 16285,
+          "pct": 14.3
+        },
+        {
+          "party": "SLPP",
+          "votes": 3263,
+          "pct": 2.86
+        },
+        {
+          "party": "SLCP",
+          "votes": 951,
+          "pct": 0.83
+        }
+      ],
+      "otherVotes": 3422
+    },
+    "EC-05B": {
+      "valid": 59939,
+      "rejected": 1338,
+      "polled": 61277,
+      "electors": 73955,
+      "turnoutPct": 82.9,
+      "rejectedPct": 2.18,
+      "winner": {
+        "party": "SJB",
+        "votes": 24828,
+        "pct": 41.42
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 20838,
+        "pct": 34.77
+      },
+      "margin": 6.66,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 24828,
+          "pct": 41.42
+        },
+        {
+          "party": "NPP",
+          "votes": 20838,
+          "pct": 34.77
+        },
+        {
+          "party": "IND16",
+          "votes": 9022,
+          "pct": 15.05
+        },
+        {
+          "party": "SLPP",
+          "votes": 2756,
+          "pct": 4.6
+        },
+        {
+          "party": "SLCP",
+          "votes": 429,
+          "pct": 0.72
+        }
+      ],
+      "otherVotes": 2066
+    },
+    "EC-05C": {
+      "valid": 68857,
+      "rejected": 1813,
+      "polled": 70670,
+      "electors": 90943,
+      "turnoutPct": 77.7,
+      "rejectedPct": 2.57,
+      "winner": {
+        "party": "NPP",
+        "votes": 27693,
+        "pct": 40.22
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 25117,
+        "pct": 36.48
+      },
+      "margin": 3.74,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 27693,
+          "pct": 40.22
+        },
+        {
+          "party": "SJB",
+          "votes": 25117,
+          "pct": 36.48
+        },
+        {
+          "party": "IND16",
+          "votes": 11712,
+          "pct": 17.01
+        },
+        {
+          "party": "SLPP",
+          "votes": 1691,
+          "pct": 2.46
+        },
+        {
+          "party": "SLCP",
+          "votes": 690,
+          "pct": 1
+        }
+      ],
+      "otherVotes": 1954
+    },
+    "EC-05D": {
+      "valid": 76106,
+      "rejected": 2182,
+      "polled": 78288,
+      "electors": 99695,
+      "turnoutPct": 78.5,
+      "rejectedPct": 2.79,
+      "winner": {
+        "party": "SJB",
+        "votes": 31358,
+        "pct": 41.2
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 26528,
+        "pct": 34.86
+      },
+      "margin": 6.35,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 31358,
+          "pct": 41.2
+        },
+        {
+          "party": "NPP",
+          "votes": 26528,
+          "pct": 34.86
+        },
+        {
+          "party": "IND16",
+          "votes": 12567,
+          "pct": 16.51
+        },
+        {
+          "party": "SLPP",
+          "votes": 2245,
+          "pct": 2.95
+        },
+        {
+          "party": "SLCP",
+          "votes": 637,
+          "pct": 0.84
+        }
+      ],
+      "otherVotes": 2771
+    },
+    "EC-05P": {
+      "valid": 20928,
+      "rejected": 484,
+      "polled": 21412,
+      "electors": 21667,
+      "turnoutPct": 98.8,
+      "rejectedPct": 2.26,
+      "winner": {
+        "party": "NPP",
+        "votes": 12186,
+        "pct": 58.23
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 4243,
+        "pct": 20.27
+      },
+      "margin": 37.95,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 12186,
+          "pct": 58.23
+        },
+        {
+          "party": "IND16",
+          "votes": 4243,
+          "pct": 20.27
+        },
+        {
+          "party": "SJB",
+          "votes": 3816,
+          "pct": 18.23
+        },
+        {
+          "party": "SLPP",
+          "votes": 372,
+          "pct": 1.78
+        },
+        {
+          "party": "SLCP",
+          "votes": 128,
+          "pct": 0.61
+        }
+      ],
+      "otherVotes": 183
+    },
+    "EC-06": {
+      "valid": 473935,
+      "rejected": 14643,
+      "polled": 488578,
+      "electors": 605292,
+      "turnoutPct": 80.7,
+      "rejectedPct": 3,
+      "winner": {
+        "party": "SJB",
+        "votes": 201814,
+        "pct": 42.58
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 138619,
+        "pct": 29.25
+      },
+      "margin": 13.33,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 201814,
+          "pct": 42.58
+        },
+        {
+          "party": "IND16",
+          "votes": 138619,
+          "pct": 29.25
+        },
+        {
+          "party": "NPP",
+          "votes": 105057,
+          "pct": 22.17
+        },
+        {
+          "party": "SLPP",
+          "votes": 8821,
+          "pct": 1.86
+        },
+        {
+          "party": "IND4",
+          "votes": 3614,
+          "pct": 0.76
+        }
+      ],
+      "otherVotes": 16010
+    },
+    "EC-06A": {
+      "valid": 260273,
+      "rejected": 8311,
+      "polled": 268584,
+      "electors": 340077,
+      "turnoutPct": 79,
+      "rejectedPct": 3.09,
+      "winner": {
+        "party": "SJB",
+        "votes": 117232,
+        "pct": 45.04
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 91005,
+        "pct": 34.97
+      },
+      "margin": 10.08,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 117232,
+          "pct": 45.04
+        },
+        {
+          "party": "IND16",
+          "votes": 91005,
+          "pct": 34.97
+        },
+        {
+          "party": "NPP",
+          "votes": 38416,
+          "pct": 14.76
+        },
+        {
+          "party": "SLPP",
+          "votes": 2689,
+          "pct": 1.03
+        },
+        {
+          "party": "IND4",
+          "votes": 2190,
+          "pct": 0.84
+        }
+      ],
+      "otherVotes": 8741
+    },
+    "EC-06B": {
+      "valid": 67115,
+      "rejected": 1809,
+      "polled": 68924,
+      "electors": 85188,
+      "turnoutPct": 80.9,
+      "rejectedPct": 2.62,
+      "winner": {
+        "party": "SJB",
+        "votes": 27043,
+        "pct": 40.29
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 18250,
+        "pct": 27.19
+      },
+      "margin": 13.1,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 27043,
+          "pct": 40.29
+        },
+        {
+          "party": "IND16",
+          "votes": 18250,
+          "pct": 27.19
+        },
+        {
+          "party": "NPP",
+          "votes": 17727,
+          "pct": 26.41
+        },
+        {
+          "party": "SLPP",
+          "votes": 1458,
+          "pct": 2.17
+        },
+        {
+          "party": "IND4",
+          "votes": 440,
+          "pct": 0.66
+        }
+      ],
+      "otherVotes": 2197
+    },
+    "EC-06C": {
+      "valid": 59165,
+      "rejected": 1670,
+      "polled": 60835,
+      "electors": 73426,
+      "turnoutPct": 82.9,
+      "rejectedPct": 2.75,
+      "winner": {
+        "party": "SJB",
+        "votes": 23309,
+        "pct": 39.4
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 22894,
+        "pct": 38.7
+      },
+      "margin": 0.7,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 23309,
+          "pct": 39.4
+        },
+        {
+          "party": "NPP",
+          "votes": 22894,
+          "pct": 38.7
+        },
+        {
+          "party": "IND16",
+          "votes": 9137,
+          "pct": 15.44
+        },
+        {
+          "party": "SLPP",
+          "votes": 1358,
+          "pct": 2.3
+        },
+        {
+          "party": "IND4",
+          "votes": 371,
+          "pct": 0.63
+        }
+      ],
+      "otherVotes": 2096
+    },
+    "EC-06D": {
+      "valid": 68407,
+      "rejected": 2317,
+      "polled": 70724,
+      "electors": 86874,
+      "turnoutPct": 81.4,
+      "rejectedPct": 3.28,
+      "winner": {
+        "party": "SJB",
+        "votes": 29896,
+        "pct": 43.7
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 17074,
+        "pct": 24.96
+      },
+      "margin": 18.74,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 29896,
+          "pct": 43.7
+        },
+        {
+          "party": "NPP",
+          "votes": 17074,
+          "pct": 24.96
+        },
+        {
+          "party": "IND16",
+          "votes": 15140,
+          "pct": 22.13
+        },
+        {
+          "party": "SLPP",
+          "votes": 3008,
+          "pct": 4.4
+        },
+        {
+          "party": "IND4",
+          "votes": 566,
+          "pct": 0.83
+        }
+      ],
+      "otherVotes": 2723
+    },
+    "EC-06P": {
+      "valid": 18975,
+      "rejected": 536,
+      "polled": 19511,
+      "electors": 19727,
+      "turnoutPct": 98.9,
+      "rejectedPct": 2.75,
+      "winner": {
+        "party": "NPP",
+        "votes": 8946,
+        "pct": 47.15
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 5087,
+        "pct": 26.81
+      },
+      "margin": 20.34,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 8946,
+          "pct": 47.15
+        },
+        {
+          "party": "IND16",
+          "votes": 5087,
+          "pct": 26.81
+        },
+        {
+          "party": "SJB",
+          "votes": 4334,
+          "pct": 22.84
+        },
+        {
+          "party": "SLPP",
+          "votes": 308,
+          "pct": 1.62
+        },
+        {
+          "party": "SLCP",
+          "votes": 73,
+          "pct": 0.38
+        }
+      ],
+      "otherVotes": 227
+    },
+    "EC-07": {
+      "valid": 712820,
+      "rejected": 12541,
+      "polled": 725361,
+      "electors": 903163,
+      "turnoutPct": 80.3,
+      "rejectedPct": 1.73,
+      "winner": {
+        "party": "NPP",
+        "votes": 366721,
+        "pct": 51.45
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 189555,
+        "pct": 26.59
+      },
+      "margin": 24.85,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 366721,
+          "pct": 51.45
+        },
+        {
+          "party": "SJB",
+          "votes": 189555,
+          "pct": 26.59
+        },
+        {
+          "party": "IND16",
+          "votes": 107336,
+          "pct": 15.06
+        },
+        {
+          "party": "SLPP",
+          "votes": 24382,
+          "pct": 3.42
+        },
+        {
+          "party": "SLCP",
+          "votes": 8263,
+          "pct": 1.16
+        }
+      ],
+      "otherVotes": 16563
+    },
+    "EC-07A": {
+      "valid": 40821,
+      "rejected": 723,
+      "polled": 41544,
+      "electors": 54973,
+      "turnoutPct": 75.6,
+      "rejectedPct": 1.74,
+      "winner": {
+        "party": "NPP",
+        "votes": 20096,
+        "pct": 49.23
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 12339,
+        "pct": 30.23
+      },
+      "margin": 19,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 20096,
+          "pct": 49.23
+        },
+        {
+          "party": "SJB",
+          "votes": 12339,
+          "pct": 30.23
+        },
+        {
+          "party": "IND16",
+          "votes": 5345,
+          "pct": 13.09
+        },
+        {
+          "party": "SLPP",
+          "votes": 1689,
+          "pct": 4.14
+        },
+        {
+          "party": "SLCP",
+          "votes": 403,
+          "pct": 0.99
+        }
+      ],
+      "otherVotes": 949
+    },
+    "EC-07B": {
+      "valid": 62314,
+      "rejected": 1169,
+      "polled": 63483,
+      "electors": 79794,
+      "turnoutPct": 79.6,
+      "rejectedPct": 1.84,
+      "winner": {
+        "party": "NPP",
+        "votes": 33026,
+        "pct": 53
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 17453,
+        "pct": 28.01
+      },
+      "margin": 24.99,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 33026,
+          "pct": 53
+        },
+        {
+          "party": "SJB",
+          "votes": 17453,
+          "pct": 28.01
+        },
+        {
+          "party": "IND16",
+          "votes": 7428,
+          "pct": 11.92
+        },
+        {
+          "party": "SLPP",
+          "votes": 2245,
+          "pct": 3.6
+        },
+        {
+          "party": "SLCP",
+          "votes": 699,
+          "pct": 1.12
+        }
+      ],
+      "otherVotes": 1463
+    },
+    "EC-07C": {
+      "valid": 59563,
+      "rejected": 807,
+      "polled": 60370,
+      "electors": 77636,
+      "turnoutPct": 77.8,
+      "rejectedPct": 1.34,
+      "winner": {
+        "party": "NPP",
+        "votes": 32895,
+        "pct": 55.23
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 15110,
+        "pct": 25.37
+      },
+      "margin": 29.86,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 32895,
+          "pct": 55.23
+        },
+        {
+          "party": "SJB",
+          "votes": 15110,
+          "pct": 25.37
+        },
+        {
+          "party": "IND16",
+          "votes": 7032,
+          "pct": 11.81
+        },
+        {
+          "party": "SLPP",
+          "votes": 2310,
+          "pct": 3.88
+        },
+        {
+          "party": "SLCP",
+          "votes": 537,
+          "pct": 0.9
+        }
+      ],
+      "otherVotes": 1679
+    },
+    "EC-07D": {
+      "valid": 72137,
+      "rejected": 1265,
+      "polled": 73402,
+      "electors": 92167,
+      "turnoutPct": 79.6,
+      "rejectedPct": 1.72,
+      "winner": {
+        "party": "NPP",
+        "votes": 35612,
+        "pct": 49.37
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 19733,
+        "pct": 27.35
+      },
+      "margin": 22.01,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 35612,
+          "pct": 49.37
+        },
+        {
+          "party": "SJB",
+          "votes": 19733,
+          "pct": 27.35
+        },
+        {
+          "party": "IND16",
+          "votes": 11595,
+          "pct": 16.07
+        },
+        {
+          "party": "SLPP",
+          "votes": 2571,
+          "pct": 3.56
+        },
+        {
+          "party": "SLCP",
+          "votes": 822,
+          "pct": 1.14
+        }
+      ],
+      "otherVotes": 1804
+    },
+    "EC-07E": {
+      "valid": 82256,
+      "rejected": 1442,
+      "polled": 83698,
+      "electors": 103104,
+      "turnoutPct": 81.2,
+      "rejectedPct": 1.72,
+      "winner": {
+        "party": "NPP",
+        "votes": 35677,
+        "pct": 43.37
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 25388,
+        "pct": 30.86
+      },
+      "margin": 12.51,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 35677,
+          "pct": 43.37
+        },
+        {
+          "party": "SJB",
+          "votes": 25388,
+          "pct": 30.86
+        },
+        {
+          "party": "IND16",
+          "votes": 14741,
+          "pct": 17.92
+        },
+        {
+          "party": "SLPP",
+          "votes": 3013,
+          "pct": 3.66
+        },
+        {
+          "party": "SLCP",
+          "votes": 876,
+          "pct": 1.06
+        }
+      ],
+      "otherVotes": 2561
+    },
+    "EC-07F": {
+      "valid": 79931,
+      "rejected": 1591,
+      "polled": 81522,
+      "electors": 100243,
+      "turnoutPct": 81.3,
+      "rejectedPct": 1.95,
+      "winner": {
+        "party": "NPP",
+        "votes": 37301,
+        "pct": 46.67
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 23442,
+        "pct": 29.33
+      },
+      "margin": 17.34,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 37301,
+          "pct": 46.67
+        },
+        {
+          "party": "SJB",
+          "votes": 23442,
+          "pct": 29.33
+        },
+        {
+          "party": "IND16",
+          "votes": 12963,
+          "pct": 16.22
+        },
+        {
+          "party": "SLPP",
+          "votes": 3204,
+          "pct": 4.01
+        },
+        {
+          "party": "SLCP",
+          "votes": 820,
+          "pct": 1.03
+        }
+      ],
+      "otherVotes": 2201
+    },
+    "EC-07G": {
+      "valid": 60755,
+      "rejected": 1116,
+      "polled": 61871,
+      "electors": 80860,
+      "turnoutPct": 76.5,
+      "rejectedPct": 1.8,
+      "winner": {
+        "party": "NPP",
+        "votes": 30323,
+        "pct": 49.91
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 17157,
+        "pct": 28.24
+      },
+      "margin": 21.67,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 30323,
+          "pct": 49.91
+        },
+        {
+          "party": "SJB",
+          "votes": 17157,
+          "pct": 28.24
+        },
+        {
+          "party": "IND16",
+          "votes": 8004,
+          "pct": 13.17
+        },
+        {
+          "party": "SLPP",
+          "votes": 3236,
+          "pct": 5.33
+        },
+        {
+          "party": "SLCP",
+          "votes": 623,
+          "pct": 1.03
+        }
+      ],
+      "otherVotes": 1412
+    },
+    "EC-07H": {
+      "valid": 65220,
+      "rejected": 1001,
+      "polled": 66221,
+      "electors": 83799,
+      "turnoutPct": 79,
+      "rejectedPct": 1.51,
+      "winner": {
+        "party": "NPP",
+        "votes": 34839,
+        "pct": 53.42
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 17935,
+        "pct": 27.5
+      },
+      "margin": 25.92,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 34839,
+          "pct": 53.42
+        },
+        {
+          "party": "SJB",
+          "votes": 17935,
+          "pct": 27.5
+        },
+        {
+          "party": "IND16",
+          "votes": 9478,
+          "pct": 14.53
+        },
+        {
+          "party": "SLPP",
+          "votes": 1220,
+          "pct": 1.87
+        },
+        {
+          "party": "SLCP",
+          "votes": 718,
+          "pct": 1.1
+        }
+      ],
+      "otherVotes": 1030
+    },
+    "EC-07I": {
+      "valid": 82005,
+      "rejected": 1355,
+      "polled": 83360,
+      "electors": 103687,
+      "turnoutPct": 80.4,
+      "rejectedPct": 1.63,
+      "winner": {
+        "party": "NPP",
+        "votes": 45632,
+        "pct": 55.65
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 18731,
+        "pct": 22.84
+      },
+      "margin": 32.8,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 45632,
+          "pct": 55.65
+        },
+        {
+          "party": "SJB",
+          "votes": 18731,
+          "pct": 22.84
+        },
+        {
+          "party": "IND16",
+          "votes": 12922,
+          "pct": 15.76
+        },
+        {
+          "party": "SLPP",
+          "votes": 1990,
+          "pct": 2.43
+        },
+        {
+          "party": "SLCP",
+          "votes": 1198,
+          "pct": 1.46
+        }
+      ],
+      "otherVotes": 1532
+    },
+    "EC-07J": {
+      "valid": 67678,
+      "rejected": 1145,
+      "polled": 68823,
+      "electors": 85463,
+      "turnoutPct": 80.5,
+      "rejectedPct": 1.66,
+      "winner": {
+        "party": "NPP",
+        "votes": 35428,
+        "pct": 52.35
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 16929,
+        "pct": 25.01
+      },
+      "margin": 27.33,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 35428,
+          "pct": 52.35
+        },
+        {
+          "party": "SJB",
+          "votes": 16929,
+          "pct": 25.01
+        },
+        {
+          "party": "IND16",
+          "votes": 10602,
+          "pct": 15.67
+        },
+        {
+          "party": "SLPP",
+          "votes": 2041,
+          "pct": 3.02
+        },
+        {
+          "party": "SLCP",
+          "votes": 1192,
+          "pct": 1.76
+        }
+      ],
+      "otherVotes": 1486
+    },
+    "EC-07P": {
+      "valid": 40140,
+      "rejected": 927,
+      "polled": 41067,
+      "electors": 41437,
+      "turnoutPct": 99.1,
+      "rejectedPct": 2.26,
+      "winner": {
+        "party": "NPP",
+        "votes": 25892,
+        "pct": 64.5
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 7226,
+        "pct": 18
+      },
+      "margin": 46.5,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 25892,
+          "pct": 64.5
+        },
+        {
+          "party": "IND16",
+          "votes": 7226,
+          "pct": 18
+        },
+        {
+          "party": "SJB",
+          "votes": 5338,
+          "pct": 13.3
+        },
+        {
+          "party": "SLPP",
+          "votes": 863,
+          "pct": 2.15
+        },
+        {
+          "party": "SLCP",
+          "votes": 375,
+          "pct": 0.93
+        }
+      ],
+      "otherVotes": 446
+    },
+    "EC-08": {
+      "valid": 548329,
+      "rejected": 9687,
+      "polled": 558016,
+      "electors": 686175,
+      "turnoutPct": 81.3,
+      "rejectedPct": 1.74,
+      "winner": {
+        "party": "NPP",
+        "votes": 287662,
+        "pct": 52.46
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 147462,
+        "pct": 26.89
+      },
+      "margin": 25.57,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 287662,
+          "pct": 52.46
+        },
+        {
+          "party": "SJB",
+          "votes": 147462,
+          "pct": 26.89
+        },
+        {
+          "party": "IND16",
+          "votes": 79249,
+          "pct": 14.45
+        },
+        {
+          "party": "SLPP",
+          "votes": 14962,
+          "pct": 2.73
+        },
+        {
+          "party": "SLCP",
+          "votes": 7316,
+          "pct": 1.33
+        }
+      ],
+      "otherVotes": 11678
+    },
+    "EC-08A": {
+      "valid": 81968,
+      "rejected": 1921,
+      "polled": 83889,
+      "electors": 104770,
+      "turnoutPct": 80.1,
+      "rejectedPct": 2.29,
+      "winner": {
+        "party": "NPP",
+        "votes": 36007,
+        "pct": 43.93
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 24580,
+        "pct": 29.99
+      },
+      "margin": 13.94,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 36007,
+          "pct": 43.93
+        },
+        {
+          "party": "SJB",
+          "votes": 24580,
+          "pct": 29.99
+        },
+        {
+          "party": "IND16",
+          "votes": 14479,
+          "pct": 17.66
+        },
+        {
+          "party": "SLPP",
+          "votes": 3098,
+          "pct": 3.78
+        },
+        {
+          "party": "SLCP",
+          "votes": 1007,
+          "pct": 1.23
+        }
+      ],
+      "otherVotes": 2797
+    },
+    "EC-08B": {
+      "valid": 75650,
+      "rejected": 1370,
+      "polled": 77020,
+      "electors": 95213,
+      "turnoutPct": 80.9,
+      "rejectedPct": 1.78,
+      "winner": {
+        "party": "NPP",
+        "votes": 35101,
+        "pct": 46.4
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 21442,
+        "pct": 28.34
+      },
+      "margin": 18.06,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 35101,
+          "pct": 46.4
+        },
+        {
+          "party": "SJB",
+          "votes": 21442,
+          "pct": 28.34
+        },
+        {
+          "party": "IND16",
+          "votes": 13273,
+          "pct": 17.55
+        },
+        {
+          "party": "SLPP",
+          "votes": 2608,
+          "pct": 3.45
+        },
+        {
+          "party": "SLCP",
+          "votes": 1058,
+          "pct": 1.4
+        }
+      ],
+      "otherVotes": 2168
+    },
+    "EC-08C": {
+      "valid": 79125,
+      "rejected": 1281,
+      "polled": 80406,
+      "electors": 98112,
+      "turnoutPct": 82,
+      "rejectedPct": 1.59,
+      "winner": {
+        "party": "NPP",
+        "votes": 41067,
+        "pct": 51.9
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 21265,
+        "pct": 26.88
+      },
+      "margin": 25.03,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 41067,
+          "pct": 51.9
+        },
+        {
+          "party": "SJB",
+          "votes": 21265,
+          "pct": 26.88
+        },
+        {
+          "party": "IND16",
+          "votes": 12154,
+          "pct": 15.36
+        },
+        {
+          "party": "SLPP",
+          "votes": 1678,
+          "pct": 2.12
+        },
+        {
+          "party": "SLCP",
+          "votes": 1344,
+          "pct": 1.7
+        }
+      ],
+      "otherVotes": 1617
+    },
+    "EC-08D": {
+      "valid": 65880,
+      "rejected": 1164,
+      "polled": 67044,
+      "electors": 82533,
+      "turnoutPct": 81.2,
+      "rejectedPct": 1.74,
+      "winner": {
+        "party": "NPP",
+        "votes": 35076,
+        "pct": 53.24
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 18548,
+        "pct": 28.15
+      },
+      "margin": 25.09,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 35076,
+          "pct": 53.24
+        },
+        {
+          "party": "SJB",
+          "votes": 18548,
+          "pct": 28.15
+        },
+        {
+          "party": "IND16",
+          "votes": 8265,
+          "pct": 12.55
+        },
+        {
+          "party": "SLPP",
+          "votes": 1802,
+          "pct": 2.74
+        },
+        {
+          "party": "SLCP",
+          "votes": 910,
+          "pct": 1.38
+        }
+      ],
+      "otherVotes": 1279
+    },
+    "EC-08E": {
+      "valid": 63462,
+      "rejected": 968,
+      "polled": 64430,
+      "electors": 81870,
+      "turnoutPct": 78.7,
+      "rejectedPct": 1.5,
+      "winner": {
+        "party": "NPP",
+        "votes": 34690,
+        "pct": 54.66
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 19516,
+        "pct": 30.75
+      },
+      "margin": 23.91,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 34690,
+          "pct": 54.66
+        },
+        {
+          "party": "SJB",
+          "votes": 19516,
+          "pct": 30.75
+        },
+        {
+          "party": "IND16",
+          "votes": 5701,
+          "pct": 8.98
+        },
+        {
+          "party": "SLPP",
+          "votes": 1775,
+          "pct": 2.8
+        },
+        {
+          "party": "SLCP",
+          "votes": 671,
+          "pct": 1.06
+        }
+      ],
+      "otherVotes": 1109
+    },
+    "EC-08F": {
+      "valid": 73791,
+      "rejected": 1111,
+      "polled": 74902,
+      "electors": 92643,
+      "turnoutPct": 80.9,
+      "rejectedPct": 1.48,
+      "winner": {
+        "party": "NPP",
+        "votes": 43827,
+        "pct": 59.39
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 16822,
+        "pct": 22.8
+      },
+      "margin": 36.6,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 43827,
+          "pct": 59.39
+        },
+        {
+          "party": "SJB",
+          "votes": 16822,
+          "pct": 22.8
+        },
+        {
+          "party": "IND16",
+          "votes": 9661,
+          "pct": 13.09
+        },
+        {
+          "party": "SLPP",
+          "votes": 1489,
+          "pct": 2.02
+        },
+        {
+          "party": "SLCP",
+          "votes": 1003,
+          "pct": 1.36
+        }
+      ],
+      "otherVotes": 989
+    },
+    "EC-08G": {
+      "valid": 78549,
+      "rejected": 1279,
+      "polled": 79828,
+      "electors": 100152,
+      "turnoutPct": 79.7,
+      "rejectedPct": 1.6,
+      "winner": {
+        "party": "NPP",
+        "votes": 42182,
+        "pct": 53.7
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 21248,
+        "pct": 27.05
+      },
+      "margin": 26.65,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 42182,
+          "pct": 53.7
+        },
+        {
+          "party": "SJB",
+          "votes": 21248,
+          "pct": 27.05
+        },
+        {
+          "party": "IND16",
+          "votes": 10628,
+          "pct": 13.53
+        },
+        {
+          "party": "SLPP",
+          "votes": 1969,
+          "pct": 2.51
+        },
+        {
+          "party": "SLCP",
+          "votes": 1064,
+          "pct": 1.35
+        }
+      ],
+      "otherVotes": 1458
+    },
+    "EC-08P": {
+      "valid": 29904,
+      "rejected": 593,
+      "polled": 30497,
+      "electors": 30882,
+      "turnoutPct": 98.8,
+      "rejectedPct": 1.94,
+      "winner": {
+        "party": "NPP",
+        "votes": 19712,
+        "pct": 65.92
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 5088,
+        "pct": 17.01
+      },
+      "margin": 48.9,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 19712,
+          "pct": 65.92
+        },
+        {
+          "party": "IND16",
+          "votes": 5088,
+          "pct": 17.01
+        },
+        {
+          "party": "SJB",
+          "votes": 4041,
+          "pct": 13.51
+        },
+        {
+          "party": "SLPP",
+          "votes": 543,
+          "pct": 1.82
+        },
+        {
+          "party": "SLCP",
+          "votes": 259,
+          "pct": 0.87
+        }
+      ],
+      "otherVotes": 261
+    },
+    "EC-09": {
+      "valid": 427062,
+      "rejected": 6443,
+      "polled": 433505,
+      "electors": 520940,
+      "turnoutPct": 83.2,
+      "rejectedPct": 1.49,
+      "winner": {
+        "party": "NPP",
+        "votes": 221913,
+        "pct": 51.96
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 131503,
+        "pct": 30.79
+      },
+      "margin": 21.17,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 221913,
+          "pct": 51.96
+        },
+        {
+          "party": "SJB",
+          "votes": 131503,
+          "pct": 30.79
+        },
+        {
+          "party": "IND16",
+          "votes": 33217,
+          "pct": 7.78
+        },
+        {
+          "party": "SLPP",
+          "votes": 26707,
+          "pct": 6.25
+        },
+        {
+          "party": "SLCP",
+          "votes": 2978,
+          "pct": 0.7
+        }
+      ],
+      "otherVotes": 10744
+    },
+    "EC-09A": {
+      "valid": 86526,
+      "rejected": 1414,
+      "polled": 87940,
+      "electors": 106421,
+      "turnoutPct": 82.6,
+      "rejectedPct": 1.61,
+      "winner": {
+        "party": "NPP",
+        "votes": 41086,
+        "pct": 47.48
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 26614,
+        "pct": 30.76
+      },
+      "margin": 16.73,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 41086,
+          "pct": 47.48
+        },
+        {
+          "party": "SJB",
+          "votes": 26614,
+          "pct": 30.76
+        },
+        {
+          "party": "IND16",
+          "votes": 9192,
+          "pct": 10.62
+        },
+        {
+          "party": "SLPP",
+          "votes": 6250,
+          "pct": 7.22
+        },
+        {
+          "party": "SLCP",
+          "votes": 841,
+          "pct": 0.97
+        }
+      ],
+      "otherVotes": 2543
+    },
+    "EC-09B": {
+      "valid": 64239,
+      "rejected": 959,
+      "polled": 65198,
+      "electors": 79751,
+      "turnoutPct": 81.8,
+      "rejectedPct": 1.47,
+      "winner": {
+        "party": "NPP",
+        "votes": 34321,
+        "pct": 53.43
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 16820,
+        "pct": 26.18
+      },
+      "margin": 27.24,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 34321,
+          "pct": 53.43
+        },
+        {
+          "party": "SJB",
+          "votes": 16820,
+          "pct": 26.18
+        },
+        {
+          "party": "IND16",
+          "votes": 5460,
+          "pct": 8.5
+        },
+        {
+          "party": "SLPP",
+          "votes": 5385,
+          "pct": 8.38
+        },
+        {
+          "party": "SLCP",
+          "votes": 700,
+          "pct": 1.09
+        }
+      ],
+      "otherVotes": 1553
+    },
+    "EC-09C": {
+      "valid": 106537,
+      "rejected": 1584,
+      "polled": 108121,
+      "electors": 130755,
+      "turnoutPct": 82.7,
+      "rejectedPct": 1.47,
+      "winner": {
+        "party": "NPP",
+        "votes": 59117,
+        "pct": 55.49
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 28857,
+        "pct": 27.09
+      },
+      "margin": 28.4,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 59117,
+          "pct": 55.49
+        },
+        {
+          "party": "SJB",
+          "votes": 28857,
+          "pct": 27.09
+        },
+        {
+          "party": "IND16",
+          "votes": 9056,
+          "pct": 8.5
+        },
+        {
+          "party": "SLPP",
+          "votes": 5964,
+          "pct": 5.6
+        },
+        {
+          "party": "SLCP",
+          "votes": 863,
+          "pct": 0.81
+        }
+      ],
+      "otherVotes": 2680
+    },
+    "EC-09D": {
+      "valid": 148211,
+      "rejected": 2037,
+      "polled": 150248,
+      "electors": 181846,
+      "turnoutPct": 82.6,
+      "rejectedPct": 1.36,
+      "winner": {
+        "party": "NPP",
+        "votes": 72907,
+        "pct": 49.19
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 55815,
+        "pct": 37.66
+      },
+      "margin": 11.53,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 72907,
+          "pct": 49.19
+        },
+        {
+          "party": "SJB",
+          "votes": 55815,
+          "pct": 37.66
+        },
+        {
+          "party": "SLPP",
+          "votes": 8289,
+          "pct": 5.59
+        },
+        {
+          "party": "IND16",
+          "votes": 7007,
+          "pct": 4.73
+        },
+        {
+          "party": "IND13",
+          "votes": 676,
+          "pct": 0.46
+        }
+      ],
+      "otherVotes": 3517
+    },
+    "EC-09P": {
+      "valid": 21549,
+      "rejected": 449,
+      "polled": 21998,
+      "electors": 22167,
+      "turnoutPct": 99.2,
+      "rejectedPct": 2.04,
+      "winner": {
+        "party": "NPP",
+        "votes": 14482,
+        "pct": 67.2
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 3397,
+        "pct": 15.76
+      },
+      "margin": 51.44,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 14482,
+          "pct": 67.2
+        },
+        {
+          "party": "SJB",
+          "votes": 3397,
+          "pct": 15.76
+        },
+        {
+          "party": "IND16",
+          "votes": 2502,
+          "pct": 11.61
+        },
+        {
+          "party": "SLPP",
+          "votes": 819,
+          "pct": 3.8
+        },
+        {
+          "party": "SLCP",
+          "votes": 105,
+          "pct": 0.49
+        }
+      ],
+      "otherVotes": 244
+    },
+    "EC-10": {
+      "valid": 371688,
+      "rejected": 25353,
+      "polled": 397041,
+      "electors": 593187,
+      "turnoutPct": 66.9,
+      "rejectedPct": 6.39,
+      "winner": {
+        "party": "SJB",
+        "votes": 121177,
+        "pct": 32.6
+      },
+      "runnerUp": {
+        "party": "IND9",
+        "votes": 116688,
+        "pct": 31.39
+      },
+      "margin": 1.21,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 121177,
+          "pct": 32.6
+        },
+        {
+          "party": "IND9",
+          "votes": 116688,
+          "pct": 31.39
+        },
+        {
+          "party": "IND16",
+          "votes": 84558,
+          "pct": 22.75
+        },
+        {
+          "party": "NPP",
+          "votes": 27086,
+          "pct": 7.29
+        },
+        {
+          "party": "IND4",
+          "votes": 6074,
+          "pct": 1.63
+        }
+      ],
+      "otherVotes": 16105
+    },
+    "EC-10A": {
+      "valid": 16174,
+      "rejected": 1028,
+      "polled": 17202,
+      "electors": 24860,
+      "turnoutPct": 69.2,
+      "rejectedPct": 5.98,
+      "winner": {
+        "party": "IND9",
+        "votes": 5726,
+        "pct": 35.4
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 5155,
+        "pct": 31.87
+      },
+      "margin": 3.53,
+      "topParties": [
+        {
+          "party": "IND9",
+          "votes": 5726,
+          "pct": 35.4
+        },
+        {
+          "party": "IND16",
+          "votes": 5155,
+          "pct": 31.87
+        },
+        {
+          "party": "SJB",
+          "votes": 3687,
+          "pct": 22.8
+        },
+        {
+          "party": "NPP",
+          "votes": 593,
+          "pct": 3.67
+        },
+        {
+          "party": "IND4",
+          "votes": 259,
+          "pct": 1.6
+        }
+      ],
+      "otherVotes": 754
+    },
+    "EC-10B": {
+      "valid": 31589,
+      "rejected": 2437,
+      "polled": 34026,
+      "electors": 52092,
+      "turnoutPct": 65.3,
+      "rejectedPct": 7.16,
+      "winner": {
+        "party": "IND9",
+        "votes": 11170,
+        "pct": 35.36
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 8749,
+        "pct": 27.7
+      },
+      "margin": 7.66,
+      "topParties": [
+        {
+          "party": "IND9",
+          "votes": 11170,
+          "pct": 35.36
+        },
+        {
+          "party": "SJB",
+          "votes": 8749,
+          "pct": 27.7
+        },
+        {
+          "party": "IND16",
+          "votes": 7367,
+          "pct": 23.32
+        },
+        {
+          "party": "NPP",
+          "votes": 1887,
+          "pct": 5.97
+        },
+        {
+          "party": "IND4",
+          "votes": 600,
+          "pct": 1.9
+        }
+      ],
+      "otherVotes": 1816
+    },
+    "EC-10C": {
+      "valid": 27593,
+      "rejected": 2144,
+      "polled": 29737,
+      "electors": 45989,
+      "turnoutPct": 64.7,
+      "rejectedPct": 7.21,
+      "winner": {
+        "party": "SJB",
+        "votes": 8708,
+        "pct": 31.56
+      },
+      "runnerUp": {
+        "party": "IND9",
+        "votes": 8365,
+        "pct": 30.32
+      },
+      "margin": 1.24,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 8708,
+          "pct": 31.56
+        },
+        {
+          "party": "IND9",
+          "votes": 8365,
+          "pct": 30.32
+        },
+        {
+          "party": "IND16",
+          "votes": 6587,
+          "pct": 23.87
+        },
+        {
+          "party": "NPP",
+          "votes": 1935,
+          "pct": 7.01
+        },
+        {
+          "party": "IND4",
+          "votes": 553,
+          "pct": 2
+        }
+      ],
+      "otherVotes": 1445
+    },
+    "EC-10D": {
+      "valid": 37330,
+      "rejected": 2644,
+      "polled": 39974,
+      "electors": 60144,
+      "turnoutPct": 66.5,
+      "rejectedPct": 6.61,
+      "winner": {
+        "party": "SJB",
+        "votes": 11609,
+        "pct": 31.1
+      },
+      "runnerUp": {
+        "party": "IND9",
+        "votes": 11587,
+        "pct": 31.04
+      },
+      "margin": 0.06,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 11609,
+          "pct": 31.1
+        },
+        {
+          "party": "IND9",
+          "votes": 11587,
+          "pct": 31.04
+        },
+        {
+          "party": "IND16",
+          "votes": 8871,
+          "pct": 23.76
+        },
+        {
+          "party": "NPP",
+          "votes": 2886,
+          "pct": 7.73
+        },
+        {
+          "party": "IND4",
+          "votes": 629,
+          "pct": 1.68
+        }
+      ],
+      "otherVotes": 1748
+    },
+    "EC-10E": {
+      "valid": 37287,
+      "rejected": 2817,
+      "polled": 40104,
+      "electors": 62449,
+      "turnoutPct": 64.2,
+      "rejectedPct": 7.02,
+      "winner": {
+        "party": "SJB",
+        "votes": 12639,
+        "pct": 33.9
+      },
+      "runnerUp": {
+        "party": "IND9",
+        "votes": 11410,
+        "pct": 30.6
+      },
+      "margin": 3.3,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 12639,
+          "pct": 33.9
+        },
+        {
+          "party": "IND9",
+          "votes": 11410,
+          "pct": 30.6
+        },
+        {
+          "party": "IND16",
+          "votes": 7654,
+          "pct": 20.53
+        },
+        {
+          "party": "NPP",
+          "votes": 2541,
+          "pct": 6.81
+        },
+        {
+          "party": "IND4",
+          "votes": 867,
+          "pct": 2.33
+        }
+      ],
+      "otherVotes": 2176
+    },
+    "EC-10F": {
+      "valid": 22583,
+      "rejected": 1586,
+      "polled": 24169,
+      "electors": 41255,
+      "turnoutPct": 58.6,
+      "rejectedPct": 6.56,
+      "winner": {
+        "party": "IND9",
+        "votes": 8467,
+        "pct": 37.49
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 5996,
+        "pct": 26.55
+      },
+      "margin": 10.94,
+      "topParties": [
+        {
+          "party": "IND9",
+          "votes": 8467,
+          "pct": 37.49
+        },
+        {
+          "party": "SJB",
+          "votes": 5996,
+          "pct": 26.55
+        },
+        {
+          "party": "IND16",
+          "votes": 5259,
+          "pct": 23.29
+        },
+        {
+          "party": "NPP",
+          "votes": 1670,
+          "pct": 7.39
+        },
+        {
+          "party": "IND4",
+          "votes": 295,
+          "pct": 1.31
+        }
+      ],
+      "otherVotes": 896
+    },
+    "EC-10G": {
+      "valid": 22988,
+      "rejected": 1548,
+      "polled": 24536,
+      "electors": 39681,
+      "turnoutPct": 61.8,
+      "rejectedPct": 6.31,
+      "winner": {
+        "party": "IND9",
+        "votes": 8658,
+        "pct": 37.66
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 6100,
+        "pct": 26.54
+      },
+      "margin": 11.13,
+      "topParties": [
+        {
+          "party": "IND9",
+          "votes": 8658,
+          "pct": 37.66
+        },
+        {
+          "party": "SJB",
+          "votes": 6100,
+          "pct": 26.54
+        },
+        {
+          "party": "IND16",
+          "votes": 5162,
+          "pct": 22.46
+        },
+        {
+          "party": "NPP",
+          "votes": 1806,
+          "pct": 7.86
+        },
+        {
+          "party": "IND4",
+          "votes": 338,
+          "pct": 1.47
+        }
+      ],
+      "otherVotes": 924
+    },
+    "EC-10H": {
+      "valid": 31186,
+      "rejected": 2263,
+      "polled": 33449,
+      "electors": 55829,
+      "turnoutPct": 59.9,
+      "rejectedPct": 6.77,
+      "winner": {
+        "party": "SJB",
+        "votes": 10956,
+        "pct": 35.13
+      },
+      "runnerUp": {
+        "party": "IND9",
+        "votes": 9159,
+        "pct": 29.37
+      },
+      "margin": 5.76,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 10956,
+          "pct": 35.13
+        },
+        {
+          "party": "IND9",
+          "votes": 9159,
+          "pct": 29.37
+        },
+        {
+          "party": "IND16",
+          "votes": 6160,
+          "pct": 19.75
+        },
+        {
+          "party": "NPP",
+          "votes": 2692,
+          "pct": 8.63
+        },
+        {
+          "party": "IND4",
+          "votes": 624,
+          "pct": 2
+        }
+      ],
+      "otherVotes": 1595
+    },
+    "EC-10I": {
+      "valid": 31526,
+      "rejected": 1860,
+      "polled": 33386,
+      "electors": 50853,
+      "turnoutPct": 65.7,
+      "rejectedPct": 5.57,
+      "winner": {
+        "party": "IND9",
+        "votes": 10097,
+        "pct": 32.03
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 8804,
+        "pct": 27.93
+      },
+      "margin": 4.1,
+      "topParties": [
+        {
+          "party": "IND9",
+          "votes": 10097,
+          "pct": 32.03
+        },
+        {
+          "party": "IND16",
+          "votes": 8804,
+          "pct": 27.93
+        },
+        {
+          "party": "SJB",
+          "votes": 7464,
+          "pct": 23.68
+        },
+        {
+          "party": "NPP",
+          "votes": 3835,
+          "pct": 12.16
+        },
+        {
+          "party": "IND4",
+          "votes": 276,
+          "pct": 0.88
+        }
+      ],
+      "otherVotes": 1050
+    },
+    "EC-10J": {
+      "valid": 24786,
+      "rejected": 1242,
+      "polled": 26028,
+      "electors": 37355,
+      "turnoutPct": 69.7,
+      "rejectedPct": 4.77,
+      "winner": {
+        "party": "IND9",
+        "votes": 7494,
+        "pct": 30.23
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 7080,
+        "pct": 28.56
+      },
+      "margin": 1.67,
+      "topParties": [
+        {
+          "party": "IND9",
+          "votes": 7494,
+          "pct": 30.23
+        },
+        {
+          "party": "IND16",
+          "votes": 7080,
+          "pct": 28.56
+        },
+        {
+          "party": "SJB",
+          "votes": 7058,
+          "pct": 28.48
+        },
+        {
+          "party": "NPP",
+          "votes": 2186,
+          "pct": 8.82
+        },
+        {
+          "party": "IND4",
+          "votes": 198,
+          "pct": 0.8
+        }
+      ],
+      "otherVotes": 770
+    },
+    "EC-10K": {
+      "valid": 64585,
+      "rejected": 4695,
+      "polled": 69280,
+      "electors": 97251,
+      "turnoutPct": 71.2,
+      "rejectedPct": 6.78,
+      "winner": {
+        "party": "SJB",
+        "votes": 30571,
+        "pct": 47.33
+      },
+      "runnerUp": {
+        "party": "IND9",
+        "votes": 20348,
+        "pct": 31.51
+      },
+      "margin": 15.83,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 30571,
+          "pct": 47.33
+        },
+        {
+          "party": "IND9",
+          "votes": 20348,
+          "pct": 31.51
+        },
+        {
+          "party": "IND16",
+          "votes": 7182,
+          "pct": 11.12
+        },
+        {
+          "party": "NPP",
+          "votes": 2805,
+          "pct": 4.34
+        },
+        {
+          "party": "IND4",
+          "votes": 1238,
+          "pct": 1.92
+        }
+      ],
+      "otherVotes": 2441
+    },
+    "EC-10P": {
+      "valid": 24061,
+      "rejected": 1089,
+      "polled": 25150,
+      "electors": 25429,
+      "turnoutPct": 98.9,
+      "rejectedPct": 4.33,
+      "winner": {
+        "party": "IND16",
+        "votes": 9277,
+        "pct": 38.56
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 7640,
+        "pct": 31.75
+      },
+      "margin": 6.8,
+      "topParties": [
+        {
+          "party": "IND16",
+          "votes": 9277,
+          "pct": 38.56
+        },
+        {
+          "party": "SJB",
+          "votes": 7640,
+          "pct": 31.75
+        },
+        {
+          "party": "IND9",
+          "votes": 4207,
+          "pct": 17.48
+        },
+        {
+          "party": "NPP",
+          "votes": 2250,
+          "pct": 9.35
+        },
+        {
+          "party": "IND4",
+          "votes": 197,
+          "pct": 0.82
+        }
+      ],
+      "otherVotes": 490
+    },
+    "EC-11": {
+      "valid": 217269,
+      "rejected": 9381,
+      "polled": 226650,
+      "electors": 306081,
+      "turnoutPct": 74,
+      "rejectedPct": 4.14,
+      "winner": {
+        "party": "SJB",
+        "votes": 95422,
+        "pct": 43.92
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 52573,
+        "pct": 24.2
+      },
+      "margin": 19.72,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 95422,
+          "pct": 43.92
+        },
+        {
+          "party": "IND16",
+          "votes": 52573,
+          "pct": 24.2
+        },
+        {
+          "party": "IND9",
+          "votes": 36377,
+          "pct": 16.74
+        },
+        {
+          "party": "NPP",
+          "votes": 21412,
+          "pct": 9.86
+        },
+        {
+          "party": "IND4",
+          "votes": 3240,
+          "pct": 1.49
+        }
+      ],
+      "otherVotes": 8245
+    },
+    "EC-11A": {
+      "valid": 63412,
+      "rejected": 2082,
+      "polled": 65494,
+      "electors": 86509,
+      "turnoutPct": 75.7,
+      "rejectedPct": 3.18,
+      "winner": {
+        "party": "SJB",
+        "votes": 28491,
+        "pct": 44.93
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 17181,
+        "pct": 27.09
+      },
+      "margin": 17.84,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 28491,
+          "pct": 44.93
+        },
+        {
+          "party": "IND16",
+          "votes": 17181,
+          "pct": 27.09
+        },
+        {
+          "party": "IND9",
+          "votes": 10757,
+          "pct": 16.96
+        },
+        {
+          "party": "NPP",
+          "votes": 4276,
+          "pct": 6.74
+        },
+        {
+          "party": "IND4",
+          "votes": 802,
+          "pct": 1.26
+        }
+      ],
+      "otherVotes": 1905
+    },
+    "EC-11B": {
+      "valid": 85808,
+      "rejected": 3395,
+      "polled": 89203,
+      "electors": 122860,
+      "turnoutPct": 72.6,
+      "rejectedPct": 3.81,
+      "winner": {
+        "party": "SJB",
+        "votes": 33731,
+        "pct": 39.31
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 24018,
+        "pct": 27.99
+      },
+      "margin": 11.32,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 33731,
+          "pct": 39.31
+        },
+        {
+          "party": "IND16",
+          "votes": 24018,
+          "pct": 27.99
+        },
+        {
+          "party": "IND9",
+          "votes": 11650,
+          "pct": 13.58
+        },
+        {
+          "party": "NPP",
+          "votes": 11591,
+          "pct": 13.51
+        },
+        {
+          "party": "IND4",
+          "votes": 1105,
+          "pct": 1.29
+        }
+      ],
+      "otherVotes": 3713
+    },
+    "EC-11C": {
+      "valid": 55285,
+      "rejected": 3560,
+      "polled": 58845,
+      "electors": 83323,
+      "turnoutPct": 70.6,
+      "rejectedPct": 6.05,
+      "winner": {
+        "party": "SJB",
+        "votes": 28301,
+        "pct": 51.19
+      },
+      "runnerUp": {
+        "party": "IND9",
+        "votes": 12810,
+        "pct": 23.17
+      },
+      "margin": 28.02,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 28301,
+          "pct": 51.19
+        },
+        {
+          "party": "IND9",
+          "votes": 12810,
+          "pct": 23.17
+        },
+        {
+          "party": "IND16",
+          "votes": 7117,
+          "pct": 12.87
+        },
+        {
+          "party": "NPP",
+          "votes": 3453,
+          "pct": 6.25
+        },
+        {
+          "party": "IND4",
+          "votes": 1220,
+          "pct": 2.21
+        }
+      ],
+      "otherVotes": 2384
+    },
+    "EC-11P": {
+      "valid": 12764,
+      "rejected": 344,
+      "polled": 13108,
+      "electors": 13389,
+      "turnoutPct": 97.9,
+      "rejectedPct": 2.62,
+      "winner": {
+        "party": "SJB",
+        "votes": 4899,
+        "pct": 38.38
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 4257,
+        "pct": 33.35
+      },
+      "margin": 5.03,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 4899,
+          "pct": 38.38
+        },
+        {
+          "party": "IND16",
+          "votes": 4257,
+          "pct": 33.35
+        },
+        {
+          "party": "NPP",
+          "votes": 2092,
+          "pct": 16.39
+        },
+        {
+          "party": "IND9",
+          "votes": 1160,
+          "pct": 9.09
+        },
+        {
+          "party": "IND4",
+          "votes": 113,
+          "pct": 0.89
+        }
+      ],
+      "otherVotes": 243
+    },
+    "EC-12": {
+      "valid": 318648,
+      "rejected": 8876,
+      "polled": 327524,
+      "electors": 449686,
+      "turnoutPct": 72.8,
+      "rejectedPct": 2.71,
+      "winner": {
+        "party": "SJB",
+        "votes": 139110,
+        "pct": 43.66
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 91132,
+        "pct": 28.6
+      },
+      "margin": 15.06,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 139110,
+          "pct": 43.66
+        },
+        {
+          "party": "IND16",
+          "votes": 91132,
+          "pct": 28.6
+        },
+        {
+          "party": "NPP",
+          "votes": 38832,
+          "pct": 12.19
+        },
+        {
+          "party": "IND9",
+          "votes": 36905,
+          "pct": 11.58
+        },
+        {
+          "party": "IND4",
+          "votes": 3057,
+          "pct": 0.96
+        }
+      ],
+      "otherVotes": 9612
+    },
+    "EC-12A": {
+      "valid": 92438,
+      "rejected": 2360,
+      "polled": 94798,
+      "electors": 131380,
+      "turnoutPct": 72.2,
+      "rejectedPct": 2.49,
+      "winner": {
+        "party": "SJB",
+        "votes": 45325,
+        "pct": 49.03
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 24782,
+        "pct": 26.81
+      },
+      "margin": 22.22,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 45325,
+          "pct": 49.03
+        },
+        {
+          "party": "IND16",
+          "votes": 24782,
+          "pct": 26.81
+        },
+        {
+          "party": "IND9",
+          "votes": 10890,
+          "pct": 11.78
+        },
+        {
+          "party": "NPP",
+          "votes": 7504,
+          "pct": 8.12
+        },
+        {
+          "party": "IND4",
+          "votes": 983,
+          "pct": 1.06
+        }
+      ],
+      "otherVotes": 2954
+    },
+    "EC-12B": {
+      "valid": 147738,
+      "rejected": 3861,
+      "polled": 151599,
+      "electors": 203232,
+      "turnoutPct": 74.6,
+      "rejectedPct": 2.55,
+      "winner": {
+        "party": "SJB",
+        "votes": 64068,
+        "pct": 43.37
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 41538,
+        "pct": 28.12
+      },
+      "margin": 15.25,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 64068,
+          "pct": 43.37
+        },
+        {
+          "party": "IND16",
+          "votes": 41538,
+          "pct": 28.12
+        },
+        {
+          "party": "NPP",
+          "votes": 24168,
+          "pct": 16.36
+        },
+        {
+          "party": "IND9",
+          "votes": 12758,
+          "pct": 8.64
+        },
+        {
+          "party": "IND4",
+          "votes": 1151,
+          "pct": 0.78
+        }
+      ],
+      "otherVotes": 4055
+    },
+    "EC-12C": {
+      "valid": 65768,
+      "rejected": 2420,
+      "polled": 68188,
+      "electors": 101958,
+      "turnoutPct": 66.9,
+      "rejectedPct": 3.55,
+      "winner": {
+        "party": "SJB",
+        "votes": 26512,
+        "pct": 40.31
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 18845,
+        "pct": 28.65
+      },
+      "margin": 11.66,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 26512,
+          "pct": 40.31
+        },
+        {
+          "party": "IND16",
+          "votes": 18845,
+          "pct": 28.65
+        },
+        {
+          "party": "IND9",
+          "votes": 12356,
+          "pct": 18.79
+        },
+        {
+          "party": "NPP",
+          "votes": 4681,
+          "pct": 7.12
+        },
+        {
+          "party": "IND4",
+          "votes": 883,
+          "pct": 1.34
+        }
+      ],
+      "otherVotes": 2491
+    },
+    "EC-12P": {
+      "valid": 12704,
+      "rejected": 235,
+      "polled": 12939,
+      "electors": 13116,
+      "turnoutPct": 98.7,
+      "rejectedPct": 1.82,
+      "winner": {
+        "party": "IND16",
+        "votes": 5967,
+        "pct": 46.97
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 3205,
+        "pct": 25.23
+      },
+      "margin": 21.74,
+      "topParties": [
+        {
+          "party": "IND16",
+          "votes": 5967,
+          "pct": 46.97
+        },
+        {
+          "party": "SJB",
+          "votes": 3205,
+          "pct": 25.23
+        },
+        {
+          "party": "NPP",
+          "votes": 2479,
+          "pct": 19.51
+        },
+        {
+          "party": "IND9",
+          "votes": 901,
+          "pct": 7.09
+        },
+        {
+          "party": "IND4",
+          "votes": 40,
+          "pct": 0.31
+        }
+      ],
+      "otherVotes": 112
+    },
+    "EC-13": {
+      "valid": 423397,
+      "rejected": 6563,
+      "polled": 429960,
+      "electors": 555432,
+      "turnoutPct": 77.4,
+      "rejectedPct": 1.53,
+      "winner": {
+        "party": "SJB",
+        "votes": 200384,
+        "pct": 47.33
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 108971,
+        "pct": 25.74
+      },
+      "margin": 21.59,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 200384,
+          "pct": 47.33
+        },
+        {
+          "party": "NPP",
+          "votes": 108971,
+          "pct": 25.74
+        },
+        {
+          "party": "IND16",
+          "votes": 86589,
+          "pct": 20.45
+        },
+        {
+          "party": "IND9",
+          "votes": 9985,
+          "pct": 2.36
+        },
+        {
+          "party": "SLPP",
+          "votes": 7570,
+          "pct": 1.79
+        }
+      ],
+      "otherVotes": 9898
+    },
+    "EC-13A": {
+      "valid": 142294,
+      "rejected": 1962,
+      "polled": 144256,
+      "electors": 172611,
+      "turnoutPct": 83.6,
+      "rejectedPct": 1.36,
+      "winner": {
+        "party": "NPP",
+        "votes": 60292,
+        "pct": 42.37
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 53410,
+        "pct": 37.53
+      },
+      "margin": 4.84,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 60292,
+          "pct": 42.37
+        },
+        {
+          "party": "SJB",
+          "votes": 53410,
+          "pct": 37.53
+        },
+        {
+          "party": "IND16",
+          "votes": 18577,
+          "pct": 13.06
+        },
+        {
+          "party": "SLPP",
+          "votes": 5630,
+          "pct": 3.96
+        },
+        {
+          "party": "SLCP",
+          "votes": 641,
+          "pct": 0.45
+        }
+      ],
+      "otherVotes": 3744
+    },
+    "EC-13B": {
+      "valid": 69464,
+      "rejected": 1103,
+      "polled": 70567,
+      "electors": 97118,
+      "turnoutPct": 72.7,
+      "rejectedPct": 1.56,
+      "winner": {
+        "party": "SJB",
+        "votes": 41791,
+        "pct": 60.16
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 15344,
+        "pct": 22.09
+      },
+      "margin": 38.07,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 41791,
+          "pct": 60.16
+        },
+        {
+          "party": "IND16",
+          "votes": 15344,
+          "pct": 22.09
+        },
+        {
+          "party": "NPP",
+          "votes": 8569,
+          "pct": 12.34
+        },
+        {
+          "party": "IND9",
+          "votes": 2299,
+          "pct": 3.31
+        },
+        {
+          "party": "IND4",
+          "votes": 268,
+          "pct": 0.39
+        }
+      ],
+      "otherVotes": 1193
+    },
+    "EC-13C": {
+      "valid": 57200,
+      "rejected": 950,
+      "polled": 58150,
+      "electors": 80368,
+      "turnoutPct": 72.4,
+      "rejectedPct": 1.63,
+      "winner": {
+        "party": "SJB",
+        "votes": 26873,
+        "pct": 46.98
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 15686,
+        "pct": 27.42
+      },
+      "margin": 19.56,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 26873,
+          "pct": 46.98
+        },
+        {
+          "party": "IND16",
+          "votes": 15686,
+          "pct": 27.42
+        },
+        {
+          "party": "NPP",
+          "votes": 10937,
+          "pct": 19.12
+        },
+        {
+          "party": "IND9",
+          "votes": 2623,
+          "pct": 4.59
+        },
+        {
+          "party": "IND4",
+          "votes": 118,
+          "pct": 0.21
+        }
+      ],
+      "otherVotes": 963
+    },
+    "EC-13D": {
+      "valid": 128373,
+      "rejected": 2057,
+      "polled": 130430,
+      "electors": 178557,
+      "turnoutPct": 73,
+      "rejectedPct": 1.58,
+      "winner": {
+        "party": "SJB",
+        "votes": 70942,
+        "pct": 55.26
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 30263,
+        "pct": 23.57
+      },
+      "margin": 31.69,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 70942,
+          "pct": 55.26
+        },
+        {
+          "party": "IND16",
+          "votes": 30263,
+          "pct": 23.57
+        },
+        {
+          "party": "NPP",
+          "votes": 18053,
+          "pct": 14.06
+        },
+        {
+          "party": "IND9",
+          "votes": 4802,
+          "pct": 3.74
+        },
+        {
+          "party": "SLPP",
+          "votes": 1397,
+          "pct": 1.09
+        }
+      ],
+      "otherVotes": 2916
+    },
+    "EC-13P": {
+      "valid": 26066,
+      "rejected": 491,
+      "polled": 26557,
+      "electors": 26778,
+      "turnoutPct": 99.2,
+      "rejectedPct": 1.85,
+      "winner": {
+        "party": "NPP",
+        "votes": 11120,
+        "pct": 42.66
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 7368,
+        "pct": 28.27
+      },
+      "margin": 14.39,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 11120,
+          "pct": 42.66
+        },
+        {
+          "party": "SJB",
+          "votes": 7368,
+          "pct": 28.27
+        },
+        {
+          "party": "IND16",
+          "votes": 6719,
+          "pct": 25.78
+        },
+        {
+          "party": "SLPP",
+          "votes": 318,
+          "pct": 1.22
+        },
+        {
+          "party": "IND9",
+          "votes": 233,
+          "pct": 0.89
+        }
+      ],
+      "otherVotes": 308
+    },
+    "EC-14": {
+      "valid": 239461,
+      "rejected": 5821,
+      "polled": 245282,
+      "electors": 315925,
+      "turnoutPct": 77.6,
+      "rejectedPct": 2.37,
+      "winner": {
+        "party": "SJB",
+        "votes": 120588,
+        "pct": 50.36
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 49886,
+        "pct": 20.83
+      },
+      "margin": 29.53,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 120588,
+          "pct": 50.36
+        },
+        {
+          "party": "NPP",
+          "votes": 49886,
+          "pct": 20.83
+        },
+        {
+          "party": "IND16",
+          "votes": 40496,
+          "pct": 16.91
+        },
+        {
+          "party": "IND9",
+          "votes": 18524,
+          "pct": 7.74
+        },
+        {
+          "party": "SLPP",
+          "votes": 2183,
+          "pct": 0.91
+        }
+      ],
+      "otherVotes": 7784
+    },
+    "EC-14A": {
+      "valid": 64259,
+      "rejected": 1317,
+      "polled": 65576,
+      "electors": 80269,
+      "turnoutPct": 81.7,
+      "rejectedPct": 2.01,
+      "winner": {
+        "party": "SJB",
+        "votes": 26527,
+        "pct": 41.28
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 22724,
+        "pct": 35.36
+      },
+      "margin": 5.92,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 26527,
+          "pct": 41.28
+        },
+        {
+          "party": "NPP",
+          "votes": 22724,
+          "pct": 35.36
+        },
+        {
+          "party": "IND16",
+          "votes": 8603,
+          "pct": 13.39
+        },
+        {
+          "party": "IND9",
+          "votes": 2412,
+          "pct": 3.75
+        },
+        {
+          "party": "SLPP",
+          "votes": 1283,
+          "pct": 2
+        }
+      ],
+      "otherVotes": 2710
+    },
+    "EC-14B": {
+      "valid": 73919,
+      "rejected": 2508,
+      "polled": 76427,
+      "electors": 101481,
+      "turnoutPct": 75.3,
+      "rejectedPct": 3.28,
+      "winner": {
+        "party": "SJB",
+        "votes": 31371,
+        "pct": 42.44
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 15403,
+        "pct": 20.84
+      },
+      "margin": 21.6,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 31371,
+          "pct": 42.44
+        },
+        {
+          "party": "IND16",
+          "votes": 15403,
+          "pct": 20.84
+        },
+        {
+          "party": "NPP",
+          "votes": 12976,
+          "pct": 17.55
+        },
+        {
+          "party": "IND9",
+          "votes": 11300,
+          "pct": 15.29
+        },
+        {
+          "party": "IND4",
+          "votes": 542,
+          "pct": 0.73
+        }
+      ],
+      "otherVotes": 2327
+    },
+    "EC-14C": {
+      "valid": 86820,
+      "rejected": 1679,
+      "polled": 88499,
+      "electors": 119211,
+      "turnoutPct": 74.2,
+      "rejectedPct": 1.9,
+      "winner": {
+        "party": "SJB",
+        "votes": 58153,
+        "pct": 66.98
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 12860,
+        "pct": 14.81
+      },
+      "margin": 52.17,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 58153,
+          "pct": 66.98
+        },
+        {
+          "party": "IND16",
+          "votes": 12860,
+          "pct": 14.81
+        },
+        {
+          "party": "NPP",
+          "votes": 8706,
+          "pct": 10.03
+        },
+        {
+          "party": "IND9",
+          "votes": 4381,
+          "pct": 5.05
+        },
+        {
+          "party": "IND4",
+          "votes": 750,
+          "pct": 0.86
+        }
+      ],
+      "otherVotes": 1970
+    },
+    "EC-14P": {
+      "valid": 14463,
+      "rejected": 317,
+      "polled": 14780,
+      "electors": 14964,
+      "turnoutPct": 98.8,
+      "rejectedPct": 2.14,
+      "winner": {
+        "party": "NPP",
+        "votes": 5480,
+        "pct": 37.89
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 4537,
+        "pct": 31.37
+      },
+      "margin": 6.52,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 5480,
+          "pct": 37.89
+        },
+        {
+          "party": "SJB",
+          "votes": 4537,
+          "pct": 31.37
+        },
+        {
+          "party": "IND16",
+          "votes": 3630,
+          "pct": 25.1
+        },
+        {
+          "party": "IND9",
+          "votes": 431,
+          "pct": 2.98
+        },
+        {
+          "party": "SLPP",
+          "votes": 129,
+          "pct": 0.89
+        }
+      ],
+      "otherVotes": 256
+    },
+    "EC-15": {
+      "valid": 1130293,
+      "rejected": 19337,
+      "polled": 1149630,
+      "electors": 1417226,
+      "turnoutPct": 81.1,
+      "rejectedPct": 1.68,
+      "winner": {
+        "party": "NPP",
+        "votes": 544763,
+        "pct": 48.2
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 368290,
+        "pct": 32.58
+      },
+      "margin": 15.61,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 544763,
+          "pct": 48.2
+        },
+        {
+          "party": "SJB",
+          "votes": 368290,
+          "pct": 32.58
+        },
+        {
+          "party": "IND16",
+          "votes": 146520,
+          "pct": 12.96
+        },
+        {
+          "party": "SLPP",
+          "votes": 38730,
+          "pct": 3.43
+        },
+        {
+          "party": "SLCP",
+          "votes": 7532,
+          "pct": 0.67
+        }
+      ],
+      "otherVotes": 24458
+    },
+    "EC-15A": {
+      "valid": 86150,
+      "rejected": 1146,
+      "polled": 87296,
+      "electors": 106867,
+      "turnoutPct": 81.7,
+      "rejectedPct": 1.31,
+      "winner": {
+        "party": "NPP",
+        "votes": 39180,
+        "pct": 45.48
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 32418,
+        "pct": 37.63
+      },
+      "margin": 7.85,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 39180,
+          "pct": 45.48
+        },
+        {
+          "party": "SJB",
+          "votes": 32418,
+          "pct": 37.63
+        },
+        {
+          "party": "IND16",
+          "votes": 7972,
+          "pct": 9.25
+        },
+        {
+          "party": "SLPP",
+          "votes": 3915,
+          "pct": 4.54
+        },
+        {
+          "party": "SLCP",
+          "votes": 507,
+          "pct": 0.59
+        }
+      ],
+      "otherVotes": 2158
+    },
+    "EC-15B": {
+      "valid": 79164,
+      "rejected": 1432,
+      "polled": 80596,
+      "electors": 99694,
+      "turnoutPct": 80.8,
+      "rejectedPct": 1.78,
+      "winner": {
+        "party": "NPP",
+        "votes": 34275,
+        "pct": 43.3
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 30228,
+        "pct": 38.18
+      },
+      "margin": 5.11,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 34275,
+          "pct": 43.3
+        },
+        {
+          "party": "SJB",
+          "votes": 30228,
+          "pct": 38.18
+        },
+        {
+          "party": "IND16",
+          "votes": 8400,
+          "pct": 10.61
+        },
+        {
+          "party": "SLPP",
+          "votes": 3776,
+          "pct": 4.77
+        },
+        {
+          "party": "SLCP",
+          "votes": 422,
+          "pct": 0.53
+        }
+      ],
+      "otherVotes": 2063
+    },
+    "EC-15C": {
+      "valid": 94379,
+      "rejected": 1577,
+      "polled": 95956,
+      "electors": 119043,
+      "turnoutPct": 80.6,
+      "rejectedPct": 1.64,
+      "winner": {
+        "party": "NPP",
+        "votes": 43766,
+        "pct": 46.37
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 34181,
+        "pct": 36.22
+      },
+      "margin": 10.16,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 43766,
+          "pct": 46.37
+        },
+        {
+          "party": "SJB",
+          "votes": 34181,
+          "pct": 36.22
+        },
+        {
+          "party": "IND16",
+          "votes": 10219,
+          "pct": 10.83
+        },
+        {
+          "party": "SLPP",
+          "votes": 3025,
+          "pct": 3.21
+        },
+        {
+          "party": "SLCP",
+          "votes": 697,
+          "pct": 0.74
+        }
+      ],
+      "otherVotes": 2491
+    },
+    "EC-15D": {
+      "valid": 82471,
+      "rejected": 1273,
+      "polled": 83744,
+      "electors": 104903,
+      "turnoutPct": 79.8,
+      "rejectedPct": 1.52,
+      "winner": {
+        "party": "NPP",
+        "votes": 40870,
+        "pct": 49.56
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 28608,
+        "pct": 34.69
+      },
+      "margin": 14.87,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 40870,
+          "pct": 49.56
+        },
+        {
+          "party": "SJB",
+          "votes": 28608,
+          "pct": 34.69
+        },
+        {
+          "party": "IND16",
+          "votes": 7757,
+          "pct": 9.41
+        },
+        {
+          "party": "SLPP",
+          "votes": 2773,
+          "pct": 3.36
+        },
+        {
+          "party": "SLCP",
+          "votes": 483,
+          "pct": 0.59
+        }
+      ],
+      "otherVotes": 1980
+    },
+    "EC-15E": {
+      "valid": 64156,
+      "rejected": 1152,
+      "polled": 65308,
+      "electors": 80312,
+      "turnoutPct": 81.3,
+      "rejectedPct": 1.76,
+      "winner": {
+        "party": "NPP",
+        "votes": 32527,
+        "pct": 50.7
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 20648,
+        "pct": 32.18
+      },
+      "margin": 18.52,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 32527,
+          "pct": 50.7
+        },
+        {
+          "party": "SJB",
+          "votes": 20648,
+          "pct": 32.18
+        },
+        {
+          "party": "IND16",
+          "votes": 7591,
+          "pct": 11.83
+        },
+        {
+          "party": "SLPP",
+          "votes": 1745,
+          "pct": 2.72
+        },
+        {
+          "party": "SLCP",
+          "votes": 309,
+          "pct": 0.48
+        }
+      ],
+      "otherVotes": 1336
+    },
+    "EC-15F": {
+      "valid": 62005,
+      "rejected": 914,
+      "polled": 62919,
+      "electors": 77970,
+      "turnoutPct": 80.7,
+      "rejectedPct": 1.45,
+      "winner": {
+        "party": "NPP",
+        "votes": 27883,
+        "pct": 44.97
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 22328,
+        "pct": 36.01
+      },
+      "margin": 8.96,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 27883,
+          "pct": 44.97
+        },
+        {
+          "party": "SJB",
+          "votes": 22328,
+          "pct": 36.01
+        },
+        {
+          "party": "IND16",
+          "votes": 7746,
+          "pct": 12.49
+        },
+        {
+          "party": "SLPP",
+          "votes": 2316,
+          "pct": 3.74
+        },
+        {
+          "party": "SLCP",
+          "votes": 332,
+          "pct": 0.54
+        }
+      ],
+      "otherVotes": 1400
+    },
+    "EC-15G": {
+      "valid": 73196,
+      "rejected": 1123,
+      "polled": 74319,
+      "electors": 95467,
+      "turnoutPct": 77.8,
+      "rejectedPct": 1.51,
+      "winner": {
+        "party": "NPP",
+        "votes": 31750,
+        "pct": 43.38
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 25745,
+        "pct": 35.17
+      },
+      "margin": 8.2,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 31750,
+          "pct": 43.38
+        },
+        {
+          "party": "SJB",
+          "votes": 25745,
+          "pct": 35.17
+        },
+        {
+          "party": "IND16",
+          "votes": 10108,
+          "pct": 13.81
+        },
+        {
+          "party": "SLPP",
+          "votes": 3267,
+          "pct": 4.46
+        },
+        {
+          "party": "SLCP",
+          "votes": 525,
+          "pct": 0.72
+        }
+      ],
+      "otherVotes": 1801
+    },
+    "EC-15H": {
+      "valid": 80424,
+      "rejected": 1346,
+      "polled": 81770,
+      "electors": 101613,
+      "turnoutPct": 80.5,
+      "rejectedPct": 1.65,
+      "winner": {
+        "party": "NPP",
+        "votes": 36538,
+        "pct": 45.43
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 24647,
+        "pct": 30.65
+      },
+      "margin": 14.79,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 36538,
+          "pct": 45.43
+        },
+        {
+          "party": "SJB",
+          "votes": 24647,
+          "pct": 30.65
+        },
+        {
+          "party": "IND16",
+          "votes": 14134,
+          "pct": 17.57
+        },
+        {
+          "party": "SLPP",
+          "votes": 2725,
+          "pct": 3.39
+        },
+        {
+          "party": "SLCP",
+          "votes": 766,
+          "pct": 0.95
+        }
+      ],
+      "otherVotes": 1614
+    },
+    "EC-15I": {
+      "valid": 83204,
+      "rejected": 1375,
+      "polled": 84579,
+      "electors": 106344,
+      "turnoutPct": 79.5,
+      "rejectedPct": 1.63,
+      "winner": {
+        "party": "NPP",
+        "votes": 36555,
+        "pct": 43.93
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 26879,
+        "pct": 32.3
+      },
+      "margin": 11.63,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 36555,
+          "pct": 43.93
+        },
+        {
+          "party": "SJB",
+          "votes": 26879,
+          "pct": 32.3
+        },
+        {
+          "party": "IND16",
+          "votes": 14217,
+          "pct": 17.09
+        },
+        {
+          "party": "SLPP",
+          "votes": 3142,
+          "pct": 3.78
+        },
+        {
+          "party": "SLCP",
+          "votes": 676,
+          "pct": 0.81
+        }
+      ],
+      "otherVotes": 1735
+    },
+    "EC-15J": {
+      "valid": 76982,
+      "rejected": 1318,
+      "polled": 78300,
+      "electors": 97305,
+      "turnoutPct": 80.5,
+      "rejectedPct": 1.68,
+      "winner": {
+        "party": "NPP",
+        "votes": 36650,
+        "pct": 47.61
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 22434,
+        "pct": 29.14
+      },
+      "margin": 18.47,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 36650,
+          "pct": 47.61
+        },
+        {
+          "party": "SJB",
+          "votes": 22434,
+          "pct": 29.14
+        },
+        {
+          "party": "IND16",
+          "votes": 13444,
+          "pct": 17.46
+        },
+        {
+          "party": "SLPP",
+          "votes": 2301,
+          "pct": 2.99
+        },
+        {
+          "party": "SLCP",
+          "votes": 692,
+          "pct": 0.9
+        }
+      ],
+      "otherVotes": 1461
+    },
+    "EC-15K": {
+      "valid": 63430,
+      "rejected": 1182,
+      "polled": 64612,
+      "electors": 80742,
+      "turnoutPct": 80,
+      "rejectedPct": 1.83,
+      "winner": {
+        "party": "NPP",
+        "votes": 31859,
+        "pct": 50.23
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 19876,
+        "pct": 31.34
+      },
+      "margin": 18.89,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 31859,
+          "pct": 50.23
+        },
+        {
+          "party": "SJB",
+          "votes": 19876,
+          "pct": 31.34
+        },
+        {
+          "party": "IND16",
+          "votes": 8272,
+          "pct": 13.04
+        },
+        {
+          "party": "SLPP",
+          "votes": 1837,
+          "pct": 2.9
+        },
+        {
+          "party": "SLCP",
+          "votes": 386,
+          "pct": 0.61
+        }
+      ],
+      "otherVotes": 1200
+    },
+    "EC-15L": {
+      "valid": 75649,
+      "rejected": 1278,
+      "polled": 76927,
+      "electors": 97155,
+      "turnoutPct": 79.2,
+      "rejectedPct": 1.66,
+      "winner": {
+        "party": "NPP",
+        "votes": 39512,
+        "pct": 52.23
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 22988,
+        "pct": 30.39
+      },
+      "margin": 21.84,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 39512,
+          "pct": 52.23
+        },
+        {
+          "party": "SJB",
+          "votes": 22988,
+          "pct": 30.39
+        },
+        {
+          "party": "IND16",
+          "votes": 9520,
+          "pct": 12.58
+        },
+        {
+          "party": "SLPP",
+          "votes": 1817,
+          "pct": 2.4
+        },
+        {
+          "party": "SLCP",
+          "votes": 532,
+          "pct": 0.7
+        }
+      ],
+      "otherVotes": 1280
+    },
+    "EC-15M": {
+      "valid": 76880,
+      "rejected": 1415,
+      "polled": 78295,
+      "electors": 98616,
+      "turnoutPct": 79.4,
+      "rejectedPct": 1.81,
+      "winner": {
+        "party": "NPP",
+        "votes": 38221,
+        "pct": 49.72
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 24760,
+        "pct": 32.21
+      },
+      "margin": 17.51,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 38221,
+          "pct": 49.72
+        },
+        {
+          "party": "SJB",
+          "votes": 24760,
+          "pct": 32.21
+        },
+        {
+          "party": "IND16",
+          "votes": 9083,
+          "pct": 11.81
+        },
+        {
+          "party": "SLPP",
+          "votes": 2615,
+          "pct": 3.4
+        },
+        {
+          "party": "SLCP",
+          "votes": 532,
+          "pct": 0.69
+        }
+      ],
+      "otherVotes": 1669
+    },
+    "EC-15N": {
+      "valid": 57620,
+      "rejected": 1029,
+      "polled": 58649,
+      "electors": 74218,
+      "turnoutPct": 79,
+      "rejectedPct": 1.75,
+      "winner": {
+        "party": "NPP",
+        "votes": 28051,
+        "pct": 48.68
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 19469,
+        "pct": 33.79
+      },
+      "margin": 14.89,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 28051,
+          "pct": 48.68
+        },
+        {
+          "party": "SJB",
+          "votes": 19469,
+          "pct": 33.79
+        },
+        {
+          "party": "IND16",
+          "votes": 6059,
+          "pct": 10.52
+        },
+        {
+          "party": "SLPP",
+          "votes": 2092,
+          "pct": 3.63
+        },
+        {
+          "party": "SLCP",
+          "votes": 359,
+          "pct": 0.62
+        }
+      ],
+      "otherVotes": 1590
+    },
+    "EC-15P": {
+      "valid": 74583,
+      "rejected": 1777,
+      "polled": 76360,
+      "electors": 76977,
+      "turnoutPct": 99.2,
+      "rejectedPct": 2.33,
+      "winner": {
+        "party": "NPP",
+        "votes": 47126,
+        "pct": 63.19
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 13081,
+        "pct": 17.54
+      },
+      "margin": 45.65,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 47126,
+          "pct": 63.19
+        },
+        {
+          "party": "SJB",
+          "votes": 13081,
+          "pct": 17.54
+        },
+        {
+          "party": "IND16",
+          "votes": 11998,
+          "pct": 16.09
+        },
+        {
+          "party": "SLPP",
+          "votes": 1384,
+          "pct": 1.86
+        },
+        {
+          "party": "SLCP",
+          "votes": 314,
+          "pct": 0.42
+        }
+      ],
+      "otherVotes": 680
+    },
+    "EC-16": {
+      "valid": 470095,
+      "rejected": 8279,
+      "polled": 478374,
+      "electors": 663673,
+      "turnoutPct": 72.1,
+      "rejectedPct": 1.73,
+      "winner": {
+        "party": "NPP",
+        "votes": 207134,
+        "pct": 44.06
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 173382,
+        "pct": 36.88
+      },
+      "margin": 7.18,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 207134,
+          "pct": 44.06
+        },
+        {
+          "party": "SJB",
+          "votes": 173382,
+          "pct": 36.88
+        },
+        {
+          "party": "IND16",
+          "votes": 60719,
+          "pct": 12.92
+        },
+        {
+          "party": "SLPP",
+          "votes": 13285,
+          "pct": 2.83
+        },
+        {
+          "party": "SLCP",
+          "votes": 3003,
+          "pct": 0.64
+        }
+      ],
+      "otherVotes": 12572
+    },
+    "EC-16A": {
+      "valid": 121604,
+      "rejected": 2417,
+      "polled": 124021,
+      "electors": 171296,
+      "turnoutPct": 72.4,
+      "rejectedPct": 1.95,
+      "winner": {
+        "party": "SJB",
+        "votes": 68403,
+        "pct": 56.25
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 31457,
+        "pct": 25.87
+      },
+      "margin": 30.38,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 68403,
+          "pct": 56.25
+        },
+        {
+          "party": "NPP",
+          "votes": 31457,
+          "pct": 25.87
+        },
+        {
+          "party": "IND16",
+          "votes": 15870,
+          "pct": 13.05
+        },
+        {
+          "party": "SLPP",
+          "votes": 1476,
+          "pct": 1.21
+        },
+        {
+          "party": "IND4",
+          "votes": 894,
+          "pct": 0.74
+        }
+      ],
+      "otherVotes": 3504
+    },
+    "EC-16B": {
+      "valid": 96706,
+      "rejected": 1786,
+      "polled": 98492,
+      "electors": 127434,
+      "turnoutPct": 77.3,
+      "rejectedPct": 1.81,
+      "winner": {
+        "party": "NPP",
+        "votes": 42455,
+        "pct": 43.9
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 33749,
+        "pct": 34.9
+      },
+      "margin": 9,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 42455,
+          "pct": 43.9
+        },
+        {
+          "party": "SJB",
+          "votes": 33749,
+          "pct": 34.9
+        },
+        {
+          "party": "IND16",
+          "votes": 12462,
+          "pct": 12.89
+        },
+        {
+          "party": "SLPP",
+          "votes": 4262,
+          "pct": 4.41
+        },
+        {
+          "party": "SLCP",
+          "votes": 753,
+          "pct": 0.78
+        }
+      ],
+      "otherVotes": 3025
+    },
+    "EC-16C": {
+      "valid": 94247,
+      "rejected": 1494,
+      "polled": 95741,
+      "electors": 131506,
+      "turnoutPct": 72.8,
+      "rejectedPct": 1.56,
+      "winner": {
+        "party": "NPP",
+        "votes": 47231,
+        "pct": 50.11
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 29179,
+        "pct": 30.96
+      },
+      "margin": 19.15,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 47231,
+          "pct": 50.11
+        },
+        {
+          "party": "SJB",
+          "votes": 29179,
+          "pct": 30.96
+        },
+        {
+          "party": "IND16",
+          "votes": 11650,
+          "pct": 12.36
+        },
+        {
+          "party": "SLPP",
+          "votes": 3172,
+          "pct": 3.37
+        },
+        {
+          "party": "SLCP",
+          "votes": 740,
+          "pct": 0.79
+        }
+      ],
+      "otherVotes": 2275
+    },
+    "EC-16D": {
+      "valid": 67222,
+      "rejected": 1047,
+      "polled": 68269,
+      "electors": 101819,
+      "turnoutPct": 67,
+      "rejectedPct": 1.53,
+      "winner": {
+        "party": "NPP",
+        "votes": 36963,
+        "pct": 54.99
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 18623,
+        "pct": 27.7
+      },
+      "margin": 27.28,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 36963,
+          "pct": 54.99
+        },
+        {
+          "party": "SJB",
+          "votes": 18623,
+          "pct": 27.7
+        },
+        {
+          "party": "IND16",
+          "votes": 7922,
+          "pct": 11.78
+        },
+        {
+          "party": "SLPP",
+          "votes": 1713,
+          "pct": 2.55
+        },
+        {
+          "party": "SLCP",
+          "votes": 554,
+          "pct": 0.82
+        }
+      ],
+      "otherVotes": 1447
+    },
+    "EC-16E": {
+      "valid": 75893,
+      "rejected": 1245,
+      "polled": 77138,
+      "electors": 116651,
+      "turnoutPct": 66.1,
+      "rejectedPct": 1.61,
+      "winner": {
+        "party": "NPP",
+        "votes": 40414,
+        "pct": 53.25
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 20384,
+        "pct": 26.86
+      },
+      "margin": 26.39,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 40414,
+          "pct": 53.25
+        },
+        {
+          "party": "SJB",
+          "votes": 20384,
+          "pct": 26.86
+        },
+        {
+          "party": "IND16",
+          "votes": 10480,
+          "pct": 13.81
+        },
+        {
+          "party": "SLPP",
+          "votes": 2443,
+          "pct": 3.22
+        },
+        {
+          "party": "SLCP",
+          "votes": 659,
+          "pct": 0.87
+        }
+      ],
+      "otherVotes": 1513
+    },
+    "EC-16P": {
+      "valid": 14423,
+      "rejected": 290,
+      "polled": 14713,
+      "electors": 14967,
+      "turnoutPct": 98.3,
+      "rejectedPct": 1.97,
+      "winner": {
+        "party": "NPP",
+        "votes": 8614,
+        "pct": 59.72
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 3044,
+        "pct": 21.11
+      },
+      "margin": 38.62,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 8614,
+          "pct": 59.72
+        },
+        {
+          "party": "SJB",
+          "votes": 3044,
+          "pct": 21.11
+        },
+        {
+          "party": "IND16",
+          "votes": 2335,
+          "pct": 16.19
+        },
+        {
+          "party": "SLPP",
+          "votes": 219,
+          "pct": 1.52
+        },
+        {
+          "party": "SLCP",
+          "votes": 58,
+          "pct": 0.4
+        }
+      ],
+      "otherVotes": 153
+    },
+    "EC-17": {
+      "valid": 603686,
+      "rejected": 9782,
+      "polled": 613468,
+      "electors": 741862,
+      "turnoutPct": 82.7,
+      "rejectedPct": 1.59,
+      "winner": {
+        "party": "NPP",
+        "votes": 285944,
+        "pct": 47.37
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 202289,
+        "pct": 33.51
+      },
+      "margin": 13.86,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 285944,
+          "pct": 47.37
+        },
+        {
+          "party": "SJB",
+          "votes": 202289,
+          "pct": 33.51
+        },
+        {
+          "party": "IND16",
+          "votes": 82152,
+          "pct": 13.61
+        },
+        {
+          "party": "SLPP",
+          "votes": 15029,
+          "pct": 2.49
+        },
+        {
+          "party": "SLCP",
+          "votes": 3696,
+          "pct": 0.61
+        }
+      ],
+      "otherVotes": 14576
+    },
+    "EC-17A": {
+      "valid": 74092,
+      "rejected": 952,
+      "polled": 75044,
+      "electors": 90179,
+      "turnoutPct": 83.2,
+      "rejectedPct": 1.27,
+      "winner": {
+        "party": "SJB",
+        "votes": 30877,
+        "pct": 41.67
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 30118,
+        "pct": 40.65
+      },
+      "margin": 1.02,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 30877,
+          "pct": 41.67
+        },
+        {
+          "party": "NPP",
+          "votes": 30118,
+          "pct": 40.65
+        },
+        {
+          "party": "IND16",
+          "votes": 7672,
+          "pct": 10.35
+        },
+        {
+          "party": "SLPP",
+          "votes": 2867,
+          "pct": 3.87
+        },
+        {
+          "party": "SLCP",
+          "votes": 619,
+          "pct": 0.84
+        }
+      ],
+      "otherVotes": 1939
+    },
+    "EC-17B": {
+      "valid": 70646,
+      "rejected": 989,
+      "polled": 71635,
+      "electors": 86717,
+      "turnoutPct": 82.6,
+      "rejectedPct": 1.38,
+      "winner": {
+        "party": "SJB",
+        "votes": 30838,
+        "pct": 43.65
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 28580,
+        "pct": 40.46
+      },
+      "margin": 3.2,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 30838,
+          "pct": 43.65
+        },
+        {
+          "party": "NPP",
+          "votes": 28580,
+          "pct": 40.46
+        },
+        {
+          "party": "IND16",
+          "votes": 7395,
+          "pct": 10.47
+        },
+        {
+          "party": "SLPP",
+          "votes": 1631,
+          "pct": 2.31
+        },
+        {
+          "party": "IND4",
+          "votes": 402,
+          "pct": 0.57
+        }
+      ],
+      "otherVotes": 1800
+    },
+    "EC-17C": {
+      "valid": 84597,
+      "rejected": 1445,
+      "polled": 86042,
+      "electors": 105697,
+      "turnoutPct": 81.4,
+      "rejectedPct": 1.68,
+      "winner": {
+        "party": "NPP",
+        "votes": 45102,
+        "pct": 53.31
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 22880,
+        "pct": 27.05
+      },
+      "margin": 26.27,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 45102,
+          "pct": 53.31
+        },
+        {
+          "party": "SJB",
+          "votes": 22880,
+          "pct": 27.05
+        },
+        {
+          "party": "IND16",
+          "votes": 12349,
+          "pct": 14.6
+        },
+        {
+          "party": "SLPP",
+          "votes": 1852,
+          "pct": 2.19
+        },
+        {
+          "party": "SLCP",
+          "votes": 734,
+          "pct": 0.87
+        }
+      ],
+      "otherVotes": 1680
+    },
+    "EC-17D": {
+      "valid": 89243,
+      "rejected": 1493,
+      "polled": 90736,
+      "electors": 111756,
+      "turnoutPct": 81.2,
+      "rejectedPct": 1.65,
+      "winner": {
+        "party": "NPP",
+        "votes": 39348,
+        "pct": 44.09
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 32058,
+        "pct": 35.92
+      },
+      "margin": 8.17,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 39348,
+          "pct": 44.09
+        },
+        {
+          "party": "SJB",
+          "votes": 32058,
+          "pct": 35.92
+        },
+        {
+          "party": "IND16",
+          "votes": 12231,
+          "pct": 13.71
+        },
+        {
+          "party": "SLPP",
+          "votes": 2776,
+          "pct": 3.11
+        },
+        {
+          "party": "SLCP",
+          "votes": 525,
+          "pct": 0.59
+        }
+      ],
+      "otherVotes": 2305
+    },
+    "EC-17E": {
+      "valid": 105772,
+      "rejected": 1722,
+      "polled": 107494,
+      "electors": 132651,
+      "turnoutPct": 81,
+      "rejectedPct": 1.6,
+      "winner": {
+        "party": "NPP",
+        "votes": 52380,
+        "pct": 49.52
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 31603,
+        "pct": 29.88
+      },
+      "margin": 19.64,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 52380,
+          "pct": 49.52
+        },
+        {
+          "party": "SJB",
+          "votes": 31603,
+          "pct": 29.88
+        },
+        {
+          "party": "IND16",
+          "votes": 16136,
+          "pct": 15.26
+        },
+        {
+          "party": "SLPP",
+          "votes": 2390,
+          "pct": 2.26
+        },
+        {
+          "party": "SLCP",
+          "votes": 661,
+          "pct": 0.62
+        }
+      ],
+      "otherVotes": 2602
+    },
+    "EC-17F": {
+      "valid": 55621,
+      "rejected": 916,
+      "polled": 56537,
+      "electors": 70291,
+      "turnoutPct": 80.4,
+      "rejectedPct": 1.62,
+      "winner": {
+        "party": "NPP",
+        "votes": 26034,
+        "pct": 46.81
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 18836,
+        "pct": 33.86
+      },
+      "margin": 12.94,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 26034,
+          "pct": 46.81
+        },
+        {
+          "party": "SJB",
+          "votes": 18836,
+          "pct": 33.86
+        },
+        {
+          "party": "IND16",
+          "votes": 7888,
+          "pct": 14.18
+        },
+        {
+          "party": "SLPP",
+          "votes": 1071,
+          "pct": 1.93
+        },
+        {
+          "party": "SLCP",
+          "votes": 307,
+          "pct": 0.55
+        }
+      ],
+      "otherVotes": 1485
+    },
+    "EC-17G": {
+      "valid": 70231,
+      "rejected": 1265,
+      "polled": 71496,
+      "electors": 89380,
+      "turnoutPct": 80,
+      "rejectedPct": 1.77,
+      "winner": {
+        "party": "NPP",
+        "votes": 31632,
+        "pct": 45.04
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 24241,
+        "pct": 34.52
+      },
+      "margin": 10.52,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 31632,
+          "pct": 45.04
+        },
+        {
+          "party": "SJB",
+          "votes": 24241,
+          "pct": 34.52
+        },
+        {
+          "party": "IND16",
+          "votes": 10263,
+          "pct": 14.61
+        },
+        {
+          "party": "SLPP",
+          "votes": 1659,
+          "pct": 2.36
+        },
+        {
+          "party": "SLCP",
+          "votes": 415,
+          "pct": 0.59
+        }
+      ],
+      "otherVotes": 2021
+    },
+    "EC-17P": {
+      "valid": 53484,
+      "rejected": 1000,
+      "polled": 54484,
+      "electors": 55191,
+      "turnoutPct": 98.7,
+      "rejectedPct": 1.84,
+      "winner": {
+        "party": "NPP",
+        "votes": 32750,
+        "pct": 61.23
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 10956,
+        "pct": 20.48
+      },
+      "margin": 40.75,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 32750,
+          "pct": 61.23
+        },
+        {
+          "party": "SJB",
+          "votes": 10956,
+          "pct": 20.48
+        },
+        {
+          "party": "IND16",
+          "votes": 8218,
+          "pct": 15.37
+        },
+        {
+          "party": "SLPP",
+          "votes": 783,
+          "pct": 1.46
+        },
+        {
+          "party": "SLCP",
+          "votes": 180,
+          "pct": 0.34
+        }
+      ],
+      "otherVotes": 597
+    },
+    "EC-18": {
+      "valid": 283801,
+      "rejected": 4962,
+      "polled": 288763,
+      "electors": 351302,
+      "turnoutPct": 82.2,
+      "rejectedPct": 1.72,
+      "winner": {
+        "party": "NPP",
+        "votes": 130880,
+        "pct": 46.12
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 100730,
+        "pct": 35.49
+      },
+      "margin": 10.62,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 130880,
+          "pct": 46.12
+        },
+        {
+          "party": "SJB",
+          "votes": 100730,
+          "pct": 35.49
+        },
+        {
+          "party": "IND16",
+          "votes": 36908,
+          "pct": 13
+        },
+        {
+          "party": "SLPP",
+          "votes": 5594,
+          "pct": 1.97
+        },
+        {
+          "party": "SLCP",
+          "votes": 1727,
+          "pct": 0.61
+        }
+      ],
+      "otherVotes": 7962
+    },
+    "EC-18A": {
+      "valid": 70566,
+      "rejected": 1328,
+      "polled": 71894,
+      "electors": 89051,
+      "turnoutPct": 80.7,
+      "rejectedPct": 1.85,
+      "winner": {
+        "party": "NPP",
+        "votes": 34088,
+        "pct": 48.31
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 22991,
+        "pct": 32.58
+      },
+      "margin": 15.73,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 34088,
+          "pct": 48.31
+        },
+        {
+          "party": "SJB",
+          "votes": 22991,
+          "pct": 32.58
+        },
+        {
+          "party": "IND16",
+          "votes": 9177,
+          "pct": 13
+        },
+        {
+          "party": "SLPP",
+          "votes": 1635,
+          "pct": 2.32
+        },
+        {
+          "party": "SLCP",
+          "votes": 504,
+          "pct": 0.71
+        }
+      ],
+      "otherVotes": 2171
+    },
+    "EC-18B": {
+      "valid": 65931,
+      "rejected": 1113,
+      "polled": 67044,
+      "electors": 82780,
+      "turnoutPct": 81,
+      "rejectedPct": 1.66,
+      "winner": {
+        "party": "NPP",
+        "votes": 28592,
+        "pct": 43.37
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 25666,
+        "pct": 38.93
+      },
+      "margin": 4.44,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 28592,
+          "pct": 43.37
+        },
+        {
+          "party": "SJB",
+          "votes": 25666,
+          "pct": 38.93
+        },
+        {
+          "party": "IND16",
+          "votes": 7897,
+          "pct": 11.98
+        },
+        {
+          "party": "SLPP",
+          "votes": 1624,
+          "pct": 2.46
+        },
+        {
+          "party": "SLCP",
+          "votes": 424,
+          "pct": 0.64
+        }
+      ],
+      "otherVotes": 1728
+    },
+    "EC-18C": {
+      "valid": 128093,
+      "rejected": 2149,
+      "polled": 130242,
+      "electors": 159613,
+      "turnoutPct": 81.6,
+      "rejectedPct": 1.65,
+      "winner": {
+        "party": "NPP",
+        "votes": 56432,
+        "pct": 44.06
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 47953,
+        "pct": 37.44
+      },
+      "margin": 6.62,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 56432,
+          "pct": 44.06
+        },
+        {
+          "party": "SJB",
+          "votes": 47953,
+          "pct": 37.44
+        },
+        {
+          "party": "IND16",
+          "votes": 17072,
+          "pct": 13.33
+        },
+        {
+          "party": "SLPP",
+          "votes": 2147,
+          "pct": 1.68
+        },
+        {
+          "party": "SLCP",
+          "votes": 743,
+          "pct": 0.58
+        }
+      ],
+      "otherVotes": 3746
+    },
+    "EC-18P": {
+      "valid": 19211,
+      "rejected": 372,
+      "polled": 19583,
+      "electors": 19858,
+      "turnoutPct": 98.6,
+      "rejectedPct": 1.9,
+      "winner": {
+        "party": "NPP",
+        "votes": 11768,
+        "pct": 61.26
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 4120,
+        "pct": 21.45
+      },
+      "margin": 39.81,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 11768,
+          "pct": 61.26
+        },
+        {
+          "party": "SJB",
+          "votes": 4120,
+          "pct": 21.45
+        },
+        {
+          "party": "IND16",
+          "votes": 2762,
+          "pct": 14.38
+        },
+        {
+          "party": "SLPP",
+          "votes": 188,
+          "pct": 0.98
+        },
+        {
+          "party": "SLCP",
+          "votes": 56,
+          "pct": 0.29
+        }
+      ],
+      "otherVotes": 317
+    },
+    "EC-19": {
+      "valid": 568924,
+      "rejected": 15519,
+      "polled": 584443,
+      "electors": 705772,
+      "turnoutPct": 82.8,
+      "rejectedPct": 2.66,
+      "winner": {
+        "party": "SJB",
+        "votes": 219674,
+        "pct": 38.61
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 197283,
+        "pct": 34.68
+      },
+      "margin": 3.94,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 219674,
+          "pct": 38.61
+        },
+        {
+          "party": "NPP",
+          "votes": 197283,
+          "pct": 34.68
+        },
+        {
+          "party": "IND16",
+          "votes": 115138,
+          "pct": 20.24
+        },
+        {
+          "party": "SLPP",
+          "votes": 13869,
+          "pct": 2.44
+        },
+        {
+          "party": "IND4",
+          "votes": 3377,
+          "pct": 0.59
+        }
+      ],
+      "otherVotes": 19583
+    },
+    "EC-19A": {
+      "valid": 87240,
+      "rejected": 1559,
+      "polled": 88799,
+      "electors": 105784,
+      "turnoutPct": 83.9,
+      "rejectedPct": 1.76,
+      "winner": {
+        "party": "SJB",
+        "votes": 38564,
+        "pct": 44.2
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 31197,
+        "pct": 35.76
+      },
+      "margin": 8.44,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 38564,
+          "pct": 44.2
+        },
+        {
+          "party": "NPP",
+          "votes": 31197,
+          "pct": 35.76
+        },
+        {
+          "party": "IND16",
+          "votes": 11282,
+          "pct": 12.93
+        },
+        {
+          "party": "SLPP",
+          "votes": 2891,
+          "pct": 3.31
+        },
+        {
+          "party": "IND4",
+          "votes": 459,
+          "pct": 0.53
+        }
+      ],
+      "otherVotes": 2847
+    },
+    "EC-19B": {
+      "valid": 43181,
+      "rejected": 1312,
+      "polled": 44493,
+      "electors": 54273,
+      "turnoutPct": 82,
+      "rejectedPct": 2.95,
+      "winner": {
+        "party": "SJB",
+        "votes": 16866,
+        "pct": 39.06
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 12969,
+        "pct": 30.03
+      },
+      "margin": 9.02,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 16866,
+          "pct": 39.06
+        },
+        {
+          "party": "NPP",
+          "votes": 12969,
+          "pct": 30.03
+        },
+        {
+          "party": "IND16",
+          "votes": 9335,
+          "pct": 21.62
+        },
+        {
+          "party": "SLPP",
+          "votes": 1565,
+          "pct": 3.62
+        },
+        {
+          "party": "IND4",
+          "votes": 397,
+          "pct": 0.92
+        }
+      ],
+      "otherVotes": 2049
+    },
+    "EC-19C": {
+      "valid": 51601,
+      "rejected": 1831,
+      "polled": 53432,
+      "electors": 67051,
+      "turnoutPct": 79.7,
+      "rejectedPct": 3.43,
+      "winner": {
+        "party": "SJB",
+        "votes": 23031,
+        "pct": 44.63
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 14288,
+        "pct": 27.69
+      },
+      "margin": 16.94,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 23031,
+          "pct": 44.63
+        },
+        {
+          "party": "IND16",
+          "votes": 14288,
+          "pct": 27.69
+        },
+        {
+          "party": "NPP",
+          "votes": 10093,
+          "pct": 19.56
+        },
+        {
+          "party": "SLPP",
+          "votes": 1183,
+          "pct": 2.29
+        },
+        {
+          "party": "IND4",
+          "votes": 580,
+          "pct": 1.12
+        }
+      ],
+      "otherVotes": 2426
+    },
+    "EC-19D": {
+      "valid": 45424,
+      "rejected": 1307,
+      "polled": 46731,
+      "electors": 57589,
+      "turnoutPct": 81.1,
+      "rejectedPct": 2.8,
+      "winner": {
+        "party": "NPP",
+        "votes": 17983,
+        "pct": 39.59
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 14309,
+        "pct": 31.5
+      },
+      "margin": 8.09,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 17983,
+          "pct": 39.59
+        },
+        {
+          "party": "SJB",
+          "votes": 14309,
+          "pct": 31.5
+        },
+        {
+          "party": "IND16",
+          "votes": 10729,
+          "pct": 23.62
+        },
+        {
+          "party": "SLPP",
+          "votes": 806,
+          "pct": 1.77
+        },
+        {
+          "party": "SLCP",
+          "votes": 378,
+          "pct": 0.83
+        }
+      ],
+      "otherVotes": 1219
+    },
+    "EC-19E": {
+      "valid": 58688,
+      "rejected": 1970,
+      "polled": 60658,
+      "electors": 74382,
+      "turnoutPct": 81.5,
+      "rejectedPct": 3.25,
+      "winner": {
+        "party": "SJB",
+        "votes": 22562,
+        "pct": 38.44
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 18275,
+        "pct": 31.14
+      },
+      "margin": 7.3,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 22562,
+          "pct": 38.44
+        },
+        {
+          "party": "NPP",
+          "votes": 18275,
+          "pct": 31.14
+        },
+        {
+          "party": "IND16",
+          "votes": 14033,
+          "pct": 23.91
+        },
+        {
+          "party": "SLPP",
+          "votes": 1076,
+          "pct": 1.83
+        },
+        {
+          "party": "IND4",
+          "votes": 425,
+          "pct": 0.72
+        }
+      ],
+      "otherVotes": 2317
+    },
+    "EC-19F": {
+      "valid": 52603,
+      "rejected": 1300,
+      "polled": 53903,
+      "electors": 64840,
+      "turnoutPct": 83.1,
+      "rejectedPct": 2.41,
+      "winner": {
+        "party": "SJB",
+        "votes": 22072,
+        "pct": 41.96
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 18208,
+        "pct": 34.61
+      },
+      "margin": 7.35,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 22072,
+          "pct": 41.96
+        },
+        {
+          "party": "NPP",
+          "votes": 18208,
+          "pct": 34.61
+        },
+        {
+          "party": "IND16",
+          "votes": 8527,
+          "pct": 16.21
+        },
+        {
+          "party": "SLPP",
+          "votes": 1778,
+          "pct": 3.38
+        },
+        {
+          "party": "IND4",
+          "votes": 306,
+          "pct": 0.58
+        }
+      ],
+      "otherVotes": 1712
+    },
+    "EC-19G": {
+      "valid": 64534,
+      "rejected": 1646,
+      "polled": 66180,
+      "electors": 80452,
+      "turnoutPct": 82.3,
+      "rejectedPct": 2.49,
+      "winner": {
+        "party": "SJB",
+        "votes": 27039,
+        "pct": 41.9
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 24434,
+        "pct": 37.86
+      },
+      "margin": 4.04,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 27039,
+          "pct": 41.9
+        },
+        {
+          "party": "NPP",
+          "votes": 24434,
+          "pct": 37.86
+        },
+        {
+          "party": "IND16",
+          "votes": 9274,
+          "pct": 14.37
+        },
+        {
+          "party": "SLPP",
+          "votes": 1629,
+          "pct": 2.52
+        },
+        {
+          "party": "SLCP",
+          "votes": 344,
+          "pct": 0.53
+        }
+      ],
+      "otherVotes": 1814
+    },
+    "EC-19H": {
+      "valid": 70667,
+      "rejected": 1969,
+      "polled": 72636,
+      "electors": 89166,
+      "turnoutPct": 81.5,
+      "rejectedPct": 2.71,
+      "winner": {
+        "party": "NPP",
+        "votes": 25962,
+        "pct": 36.74
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 23481,
+        "pct": 33.23
+      },
+      "margin": 3.51,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 25962,
+          "pct": 36.74
+        },
+        {
+          "party": "SJB",
+          "votes": 23481,
+          "pct": 33.23
+        },
+        {
+          "party": "IND16",
+          "votes": 17248,
+          "pct": 24.41
+        },
+        {
+          "party": "SLPP",
+          "votes": 1282,
+          "pct": 1.81
+        },
+        {
+          "party": "SLCP",
+          "votes": 498,
+          "pct": 0.7
+        }
+      ],
+      "otherVotes": 2196
+    },
+    "EC-19I": {
+      "valid": 54498,
+      "rejected": 1842,
+      "polled": 56340,
+      "electors": 70174,
+      "turnoutPct": 80.3,
+      "rejectedPct": 3.27,
+      "winner": {
+        "party": "SJB",
+        "votes": 23993,
+        "pct": 44.03
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 14533,
+        "pct": 26.67
+      },
+      "margin": 17.36,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 23993,
+          "pct": 44.03
+        },
+        {
+          "party": "NPP",
+          "votes": 14533,
+          "pct": 26.67
+        },
+        {
+          "party": "IND16",
+          "votes": 12455,
+          "pct": 22.85
+        },
+        {
+          "party": "SLPP",
+          "votes": 1061,
+          "pct": 1.95
+        },
+        {
+          "party": "IND4",
+          "votes": 375,
+          "pct": 0.69
+        }
+      ],
+      "otherVotes": 2081
+    },
+    "EC-19P": {
+      "valid": 40488,
+      "rejected": 783,
+      "polled": 41271,
+      "electors": 42061,
+      "turnoutPct": 98.1,
+      "rejectedPct": 1.9,
+      "winner": {
+        "party": "NPP",
+        "votes": 23629,
+        "pct": 58.36
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 7967,
+        "pct": 19.68
+      },
+      "margin": 38.68,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 23629,
+          "pct": 58.36
+        },
+        {
+          "party": "IND16",
+          "votes": 7967,
+          "pct": 19.68
+        },
+        {
+          "party": "SJB",
+          "votes": 7757,
+          "pct": 19.16
+        },
+        {
+          "party": "SLPP",
+          "votes": 598,
+          "pct": 1.48
+        },
+        {
+          "party": "SLCP",
+          "votes": 151,
+          "pct": 0.37
+        }
+      ],
+      "otherVotes": 386
+    },
+    "EC-20": {
+      "valid": 335082,
+      "rejected": 6671,
+      "polled": 341753,
+      "electors": 399166,
+      "turnoutPct": 85.6,
+      "rejectedPct": 1.95,
+      "winner": {
+        "party": "NPP",
+        "votes": 140269,
+        "pct": 41.86
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 134238,
+        "pct": 40.06
+      },
+      "margin": 1.8,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 140269,
+          "pct": 41.86
+        },
+        {
+          "party": "SJB",
+          "votes": 134238,
+          "pct": 40.06
+        },
+        {
+          "party": "IND16",
+          "votes": 35728,
+          "pct": 10.66
+        },
+        {
+          "party": "SLPP",
+          "votes": 12832,
+          "pct": 3.83
+        },
+        {
+          "party": "SLCP",
+          "votes": 2286,
+          "pct": 0.68
+        }
+      ],
+      "otherVotes": 9729
+    },
+    "EC-20A": {
+      "valid": 73236,
+      "rejected": 1402,
+      "polled": 74638,
+      "electors": 88625,
+      "turnoutPct": 84.2,
+      "rejectedPct": 1.88,
+      "winner": {
+        "party": "SJB",
+        "votes": 29952,
+        "pct": 40.9
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 28639,
+        "pct": 39.11
+      },
+      "margin": 1.79,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 29952,
+          "pct": 40.9
+        },
+        {
+          "party": "NPP",
+          "votes": 28639,
+          "pct": 39.11
+        },
+        {
+          "party": "IND16",
+          "votes": 9461,
+          "pct": 12.92
+        },
+        {
+          "party": "SLPP",
+          "votes": 2432,
+          "pct": 3.32
+        },
+        {
+          "party": "SLCP",
+          "votes": 427,
+          "pct": 0.58
+        }
+      ],
+      "otherVotes": 2325
+    },
+    "EC-20B": {
+      "valid": 96791,
+      "rejected": 2124,
+      "polled": 98915,
+      "electors": 117333,
+      "turnoutPct": 84.3,
+      "rejectedPct": 2.15,
+      "winner": {
+        "party": "SJB",
+        "votes": 42111,
+        "pct": 43.51
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 36736,
+        "pct": 37.95
+      },
+      "margin": 5.55,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 42111,
+          "pct": 43.51
+        },
+        {
+          "party": "NPP",
+          "votes": 36736,
+          "pct": 37.95
+        },
+        {
+          "party": "IND16",
+          "votes": 9625,
+          "pct": 9.94
+        },
+        {
+          "party": "SLPP",
+          "votes": 4264,
+          "pct": 4.41
+        },
+        {
+          "party": "SLCP",
+          "votes": 796,
+          "pct": 0.82
+        }
+      ],
+      "otherVotes": 3259
+    },
+    "EC-20C": {
+      "valid": 141066,
+      "rejected": 2590,
+      "polled": 143656,
+      "electors": 168411,
+      "turnoutPct": 85.3,
+      "rejectedPct": 1.8,
+      "winner": {
+        "party": "NPP",
+        "votes": 60844,
+        "pct": 43.13
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 56442,
+        "pct": 40.01
+      },
+      "margin": 3.12,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 60844,
+          "pct": 43.13
+        },
+        {
+          "party": "SJB",
+          "votes": 56442,
+          "pct": 40.01
+        },
+        {
+          "party": "IND16",
+          "votes": 13241,
+          "pct": 9.39
+        },
+        {
+          "party": "SLPP",
+          "votes": 5666,
+          "pct": 4.02
+        },
+        {
+          "party": "SLCP",
+          "votes": 974,
+          "pct": 0.69
+        }
+      ],
+      "otherVotes": 3899
+    },
+    "EC-20P": {
+      "valid": 23989,
+      "rejected": 555,
+      "polled": 24544,
+      "electors": 24797,
+      "turnoutPct": 99,
+      "rejectedPct": 2.26,
+      "winner": {
+        "party": "NPP",
+        "votes": 14050,
+        "pct": 58.57
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 5733,
+        "pct": 23.9
+      },
+      "margin": 34.67,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 14050,
+          "pct": 58.57
+        },
+        {
+          "party": "SJB",
+          "votes": 5733,
+          "pct": 23.9
+        },
+        {
+          "party": "IND16",
+          "votes": 3401,
+          "pct": 14.18
+        },
+        {
+          "party": "SLPP",
+          "votes": 470,
+          "pct": 1.96
+        },
+        {
+          "party": "SLCP",
+          "votes": 89,
+          "pct": 0.37
+        }
+      ],
+      "otherVotes": 246
+    },
+    "EC-21": {
+      "valid": 741900,
+      "rejected": 15070,
+      "polled": 756970,
+      "electors": 923736,
+      "turnoutPct": 81.9,
+      "rejectedPct": 1.99,
+      "winner": {
+        "party": "NPP",
+        "votes": 291708,
+        "pct": 39.32
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 257721,
+        "pct": 34.74
+      },
+      "margin": 4.58,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 291708,
+          "pct": 39.32
+        },
+        {
+          "party": "SJB",
+          "votes": 257721,
+          "pct": 34.74
+        },
+        {
+          "party": "IND16",
+          "votes": 145038,
+          "pct": 19.55
+        },
+        {
+          "party": "SLPP",
+          "votes": 20575,
+          "pct": 2.77
+        },
+        {
+          "party": "SLCP",
+          "votes": 7629,
+          "pct": 1.03
+        }
+      ],
+      "otherVotes": 19229
+    },
+    "EC-21A": {
+      "valid": 81526,
+      "rejected": 1559,
+      "polled": 83085,
+      "electors": 103290,
+      "turnoutPct": 80.4,
+      "rejectedPct": 1.88,
+      "winner": {
+        "party": "NPP",
+        "votes": 34829,
+        "pct": 42.72
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 24209,
+        "pct": 29.69
+      },
+      "margin": 13.03,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 34829,
+          "pct": 42.72
+        },
+        {
+          "party": "SJB",
+          "votes": 24209,
+          "pct": 29.69
+        },
+        {
+          "party": "IND16",
+          "votes": 17477,
+          "pct": 21.44
+        },
+        {
+          "party": "SLPP",
+          "votes": 1814,
+          "pct": 2.23
+        },
+        {
+          "party": "SLCP",
+          "votes": 1274,
+          "pct": 1.56
+        }
+      ],
+      "otherVotes": 1923
+    },
+    "EC-21B": {
+      "valid": 105212,
+      "rejected": 1972,
+      "polled": 107184,
+      "electors": 131522,
+      "turnoutPct": 81.5,
+      "rejectedPct": 1.84,
+      "winner": {
+        "party": "NPP",
+        "votes": 41075,
+        "pct": 39.04
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 32133,
+        "pct": 30.54
+      },
+      "margin": 8.5,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 41075,
+          "pct": 39.04
+        },
+        {
+          "party": "SJB",
+          "votes": 32133,
+          "pct": 30.54
+        },
+        {
+          "party": "IND16",
+          "votes": 25589,
+          "pct": 24.32
+        },
+        {
+          "party": "SLPP",
+          "votes": 2678,
+          "pct": 2.55
+        },
+        {
+          "party": "SLCP",
+          "votes": 1350,
+          "pct": 1.28
+        }
+      ],
+      "otherVotes": 2387
+    },
+    "EC-21C": {
+      "valid": 74474,
+      "rejected": 1585,
+      "polled": 76059,
+      "electors": 94099,
+      "turnoutPct": 80.8,
+      "rejectedPct": 2.08,
+      "winner": {
+        "party": "SJB",
+        "votes": 27599,
+        "pct": 37.06
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 25573,
+        "pct": 34.34
+      },
+      "margin": 2.72,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 27599,
+          "pct": 37.06
+        },
+        {
+          "party": "NPP",
+          "votes": 25573,
+          "pct": 34.34
+        },
+        {
+          "party": "IND16",
+          "votes": 16826,
+          "pct": 22.59
+        },
+        {
+          "party": "SLPP",
+          "votes": 1706,
+          "pct": 2.29
+        },
+        {
+          "party": "SLCP",
+          "votes": 681,
+          "pct": 0.91
+        }
+      ],
+      "otherVotes": 2089
+    },
+    "EC-21D": {
+      "valid": 93861,
+      "rejected": 2080,
+      "polled": 95941,
+      "electors": 117507,
+      "turnoutPct": 81.6,
+      "rejectedPct": 2.17,
+      "winner": {
+        "party": "NPP",
+        "votes": 36999,
+        "pct": 39.42
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 36834,
+        "pct": 39.24
+      },
+      "margin": 0.18,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 36999,
+          "pct": 39.42
+        },
+        {
+          "party": "SJB",
+          "votes": 36834,
+          "pct": 39.24
+        },
+        {
+          "party": "IND16",
+          "votes": 14265,
+          "pct": 15.2
+        },
+        {
+          "party": "SLPP",
+          "votes": 2492,
+          "pct": 2.65
+        },
+        {
+          "party": "SLCP",
+          "votes": 544,
+          "pct": 0.58
+        }
+      ],
+      "otherVotes": 2727
+    },
+    "EC-21E": {
+      "valid": 89219,
+      "rejected": 1857,
+      "polled": 91076,
+      "electors": 112997,
+      "turnoutPct": 80.6,
+      "rejectedPct": 2.04,
+      "winner": {
+        "party": "SJB",
+        "votes": 37151,
+        "pct": 41.64
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 30908,
+        "pct": 34.64
+      },
+      "margin": 7,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 37151,
+          "pct": 41.64
+        },
+        {
+          "party": "NPP",
+          "votes": 30908,
+          "pct": 34.64
+        },
+        {
+          "party": "IND16",
+          "votes": 15474,
+          "pct": 17.34
+        },
+        {
+          "party": "SLPP",
+          "votes": 2526,
+          "pct": 2.83
+        },
+        {
+          "party": "SLCP",
+          "votes": 601,
+          "pct": 0.67
+        }
+      ],
+      "otherVotes": 2559
+    },
+    "EC-21F": {
+      "valid": 85210,
+      "rejected": 1981,
+      "polled": 87191,
+      "electors": 106254,
+      "turnoutPct": 82.1,
+      "rejectedPct": 2.27,
+      "winner": {
+        "party": "SJB",
+        "votes": 30363,
+        "pct": 35.63
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 27501,
+        "pct": 32.27
+      },
+      "margin": 3.36,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 30363,
+          "pct": 35.63
+        },
+        {
+          "party": "NPP",
+          "votes": 27501,
+          "pct": 32.27
+        },
+        {
+          "party": "IND16",
+          "votes": 21556,
+          "pct": 25.3
+        },
+        {
+          "party": "SLPP",
+          "votes": 2573,
+          "pct": 3.02
+        },
+        {
+          "party": "SLCP",
+          "votes": 746,
+          "pct": 0.88
+        }
+      ],
+      "otherVotes": 2471
+    },
+    "EC-21G": {
+      "valid": 55978,
+      "rejected": 1201,
+      "polled": 57179,
+      "electors": 69438,
+      "turnoutPct": 82.3,
+      "rejectedPct": 2.1,
+      "winner": {
+        "party": "NPP",
+        "votes": 19850,
+        "pct": 35.46
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 19683,
+        "pct": 35.16
+      },
+      "margin": 0.3,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 19850,
+          "pct": 35.46
+        },
+        {
+          "party": "SJB",
+          "votes": 19683,
+          "pct": 35.16
+        },
+        {
+          "party": "IND16",
+          "votes": 11972,
+          "pct": 21.39
+        },
+        {
+          "party": "SLPP",
+          "votes": 1985,
+          "pct": 3.55
+        },
+        {
+          "party": "SLCP",
+          "votes": 869,
+          "pct": 1.55
+        }
+      ],
+      "otherVotes": 1619
+    },
+    "EC-21H": {
+      "valid": 124881,
+      "rejected": 2195,
+      "polled": 127076,
+      "electors": 156099,
+      "turnoutPct": 81.4,
+      "rejectedPct": 1.73,
+      "winner": {
+        "party": "NPP",
+        "votes": 55788,
+        "pct": 44.67
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 45074,
+        "pct": 36.09
+      },
+      "margin": 8.58,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 55788,
+          "pct": 44.67
+        },
+        {
+          "party": "SJB",
+          "votes": 45074,
+          "pct": 36.09
+        },
+        {
+          "party": "IND16",
+          "votes": 15238,
+          "pct": 12.2
+        },
+        {
+          "party": "SLPP",
+          "votes": 4301,
+          "pct": 3.44
+        },
+        {
+          "party": "SLCP",
+          "votes": 1313,
+          "pct": 1.05
+        }
+      ],
+      "otherVotes": 3167
+    },
+    "EC-21P": {
+      "valid": 31539,
+      "rejected": 640,
+      "polled": 32179,
+      "electors": 32530,
+      "turnoutPct": 98.9,
+      "rejectedPct": 1.99,
+      "winner": {
+        "party": "NPP",
+        "votes": 19185,
+        "pct": 60.83
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 6641,
+        "pct": 21.06
+      },
+      "margin": 39.77,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 19185,
+          "pct": 60.83
+        },
+        {
+          "party": "IND16",
+          "votes": 6641,
+          "pct": 21.06
+        },
+        {
+          "party": "SJB",
+          "votes": 4675,
+          "pct": 14.82
+        },
+        {
+          "party": "SLPP",
+          "votes": 500,
+          "pct": 1.59
+        },
+        {
+          "party": "SLCP",
+          "votes": 251,
+          "pct": 0.8
+        }
+      ],
+      "otherVotes": 287
+    },
+    "EC-22": {
+      "valid": 569679,
+      "rejected": 11878,
+      "polled": 581557,
+      "electors": 709622,
+      "turnoutPct": 82,
+      "rejectedPct": 2.04,
+      "winner": {
+        "party": "NPP",
+        "votes": 247179,
+        "pct": 43.39
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 185930,
+        "pct": 32.64
+      },
+      "margin": 10.75,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 247179,
+          "pct": 43.39
+        },
+        {
+          "party": "SJB",
+          "votes": 185930,
+          "pct": 32.64
+        },
+        {
+          "party": "IND16",
+          "votes": 106510,
+          "pct": 18.7
+        },
+        {
+          "party": "SLPP",
+          "votes": 11722,
+          "pct": 2.06
+        },
+        {
+          "party": "SLCP",
+          "votes": 4619,
+          "pct": 0.81
+        }
+      ],
+      "otherVotes": 13719
+    },
+    "EC-22A": {
+      "valid": 71713,
+      "rejected": 1401,
+      "polled": 73114,
+      "electors": 89241,
+      "turnoutPct": 81.9,
+      "rejectedPct": 1.92,
+      "winner": {
+        "party": "NPP",
+        "votes": 33226,
+        "pct": 46.33
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 21854,
+        "pct": 30.47
+      },
+      "margin": 15.86,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 33226,
+          "pct": 46.33
+        },
+        {
+          "party": "SJB",
+          "votes": 21854,
+          "pct": 30.47
+        },
+        {
+          "party": "IND16",
+          "votes": 12842,
+          "pct": 17.91
+        },
+        {
+          "party": "SLPP",
+          "votes": 1704,
+          "pct": 2.38
+        },
+        {
+          "party": "SLCP",
+          "votes": 556,
+          "pct": 0.78
+        }
+      ],
+      "otherVotes": 1531
+    },
+    "EC-22B": {
+      "valid": 53788,
+      "rejected": 1106,
+      "polled": 54894,
+      "electors": 67289,
+      "turnoutPct": 81.6,
+      "rejectedPct": 2.01,
+      "winner": {
+        "party": "NPP",
+        "votes": 23348,
+        "pct": 43.41
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 17713,
+        "pct": 32.93
+      },
+      "margin": 10.48,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 23348,
+          "pct": 43.41
+        },
+        {
+          "party": "SJB",
+          "votes": 17713,
+          "pct": 32.93
+        },
+        {
+          "party": "IND16",
+          "votes": 9974,
+          "pct": 18.54
+        },
+        {
+          "party": "SLPP",
+          "votes": 1036,
+          "pct": 1.93
+        },
+        {
+          "party": "SLCP",
+          "votes": 404,
+          "pct": 0.75
+        }
+      ],
+      "otherVotes": 1313
+    },
+    "EC-22C": {
+      "valid": 57762,
+      "rejected": 1125,
+      "polled": 58887,
+      "electors": 72552,
+      "turnoutPct": 81.2,
+      "rejectedPct": 1.91,
+      "winner": {
+        "party": "NPP",
+        "votes": 28994,
+        "pct": 50.2
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 14755,
+        "pct": 25.54
+      },
+      "margin": 24.65,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 28994,
+          "pct": 50.2
+        },
+        {
+          "party": "SJB",
+          "votes": 14755,
+          "pct": 25.54
+        },
+        {
+          "party": "IND16",
+          "votes": 11067,
+          "pct": 19.16
+        },
+        {
+          "party": "SLPP",
+          "votes": 1176,
+          "pct": 2.04
+        },
+        {
+          "party": "SLCP",
+          "votes": 493,
+          "pct": 0.85
+        }
+      ],
+      "otherVotes": 1277
+    },
+    "EC-22D": {
+      "valid": 53852,
+      "rejected": 1119,
+      "polled": 54971,
+      "electors": 67403,
+      "turnoutPct": 81.6,
+      "rejectedPct": 2.04,
+      "winner": {
+        "party": "NPP",
+        "votes": 26012,
+        "pct": 48.3
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 15848,
+        "pct": 29.43
+      },
+      "margin": 18.87,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 26012,
+          "pct": 48.3
+        },
+        {
+          "party": "SJB",
+          "votes": 15848,
+          "pct": 29.43
+        },
+        {
+          "party": "IND16",
+          "votes": 9374,
+          "pct": 17.41
+        },
+        {
+          "party": "SLPP",
+          "votes": 1086,
+          "pct": 2.02
+        },
+        {
+          "party": "SLCP",
+          "votes": 268,
+          "pct": 0.5
+        }
+      ],
+      "otherVotes": 1264
+    },
+    "EC-22E": {
+      "valid": 75697,
+      "rejected": 1416,
+      "polled": 77113,
+      "electors": 97200,
+      "turnoutPct": 79.3,
+      "rejectedPct": 1.84,
+      "winner": {
+        "party": "NPP",
+        "votes": 33447,
+        "pct": 44.19
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 27161,
+        "pct": 35.88
+      },
+      "margin": 8.3,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 33447,
+          "pct": 44.19
+        },
+        {
+          "party": "SJB",
+          "votes": 27161,
+          "pct": 35.88
+        },
+        {
+          "party": "IND16",
+          "votes": 11610,
+          "pct": 15.34
+        },
+        {
+          "party": "SLPP",
+          "votes": 1418,
+          "pct": 1.87
+        },
+        {
+          "party": "SLCP",
+          "votes": 389,
+          "pct": 0.51
+        }
+      ],
+      "otherVotes": 1672
+    },
+    "EC-22F": {
+      "valid": 41644,
+      "rejected": 942,
+      "polled": 42586,
+      "electors": 52352,
+      "turnoutPct": 81.3,
+      "rejectedPct": 2.21,
+      "winner": {
+        "party": "NPP",
+        "votes": 16853,
+        "pct": 40.47
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 15165,
+        "pct": 36.42
+      },
+      "margin": 4.05,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 16853,
+          "pct": 40.47
+        },
+        {
+          "party": "SJB",
+          "votes": 15165,
+          "pct": 36.42
+        },
+        {
+          "party": "IND16",
+          "votes": 7465,
+          "pct": 17.93
+        },
+        {
+          "party": "SLPP",
+          "votes": 689,
+          "pct": 1.65
+        },
+        {
+          "party": "SLCP",
+          "votes": 313,
+          "pct": 0.75
+        }
+      ],
+      "otherVotes": 1159
+    },
+    "EC-22G": {
+      "valid": 61883,
+      "rejected": 1333,
+      "polled": 63216,
+      "electors": 77885,
+      "turnoutPct": 81.2,
+      "rejectedPct": 2.11,
+      "winner": {
+        "party": "SJB",
+        "votes": 23891,
+        "pct": 38.61
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 19482,
+        "pct": 31.48
+      },
+      "margin": 7.12,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 23891,
+          "pct": 38.61
+        },
+        {
+          "party": "NPP",
+          "votes": 19482,
+          "pct": 31.48
+        },
+        {
+          "party": "IND16",
+          "votes": 14893,
+          "pct": 24.07
+        },
+        {
+          "party": "SLPP",
+          "votes": 1335,
+          "pct": 2.16
+        },
+        {
+          "party": "SLCP",
+          "votes": 540,
+          "pct": 0.87
+        }
+      ],
+      "otherVotes": 1742
+    },
+    "EC-22H": {
+      "valid": 62781,
+      "rejected": 1270,
+      "polled": 64051,
+      "electors": 78725,
+      "turnoutPct": 81.4,
+      "rejectedPct": 1.98,
+      "winner": {
+        "party": "NPP",
+        "votes": 26671,
+        "pct": 42.48
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 22000,
+        "pct": 35.04
+      },
+      "margin": 7.44,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 26671,
+          "pct": 42.48
+        },
+        {
+          "party": "SJB",
+          "votes": 22000,
+          "pct": 35.04
+        },
+        {
+          "party": "IND16",
+          "votes": 10448,
+          "pct": 16.64
+        },
+        {
+          "party": "SLPP",
+          "votes": 1413,
+          "pct": 2.25
+        },
+        {
+          "party": "SLCP",
+          "votes": 720,
+          "pct": 1.15
+        }
+      ],
+      "otherVotes": 1529
+    },
+    "EC-22I": {
+      "valid": 56655,
+      "rejected": 1272,
+      "polled": 57927,
+      "electors": 71872,
+      "turnoutPct": 80.6,
+      "rejectedPct": 2.2,
+      "winner": {
+        "party": "SJB",
+        "votes": 21939,
+        "pct": 38.72
+      },
+      "runnerUp": {
+        "party": "NPP",
+        "votes": 19084,
+        "pct": 33.68
+      },
+      "margin": 5.04,
+      "topParties": [
+        {
+          "party": "SJB",
+          "votes": 21939,
+          "pct": 38.72
+        },
+        {
+          "party": "NPP",
+          "votes": 19084,
+          "pct": 33.68
+        },
+        {
+          "party": "IND16",
+          "votes": 11608,
+          "pct": 20.49
+        },
+        {
+          "party": "SLPP",
+          "votes": 1383,
+          "pct": 2.44
+        },
+        {
+          "party": "SLCP",
+          "votes": 754,
+          "pct": 1.33
+        }
+      ],
+      "otherVotes": 1887
+    },
+    "EC-22P": {
+      "valid": 33904,
+      "rejected": 894,
+      "polled": 34798,
+      "electors": 35103,
+      "turnoutPct": 99.1,
+      "rejectedPct": 2.57,
+      "winner": {
+        "party": "NPP",
+        "votes": 20062,
+        "pct": 59.17
+      },
+      "runnerUp": {
+        "party": "IND16",
+        "votes": 7229,
+        "pct": 21.32
+      },
+      "margin": 37.85,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 20062,
+          "pct": 59.17
+        },
+        {
+          "party": "IND16",
+          "votes": 7229,
+          "pct": 21.32
+        },
+        {
+          "party": "SJB",
+          "votes": 5604,
+          "pct": 16.53
+        },
+        {
+          "party": "SLPP",
+          "votes": 482,
+          "pct": 1.42
+        },
+        {
+          "party": "SLCP",
+          "votes": 182,
+          "pct": 0.54
+        }
+      ],
+      "otherVotes": 345
+    },
+    "LK": {
+      "valid": 13319616,
+      "rejected": 300300,
+      "polled": 13619916,
+      "electors": 17140354,
+      "turnoutPct": 79.5,
+      "rejectedPct": 2.2,
+      "winner": {
+        "party": "NPP",
+        "votes": 5634915,
+        "pct": 42.31
+      },
+      "runnerUp": {
+        "party": "SJB",
+        "votes": 4363035,
+        "pct": 32.76
+      },
+      "margin": 9.55,
+      "topParties": [
+        {
+          "party": "NPP",
+          "votes": 5634915,
+          "pct": 42.31
+        },
+        {
+          "party": "SJB",
+          "votes": 4363035,
+          "pct": 32.76
+        },
+        {
+          "party": "IND16",
+          "votes": 2299767,
+          "pct": 17.27
+        },
+        {
+          "party": "SLPP",
+          "votes": 342781,
+          "pct": 2.57
+        },
+        {
+          "party": "IND9",
+          "votes": 226343,
+          "pct": 1.7
+        }
+      ],
+      "otherVotes": 452775
+    }
+  }
+}

@@ -137,6 +137,22 @@ export const CATALOG: Dataset[] = [
     license: "Open data (via nuuuwan)",
   },
   {
+    id: "pres-2024",
+    title: "2024 presidential results",
+    shortTitle: "Pres 2024",
+    description:
+      "Color each electoral division by the winning party in the 22 September 2024 presidential election. Underlying vote counts appear in the info panel.",
+    category: "electoral",
+    status: "ready",
+    kind: "choropleth",
+    featureCount: 22,
+    source: {
+      name: "Election Commission of Sri Lanka via nuuuwan/lk_elections",
+      url: "https://github.com/nuuuwan/lk_elections",
+    },
+    license: "Open data",
+  },
+  {
     id: "population-choropleth",
     title: "Population density",
     shortTitle: "Pop. density",

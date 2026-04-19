@@ -67,14 +67,25 @@ function formatNumber(n) {
 }
 
 async function main() {
-  const [provinces, districts, dsDivisions, population, ethnicityReligion] =
-    await Promise.all([
-      readJSON(resolve(OUT, "provinces.geojson")),
-      readJSON(resolve(OUT, "districts.geojson")),
-      readJSON(resolve(OUT, "ds-divisions.geojson")),
-      readJSON(resolve(__dirname, "population-2023.json")),
-      readJSON(resolve(__dirname, "ethnicity-religion-2012.json")),
-    ])
+  const [
+    provinces,
+    districts,
+    dsDivisions,
+    electoral,
+    polling,
+    population,
+    ethnicityReligion,
+    election,
+  ] = await Promise.all([
+    readJSON(resolve(OUT, "provinces.geojson")),
+    readJSON(resolve(OUT, "districts.geojson")),
+    readJSON(resolve(OUT, "ds-divisions.geojson")),
+    readJSON(resolve(OUT, "electoral-divisions.geojson")),
+    readJSON(resolve(OUT, "polling-divisions.geojson")),
+    readJSON(resolve(__dirname, "population-2023.json")),
+    readJSON(resolve(__dirname, "ethnicity-religion-2012.json")),
+    readJSON(resolve(__dirname, "election-presidential-2024.json")),
+  ])
 
   const popByDistrict = population.districts
   const popByProvince = population.provinces
@@ -214,8 +225,29 @@ async function main() {
     district.properties.dsDivisionCount = children.length
   }
 
+  // --- Electoral + polling divisions: join 2024 presidential results
+  console.log("Enriching electoral / polling divisions…")
+  const electionEntities = election.entities ?? {}
+  const attachElection = (feature) => {
+    const entry = electionEntities[feature.properties.id]
+    if (!entry) return
+    feature.properties = {
+      ...feature.properties,
+      election2024: entry,
+      // Flat mirrors of the winner for MapLibre expressions (nested get is finicky)
+      winnerParty: entry.winner?.party ?? null,
+      winnerVotes: entry.winner?.votes ?? null,
+      winnerPct: entry.winner?.pct ?? null,
+      turnoutPct: entry.turnoutPct ?? null,
+    }
+  }
+  for (const feature of electoral.features) attachElection(feature)
+  for (const feature of polling.features) attachElection(feature)
+
   await Promise.all([
     writeJSON(resolve(OUT, "provinces.geojson"), provinces),
+    writeJSON(resolve(OUT, "electoral-divisions.geojson"), electoral),
+    writeJSON(resolve(OUT, "polling-divisions.geojson"), polling),
     writeJSON(resolve(OUT, "districts.geojson"), districts),
     writeJSON(resolve(OUT, "ds-divisions.geojson"), dsDivisions),
   ])

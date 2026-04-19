@@ -19,8 +19,12 @@ import { CATALOG, CATEGORIES } from "@/data/catalog"
 import { useLayerStore } from "@/stores/layers"
 import { cn } from "@/lib/utils"
 
-const CHOROPLETH_DATASETS: Record<string, "density" | "population"> = {
+const CHOROPLETH_DATASETS: Record<
+  string,
+  "density" | "population" | "pres-2024"
+> = {
   "population-choropleth": "density",
+  "pres-2024": "pres-2024",
 }
 
 export function AppSidebar() {

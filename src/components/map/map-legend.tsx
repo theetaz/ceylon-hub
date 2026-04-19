@@ -5,6 +5,7 @@ import { ADMIN_LAYER_THEMES } from "@/components/map/admin-layers"
 import {
   getChoroplethLabel,
   getChoroplethStops,
+  PARTY_PALETTE,
 } from "@/components/map/choropleth"
 import { OSM_COLORS } from "@/components/map/osm-layers"
 import { useTheme } from "@/components/theme-provider"
@@ -23,22 +24,60 @@ function ChoroplethScale() {
   const choroplethMode = useLayerStore((s) => s.choroplethMode)
   const setChoroplethMode = useLayerStore((s) => s.setChoroplethMode)
   if (choroplethMode === "none") return null
+
+  const label = (
+    <div className="flex items-center justify-between text-[11px] text-muted-foreground">
+      <span className="font-semibold tracking-wide uppercase">
+        {getChoroplethLabel(choroplethMode)}
+      </span>
+      <button
+        type="button"
+        onClick={() => setChoroplethMode("none")}
+        className="rounded px-1 text-[10px] hover:bg-accent"
+      >
+        clear
+      </button>
+    </div>
+  )
+
+  if (choroplethMode === "pres-2024") {
+    const entries = Object.entries(PARTY_PALETTE)
+    return (
+      <div className="mt-1 space-y-1.5 border-t pt-2">
+        {label}
+        <ul className="space-y-0.5 text-xs">
+          {entries.map(([code, meta]) => (
+            <li
+              key={code}
+              className="flex items-center justify-between gap-2"
+            >
+              <span className="flex min-w-0 items-center gap-1.5">
+                <span
+                  aria-hidden
+                  className="size-2.5 shrink-0 rounded-sm"
+                  style={{ backgroundColor: meta.color }}
+                />
+                <span className="truncate text-muted-foreground">
+                  {meta.candidate === "Other candidates"
+                    ? "Other"
+                    : meta.candidate}
+                </span>
+              </span>
+              <span className="shrink-0 font-mono text-[10px] tabular-nums text-muted-foreground/70">
+                {code.startsWith("IND") ? code : code}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
   const stops = getChoroplethStops(choroplethMode)
   if (!stops) return null
   return (
     <div className="mt-1 space-y-1 border-t pt-2">
-      <div className="flex items-center justify-between text-[11px] text-muted-foreground">
-        <span className="font-semibold tracking-wide uppercase">
-          {getChoroplethLabel(choroplethMode)}
-        </span>
-        <button
-          type="button"
-          onClick={() => setChoroplethMode("none")}
-          className="rounded px-1 text-[10px] hover:bg-accent"
-        >
-          clear
-        </button>
-      </div>
+      {label}
       <div
         className="h-2 rounded-full"
         style={{

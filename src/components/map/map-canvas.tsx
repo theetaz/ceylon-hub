@@ -485,6 +485,20 @@ function addAdminLayer(
   }
 }
 
+function appliesChoropleth(
+  id: AdminDatasetId,
+  choropleth: ChoroplethMode
+): boolean {
+  if (choropleth === "none") return false
+  if (choropleth === "density" || choropleth === "population") {
+    return id === "districts"
+  }
+  if (choropleth === "pres-2024") {
+    return id === "electoral-divisions" || id === "polling-divisions"
+  }
+  return false
+}
+
 function applyAdminTheme(
   map: maplibregl.Map,
   mode: BasemapMode,
@@ -494,16 +508,12 @@ function applyAdminTheme(
     const ids = layerIds(id)
     const theme = ADMIN_LAYER_THEMES[id][mode]
     if (map.getLayer(ids.fill)) {
-      const fillColor =
-        id === "districts" && choropleth !== "none"
-          ? buildChoroplethFillColor(choropleth, theme.fillColor)
-          : theme.fillColor
-      const baseOpacity =
-        id === "districts" && choropleth !== "none" ? 0.75 : theme.fillOpacity
-      const hoverOpacity =
-        id === "districts" && choropleth !== "none"
-          ? 0.9
-          : theme.fillHoverOpacity
+      const applies = appliesChoropleth(id, choropleth)
+      const fillColor = applies
+        ? buildChoroplethFillColor(choropleth, theme.fillColor)
+        : theme.fillColor
+      const baseOpacity = applies ? 0.75 : theme.fillOpacity
+      const hoverOpacity = applies ? 0.9 : theme.fillHoverOpacity
       map.setPaintProperty(ids.fill, "fill-color", fillColor)
       map.setPaintProperty(ids.fill, "fill-opacity", [
         "case",
@@ -935,12 +945,9 @@ export function MapCanvas() {
   React.useEffect(() => {
     const map = mapRef.current
     if (!map) return
-    const apply = () =>
-      applyAdminTheme(map, resolveMode(theme), choroplethMode)
     // applyAdminTheme only touches layers that exist — safe to call
     // repeatedly as sources come online.
-    if (map.isStyleLoaded()) apply()
-    else map.once("load", apply)
+    applyAdminTheme(map, resolveMode(theme), choroplethMode)
   }, [choroplethMode, theme])
 
   React.useEffect(() => {

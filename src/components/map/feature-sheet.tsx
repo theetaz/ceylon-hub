@@ -21,6 +21,7 @@ import type {
   Polygon,
 } from "geojson"
 
+import { PARTY_PALETTE } from "@/components/map/choropleth"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
@@ -38,6 +39,21 @@ type AgeBucket = { female: number; male: number; total: number }
 type AgeBreakdown = Record<string, AgeBucket>
 
 type GroupBreakdown = Record<string, number>
+
+type ElectionPartyResult = { party: string; votes: number; pct: number | null }
+type ElectionResult = {
+  valid: number
+  rejected: number
+  polled: number
+  electors: number
+  turnoutPct: number | null
+  rejectedPct: number | null
+  winner: ElectionPartyResult | null
+  runnerUp: ElectionPartyResult | null
+  margin: number | null
+  topParties: ElectionPartyResult[]
+  otherVotes: number
+}
 
 type AdminProperties = {
   id: string | number
@@ -60,6 +76,7 @@ type AdminProperties = {
   ethnicity?: GroupBreakdown | null
   religion?: GroupBreakdown | null
   censusYear?: number | null
+  election2024?: ElectionResult | null
 }
 
 type AdminFeature = Feature<Polygon | MultiPolygon, AdminProperties>
@@ -441,6 +458,126 @@ const OSM_ICONS: Record<OsmDatasetId, typeof IconMap2> = {
   cities: IconMap2,
 }
 
+function partyMeta(code: string) {
+  return PARTY_PALETTE[code] ?? PARTY_PALETTE.OTHER
+}
+
+function ElectionBlock({ result }: { result: ElectionResult }) {
+  if (!result.winner) return null
+  const winner = partyMeta(result.winner.party)
+
+  return (
+    <div className="space-y-3 rounded-lg border bg-muted/30 p-3">
+      <div className="flex items-baseline justify-between">
+        <div className="text-xs font-semibold tracking-wide text-muted-foreground uppercase">
+          Presidential 2024
+        </div>
+        <div className="text-[10px] text-muted-foreground">
+          22 Sep 2024
+        </div>
+      </div>
+
+      <div className="flex items-center gap-2">
+        <span
+          aria-hidden
+          className="inline-block size-3 shrink-0 rounded-sm"
+          style={{ backgroundColor: winner.color }}
+        />
+        <div className="min-w-0 flex-1">
+          <div className="truncate text-sm font-medium">
+            {winner.candidate}
+          </div>
+          <div className="truncate text-xs text-muted-foreground">
+            {winner.name}
+          </div>
+        </div>
+        <div className="shrink-0 text-right">
+          <div className="font-mono text-sm tabular-nums">
+            {result.winner.pct?.toFixed(1)}%
+          </div>
+          <div className="font-mono text-[10px] tabular-nums text-muted-foreground">
+            {result.winner.votes.toLocaleString()}
+          </div>
+        </div>
+      </div>
+
+      {result.topParties.length > 1 && (
+        <>
+          <div className="flex h-1.5 overflow-hidden rounded-full bg-muted">
+            {result.topParties.map((p) => {
+              const color = partyMeta(p.party).color
+              return (
+                <div
+                  key={p.party}
+                  className="h-full"
+                  style={{
+                    width: `${p.pct ?? 0}%`,
+                    backgroundColor: color,
+                  }}
+                  title={`${partyMeta(p.party).candidate}: ${p.votes.toLocaleString()}`}
+                />
+              )
+            })}
+          </div>
+
+          <ul className="space-y-0.5 text-xs">
+            {result.topParties.slice(1).map((p) => {
+              const meta = partyMeta(p.party)
+              return (
+                <li
+                  key={p.party}
+                  className="flex items-center justify-between gap-2"
+                >
+                  <span className="flex min-w-0 items-center gap-1.5">
+                    <span
+                      aria-hidden
+                      className="size-2 shrink-0 rounded-sm"
+                      style={{ backgroundColor: meta.color }}
+                    />
+                    <span className="truncate text-muted-foreground">
+                      {meta.candidate}
+                    </span>
+                  </span>
+                  <span className="shrink-0 font-mono tabular-nums text-muted-foreground">
+                    {p.pct?.toFixed(1)}% ({p.votes.toLocaleString()})
+                  </span>
+                </li>
+              )
+            })}
+          </ul>
+        </>
+      )}
+
+      <dl className="grid grid-cols-2 gap-x-3 gap-y-1 border-t pt-2 text-xs">
+        <div className="flex justify-between">
+          <dt className="text-muted-foreground">Turnout</dt>
+          <dd className="font-mono tabular-nums">
+            {result.turnoutPct?.toFixed(1) ?? "—"}%
+          </dd>
+        </div>
+        <div className="flex justify-between">
+          <dt className="text-muted-foreground">Margin</dt>
+          <dd className="font-mono tabular-nums">
+            {result.margin != null ? `${result.margin.toFixed(1)}%` : "—"}
+          </dd>
+        </div>
+        <div className="flex justify-between">
+          <dt className="text-muted-foreground">Polled</dt>
+          <dd className="font-mono tabular-nums">
+            {result.polled.toLocaleString()}
+          </dd>
+        </div>
+        <div className="flex justify-between">
+          <dt className="text-muted-foreground">Rejected</dt>
+          <dd className="font-mono tabular-nums">
+            {result.rejectedPct?.toFixed(1) ?? "—"}%
+          </dd>
+        </div>
+      </dl>
+    </div>
+  )
+}
+
 function levelIcon(level: number) {
   if (level === 1) return IconMap2
   if (level === 2) return IconBuildingCommunity
@@ -653,10 +790,12 @@ function RoadInfo({
   )
 }
 
-function levelLabel(level: number) {
+function levelLabel(level: number | string) {
   if (level === 1) return "Province"
   if (level === 2) return "District"
   if (level === 3) return "DS Division"
+  if (level === "ED") return "Electoral division"
+  if (level === "PD") return "Polling division"
   return `Level ${level}`
 }
 
@@ -918,6 +1057,10 @@ export function FeatureSheet() {
                 </dl>
 
                 <DemographicsBlock properties={props} />
+
+                {props.election2024 && (
+                  <ElectionBlock result={props.election2024} />
+                )}
 
                 {props.ethnicity && (
                   <GroupBar

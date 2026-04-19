@@ -10,7 +10,7 @@ export type SelectedFeature = {
   properties: Record<string, unknown>
 }
 
-export type ChoroplethMode = "none" | "density" | "population"
+export type ChoroplethMode = "none" | "density" | "population" | "pres-2024"
 
 type LayerState = {
   visible: Record<string, boolean>
@@ -33,7 +33,12 @@ const initialVisibility = () => {
   return visible
 }
 
-const CHOROPLETH_CYCLE: ChoroplethMode[] = ["none", "density", "population"]
+const CHOROPLETH_CYCLE: ChoroplethMode[] = [
+  "none",
+  "density",
+  "population",
+  "pres-2024",
+]
 
 export const useLayerStore = create<LayerState>((set) => ({
   visible: initialVisibility(),
@@ -50,14 +55,22 @@ export const useLayerStore = create<LayerState>((set) => ({
     })),
   setSelected: (feature) => set({ selected: feature }),
   setChoroplethMode: (mode) =>
-    set((state) => ({
-      choroplethMode: mode,
-      // Ensure districts layer is visible whenever choropleth is active.
-      visible:
-        mode === "none"
-          ? state.visible
-          : { ...state.visible, districts: true },
-    })),
+    set((state) => {
+      if (mode === "none") return { choroplethMode: mode }
+      if (mode === "pres-2024") {
+        // Election choropleth acts on electoral divisions — auto-enable
+        // that layer while we're at it.
+        return {
+          choroplethMode: mode,
+          visible: { ...state.visible, "electoral-divisions": true },
+        }
+      }
+      // Density / population act on districts.
+      return {
+        choroplethMode: mode,
+        visible: { ...state.visible, districts: true },
+      }
+    }),
   cycleChoroplethMode: () =>
     set((state) => {
       const idx = CHOROPLETH_CYCLE.indexOf(state.choroplethMode)
