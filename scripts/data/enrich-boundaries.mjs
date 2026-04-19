@@ -71,10 +71,13 @@ async function main() {
     readJSON(resolve(OUT, "provinces.geojson")),
     readJSON(resolve(OUT, "districts.geojson")),
     readJSON(resolve(OUT, "ds-divisions.geojson")),
-    readJSON(resolve(__dirname, "district-population.json")),
+    readJSON(resolve(__dirname, "population-2023.json")),
   ])
 
   const popByDistrict = population.districts
+  const popByProvince = population.provinces
+  const popYear = population.year
+  const popSource = population.source
 
   // --- Districts: assign parent province + population + area + density
   console.log("Enriching districts…")
@@ -87,15 +90,23 @@ async function main() {
       )
       continue
     }
-    const pop = popByDistrict[district.properties.name]
+    // HDX uses bare name (e.g., "Kandy"); our GeoJSON uses "Kandy District".
+    const lookupKey = district.properties.name.replace(/\s+District$/, "")
+    const popEntry = popByDistrict[lookupKey]
+    const totalPop = popEntry?.total ?? null
     const areaKm2 = turfArea(district) / 1_000_000
     district.properties = {
       ...district.properties,
       parentId: parent.properties.id,
       parentName: parent.properties.name,
-      population: pop ?? null,
+      population: totalPop,
+      populationFemale: popEntry?.female ?? null,
+      populationMale: popEntry?.male ?? null,
+      populationAge: popEntry?.age ?? null,
+      populationYear: popEntry ? popYear : null,
+      pcode: popEntry?.pcode ?? null,
       areaKm2: Number(areaKm2.toFixed(2)),
-      density: pop ? Number((pop / areaKm2).toFixed(1)) : null,
+      density: totalPop ? Number((totalPop / areaKm2).toFixed(1)) : null,
     }
     districtToProvince.set(district.properties.id, parent.properties.id)
   }
@@ -125,7 +136,7 @@ async function main() {
     dsToDistrict.set(ds.properties.id, parentDistrict.properties.id)
   }
 
-  // --- Provinces: aggregate population + area + district count + DS count
+  // --- Provinces: join HDX province totals + aggregate child counts + area
   console.log("Aggregating provinces…")
   for (const province of provinces.features) {
     const provinceId = province.properties.id
@@ -135,17 +146,27 @@ async function main() {
     const childDsCount = dsDivisions.features.filter(
       (d) => d.properties.provinceId === provinceId
     ).length
-    const totalPop = childDistricts.reduce(
-      (sum, d) =>
-        d.properties.population != null ? sum + d.properties.population : sum,
-      0
-    )
+    // HDX uses bare name ("Central"); our GeoJSON uses "Central Province".
+    const lookupKey = province.properties.name.replace(/\s+Province$/, "")
+    const provEntry = popByProvince[lookupKey]
+    const totalPop =
+      provEntry?.total ??
+      childDistricts.reduce(
+        (sum, d) =>
+          d.properties.population != null ? sum + d.properties.population : sum,
+        0
+      )
     const totalArea = turfArea(province) / 1_000_000
     province.properties = {
       ...province.properties,
       districtCount: childDistricts.length,
       dsDivisionCount: childDsCount,
       population: totalPop,
+      populationFemale: provEntry?.female ?? null,
+      populationMale: provEntry?.male ?? null,
+      populationAge: provEntry?.age ?? null,
+      populationYear: provEntry ? popYear : null,
+      pcode: provEntry?.pcode ?? null,
       areaKm2: Number(totalArea.toFixed(2)),
       density: totalPop
         ? Number((totalPop / totalArea).toFixed(1))
@@ -181,6 +202,9 @@ async function main() {
     `\nTotal: ${districts.features.length} districts, ` +
       `${dsDivisions.features.length} DS divisions, ` +
       `population ${formatNumber(provinces.features.reduce((s, p) => s + p.properties.population, 0))}`
+  )
+  console.log(
+    `\nPopulation source (${popYear}): ${popSource.name}\n  ${popSource.hdxDataset}`
   )
 }
 

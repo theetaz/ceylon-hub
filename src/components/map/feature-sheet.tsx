@@ -20,6 +20,9 @@ import {
 import { getDataset } from "@/data/catalog"
 import { useLayerStore, type SelectedFeature } from "@/stores/layers"
 
+type AgeBucket = { female: number; male: number; total: number }
+type AgeBreakdown = Record<string, AgeBucket>
+
 type AdminProperties = {
   id: string | number
   name: string
@@ -29,6 +32,11 @@ type AdminProperties = {
   provinceId?: string
   provinceName?: string
   population?: number | null
+  populationFemale?: number | null
+  populationMale?: number | null
+  populationAge?: AgeBreakdown | null
+  populationYear?: number | null
+  pcode?: string | null
   areaKm2?: number
   density?: number | null
   districtCount?: number
@@ -93,6 +101,138 @@ function formatArea(km2: number | undefined) {
 function formatDensity(density: number | null | undefined) {
   if (density == null) return "—"
   return `${density.toLocaleString("en-US", { maximumFractionDigits: 0 })} / km²`
+}
+
+function formatPercent(n: number, total: number) {
+  if (!total) return "0%"
+  return `${((n / total) * 100).toFixed(1)}%`
+}
+
+const AGE_GROUPS = {
+  children: ["00_04", "05_09", "10_14"] as const,
+  working: [
+    "15_19",
+    "20_24",
+    "25_29",
+    "30_34",
+    "35_39",
+    "40_44",
+    "45_49",
+    "50_54",
+    "55_59",
+    "60_64",
+  ] as const,
+  elderly: ["65_69", "70_74", "75_79", "80Plus"] as const,
+}
+
+function summarizeAges(age: AgeBreakdown | null | undefined) {
+  if (!age) return null
+  const sum = (keys: readonly string[]) =>
+    keys.reduce((acc, k) => acc + (age[k]?.total ?? 0), 0)
+  const children = sum(AGE_GROUPS.children)
+  const working = sum(AGE_GROUPS.working)
+  const elderly = sum(AGE_GROUPS.elderly)
+  const total = children + working + elderly
+  return { children, working, elderly, total }
+}
+
+function DemographicsBlock({ properties }: { properties: AdminProperties }) {
+  const {
+    population,
+    populationFemale,
+    populationMale,
+    populationAge,
+    populationYear,
+  } = properties
+  if (population == null) return null
+
+  const ages = summarizeAges(populationAge)
+
+  return (
+    <div className="space-y-3 rounded-lg border bg-muted/30 p-3">
+      <div className="flex items-baseline justify-between">
+        <div className="text-xs font-semibold tracking-wide text-muted-foreground uppercase">
+          Demographics
+        </div>
+        {populationYear && (
+          <div className="text-[10px] text-muted-foreground">
+            {populationYear} projection
+          </div>
+        )}
+      </div>
+
+      {populationFemale != null && populationMale != null && (
+        <div>
+          <div className="mb-1 flex items-center justify-between text-xs">
+            <span className="text-muted-foreground">Female / Male</span>
+            <span className="font-mono tabular-nums">
+              {formatPercent(populationFemale, population)} /{" "}
+              {formatPercent(populationMale, population)}
+            </span>
+          </div>
+          <div className="flex h-1.5 overflow-hidden rounded-full bg-muted">
+            <div
+              className="bg-rose-400 dark:bg-rose-500"
+              style={{ width: `${(populationFemale / population) * 100}%` }}
+            />
+            <div
+              className="bg-sky-400 dark:bg-sky-500"
+              style={{ width: `${(populationMale / population) * 100}%` }}
+            />
+          </div>
+          <div className="mt-1 flex justify-between font-mono text-[10px] tabular-nums text-muted-foreground">
+            <span>♀ {populationFemale.toLocaleString("en-US")}</span>
+            <span>♂ {populationMale.toLocaleString("en-US")}</span>
+          </div>
+        </div>
+      )}
+
+      {ages && ages.total > 0 && (
+        <div>
+          <div className="mb-1 flex items-center justify-between text-xs">
+            <span className="text-muted-foreground">Age groups</span>
+          </div>
+          <div className="flex h-1.5 overflow-hidden rounded-full bg-muted">
+            <div
+              className="bg-emerald-400 dark:bg-emerald-500"
+              style={{ width: `${(ages.children / ages.total) * 100}%` }}
+              title={`Children 0–14: ${ages.children.toLocaleString()}`}
+            />
+            <div
+              className="bg-indigo-400 dark:bg-indigo-500"
+              style={{ width: `${(ages.working / ages.total) * 100}%` }}
+              title={`Working 15–64: ${ages.working.toLocaleString()}`}
+            />
+            <div
+              className="bg-amber-400 dark:bg-amber-500"
+              style={{ width: `${(ages.elderly / ages.total) * 100}%` }}
+              title={`Elderly 65+: ${ages.elderly.toLocaleString()}`}
+            />
+          </div>
+          <div className="mt-1 grid grid-cols-3 gap-1 text-[10px] text-muted-foreground">
+            <span>
+              0–14 ·{" "}
+              <span className="font-mono tabular-nums">
+                {formatPercent(ages.children, ages.total)}
+              </span>
+            </span>
+            <span className="text-center">
+              15–64 ·{" "}
+              <span className="font-mono tabular-nums">
+                {formatPercent(ages.working, ages.total)}
+              </span>
+            </span>
+            <span className="text-right">
+              65+ ·{" "}
+              <span className="font-mono tabular-nums">
+                {formatPercent(ages.elderly, ages.total)}
+              </span>
+            </span>
+          </div>
+        </div>
+      )}
+    </div>
+  )
 }
 
 function StatRow({
@@ -332,7 +472,11 @@ export function FeatureSheet() {
                     />
                   )}
                   <StatRow
-                    label="Population (2012)"
+                    label={
+                      props.populationYear
+                        ? `Population (${props.populationYear})`
+                        : "Population"
+                    }
                     value={formatNumber(props.population)}
                   />
                   <StatRow label="Area" value={formatArea(props.areaKm2)} />
@@ -341,6 +485,8 @@ export function FeatureSheet() {
                     value={formatDensity(props.density)}
                   />
                 </dl>
+
+                <DemographicsBlock properties={props} />
 
                 {selected.level === 1 && (
                   <>
