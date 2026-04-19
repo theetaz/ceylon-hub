@@ -51,6 +51,29 @@ function colorExpr(theme: RoadsTheme) {
   ]
 }
 
+function selectedColor(mode: Mode) {
+  return mode === "dark" ? "#38bdf8" : "#0369a1"
+}
+
+// Full line-color expression: accent when the segment's feature-state
+// has selected=true, class color otherwise.
+export function roadsLineColor(mode: Mode) {
+  return [
+    "case",
+    ["boolean", ["feature-state", "selected"], false],
+    selectedColor(mode),
+    colorExpr(roadsTheme(mode)),
+  ]
+}
+
+// Line-width expression: the normal class-graduated widths. Selected
+// segments rely on the color change for feedback — nesting a zoom
+// interpolation inside a feature-state case is rejected by some
+// MapLibre builds.
+export function roadsLineWidth() {
+  return widthExpr(1)
+}
+
 // Line width varies by road class and zoom level.
 function widthExpr(scale: number) {
   return [
@@ -123,19 +146,6 @@ export function roadsCasingLayer(mode: Mode): LineLayerSpecification {
 }
 
 export function roadsLineLayer(mode: Mode): LineLayerSpecification {
-  const theme = roadsTheme(mode)
-  const selectedColor = mode === "dark" ? "#38bdf8" : "#0369a1"
-  const selectedWidth = [
-    "interpolate",
-    ["linear"],
-    ["zoom"],
-    6,
-    4,
-    9,
-    6,
-    13,
-    10,
-  ]
   return {
     id: ROADS_LINE_LAYER_ID,
     type: "line",
@@ -147,19 +157,9 @@ export function roadsLineLayer(mode: Mode): LineLayerSpecification {
     },
     paint: {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      "line-color": [
-        "case",
-        ["boolean", ["feature-state", "selected"], false],
-        selectedColor,
-        colorExpr(theme),
-      ] as any,
+      "line-color": roadsLineColor(mode) as any,
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      "line-width": [
-        "case",
-        ["boolean", ["feature-state", "selected"], false],
-        selectedWidth,
-        widthExpr(1),
-      ] as any,
+      "line-width": roadsLineWidth() as any,
       "line-opacity": 0.95,
     },
   }

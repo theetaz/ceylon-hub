@@ -41,7 +41,9 @@ import {
   ROADS_LINE_LAYER_ID,
   ROADS_SOURCE_ID,
   roadsCasingLayer,
+  roadsLineColor,
   roadsLineLayer,
+  roadsLineWidth,
   roadsTheme,
 } from "@/components/map/roads-layer"
 import {
@@ -284,19 +286,12 @@ function applyRoadsTheme(map: maplibregl.Map, mode: BasemapMode) {
   if (!map.getLayer(ROADS_LINE_LAYER_ID)) return
   const theme = roadsTheme(mode)
   map.setPaintProperty(ROADS_CASING_LAYER_ID, "line-color", theme.casing)
-  map.setPaintProperty(ROADS_LINE_LAYER_ID, "line-color", [
-    "match",
-    ["get", "highway"],
-    "motorway",
-    theme.motorway,
-    "trunk",
-    theme.trunk,
-    "primary",
-    theme.primary,
-    "secondary",
-    theme.secondary,
-    theme.secondary,
-  ])
+  // Re-apply the full expressions so the feature-state case for selected
+  // road segments stays wired after a theme swap.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  map.setPaintProperty(ROADS_LINE_LAYER_ID, "line-color", roadsLineColor(mode) as any)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  map.setPaintProperty(ROADS_LINE_LAYER_ID, "line-width", roadsLineWidth() as any)
 }
 
 function setRoadsVisible(map: maplibregl.Map, visible: boolean) {
