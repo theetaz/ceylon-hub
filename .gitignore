@@ -22,3 +22,20 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Agentic coding tool artifacts
+.claude/
+.claude-*/
+CLAUDE.md
+.cursor/
+.cursorrules
+.aider*
+.windsurf/
+.continue/
+.github/copilot-instructions.md
+
+# Local env and secrets
+.env
+.env.*
+!.env.example
+
