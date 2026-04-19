@@ -15,8 +15,9 @@
     "data:population": "node scripts/data/fetch-population.mjs",
     "data:cities": "node scripts/data/fetch-cities.mjs",
     "data:roads": "node scripts/data/fetch-roads.mjs",
+    "data:osm": "node scripts/data/fetch-osm-features.mjs",
     "data:enrich": "node scripts/data/enrich-boundaries.mjs",
-    "data:refresh": "npm run data:boundaries && npm run data:population && npm run data:cities && npm run data:roads && npm run data:enrich"
+    "data:refresh": "npm run data:boundaries && npm run data:population && npm run data:cities && npm run data:roads && npm run data:osm && npm run data:enrich"
   },
   "dependencies": {
     "@fontsource-variable/jetbrains-mono": "^5.2.8",

@@ -50,6 +50,10 @@ import {
   EXTRUSION_LAYER_ID,
   extrusionLayer,
 } from "@/components/map/extrusion-layer"
+import {
+  OSM_DATASETS,
+  type OsmLayerId,
+} from "@/components/map/osm-layers"
 import { getDataset } from "@/data/catalog"
 import {
   useLayerStore,
@@ -304,6 +308,71 @@ function setRoadsVisible(map: maplibregl.Map, visible: boolean) {
   }
 }
 
+async function loadOsmDataset(path: string) {
+  const res = await fetch(path)
+  if (!res.ok) throw new Error(`OSM load failed: ${res.status}`)
+  return await res.json()
+}
+
+function addOsmDataset(
+  map: maplibregl.Map,
+  id: OsmLayerId,
+  data: unknown,
+  mode: BasemapMode,
+  beforeLayer?: string
+) {
+  const config = OSM_DATASETS[id]
+  if (!map.getSource(config.sourceId)) {
+    map.addSource(config.sourceId, {
+      type: "geojson",
+      data: data as GeoJSON.FeatureCollection,
+      promoteId: "osmId",
+    })
+  }
+  for (const entry of config.layers) {
+    const spec = entry.spec(mode)
+    if (map.getLayer(spec.id)) continue
+    const target = entry.beneathRoads && map.getLayer(ROADS_CASING_LAYER_ID)
+      ? ROADS_CASING_LAYER_ID
+      : beforeLayer
+    map.addLayer(spec, target)
+  }
+}
+
+function setOsmDatasetVisible(
+  map: maplibregl.Map,
+  id: OsmLayerId,
+  visible: boolean
+) {
+  const config = OSM_DATASETS[id]
+  const value = visible ? "visible" : "none"
+  for (const entry of config.layers) {
+    const spec = entry.spec("light") // spec id is mode-agnostic
+    if (map.getLayer(spec.id)) {
+      map.setLayoutProperty(spec.id, "visibility", value)
+    }
+  }
+}
+
+function applyOsmTheme(map: maplibregl.Map, mode: BasemapMode) {
+  for (const config of Object.values(OSM_DATASETS)) {
+    for (const entry of config.layers) {
+      const themed = entry.spec(mode)
+      if (!map.getLayer(themed.id)) continue
+      const paint = themed.paint as Record<string, unknown> | undefined
+      if (!paint) continue
+      for (const [prop, value] of Object.entries(paint)) {
+        try {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          map.setPaintProperty(themed.id, prop, value as any)
+        } catch {
+          // ignore unsupported property combinations
+        }
+      }
+    }
+  }
+}
+
 function ensureExtrusionLayer(map: maplibregl.Map, mode: BasemapMode) {
   if (map.getLayer(EXTRUSION_LAYER_ID)) return
   if (!map.getSource(layerIds("districts").source)) return
@@ -471,6 +540,7 @@ function applyBasemapMode(map: maplibregl.Map, mode: BasemapMode) {
   applyAdminTheme(map, mode, useLayerStore.getState().choroplethMode)
   applyCitiesTheme(map, mode)
   applyRoadsTheme(map, mode)
+  applyOsmTheme(map, mode)
 }
 
 function setLayerVisible(
@@ -630,6 +700,23 @@ export function MapCanvas() {
       } catch (err) {
         console.warn("Failed to load roads", err)
       }
+
+      // Load all OSM datasets (railways, airports, hospitals, schools,
+      // waterways, protected areas). Each is independent — a failure in
+      // one doesn't block the rest.
+      await Promise.all(
+        (Object.keys(OSM_DATASETS) as OsmLayerId[]).map(async (id) => {
+          const config = OSM_DATASETS[id]
+          try {
+            const data = await loadOsmDataset(config.path)
+            if (cancelled || !mapRef.current) return
+            addOsmDataset(map, id, data, resolveMode(theme))
+            setOsmDatasetVisible(map, id, Boolean(currentVisible[id]))
+          } catch (err) {
+            console.warn(`Failed to load ${id}`, err)
+          }
+        })
+      )
 
       // Re-apply the current admin theme now that layers exist, so any
       // choropleth mode toggled before the data loaded takes effect.
@@ -824,6 +911,14 @@ export function MapCanvas() {
     }
     if (map.getLayer(ROADS_LINE_LAYER_ID)) {
       setRoadsVisible(map, Boolean(visible.roads))
+    }
+    for (const id of Object.keys(OSM_DATASETS) as OsmLayerId[]) {
+      const config = OSM_DATASETS[id]
+      // any member layer is enough to decide existence
+      const firstLayerId = config.layers[0].spec("light").id
+      if (map.getLayer(firstLayerId)) {
+        setOsmDatasetVisible(map, id, Boolean(visible[id]))
+      }
     }
   }, [visible])
 
