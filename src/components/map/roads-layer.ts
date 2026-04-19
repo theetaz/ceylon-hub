@@ -124,6 +124,18 @@ export function roadsCasingLayer(mode: Mode): LineLayerSpecification {
 
 export function roadsLineLayer(mode: Mode): LineLayerSpecification {
   const theme = roadsTheme(mode)
+  const selectedColor = mode === "dark" ? "#38bdf8" : "#0369a1"
+  const selectedWidth = [
+    "interpolate",
+    ["linear"],
+    ["zoom"],
+    6,
+    4,
+    9,
+    6,
+    13,
+    10,
+  ]
   return {
     id: ROADS_LINE_LAYER_ID,
     type: "line",
@@ -135,9 +147,19 @@ export function roadsLineLayer(mode: Mode): LineLayerSpecification {
     },
     paint: {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      "line-color": colorExpr(theme) as any,
+      "line-color": [
+        "case",
+        ["boolean", ["feature-state", "selected"], false],
+        selectedColor,
+        colorExpr(theme),
+      ] as any,
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      "line-width": widthExpr(1) as any,
+      "line-width": [
+        "case",
+        ["boolean", ["feature-state", "selected"], false],
+        selectedWidth,
+        widthExpr(1),
+      ] as any,
       "line-opacity": 0.95,
     },
   }

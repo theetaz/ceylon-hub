@@ -1,5 +1,11 @@
 import * as React from "react"
-import { IconBuildingCommunity, IconMap2, IconUsers } from "@tabler/icons-react"
+import {
+  IconBuildingCommunity,
+  IconExternalLink,
+  IconMap2,
+  IconRoad,
+  IconUsers,
+} from "@tabler/icons-react"
 import type {
   Feature,
   FeatureCollection,
@@ -370,10 +376,113 @@ function StatRow({
   )
 }
 
+type RoadProperties = {
+  ref?: string | null
+  name?: string | null
+  highway?: string | null
+  classes?: string[]
+  segmentCount?: number
+  totalLengthKm?: number
+  roadNames?: string[]
+  osmId?: number
+}
+
 function levelIcon(level: number) {
   if (level === 1) return IconMap2
   if (level === 2) return IconBuildingCommunity
   return IconUsers
+}
+
+function highwayLabel(highway: string | null | undefined) {
+  switch (highway) {
+    case "motorway":
+      return "Motorway (E-class)"
+    case "trunk":
+      return "Trunk road (A-class)"
+    case "primary":
+      return "Primary road"
+    case "secondary":
+      return "Secondary road"
+    default:
+      return highway ?? "Road"
+  }
+}
+
+function RoadInfo({
+  properties,
+  osmId,
+}: {
+  properties: RoadProperties
+  osmId: number | undefined
+}) {
+  const classes = properties.classes ?? []
+  const names = properties.roadNames ?? []
+  return (
+    <>
+      <dl className="grid grid-cols-1 gap-2">
+        {properties.ref && (
+          <StatRow label="Reference" value={properties.ref} />
+        )}
+        <StatRow
+          label="Class"
+          value={
+            classes.length > 1
+              ? classes.map(highwayLabel).join(" · ")
+              : highwayLabel(properties.highway ?? classes[0])
+          }
+        />
+        <StatRow
+          label="Total length"
+          value={
+            properties.totalLengthKm != null
+              ? `${properties.totalLengthKm.toLocaleString("en-US", { maximumFractionDigits: 1 })} km`
+              : "—"
+          }
+        />
+        <StatRow
+          label="Segments"
+          value={formatNumber(properties.segmentCount)}
+        />
+      </dl>
+
+      {names.length > 0 && (
+        <div className="space-y-1 rounded-lg border bg-muted/30 p-3">
+          <div className="text-xs font-semibold tracking-wide text-muted-foreground uppercase">
+            Named segments
+          </div>
+          <div className="text-xs text-muted-foreground">
+            Shares {names.length} distinct OSM name{names.length === 1 ? "" : "s"}:
+          </div>
+          <ul className="mt-1 space-y-0.5 text-sm">
+            {names.slice(0, 12).map((n) => (
+              <li key={n} className="truncate">
+                {n}
+              </li>
+            ))}
+            {names.length > 12 && (
+              <li className="text-xs text-muted-foreground">
+                +{names.length - 12} more…
+              </li>
+            )}
+          </ul>
+        </div>
+      )}
+
+      {osmId && (
+        <div className="text-xs">
+          <a
+            href={`https://www.openstreetmap.org/way/${osmId}`}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1 text-muted-foreground underline underline-offset-2 hover:text-foreground"
+          >
+            View a segment on OpenStreetMap
+            <IconExternalLink className="size-3" />
+          </a>
+        </div>
+      )}
+    </>
+  )
 }
 
 function levelLabel(level: number) {
@@ -458,9 +567,15 @@ export function FeatureSheet() {
   const { provinces, districts, dsDivisions } = useEnrichedDatasets()
 
   const dataset = selected ? getDataset(selected.datasetId) : undefined
+  const isRoad = selected?.datasetId === "roads"
   const props = (selected?.properties ?? {}) as AdminProperties
+  const roadProps = (selected?.properties ?? {}) as RoadProperties
 
-  const Icon = selected ? levelIcon(selected.level) : IconMap2
+  const Icon = selected
+    ? isRoad
+      ? IconRoad
+      : levelIcon(selected.level)
+    : IconMap2
 
   const parentProvince = React.useMemo(() => {
     if (!selected) return undefined
@@ -529,14 +644,16 @@ export function FeatureSheet() {
                   <SheetTitle className="truncate">{selected.name}</SheetTitle>
                   <SheetDescription className="flex flex-wrap items-center gap-2 text-xs">
                     <Badge variant="secondary" className="h-4 px-1 text-[10px]">
-                      {levelLabel(selected.level)}
+                      {isRoad
+                        ? highwayLabel(roadProps.highway)
+                        : levelLabel(selected.level)}
                     </Badge>
                     {dataset && <span>· {dataset.title}</span>}
                   </SheetDescription>
                 </div>
               </div>
 
-              {(parentProvince || parentDistrict) && (
+              {!isRoad && (parentProvince || parentDistrict) && (
                 <div className="mt-2 flex flex-wrap items-center gap-1 text-xs text-muted-foreground">
                   <span>in</span>
                   {parentDistrict && (
@@ -572,6 +689,13 @@ export function FeatureSheet() {
 
             <div className="flex-1 overflow-y-auto">
               <div className="p-6 space-y-4">
+                {isRoad ? (
+                  <RoadInfo
+                    properties={roadProps}
+                    osmId={roadProps.osmId}
+                  />
+                ) : (
+                  <>
                 <dl className="grid grid-cols-1 gap-2">
                   {selected.level === 1 && (
                     <>
@@ -653,6 +777,8 @@ export function FeatureSheet() {
                       />
                     </>
                   )}
+                  </>
+                )}
 
                 <Separator />
 

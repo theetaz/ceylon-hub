@@ -1,9 +1,11 @@
 import * as React from "react"
 import maplibregl from "maplibre-gl"
 import { mask as turfMask } from "@turf/mask"
+import { length as turfLength } from "@turf/length"
 import type {
   Feature,
   FeatureCollection,
+  LineString,
   MultiPolygon,
   Polygon,
 } from "geojson"
@@ -242,10 +244,19 @@ function setCitiesVisible(map: maplibregl.Map, visible: boolean) {
   }
 }
 
-async function loadRoadsDataset(path: string) {
+type RoadProperties = {
+  id: number
+  highway: string
+  name: string | null
+  ref: string | null
+}
+
+type RoadFeatureCollection = FeatureCollection<LineString, RoadProperties>
+
+async function loadRoadsDataset(path: string): Promise<RoadFeatureCollection> {
   const res = await fetch(path)
   if (!res.ok) throw new Error(`Roads load failed: ${res.status}`)
-  return await res.json()
+  return (await res.json()) as RoadFeatureCollection
 }
 
 function addRoadsLayer(
@@ -504,6 +515,8 @@ export function MapCanvas() {
   const hoverStateRef = React.useRef<
     Map<AdminDatasetId, string | number | null>
   >(new Map())
+  const roadsDataRef = React.useRef<RoadFeatureCollection | null>(null)
+  const selectedRoadSegmentsRef = React.useRef<number[]>([])
 
   const visible = useLayerStore((s) => s.visible)
   const selected = useLayerStore((s) => s.selected)
@@ -615,6 +628,8 @@ export function MapCanvas() {
               map.getLayer(CITIES_CIRCLE_LAYER_ID) ? CITIES_CIRCLE_LAYER_ID : undefined
             )
             setRoadsVisible(map, Boolean(currentVisible.roads))
+            roadsDataRef.current = data
+            wireRoadInteractivity(map)
           }
         }
       } catch (err) {
@@ -637,6 +652,95 @@ export function MapCanvas() {
     } else {
       map.once("load", () => {
         void loadOverlays()
+      })
+    }
+
+    const wireRoadInteractivity = (m: maplibregl.Map) => {
+      const onMove = () => {
+        m.getCanvas().style.cursor = "pointer"
+      }
+      const onLeave = () => {
+        m.getCanvas().style.cursor = ""
+      }
+      const onClick = (
+        event: MapMouseEvent & { features?: MapGeoJSONFeature[] }
+      ) => {
+        const feature = event.features?.[0]
+        if (!feature) return
+        const props = feature.properties as RoadProperties | undefined
+        if (!props) return
+        handleRoadClick(props)
+      }
+      m.on("mousemove", ROADS_LINE_LAYER_ID, onMove)
+      m.on("mouseleave", ROADS_LINE_LAYER_ID, onLeave)
+      m.on("click", ROADS_LINE_LAYER_ID, onClick)
+    }
+
+    const handleRoadClick = (clicked: RoadProperties) => {
+      const m = mapRef.current
+      const data = roadsDataRef.current
+      if (!m || !data) return
+
+      // Group by ref (e.g. "A1"). Ways without a ref: fall back to name.
+      // Only a single way is selected if neither ref nor name is present.
+      const key: { field: "ref" | "name" | "id"; value: string | number } =
+        clicked.ref
+          ? { field: "ref", value: clicked.ref }
+          : clicked.name
+            ? { field: "name", value: clicked.name }
+            : { field: "id", value: clicked.id }
+
+      const matching = data.features.filter((f) => {
+        if (key.field === "id") return f.properties.id === key.value
+        return f.properties[key.field] === key.value
+      })
+
+      if (matching.length === 0) return
+
+      const totalLengthKm = matching.reduce(
+        (sum, f) => sum + turfLength(f, { units: "kilometers" }),
+        0
+      )
+
+      const classes = Array.from(
+        new Set(matching.map((f) => f.properties.highway))
+      )
+      const names = Array.from(
+        new Set(matching.map((f) => f.properties.name).filter(Boolean) as string[])
+      )
+
+      // Clear previous selection feature-state
+      for (const id of selectedRoadSegmentsRef.current) {
+        m.setFeatureState(
+          { source: ROADS_SOURCE_ID, id },
+          { selected: false }
+        )
+      }
+      selectedRoadSegmentsRef.current = matching.map(
+        (f) => f.properties.id
+      )
+      for (const id of selectedRoadSegmentsRef.current) {
+        m.setFeatureState(
+          { source: ROADS_SOURCE_ID, id },
+          { selected: true }
+        )
+      }
+
+      setSelected({
+        datasetId: "roads",
+        id: String(key.value),
+        name: (clicked.ref as string) ?? (clicked.name as string) ?? `Road ${clicked.id}`,
+        level: 0,
+        properties: {
+          ref: clicked.ref,
+          name: clicked.name,
+          highway: clicked.highway,
+          classes,
+          segmentCount: matching.length,
+          totalLengthKm: Number(totalLengthKm.toFixed(1)),
+          roadNames: names,
+          osmId: clicked.id,
+        },
       })
     }
 
@@ -776,6 +880,18 @@ export function MapCanvas() {
           // ignore
         }
       }
+    }
+
+    // Clear any road segment selection when selection changes to a
+    // non-road feature or closes entirely.
+    if (selected?.datasetId !== "roads" && map.getSource(ROADS_SOURCE_ID)) {
+      for (const segmentId of selectedRoadSegmentsRef.current) {
+        map.setFeatureState(
+          { source: ROADS_SOURCE_ID, id: segmentId },
+          { selected: false }
+        )
+      }
+      selectedRoadSegmentsRef.current = []
     }
   }, [selected])
 
