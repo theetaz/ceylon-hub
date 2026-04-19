@@ -19,12 +19,14 @@ import { CATALOG, CATEGORIES } from "@/data/catalog"
 import { useLayerStore } from "@/stores/layers"
 import { cn } from "@/lib/utils"
 
-const CHOROPLETH_DATASETS: Record<
-  string,
-  "density" | "population" | "pres-2024"
-> = {
+// Maps catalog dataset ids to their corresponding choroplethMode value.
+// For election datasets the id IS the mode.
+const CHOROPLETH_DATASETS: Record<string, string> = {
   "population-choropleth": "density",
   "pres-2024": "pres-2024",
+  "pres-2019": "pres-2019",
+  "pres-2015": "pres-2015",
+  "parl-2024": "parl-2024",
 }
 
 export function AppSidebar() {

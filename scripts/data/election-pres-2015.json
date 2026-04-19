@@ -1,0 +1,9666 @@
+{
+  "source": {
+    "name": "Election Commission of Sri Lanka via nuuuwan/lk_elections",
+    "url": "https://raw.githubusercontent.com/nuuuwan/lk_elections/master/public/data/elections/government-elections-presidential.regions-ec.2015.tsv",
+    "license": "Open data"
+  },
+  "id": "pres-2015",
+  "type": "presidential",
+  "year": 2015,
+  "label": "2015 Presidential",
+  "date": "2015-01-08",
+  "fetchedAt": "2026-04-19T23:45:59.164Z",
+  "parties": {
+    "NDF": {
+      "candidate": "Maithripala Sirisena",
+      "name": "New Democratic Front (common opposition)",
+      "color": "#16a34a"
+    },
+    "UPFA": {
+      "candidate": "Mahinda Rajapaksa",
+      "name": "United People's Freedom Alliance",
+      "color": "#b45309"
+    }
+  },
+  "countryWinner": {
+    "party": "NDF",
+    "votes": 6217162
+  },
+  "entities": {
+    "EC-01": {
+      "valid": 1296360,
+      "rejected": 15334,
+      "polled": 1311694,
+      "electors": 1612660,
+      "turnoutPct": 81.3,
+      "rejectedPct": 1.17,
+      "winner": {
+        "party": "NDF",
+        "votes": 725073,
+        "pct": 55.93
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 562614,
+        "pct": 43.4
+      },
+      "margin": 12.53,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 725073,
+          "pct": 55.93
+        },
+        {
+          "party": "UPFA",
+          "votes": 562614,
+          "pct": 43.4
+        },
+        {
+          "party": "SLLP",
+          "votes": 1007,
+          "pct": 0.08
+        },
+        {
+          "party": "UPF",
+          "votes": 978,
+          "pct": 0.08
+        },
+        {
+          "party": "PNF",
+          "votes": 943,
+          "pct": 0.07
+        }
+      ],
+      "otherVotes": 5745
+    },
+    "EC-01A": {
+      "valid": 68649,
+      "rejected": 1146,
+      "polled": 69795,
+      "electors": 89771,
+      "turnoutPct": 77.7,
+      "rejectedPct": 1.64,
+      "winner": {
+        "party": "NDF",
+        "votes": 51537,
+        "pct": 75.07
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 16423,
+        "pct": 23.92
+      },
+      "margin": 51.15,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 51537,
+          "pct": 75.07
+        },
+        {
+          "party": "UPFA",
+          "votes": 16423,
+          "pct": 23.92
+        },
+        {
+          "party": "SLLP",
+          "votes": 101,
+          "pct": 0.15
+        },
+        {
+          "party": "UPF",
+          "votes": 90,
+          "pct": 0.13
+        },
+        {
+          "party": "ULPP",
+          "votes": 75,
+          "pct": 0.11
+        }
+      ],
+      "otherVotes": 423
+    },
+    "EC-01B": {
+      "valid": 101497,
+      "rejected": 1237,
+      "polled": 102734,
+      "electors": 131482,
+      "turnoutPct": 78.1,
+      "rejectedPct": 1.2,
+      "winner": {
+        "party": "NDF",
+        "votes": 82495,
+        "pct": 81.28
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 17779,
+        "pct": 17.52
+      },
+      "margin": 63.76,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 82495,
+          "pct": 81.28
+        },
+        {
+          "party": "UPFA",
+          "votes": 17779,
+          "pct": 17.52
+        },
+        {
+          "party": "UPF",
+          "votes": 298,
+          "pct": 0.29
+        },
+        {
+          "party": "SLLP",
+          "votes": 185,
+          "pct": 0.18
+        },
+        {
+          "party": "ULPP",
+          "votes": 131,
+          "pct": 0.13
+        }
+      ],
+      "otherVotes": 609
+    },
+    "EC-01C": {
+      "valid": 46990,
+      "rejected": 547,
+      "polled": 47537,
+      "electors": 60109,
+      "turnoutPct": 79.1,
+      "rejectedPct": 1.15,
+      "winner": {
+        "party": "NDF",
+        "votes": 31469,
+        "pct": 66.97
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 15148,
+        "pct": 32.24
+      },
+      "margin": 34.73,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 31469,
+          "pct": 66.97
+        },
+        {
+          "party": "UPFA",
+          "votes": 15148,
+          "pct": 32.24
+        },
+        {
+          "party": "SLLP",
+          "votes": 78,
+          "pct": 0.17
+        },
+        {
+          "party": "PNF",
+          "votes": 37,
+          "pct": 0.08
+        },
+        {
+          "party": "ULPP",
+          "votes": 37,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 221
+    },
+    "EC-01D": {
+      "valid": 52137,
+      "rejected": 668,
+      "polled": 52805,
+      "electors": 66941,
+      "turnoutPct": 78.9,
+      "rejectedPct": 1.27,
+      "winner": {
+        "party": "NDF",
+        "votes": 35167,
+        "pct": 67.45
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 16601,
+        "pct": 31.84
+      },
+      "margin": 35.61,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 35167,
+          "pct": 67.45
+        },
+        {
+          "party": "UPFA",
+          "votes": 16601,
+          "pct": 31.84
+        },
+        {
+          "party": "SLLP",
+          "votes": 47,
+          "pct": 0.09
+        },
+        {
+          "party": "USP",
+          "votes": 36,
+          "pct": 0.07
+        },
+        {
+          "party": "ULPP",
+          "votes": 33,
+          "pct": 0.06
+        }
+      ],
+      "otherVotes": 253
+    },
+    "EC-01E": {
+      "valid": 30275,
+      "rejected": 325,
+      "polled": 30600,
+      "electors": 40609,
+      "turnoutPct": 75.4,
+      "rejectedPct": 1.06,
+      "winner": {
+        "party": "NDF",
+        "votes": 23915,
+        "pct": 78.99
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 6164,
+        "pct": 20.36
+      },
+      "margin": 58.63,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 23915,
+          "pct": 78.99
+        },
+        {
+          "party": "UPFA",
+          "votes": 6164,
+          "pct": 20.36
+        },
+        {
+          "party": "NSSP",
+          "votes": 22,
+          "pct": 0.07
+        },
+        {
+          "party": "SLLP",
+          "votes": 21,
+          "pct": 0.07
+        },
+        {
+          "party": "USP",
+          "votes": 19,
+          "pct": 0.06
+        }
+      ],
+      "otherVotes": 134
+    },
+    "EC-01F": {
+      "valid": 47169,
+      "rejected": 599,
+      "polled": 47768,
+      "electors": 59812,
+      "turnoutPct": 79.9,
+      "rejectedPct": 1.25,
+      "winner": {
+        "party": "NDF",
+        "votes": 30955,
+        "pct": 65.63
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 15932,
+        "pct": 33.78
+      },
+      "margin": 31.85,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 30955,
+          "pct": 65.63
+        },
+        {
+          "party": "UPFA",
+          "votes": 15932,
+          "pct": 33.78
+        },
+        {
+          "party": "UPF",
+          "votes": 39,
+          "pct": 0.08
+        },
+        {
+          "party": "SLLP",
+          "votes": 34,
+          "pct": 0.07
+        },
+        {
+          "party": "PNF",
+          "votes": 32,
+          "pct": 0.07
+        }
+      ],
+      "otherVotes": 177
+    },
+    "EC-01G": {
+      "valid": 53004,
+      "rejected": 680,
+      "polled": 53684,
+      "electors": 66793,
+      "turnoutPct": 80.4,
+      "rejectedPct": 1.27,
+      "winner": {
+        "party": "NDF",
+        "votes": 29554,
+        "pct": 55.76
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 23144,
+        "pct": 43.66
+      },
+      "margin": 12.09,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 29554,
+          "pct": 55.76
+        },
+        {
+          "party": "UPFA",
+          "votes": 23144,
+          "pct": 43.66
+        },
+        {
+          "party": "ONF",
+          "votes": 31,
+          "pct": 0.06
+        },
+        {
+          "party": "PNF",
+          "votes": 30,
+          "pct": 0.06
+        },
+        {
+          "party": "SLLP",
+          "votes": 29,
+          "pct": 0.05
+        }
+      ],
+      "otherVotes": 216
+    },
+    "EC-01H": {
+      "valid": 97336,
+      "rejected": 1275,
+      "polled": 98611,
+      "electors": 120617,
+      "turnoutPct": 81.8,
+      "rejectedPct": 1.29,
+      "winner": {
+        "party": "NDF",
+        "votes": 56835,
+        "pct": 58.39
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 39767,
+        "pct": 40.86
+      },
+      "margin": 17.54,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 56835,
+          "pct": 58.39
+        },
+        {
+          "party": "UPFA",
+          "votes": 39767,
+          "pct": 40.86
+        },
+        {
+          "party": "UPF",
+          "votes": 129,
+          "pct": 0.13
+        },
+        {
+          "party": "SLLP",
+          "votes": 90,
+          "pct": 0.09
+        },
+        {
+          "party": "ULPP",
+          "votes": 86,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 429
+    },
+    "EC-01I": {
+      "valid": 59588,
+      "rejected": 703,
+      "polled": 60291,
+      "electors": 74934,
+      "turnoutPct": 80.5,
+      "rejectedPct": 1.17,
+      "winner": {
+        "party": "NDF",
+        "votes": 34614,
+        "pct": 58.09
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 24663,
+        "pct": 41.39
+      },
+      "margin": 16.7,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 34614,
+          "pct": 58.09
+        },
+        {
+          "party": "UPFA",
+          "votes": 24663,
+          "pct": 41.39
+        },
+        {
+          "party": "SLLP",
+          "votes": 41,
+          "pct": 0.07
+        },
+        {
+          "party": "PNF",
+          "votes": 39,
+          "pct": 0.07
+        },
+        {
+          "party": "ONF",
+          "votes": 33,
+          "pct": 0.06
+        }
+      ],
+      "otherVotes": 198
+    },
+    "EC-01J": {
+      "valid": 140642,
+      "rejected": 1534,
+      "polled": 142176,
+      "electors": 173355,
+      "turnoutPct": 82,
+      "rejectedPct": 1.08,
+      "winner": {
+        "party": "UPFA",
+        "votes": 70970,
+        "pct": 50.46
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 68886,
+        "pct": 48.98
+      },
+      "margin": 1.48,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 70970,
+          "pct": 50.46
+        },
+        {
+          "party": "NDF",
+          "votes": 68886,
+          "pct": 48.98
+        },
+        {
+          "party": "PNF",
+          "votes": 84,
+          "pct": 0.06
+        },
+        {
+          "party": "ONF",
+          "votes": 84,
+          "pct": 0.06
+        },
+        {
+          "party": "ULPP",
+          "votes": 81,
+          "pct": 0.06
+        }
+      ],
+      "otherVotes": 537
+    },
+    "EC-01K": {
+      "valid": 94880,
+      "rejected": 1032,
+      "polled": 95912,
+      "electors": 117472,
+      "turnoutPct": 81.6,
+      "rejectedPct": 1.08,
+      "winner": {
+        "party": "UPFA",
+        "votes": 51351,
+        "pct": 54.12
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 42728,
+        "pct": 45.03
+      },
+      "margin": 9.09,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 51351,
+          "pct": 54.12
+        },
+        {
+          "party": "NDF",
+          "votes": 42728,
+          "pct": 45.03
+        },
+        {
+          "party": "PNF",
+          "votes": 112,
+          "pct": 0.12
+        },
+        {
+          "party": "FSP",
+          "votes": 84,
+          "pct": 0.09
+        },
+        {
+          "party": "ONF",
+          "votes": 80,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 525
+    },
+    "EC-01L": {
+      "valid": 141762,
+      "rejected": 1481,
+      "polled": 143243,
+      "electors": 174909,
+      "turnoutPct": 81.9,
+      "rejectedPct": 1.03,
+      "winner": {
+        "party": "UPFA",
+        "votes": 77415,
+        "pct": 54.61
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 63563,
+        "pct": 44.84
+      },
+      "margin": 9.77,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 77415,
+          "pct": 54.61
+        },
+        {
+          "party": "NDF",
+          "votes": 63563,
+          "pct": 44.84
+        },
+        {
+          "party": "PNF",
+          "votes": 128,
+          "pct": 0.09
+        },
+        {
+          "party": "ONF",
+          "votes": 80,
+          "pct": 0.06
+        },
+        {
+          "party": "SLLP",
+          "votes": 74,
+          "pct": 0.05
+        }
+      ],
+      "otherVotes": 502
+    },
+    "EC-01M": {
+      "valid": 105353,
+      "rejected": 1220,
+      "polled": 106573,
+      "electors": 129801,
+      "turnoutPct": 82.1,
+      "rejectedPct": 1.14,
+      "winner": {
+        "party": "UPFA",
+        "votes": 53327,
+        "pct": 50.62
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 51480,
+        "pct": 48.86
+      },
+      "margin": 1.75,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 53327,
+          "pct": 50.62
+        },
+        {
+          "party": "NDF",
+          "votes": 51480,
+          "pct": 48.86
+        },
+        {
+          "party": "PNF",
+          "votes": 66,
+          "pct": 0.06
+        },
+        {
+          "party": "FSP",
+          "votes": 65,
+          "pct": 0.06
+        },
+        {
+          "party": "SLLP",
+          "votes": 57,
+          "pct": 0.05
+        }
+      ],
+      "otherVotes": 358
+    },
+    "EC-01N": {
+      "valid": 135983,
+      "rejected": 1393,
+      "polled": 137376,
+      "electors": 164774,
+      "turnoutPct": 83.4,
+      "rejectedPct": 1.01,
+      "winner": {
+        "party": "UPFA",
+        "votes": 74189,
+        "pct": 54.56
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 61116,
+        "pct": 44.94
+      },
+      "margin": 9.61,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 74189,
+          "pct": 54.56
+        },
+        {
+          "party": "NDF",
+          "votes": 61116,
+          "pct": 44.94
+        },
+        {
+          "party": "FSP",
+          "votes": 85,
+          "pct": 0.06
+        },
+        {
+          "party": "PNF",
+          "votes": 83,
+          "pct": 0.06
+        },
+        {
+          "party": "ONF",
+          "votes": 70,
+          "pct": 0.05
+        }
+      ],
+      "otherVotes": 440
+    },
+    "EC-01O": {
+      "valid": 95981,
+      "rejected": 958,
+      "polled": 96939,
+      "electors": 115219,
+      "turnoutPct": 84.1,
+      "rejectedPct": 0.99,
+      "winner": {
+        "party": "NDF",
+        "votes": 48599,
+        "pct": 50.63
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 46885,
+        "pct": 48.85
+      },
+      "margin": 1.79,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 48599,
+          "pct": 50.63
+        },
+        {
+          "party": "UPFA",
+          "votes": 46885,
+          "pct": 48.85
+        },
+        {
+          "party": "PNF",
+          "votes": 78,
+          "pct": 0.08
+        },
+        {
+          "party": "ONF",
+          "votes": 57,
+          "pct": 0.06
+        },
+        {
+          "party": "SLLP",
+          "votes": 49,
+          "pct": 0.05
+        }
+      ],
+      "otherVotes": 313
+    },
+    "EC-01P": {
+      "valid": 25114,
+      "rejected": 536,
+      "polled": 25650,
+      "electors": 26062,
+      "turnoutPct": 98.4,
+      "rejectedPct": 2.09,
+      "winner": {
+        "party": "UPFA",
+        "votes": 12856,
+        "pct": 51.19
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 12160,
+        "pct": 48.42
+      },
+      "margin": 2.77,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 12856,
+          "pct": 51.19
+        },
+        {
+          "party": "NDF",
+          "votes": 12160,
+          "pct": 48.42
+        },
+        {
+          "party": "FSP",
+          "votes": 21,
+          "pct": 0.08
+        },
+        {
+          "party": "JSP",
+          "votes": 20,
+          "pct": 0.08
+        },
+        {
+          "party": "SLLP",
+          "votes": 8,
+          "pct": 0.03
+        }
+      ],
+      "otherVotes": 49
+    },
+    "EC-02": {
+      "valid": 1342496,
+      "rejected": 14647,
+      "polled": 1357143,
+      "electors": 1680263,
+      "turnoutPct": 80.8,
+      "rejectedPct": 1.08,
+      "winner": {
+        "party": "NDF",
+        "votes": 669007,
+        "pct": 49.83
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 664347,
+        "pct": 49.49
+      },
+      "margin": 0.35,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 669007,
+          "pct": 49.83
+        },
+        {
+          "party": "UPFA",
+          "votes": 664347,
+          "pct": 49.49
+        },
+        {
+          "party": "PNF",
+          "votes": 1249,
+          "pct": 0.09
+        },
+        {
+          "party": "ONF",
+          "votes": 1033,
+          "pct": 0.08
+        },
+        {
+          "party": "I-AMI",
+          "votes": 930,
+          "pct": 0.07
+        }
+      ],
+      "otherVotes": 5930
+    },
+    "EC-02A": {
+      "valid": 95311,
+      "rejected": 1332,
+      "polled": 96643,
+      "electors": 120471,
+      "turnoutPct": 80.2,
+      "rejectedPct": 1.38,
+      "winner": {
+        "party": "NDF",
+        "votes": 56541,
+        "pct": 59.32
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 38001,
+        "pct": 39.87
+      },
+      "margin": 19.45,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 56541,
+          "pct": 59.32
+        },
+        {
+          "party": "UPFA",
+          "votes": 38001,
+          "pct": 39.87
+        },
+        {
+          "party": "SLLP",
+          "votes": 108,
+          "pct": 0.11
+        },
+        {
+          "party": "UPF",
+          "votes": 84,
+          "pct": 0.09
+        },
+        {
+          "party": "PNF",
+          "votes": 82,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 495
+    },
+    "EC-02B": {
+      "valid": 79482,
+      "rejected": 871,
+      "polled": 80353,
+      "electors": 106213,
+      "turnoutPct": 75.7,
+      "rejectedPct": 1.08,
+      "winner": {
+        "party": "NDF",
+        "votes": 53331,
+        "pct": 67.1
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 25432,
+        "pct": 32
+      },
+      "margin": 35.1,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 53331,
+          "pct": 67.1
+        },
+        {
+          "party": "UPFA",
+          "votes": 25432,
+          "pct": 32
+        },
+        {
+          "party": "SLLP",
+          "votes": 110,
+          "pct": 0.14
+        },
+        {
+          "party": "UPF",
+          "votes": 83,
+          "pct": 0.1
+        },
+        {
+          "party": "I-AMI",
+          "votes": 65,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 461
+    },
+    "EC-02C": {
+      "valid": 113635,
+      "rejected": 1505,
+      "polled": 115140,
+      "electors": 143885,
+      "turnoutPct": 80,
+      "rejectedPct": 1.31,
+      "winner": {
+        "party": "NDF",
+        "votes": 58507,
+        "pct": 51.49
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 54355,
+        "pct": 47.83
+      },
+      "margin": 3.65,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 58507,
+          "pct": 51.49
+        },
+        {
+          "party": "UPFA",
+          "votes": 54355,
+          "pct": 47.83
+        },
+        {
+          "party": "PNF",
+          "votes": 119,
+          "pct": 0.1
+        },
+        {
+          "party": "SLLP",
+          "votes": 84,
+          "pct": 0.07
+        },
+        {
+          "party": "I-AMI",
+          "votes": 84,
+          "pct": 0.07
+        }
+      ],
+      "otherVotes": 486
+    },
+    "EC-02D": {
+      "valid": 86583,
+      "rejected": 701,
+      "polled": 87284,
+      "electors": 108529,
+      "turnoutPct": 80.4,
+      "rejectedPct": 0.8,
+      "winner": {
+        "party": "UPFA",
+        "votes": 45813,
+        "pct": 52.91
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 40112,
+        "pct": 46.33
+      },
+      "margin": 6.58,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 45813,
+          "pct": 52.91
+        },
+        {
+          "party": "NDF",
+          "votes": 40112,
+          "pct": 46.33
+        },
+        {
+          "party": "PNF",
+          "votes": 95,
+          "pct": 0.11
+        },
+        {
+          "party": "I-AMI",
+          "votes": 83,
+          "pct": 0.1
+        },
+        {
+          "party": "ONF",
+          "votes": 75,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 405
+    },
+    "EC-02E": {
+      "valid": 97147,
+      "rejected": 880,
+      "polled": 98027,
+      "electors": 124679,
+      "turnoutPct": 78.6,
+      "rejectedPct": 0.9,
+      "winner": {
+        "party": "UPFA",
+        "votes": 51244,
+        "pct": 52.75
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 45202,
+        "pct": 46.53
+      },
+      "margin": 6.22,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 51244,
+          "pct": 52.75
+        },
+        {
+          "party": "NDF",
+          "votes": 45202,
+          "pct": 46.53
+        },
+        {
+          "party": "PNF",
+          "votes": 104,
+          "pct": 0.11
+        },
+        {
+          "party": "I-AMI",
+          "votes": 82,
+          "pct": 0.08
+        },
+        {
+          "party": "ONF",
+          "votes": 81,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 434
+    },
+    "EC-02F": {
+      "valid": 107270,
+      "rejected": 986,
+      "polled": 108256,
+      "electors": 132981,
+      "turnoutPct": 81.4,
+      "rejectedPct": 0.91,
+      "winner": {
+        "party": "UPFA",
+        "votes": 54929,
+        "pct": 51.21
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 51581,
+        "pct": 48.09
+      },
+      "margin": 3.12,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 54929,
+          "pct": 51.21
+        },
+        {
+          "party": "NDF",
+          "votes": 51581,
+          "pct": 48.09
+        },
+        {
+          "party": "PNF",
+          "votes": 125,
+          "pct": 0.12
+        },
+        {
+          "party": "I-AMI",
+          "votes": 88,
+          "pct": 0.08
+        },
+        {
+          "party": "ONF",
+          "votes": 73,
+          "pct": 0.07
+        }
+      ],
+      "otherVotes": 474
+    },
+    "EC-02G": {
+      "valid": 105931,
+      "rejected": 1024,
+      "polled": 106955,
+      "electors": 133023,
+      "turnoutPct": 80.4,
+      "rejectedPct": 0.96,
+      "winner": {
+        "party": "UPFA",
+        "votes": 54777,
+        "pct": 51.71
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 50380,
+        "pct": 47.56
+      },
+      "margin": 4.15,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 54777,
+          "pct": 51.71
+        },
+        {
+          "party": "NDF",
+          "votes": 50380,
+          "pct": 47.56
+        },
+        {
+          "party": "ONF",
+          "votes": 100,
+          "pct": 0.09
+        },
+        {
+          "party": "I-AMI",
+          "votes": 98,
+          "pct": 0.09
+        },
+        {
+          "party": "UPF",
+          "votes": 91,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 485
+    },
+    "EC-02H": {
+      "valid": 118564,
+      "rejected": 1222,
+      "polled": 119786,
+      "electors": 147280,
+      "turnoutPct": 81.3,
+      "rejectedPct": 1.02,
+      "winner": {
+        "party": "UPFA",
+        "votes": 63962,
+        "pct": 53.95
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 53922,
+        "pct": 45.48
+      },
+      "margin": 8.47,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 63962,
+          "pct": 53.95
+        },
+        {
+          "party": "NDF",
+          "votes": 53922,
+          "pct": 45.48
+        },
+        {
+          "party": "PNF",
+          "votes": 102,
+          "pct": 0.09
+        },
+        {
+          "party": "FSP",
+          "votes": 85,
+          "pct": 0.07
+        },
+        {
+          "party": "I-AMI",
+          "votes": 70,
+          "pct": 0.06
+        }
+      ],
+      "otherVotes": 423
+    },
+    "EC-02I": {
+      "valid": 112797,
+      "rejected": 1584,
+      "polled": 114381,
+      "electors": 143843,
+      "turnoutPct": 79.5,
+      "rejectedPct": 1.38,
+      "winner": {
+        "party": "NDF",
+        "votes": 58669,
+        "pct": 52.01
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 53481,
+        "pct": 47.41
+      },
+      "margin": 4.6,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 58669,
+          "pct": 52.01
+        },
+        {
+          "party": "UPFA",
+          "votes": 53481,
+          "pct": 47.41
+        },
+        {
+          "party": "PNF",
+          "votes": 89,
+          "pct": 0.08
+        },
+        {
+          "party": "ONF",
+          "votes": 73,
+          "pct": 0.06
+        },
+        {
+          "party": "I-AMI",
+          "votes": 70,
+          "pct": 0.06
+        }
+      ],
+      "otherVotes": 415
+    },
+    "EC-02J": {
+      "valid": 120381,
+      "rejected": 1154,
+      "polled": 121535,
+      "electors": 149453,
+      "turnoutPct": 81.3,
+      "rejectedPct": 0.95,
+      "winner": {
+        "party": "UPFA",
+        "votes": 64314,
+        "pct": 53.43
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 55334,
+        "pct": 45.97
+      },
+      "margin": 7.46,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 64314,
+          "pct": 53.43
+        },
+        {
+          "party": "NDF",
+          "votes": 55334,
+          "pct": 45.97
+        },
+        {
+          "party": "ONF",
+          "votes": 112,
+          "pct": 0.09
+        },
+        {
+          "party": "PNF",
+          "votes": 94,
+          "pct": 0.08
+        },
+        {
+          "party": "FSP",
+          "votes": 87,
+          "pct": 0.07
+        }
+      ],
+      "otherVotes": 440
+    },
+    "EC-02K": {
+      "valid": 93871,
+      "rejected": 878,
+      "polled": 94749,
+      "electors": 115356,
+      "turnoutPct": 82.1,
+      "rejectedPct": 0.93,
+      "winner": {
+        "party": "UPFA",
+        "votes": 54714,
+        "pct": 58.29
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 38491,
+        "pct": 41
+      },
+      "margin": 17.28,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 54714,
+          "pct": 58.29
+        },
+        {
+          "party": "NDF",
+          "votes": 38491,
+          "pct": 41
+        },
+        {
+          "party": "PNF",
+          "votes": 109,
+          "pct": 0.12
+        },
+        {
+          "party": "ONF",
+          "votes": 104,
+          "pct": 0.11
+        },
+        {
+          "party": "I-AMI",
+          "votes": 72,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 381
+    },
+    "EC-02L": {
+      "valid": 99433,
+      "rejected": 997,
+      "polled": 100430,
+      "electors": 121702,
+      "turnoutPct": 82.5,
+      "rejectedPct": 0.99,
+      "winner": {
+        "party": "UPFA",
+        "votes": 50173,
+        "pct": 50.46
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 48667,
+        "pct": 48.94
+      },
+      "margin": 1.51,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 50173,
+          "pct": 50.46
+        },
+        {
+          "party": "NDF",
+          "votes": 48667,
+          "pct": 48.94
+        },
+        {
+          "party": "PNF",
+          "votes": 89,
+          "pct": 0.09
+        },
+        {
+          "party": "FSP",
+          "votes": 75,
+          "pct": 0.08
+        },
+        {
+          "party": "ONF",
+          "votes": 62,
+          "pct": 0.06
+        }
+      ],
+      "otherVotes": 367
+    },
+    "EC-02M": {
+      "valid": 71260,
+      "rejected": 859,
+      "polled": 72119,
+      "electors": 90122,
+      "turnoutPct": 80,
+      "rejectedPct": 1.19,
+      "winner": {
+        "party": "NDF",
+        "votes": 37884,
+        "pct": 53.16
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 32856,
+        "pct": 46.11
+      },
+      "margin": 7.06,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 37884,
+          "pct": 53.16
+        },
+        {
+          "party": "UPFA",
+          "votes": 32856,
+          "pct": 46.11
+        },
+        {
+          "party": "PNF",
+          "votes": 79,
+          "pct": 0.11
+        },
+        {
+          "party": "ONF",
+          "votes": 63,
+          "pct": 0.09
+        },
+        {
+          "party": "UPF",
+          "votes": 63,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 315
+    },
+    "EC-02P": {
+      "valid": 40831,
+      "rejected": 654,
+      "polled": 41485,
+      "electors": 42726,
+      "turnoutPct": 97.1,
+      "rejectedPct": 1.58,
+      "winner": {
+        "party": "NDF",
+        "votes": 20386,
+        "pct": 49.93
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 20296,
+        "pct": 49.71
+      },
+      "margin": 0.22,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 20386,
+          "pct": 49.93
+        },
+        {
+          "party": "UPFA",
+          "votes": 20296,
+          "pct": 49.71
+        },
+        {
+          "party": "FSP",
+          "votes": 25,
+          "pct": 0.06
+        },
+        {
+          "party": "ONF",
+          "votes": 21,
+          "pct": 0.05
+        },
+        {
+          "party": "JSP",
+          "votes": 21,
+          "pct": 0.05
+        }
+      ],
+      "otherVotes": 82
+    },
+    "EC-03": {
+      "valid": 751984,
+      "rejected": 8381,
+      "polled": 760365,
+      "electors": 926346,
+      "turnoutPct": 82.1,
+      "rejectedPct": 1.1,
+      "winner": {
+        "party": "UPFA",
+        "votes": 395890,
+        "pct": 52.65
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 349404,
+        "pct": 46.46
+      },
+      "margin": 6.18,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 395890,
+          "pct": 52.65
+        },
+        {
+          "party": "NDF",
+          "votes": 349404,
+          "pct": 46.46
+        },
+        {
+          "party": "PNF",
+          "votes": 979,
+          "pct": 0.13
+        },
+        {
+          "party": "ONF",
+          "votes": 808,
+          "pct": 0.11
+        },
+        {
+          "party": "FSP",
+          "votes": 695,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 4208
+    },
+    "EC-03A": {
+      "valid": 93355,
+      "rejected": 1152,
+      "polled": 94507,
+      "electors": 114828,
+      "turnoutPct": 82.3,
+      "rejectedPct": 1.22,
+      "winner": {
+        "party": "NDF",
+        "votes": 46820,
+        "pct": 50.15
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 45908,
+        "pct": 49.18
+      },
+      "margin": 0.98,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 46820,
+          "pct": 50.15
+        },
+        {
+          "party": "UPFA",
+          "votes": 45908,
+          "pct": 49.18
+        },
+        {
+          "party": "PNF",
+          "votes": 84,
+          "pct": 0.09
+        },
+        {
+          "party": "UPF",
+          "votes": 79,
+          "pct": 0.08
+        },
+        {
+          "party": "FSP",
+          "votes": 71,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 393
+    },
+    "EC-03B": {
+      "valid": 110628,
+      "rejected": 999,
+      "polled": 111627,
+      "electors": 133887,
+      "turnoutPct": 83.4,
+      "rejectedPct": 0.89,
+      "winner": {
+        "party": "UPFA",
+        "votes": 61199,
+        "pct": 55.32
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 48469,
+        "pct": 43.81
+      },
+      "margin": 11.51,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 61199,
+          "pct": 55.32
+        },
+        {
+          "party": "NDF",
+          "votes": 48469,
+          "pct": 43.81
+        },
+        {
+          "party": "PNF",
+          "votes": 154,
+          "pct": 0.14
+        },
+        {
+          "party": "ONF",
+          "votes": 118,
+          "pct": 0.11
+        },
+        {
+          "party": "I-AMI",
+          "votes": 94,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 594
+    },
+    "EC-03C": {
+      "valid": 100517,
+      "rejected": 952,
+      "polled": 101469,
+      "electors": 122511,
+      "turnoutPct": 82.8,
+      "rejectedPct": 0.94,
+      "winner": {
+        "party": "UPFA",
+        "votes": 57633,
+        "pct": 57.34
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 42065,
+        "pct": 41.85
+      },
+      "margin": 15.49,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 57633,
+          "pct": 57.34
+        },
+        {
+          "party": "NDF",
+          "votes": 42065,
+          "pct": 41.85
+        },
+        {
+          "party": "PNF",
+          "votes": 120,
+          "pct": 0.12
+        },
+        {
+          "party": "ONF",
+          "votes": 107,
+          "pct": 0.11
+        },
+        {
+          "party": "I-AMI",
+          "votes": 77,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 515
+    },
+    "EC-03D": {
+      "valid": 66431,
+      "rejected": 716,
+      "polled": 67147,
+      "electors": 82123,
+      "turnoutPct": 81.8,
+      "rejectedPct": 1.07,
+      "winner": {
+        "party": "UPFA",
+        "votes": 37311,
+        "pct": 56.17
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 28341,
+        "pct": 42.66
+      },
+      "margin": 13.5,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 37311,
+          "pct": 56.17
+        },
+        {
+          "party": "NDF",
+          "votes": 28341,
+          "pct": 42.66
+        },
+        {
+          "party": "PNF",
+          "votes": 123,
+          "pct": 0.19
+        },
+        {
+          "party": "ONF",
+          "votes": 95,
+          "pct": 0.14
+        },
+        {
+          "party": "SLLP",
+          "votes": 79,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 482
+    },
+    "EC-03E": {
+      "valid": 85597,
+      "rejected": 1063,
+      "polled": 86660,
+      "electors": 108996,
+      "turnoutPct": 79.5,
+      "rejectedPct": 1.23,
+      "winner": {
+        "party": "UPFA",
+        "votes": 45984,
+        "pct": 53.72
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 38668,
+        "pct": 45.17
+      },
+      "margin": 8.55,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 45984,
+          "pct": 53.72
+        },
+        {
+          "party": "NDF",
+          "votes": 38668,
+          "pct": 45.17
+        },
+        {
+          "party": "PNF",
+          "votes": 148,
+          "pct": 0.17
+        },
+        {
+          "party": "ONF",
+          "votes": 114,
+          "pct": 0.13
+        },
+        {
+          "party": "FSP",
+          "votes": 96,
+          "pct": 0.11
+        }
+      ],
+      "otherVotes": 587
+    },
+    "EC-03F": {
+      "valid": 94342,
+      "rejected": 905,
+      "polled": 95247,
+      "electors": 117931,
+      "turnoutPct": 80.8,
+      "rejectedPct": 0.95,
+      "winner": {
+        "party": "UPFA",
+        "votes": 48851,
+        "pct": 51.78
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 44804,
+        "pct": 47.49
+      },
+      "margin": 4.29,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 48851,
+          "pct": 51.78
+        },
+        {
+          "party": "NDF",
+          "votes": 44804,
+          "pct": 47.49
+        },
+        {
+          "party": "PNF",
+          "votes": 92,
+          "pct": 0.1
+        },
+        {
+          "party": "FSP",
+          "votes": 92,
+          "pct": 0.1
+        },
+        {
+          "party": "ONF",
+          "votes": 82,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 421
+    },
+    "EC-03G": {
+      "valid": 93540,
+      "rejected": 951,
+      "polled": 94491,
+      "electors": 117033,
+      "turnoutPct": 80.7,
+      "rejectedPct": 1.01,
+      "winner": {
+        "party": "NDF",
+        "votes": 53280,
+        "pct": 56.96
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 39424,
+        "pct": 42.15
+      },
+      "margin": 14.81,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 53280,
+          "pct": 56.96
+        },
+        {
+          "party": "UPFA",
+          "votes": 39424,
+          "pct": 42.15
+        },
+        {
+          "party": "SLLP",
+          "votes": 113,
+          "pct": 0.12
+        },
+        {
+          "party": "PNF",
+          "votes": 96,
+          "pct": 0.1
+        },
+        {
+          "party": "FSP",
+          "votes": 93,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 534
+    },
+    "EC-03H": {
+      "valid": 79674,
+      "rejected": 1002,
+      "polled": 80676,
+      "electors": 100040,
+      "turnoutPct": 80.6,
+      "rejectedPct": 1.24,
+      "winner": {
+        "party": "UPFA",
+        "votes": 44750,
+        "pct": 56.17
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 33995,
+        "pct": 42.67
+      },
+      "margin": 13.5,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 44750,
+          "pct": 56.17
+        },
+        {
+          "party": "NDF",
+          "votes": 33995,
+          "pct": 42.67
+        },
+        {
+          "party": "PNF",
+          "votes": 154,
+          "pct": 0.19
+        },
+        {
+          "party": "ONF",
+          "votes": 142,
+          "pct": 0.18
+        },
+        {
+          "party": "ULPP",
+          "votes": 87,
+          "pct": 0.11
+        }
+      ],
+      "otherVotes": 546
+    },
+    "EC-03P": {
+      "valid": 27900,
+      "rejected": 641,
+      "polled": 28541,
+      "electors": 28997,
+      "turnoutPct": 98.4,
+      "rejectedPct": 2.25,
+      "winner": {
+        "party": "UPFA",
+        "votes": 14830,
+        "pct": 53.15
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 12962,
+        "pct": 46.46
+      },
+      "margin": 6.7,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 14830,
+          "pct": 53.15
+        },
+        {
+          "party": "NDF",
+          "votes": 12962,
+          "pct": 46.46
+        },
+        {
+          "party": "FSP",
+          "votes": 25,
+          "pct": 0.09
+        },
+        {
+          "party": "JSP",
+          "votes": 15,
+          "pct": 0.05
+        },
+        {
+          "party": "PNF",
+          "votes": 8,
+          "pct": 0.03
+        }
+      ],
+      "otherVotes": 60
+    },
+    "EC-04": {
+      "valid": 855908,
+      "rejected": 10993,
+      "polled": 866901,
+      "electors": 1087542,
+      "turnoutPct": 79.7,
+      "rejectedPct": 1.27,
+      "winner": {
+        "party": "NDF",
+        "votes": 466994,
+        "pct": 54.56
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 378585,
+        "pct": 44.23
+      },
+      "margin": 10.33,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 466994,
+          "pct": 54.56
+        },
+        {
+          "party": "UPFA",
+          "votes": 378585,
+          "pct": 44.23
+        },
+        {
+          "party": "PNF",
+          "votes": 1306,
+          "pct": 0.15
+        },
+        {
+          "party": "ONF",
+          "votes": 1204,
+          "pct": 0.14
+        },
+        {
+          "party": "UPF",
+          "votes": 1103,
+          "pct": 0.13
+        }
+      ],
+      "otherVotes": 6716
+    },
+    "EC-04A": {
+      "valid": 41815,
+      "rejected": 390,
+      "polled": 42205,
+      "electors": 54214,
+      "turnoutPct": 77.8,
+      "rejectedPct": 0.92,
+      "winner": {
+        "party": "UPFA",
+        "votes": 21466,
+        "pct": 51.34
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 19818,
+        "pct": 47.39
+      },
+      "margin": 3.94,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 21466,
+          "pct": 51.34
+        },
+        {
+          "party": "NDF",
+          "votes": 19818,
+          "pct": 47.39
+        },
+        {
+          "party": "PNF",
+          "votes": 79,
+          "pct": 0.19
+        },
+        {
+          "party": "ONF",
+          "votes": 72,
+          "pct": 0.17
+        },
+        {
+          "party": "I-AMI",
+          "votes": 47,
+          "pct": 0.11
+        }
+      ],
+      "otherVotes": 333
+    },
+    "EC-04B": {
+      "valid": 123998,
+      "rejected": 1356,
+      "polled": 125354,
+      "electors": 157463,
+      "turnoutPct": 79.6,
+      "rejectedPct": 1.08,
+      "winner": {
+        "party": "NDF",
+        "votes": 71533,
+        "pct": 57.69
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 51156,
+        "pct": 41.26
+      },
+      "margin": 16.43,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 71533,
+          "pct": 57.69
+        },
+        {
+          "party": "UPFA",
+          "votes": 51156,
+          "pct": 41.26
+        },
+        {
+          "party": "PNF",
+          "votes": 153,
+          "pct": 0.12
+        },
+        {
+          "party": "ONF",
+          "votes": 149,
+          "pct": 0.12
+        },
+        {
+          "party": "SLLP",
+          "votes": 148,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 859
+    },
+    "EC-04C": {
+      "valid": 65480,
+      "rejected": 1023,
+      "polled": 66503,
+      "electors": 85375,
+      "turnoutPct": 77.9,
+      "rejectedPct": 1.54,
+      "winner": {
+        "party": "NDF",
+        "votes": 37840,
+        "pct": 57.79
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 26762,
+        "pct": 40.87
+      },
+      "margin": 16.92,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 37840,
+          "pct": 57.79
+        },
+        {
+          "party": "UPFA",
+          "votes": 26762,
+          "pct": 40.87
+        },
+        {
+          "party": "PNF",
+          "votes": 101,
+          "pct": 0.15
+        },
+        {
+          "party": "UPF",
+          "votes": 90,
+          "pct": 0.14
+        },
+        {
+          "party": "ULPP",
+          "votes": 90,
+          "pct": 0.14
+        }
+      ],
+      "otherVotes": 597
+    },
+    "EC-04D": {
+      "valid": 46917,
+      "rejected": 479,
+      "polled": 47396,
+      "electors": 58637,
+      "turnoutPct": 80.8,
+      "rejectedPct": 1.01,
+      "winner": {
+        "party": "UPFA",
+        "votes": 27722,
+        "pct": 59.09
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 18472,
+        "pct": 39.37
+      },
+      "margin": 19.72,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 27722,
+          "pct": 59.09
+        },
+        {
+          "party": "NDF",
+          "votes": 18472,
+          "pct": 39.37
+        },
+        {
+          "party": "ONF",
+          "votes": 129,
+          "pct": 0.27
+        },
+        {
+          "party": "PNF",
+          "votes": 112,
+          "pct": 0.24
+        },
+        {
+          "party": "UPF",
+          "votes": 80,
+          "pct": 0.17
+        }
+      ],
+      "otherVotes": 402
+    },
+    "EC-04E": {
+      "valid": 37377,
+      "rejected": 517,
+      "polled": 37894,
+      "electors": 47685,
+      "turnoutPct": 79.5,
+      "rejectedPct": 1.36,
+      "winner": {
+        "party": "NDF",
+        "votes": 18624,
+        "pct": 49.83
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 18150,
+        "pct": 48.56
+      },
+      "margin": 1.27,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 18624,
+          "pct": 49.83
+        },
+        {
+          "party": "UPFA",
+          "votes": 18150,
+          "pct": 48.56
+        },
+        {
+          "party": "PNF",
+          "votes": 80,
+          "pct": 0.21
+        },
+        {
+          "party": "SLLP",
+          "votes": 68,
+          "pct": 0.18
+        },
+        {
+          "party": "UPF",
+          "votes": 65,
+          "pct": 0.17
+        }
+      ],
+      "otherVotes": 390
+    },
+    "EC-04F": {
+      "valid": 74890,
+      "rejected": 794,
+      "polled": 75684,
+      "electors": 94870,
+      "turnoutPct": 79.8,
+      "rejectedPct": 1.05,
+      "winner": {
+        "party": "NDF",
+        "votes": 41238,
+        "pct": 55.06
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 32930,
+        "pct": 43.97
+      },
+      "margin": 11.09,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 41238,
+          "pct": 55.06
+        },
+        {
+          "party": "UPFA",
+          "votes": 32930,
+          "pct": 43.97
+        },
+        {
+          "party": "PNF",
+          "votes": 90,
+          "pct": 0.12
+        },
+        {
+          "party": "ONF",
+          "votes": 85,
+          "pct": 0.11
+        },
+        {
+          "party": "SLLP",
+          "votes": 75,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 472
+    },
+    "EC-04G": {
+      "valid": 53079,
+      "rejected": 673,
+      "polled": 53752,
+      "electors": 69243,
+      "turnoutPct": 77.6,
+      "rejectedPct": 1.25,
+      "winner": {
+        "party": "NDF",
+        "votes": 28049,
+        "pct": 52.84
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 24167,
+        "pct": 45.53
+      },
+      "margin": 7.31,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 28049,
+          "pct": 52.84
+        },
+        {
+          "party": "UPFA",
+          "votes": 24167,
+          "pct": 45.53
+        },
+        {
+          "party": "UPF",
+          "votes": 112,
+          "pct": 0.21
+        },
+        {
+          "party": "ONF",
+          "votes": 111,
+          "pct": 0.21
+        },
+        {
+          "party": "PNF",
+          "votes": 106,
+          "pct": 0.2
+        }
+      ],
+      "otherVotes": 534
+    },
+    "EC-04H": {
+      "valid": 62735,
+      "rejected": 834,
+      "polled": 63569,
+      "electors": 81149,
+      "turnoutPct": 78.3,
+      "rejectedPct": 1.31,
+      "winner": {
+        "party": "NDF",
+        "votes": 36127,
+        "pct": 57.59
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 26062,
+        "pct": 41.54
+      },
+      "margin": 16.04,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 36127,
+          "pct": 57.59
+        },
+        {
+          "party": "UPFA",
+          "votes": 26062,
+          "pct": 41.54
+        },
+        {
+          "party": "ONF",
+          "votes": 61,
+          "pct": 0.1
+        },
+        {
+          "party": "UPF",
+          "votes": 57,
+          "pct": 0.09
+        },
+        {
+          "party": "FSP",
+          "votes": 53,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 375
+    },
+    "EC-04I": {
+      "valid": 30715,
+      "rejected": 401,
+      "polled": 31116,
+      "electors": 40020,
+      "turnoutPct": 77.8,
+      "rejectedPct": 1.29,
+      "winner": {
+        "party": "NDF",
+        "votes": 20316,
+        "pct": 66.14
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 10200,
+        "pct": 33.21
+      },
+      "margin": 32.94,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 20316,
+          "pct": 66.14
+        },
+        {
+          "party": "UPFA",
+          "votes": 10200,
+          "pct": 33.21
+        },
+        {
+          "party": "PNF",
+          "votes": 26,
+          "pct": 0.08
+        },
+        {
+          "party": "I-AMI",
+          "votes": 24,
+          "pct": 0.08
+        },
+        {
+          "party": "ULPP",
+          "votes": 23,
+          "pct": 0.07
+        }
+      ],
+      "otherVotes": 126
+    },
+    "EC-04J": {
+      "valid": 63089,
+      "rejected": 748,
+      "polled": 63837,
+      "electors": 80420,
+      "turnoutPct": 79.4,
+      "rejectedPct": 1.17,
+      "winner": {
+        "party": "NDF",
+        "votes": 32298,
+        "pct": 51.19
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 30194,
+        "pct": 47.86
+      },
+      "margin": 3.33,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 32298,
+          "pct": 51.19
+        },
+        {
+          "party": "UPFA",
+          "votes": 30194,
+          "pct": 47.86
+        },
+        {
+          "party": "PNF",
+          "votes": 88,
+          "pct": 0.14
+        },
+        {
+          "party": "ONF",
+          "votes": 78,
+          "pct": 0.12
+        },
+        {
+          "party": "UPF",
+          "votes": 74,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 357
+    },
+    "EC-04K": {
+      "valid": 64754,
+      "rejected": 763,
+      "polled": 65517,
+      "electors": 82298,
+      "turnoutPct": 79.6,
+      "rejectedPct": 1.16,
+      "winner": {
+        "party": "NDF",
+        "votes": 38018,
+        "pct": 58.71
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 25984,
+        "pct": 40.13
+      },
+      "margin": 18.58,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 38018,
+          "pct": 58.71
+        },
+        {
+          "party": "UPFA",
+          "votes": 25984,
+          "pct": 40.13
+        },
+        {
+          "party": "PNF",
+          "votes": 87,
+          "pct": 0.13
+        },
+        {
+          "party": "UPF",
+          "votes": 87,
+          "pct": 0.13
+        },
+        {
+          "party": "SLLP",
+          "votes": 82,
+          "pct": 0.13
+        }
+      ],
+      "otherVotes": 496
+    },
+    "EC-04L": {
+      "valid": 79785,
+      "rejected": 1020,
+      "polled": 80805,
+      "electors": 102219,
+      "turnoutPct": 79.1,
+      "rejectedPct": 1.26,
+      "winner": {
+        "party": "NDF",
+        "votes": 45328,
+        "pct": 56.81
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 33293,
+        "pct": 41.73
+      },
+      "margin": 15.08,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 45328,
+          "pct": 56.81
+        },
+        {
+          "party": "UPFA",
+          "votes": 33293,
+          "pct": 41.73
+        },
+        {
+          "party": "UPF",
+          "votes": 161,
+          "pct": 0.2
+        },
+        {
+          "party": "PNF",
+          "votes": 151,
+          "pct": 0.19
+        },
+        {
+          "party": "SLLP",
+          "votes": 132,
+          "pct": 0.17
+        }
+      ],
+      "otherVotes": 720
+    },
+    "EC-04M": {
+      "valid": 74162,
+      "rejected": 1393,
+      "polled": 75555,
+      "electors": 95567,
+      "turnoutPct": 79.1,
+      "rejectedPct": 1.84,
+      "winner": {
+        "party": "NDF",
+        "votes": 40233,
+        "pct": 54.25
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 32619,
+        "pct": 43.98
+      },
+      "margin": 10.27,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 40233,
+          "pct": 54.25
+        },
+        {
+          "party": "UPFA",
+          "votes": 32619,
+          "pct": 43.98
+        },
+        {
+          "party": "PNF",
+          "votes": 173,
+          "pct": 0.23
+        },
+        {
+          "party": "ONF",
+          "votes": 146,
+          "pct": 0.2
+        },
+        {
+          "party": "ULPP",
+          "votes": 144,
+          "pct": 0.19
+        }
+      ],
+      "otherVotes": 847
+    },
+    "EC-04P": {
+      "valid": 37112,
+      "rejected": 602,
+      "polled": 37714,
+      "electors": 38382,
+      "turnoutPct": 98.3,
+      "rejectedPct": 1.6,
+      "winner": {
+        "party": "NDF",
+        "votes": 19100,
+        "pct": 51.47
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 17880,
+        "pct": 48.18
+      },
+      "margin": 3.29,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 19100,
+          "pct": 51.47
+        },
+        {
+          "party": "UPFA",
+          "votes": 17880,
+          "pct": 48.18
+        },
+        {
+          "party": "FSP",
+          "votes": 32,
+          "pct": 0.09
+        },
+        {
+          "party": "JSP",
+          "votes": 15,
+          "pct": 0.04
+        },
+        {
+          "party": "ONF",
+          "votes": 13,
+          "pct": 0.04
+        }
+      ],
+      "otherVotes": 72
+    },
+    "EC-05": {
+      "valid": 309022,
+      "rejected": 3653,
+      "polled": 312675,
+      "electors": 397005,
+      "turnoutPct": 78.8,
+      "rejectedPct": 1.17,
+      "winner": {
+        "party": "UPFA",
+        "votes": 158880,
+        "pct": 51.41
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 145928,
+        "pct": 47.22
+      },
+      "margin": 4.19,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 158880,
+          "pct": 51.41
+        },
+        {
+          "party": "NDF",
+          "votes": 145928,
+          "pct": 47.22
+        },
+        {
+          "party": "PNF",
+          "votes": 649,
+          "pct": 0.21
+        },
+        {
+          "party": "ONF",
+          "votes": 500,
+          "pct": 0.16
+        },
+        {
+          "party": "SLLP",
+          "votes": 394,
+          "pct": 0.13
+        }
+      ],
+      "otherVotes": 2671
+    },
+    "EC-05A": {
+      "valid": 101472,
+      "rejected": 1074,
+      "polled": 102546,
+      "electors": 131831,
+      "turnoutPct": 77.8,
+      "rejectedPct": 1.05,
+      "winner": {
+        "party": "UPFA",
+        "votes": 57657,
+        "pct": 56.82
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 42652,
+        "pct": 42.03
+      },
+      "margin": 14.79,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 57657,
+          "pct": 56.82
+        },
+        {
+          "party": "NDF",
+          "votes": 42652,
+          "pct": 42.03
+        },
+        {
+          "party": "PNF",
+          "votes": 205,
+          "pct": 0.2
+        },
+        {
+          "party": "ONF",
+          "votes": 158,
+          "pct": 0.16
+        },
+        {
+          "party": "UPF",
+          "votes": 104,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 696
+    },
+    "EC-05B": {
+      "valid": 56178,
+      "rejected": 581,
+      "polled": 56759,
+      "electors": 70323,
+      "turnoutPct": 80.7,
+      "rejectedPct": 1.02,
+      "winner": {
+        "party": "UPFA",
+        "votes": 33821,
+        "pct": 60.2
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 21511,
+        "pct": 38.29
+      },
+      "margin": 21.91,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 33821,
+          "pct": 60.2
+        },
+        {
+          "party": "NDF",
+          "votes": 21511,
+          "pct": 38.29
+        },
+        {
+          "party": "PNF",
+          "votes": 175,
+          "pct": 0.31
+        },
+        {
+          "party": "ONF",
+          "votes": 136,
+          "pct": 0.24
+        },
+        {
+          "party": "SLLP",
+          "votes": 73,
+          "pct": 0.13
+        }
+      ],
+      "otherVotes": 462
+    },
+    "EC-05C": {
+      "valid": 63637,
+      "rejected": 773,
+      "polled": 64410,
+      "electors": 84225,
+      "turnoutPct": 76.5,
+      "rejectedPct": 1.2,
+      "winner": {
+        "party": "NDF",
+        "votes": 36052,
+        "pct": 56.65
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 26684,
+        "pct": 41.93
+      },
+      "margin": 14.72,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 36052,
+          "pct": 56.65
+        },
+        {
+          "party": "UPFA",
+          "votes": 26684,
+          "pct": 41.93
+        },
+        {
+          "party": "PNF",
+          "votes": 123,
+          "pct": 0.19
+        },
+        {
+          "party": "SLLP",
+          "votes": 101,
+          "pct": 0.16
+        },
+        {
+          "party": "ULPP",
+          "votes": 96,
+          "pct": 0.15
+        }
+      ],
+      "otherVotes": 581
+    },
+    "EC-05D": {
+      "valid": 70812,
+      "rejected": 1079,
+      "polled": 71891,
+      "electors": 93296,
+      "turnoutPct": 77.1,
+      "rejectedPct": 1.5,
+      "winner": {
+        "party": "NDF",
+        "votes": 37319,
+        "pct": 52.7
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 32235,
+        "pct": 45.52
+      },
+      "margin": 7.18,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 37319,
+          "pct": 52.7
+        },
+        {
+          "party": "UPFA",
+          "votes": 32235,
+          "pct": 45.52
+        },
+        {
+          "party": "PNF",
+          "votes": 141,
+          "pct": 0.2
+        },
+        {
+          "party": "ONF",
+          "votes": 137,
+          "pct": 0.19
+        },
+        {
+          "party": "UPF",
+          "votes": 134,
+          "pct": 0.19
+        }
+      ],
+      "otherVotes": 846
+    },
+    "EC-05P": {
+      "valid": 16923,
+      "rejected": 146,
+      "polled": 17069,
+      "electors": 17330,
+      "turnoutPct": 98.5,
+      "rejectedPct": 0.86,
+      "winner": {
+        "party": "UPFA",
+        "votes": 8483,
+        "pct": 50.13
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 8394,
+        "pct": 49.6
+      },
+      "margin": 0.53,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 8483,
+          "pct": 50.13
+        },
+        {
+          "party": "NDF",
+          "votes": 8394,
+          "pct": 49.6
+        },
+        {
+          "party": "FSP",
+          "votes": 7,
+          "pct": 0.04
+        },
+        {
+          "party": "PNF",
+          "votes": 5,
+          "pct": 0.03
+        },
+        {
+          "party": "ONF",
+          "votes": 4,
+          "pct": 0.02
+        }
+      ],
+      "otherVotes": 30
+    },
+    "EC-06": {
+      "valid": 426766,
+      "rejected": 7329,
+      "polled": 434095,
+      "electors": 547766,
+      "turnoutPct": 79.2,
+      "rejectedPct": 1.69,
+      "winner": {
+        "party": "NDF",
+        "votes": 272605,
+        "pct": 63.88
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 145339,
+        "pct": 34.06
+      },
+      "margin": 29.82,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 272605,
+          "pct": 63.88
+        },
+        {
+          "party": "UPFA",
+          "votes": 145339,
+          "pct": 34.06
+        },
+        {
+          "party": "SLLP",
+          "votes": 1191,
+          "pct": 0.28
+        },
+        {
+          "party": "ULPP",
+          "votes": 1068,
+          "pct": 0.25
+        },
+        {
+          "party": "UPF",
+          "votes": 1054,
+          "pct": 0.25
+        }
+      ],
+      "otherVotes": 5509
+    },
+    "EC-06A": {
+      "valid": 234996,
+      "rejected": 3939,
+      "polled": 238935,
+      "electors": 302836,
+      "turnoutPct": 78.9,
+      "rejectedPct": 1.65,
+      "winner": {
+        "party": "NDF",
+        "votes": 171578,
+        "pct": 73.01
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 57718,
+        "pct": 24.56
+      },
+      "margin": 48.45,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 171578,
+          "pct": 73.01
+        },
+        {
+          "party": "UPFA",
+          "votes": 57718,
+          "pct": 24.56
+        },
+        {
+          "party": "SLLP",
+          "votes": 831,
+          "pct": 0.35
+        },
+        {
+          "party": "ULPP",
+          "votes": 730,
+          "pct": 0.31
+        },
+        {
+          "party": "UPF",
+          "votes": 705,
+          "pct": 0.3
+        }
+      ],
+      "otherVotes": 3434
+    },
+    "EC-06B": {
+      "valid": 61099,
+      "rejected": 1018,
+      "polled": 62117,
+      "electors": 78068,
+      "turnoutPct": 79.6,
+      "rejectedPct": 1.64,
+      "winner": {
+        "party": "NDF",
+        "votes": 36343,
+        "pct": 59.48
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 23821,
+        "pct": 38.99
+      },
+      "margin": 20.49,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 36343,
+          "pct": 59.48
+        },
+        {
+          "party": "UPFA",
+          "votes": 23821,
+          "pct": 38.99
+        },
+        {
+          "party": "SLLP",
+          "votes": 133,
+          "pct": 0.22
+        },
+        {
+          "party": "ULPP",
+          "votes": 115,
+          "pct": 0.19
+        },
+        {
+          "party": "PNF",
+          "votes": 97,
+          "pct": 0.16
+        }
+      ],
+      "otherVotes": 590
+    },
+    "EC-06C": {
+      "valid": 53956,
+      "rejected": 1064,
+      "polled": 55020,
+      "electors": 71053,
+      "turnoutPct": 77.4,
+      "rejectedPct": 1.93,
+      "winner": {
+        "party": "UPFA",
+        "votes": 27389,
+        "pct": 50.76
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 25645,
+        "pct": 47.53
+      },
+      "margin": 3.23,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 27389,
+          "pct": 50.76
+        },
+        {
+          "party": "NDF",
+          "votes": 25645,
+          "pct": 47.53
+        },
+        {
+          "party": "PNF",
+          "votes": 122,
+          "pct": 0.23
+        },
+        {
+          "party": "ONF",
+          "votes": 113,
+          "pct": 0.21
+        },
+        {
+          "party": "UPF",
+          "votes": 97,
+          "pct": 0.18
+        }
+      ],
+      "otherVotes": 590
+    },
+    "EC-06D": {
+      "valid": 63924,
+      "rejected": 1052,
+      "polled": 64976,
+      "electors": 82193,
+      "turnoutPct": 79.1,
+      "rejectedPct": 1.62,
+      "winner": {
+        "party": "NDF",
+        "votes": 32340,
+        "pct": 50.59
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 30354,
+        "pct": 47.48
+      },
+      "margin": 3.11,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 32340,
+          "pct": 50.59
+        },
+        {
+          "party": "UPFA",
+          "votes": 30354,
+          "pct": 47.48
+        },
+        {
+          "party": "PNF",
+          "votes": 171,
+          "pct": 0.27
+        },
+        {
+          "party": "ONF",
+          "votes": 161,
+          "pct": 0.25
+        },
+        {
+          "party": "UPF",
+          "votes": 155,
+          "pct": 0.24
+        }
+      ],
+      "otherVotes": 743
+    },
+    "EC-06P": {
+      "valid": 12791,
+      "rejected": 256,
+      "polled": 13047,
+      "electors": 13616,
+      "turnoutPct": 95.8,
+      "rejectedPct": 1.96,
+      "winner": {
+        "party": "NDF",
+        "votes": 6699,
+        "pct": 52.37
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 6057,
+        "pct": 47.35
+      },
+      "margin": 5.02,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 6699,
+          "pct": 52.37
+        },
+        {
+          "party": "UPFA",
+          "votes": 6057,
+          "pct": 47.35
+        },
+        {
+          "party": "PNF",
+          "votes": 6,
+          "pct": 0.05
+        },
+        {
+          "party": "UPF",
+          "votes": 4,
+          "pct": 0.03
+        },
+        {
+          "party": "SEP",
+          "votes": 4,
+          "pct": 0.03
+        }
+      ],
+      "otherVotes": 21
+    },
+    "EC-07": {
+      "valid": 677811,
+      "rejected": 6516,
+      "polled": 684327,
+      "electors": 850549,
+      "turnoutPct": 80.5,
+      "rejectedPct": 0.95,
+      "winner": {
+        "party": "UPFA",
+        "votes": 377126,
+        "pct": 55.64
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 293994,
+        "pct": 43.37
+      },
+      "margin": 12.26,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 377126,
+          "pct": 55.64
+        },
+        {
+          "party": "NDF",
+          "votes": 293994,
+          "pct": 43.37
+        },
+        {
+          "party": "PNF",
+          "votes": 995,
+          "pct": 0.15
+        },
+        {
+          "party": "FSP",
+          "votes": 835,
+          "pct": 0.12
+        },
+        {
+          "party": "ONF",
+          "votes": 755,
+          "pct": 0.11
+        }
+      ],
+      "otherVotes": 4106
+    },
+    "EC-07A": {
+      "valid": 39831,
+      "rejected": 388,
+      "polled": 40219,
+      "electors": 52852,
+      "turnoutPct": 76.1,
+      "rejectedPct": 0.96,
+      "winner": {
+        "party": "UPFA",
+        "votes": 23283,
+        "pct": 58.45
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 16196,
+        "pct": 40.66
+      },
+      "margin": 17.79,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 23283,
+          "pct": 58.45
+        },
+        {
+          "party": "NDF",
+          "votes": 16196,
+          "pct": 40.66
+        },
+        {
+          "party": "PNF",
+          "votes": 60,
+          "pct": 0.15
+        },
+        {
+          "party": "I-AMI",
+          "votes": 39,
+          "pct": 0.1
+        },
+        {
+          "party": "UPF",
+          "votes": 38,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 215
+    },
+    "EC-07B": {
+      "valid": 59604,
+      "rejected": 635,
+      "polled": 60239,
+      "electors": 75524,
+      "turnoutPct": 79.8,
+      "rejectedPct": 1.05,
+      "winner": {
+        "party": "UPFA",
+        "votes": 32871,
+        "pct": 55.15
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 26187,
+        "pct": 43.93
+      },
+      "margin": 11.21,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 32871,
+          "pct": 55.15
+        },
+        {
+          "party": "NDF",
+          "votes": 26187,
+          "pct": 43.93
+        },
+        {
+          "party": "PNF",
+          "votes": 78,
+          "pct": 0.13
+        },
+        {
+          "party": "FSP",
+          "votes": 78,
+          "pct": 0.13
+        },
+        {
+          "party": "UPF",
+          "votes": 55,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 335
+    },
+    "EC-07C": {
+      "valid": 55410,
+      "rejected": 541,
+      "polled": 55951,
+      "electors": 72572,
+      "turnoutPct": 77.1,
+      "rejectedPct": 0.97,
+      "winner": {
+        "party": "UPFA",
+        "votes": 34983,
+        "pct": 63.13
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 19752,
+        "pct": 35.65
+      },
+      "margin": 27.49,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 34983,
+          "pct": 63.13
+        },
+        {
+          "party": "NDF",
+          "votes": 19752,
+          "pct": 35.65
+        },
+        {
+          "party": "FSP",
+          "votes": 129,
+          "pct": 0.23
+        },
+        {
+          "party": "PNF",
+          "votes": 109,
+          "pct": 0.2
+        },
+        {
+          "party": "ONF",
+          "votes": 88,
+          "pct": 0.16
+        }
+      ],
+      "otherVotes": 349
+    },
+    "EC-07D": {
+      "valid": 71110,
+      "rejected": 574,
+      "polled": 71684,
+      "electors": 89500,
+      "turnoutPct": 80.1,
+      "rejectedPct": 0.8,
+      "winner": {
+        "party": "UPFA",
+        "votes": 42015,
+        "pct": 59.08
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 28287,
+        "pct": 39.78
+      },
+      "margin": 19.31,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 42015,
+          "pct": 59.08
+        },
+        {
+          "party": "NDF",
+          "votes": 28287,
+          "pct": 39.78
+        },
+        {
+          "party": "ONF",
+          "votes": 123,
+          "pct": 0.17
+        },
+        {
+          "party": "FSP",
+          "votes": 119,
+          "pct": 0.17
+        },
+        {
+          "party": "PNF",
+          "votes": 108,
+          "pct": 0.15
+        }
+      ],
+      "otherVotes": 458
+    },
+    "EC-07E": {
+      "valid": 82428,
+      "rejected": 790,
+      "polled": 83218,
+      "electors": 100757,
+      "turnoutPct": 82.6,
+      "rejectedPct": 0.95,
+      "winner": {
+        "party": "UPFA",
+        "votes": 47464,
+        "pct": 57.58
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 34022,
+        "pct": 41.27
+      },
+      "margin": 16.31,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 47464,
+          "pct": 57.58
+        },
+        {
+          "party": "NDF",
+          "votes": 34022,
+          "pct": 41.27
+        },
+        {
+          "party": "PNF",
+          "votes": 171,
+          "pct": 0.21
+        },
+        {
+          "party": "ONF",
+          "votes": 106,
+          "pct": 0.13
+        },
+        {
+          "party": "UPF",
+          "votes": 87,
+          "pct": 0.11
+        }
+      ],
+      "otherVotes": 578
+    },
+    "EC-07F": {
+      "valid": 76667,
+      "rejected": 941,
+      "polled": 77608,
+      "electors": 95641,
+      "turnoutPct": 81.1,
+      "rejectedPct": 1.21,
+      "winner": {
+        "party": "UPFA",
+        "votes": 43369,
+        "pct": 56.57
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 32347,
+        "pct": 42.19
+      },
+      "margin": 14.38,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 43369,
+          "pct": 56.57
+        },
+        {
+          "party": "NDF",
+          "votes": 32347,
+          "pct": 42.19
+        },
+        {
+          "party": "ONF",
+          "votes": 141,
+          "pct": 0.18
+        },
+        {
+          "party": "PNF",
+          "votes": 133,
+          "pct": 0.17
+        },
+        {
+          "party": "I-AMI",
+          "votes": 108,
+          "pct": 0.14
+        }
+      ],
+      "otherVotes": 569
+    },
+    "EC-07G": {
+      "valid": 59783,
+      "rejected": 480,
+      "polled": 60263,
+      "electors": 78182,
+      "turnoutPct": 77.1,
+      "rejectedPct": 0.8,
+      "winner": {
+        "party": "UPFA",
+        "votes": 36209,
+        "pct": 60.57
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 23038,
+        "pct": 38.54
+      },
+      "margin": 22.03,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 36209,
+          "pct": 60.57
+        },
+        {
+          "party": "NDF",
+          "votes": 23038,
+          "pct": 38.54
+        },
+        {
+          "party": "PNF",
+          "votes": 77,
+          "pct": 0.13
+        },
+        {
+          "party": "ONF",
+          "votes": 57,
+          "pct": 0.1
+        },
+        {
+          "party": "FSP",
+          "votes": 55,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 347
+    },
+    "EC-07H": {
+      "valid": 63190,
+      "rejected": 447,
+      "polled": 63637,
+      "electors": 79685,
+      "turnoutPct": 79.9,
+      "rejectedPct": 0.7,
+      "winner": {
+        "party": "NDF",
+        "votes": 39547,
+        "pct": 62.58
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 23184,
+        "pct": 36.69
+      },
+      "margin": 25.89,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 39547,
+          "pct": 62.58
+        },
+        {
+          "party": "UPFA",
+          "votes": 23184,
+          "pct": 36.69
+        },
+        {
+          "party": "SLLP",
+          "votes": 57,
+          "pct": 0.09
+        },
+        {
+          "party": "ULPP",
+          "votes": 53,
+          "pct": 0.08
+        },
+        {
+          "party": "PNF",
+          "votes": 48,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 301
+    },
+    "EC-07I": {
+      "valid": 75054,
+      "rejected": 738,
+      "polled": 75792,
+      "electors": 94175,
+      "turnoutPct": 80.5,
+      "rejectedPct": 0.97,
+      "winner": {
+        "party": "UPFA",
+        "votes": 39604,
+        "pct": 52.77
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 34807,
+        "pct": 46.38
+      },
+      "margin": 6.39,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 39604,
+          "pct": 52.77
+        },
+        {
+          "party": "NDF",
+          "votes": 34807,
+          "pct": 46.38
+        },
+        {
+          "party": "PNF",
+          "votes": 105,
+          "pct": 0.14
+        },
+        {
+          "party": "FSP",
+          "votes": 74,
+          "pct": 0.1
+        },
+        {
+          "party": "UPF",
+          "votes": 66,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 398
+    },
+    "EC-07J": {
+      "valid": 64603,
+      "rejected": 572,
+      "polled": 65175,
+      "electors": 80778,
+      "turnoutPct": 80.7,
+      "rejectedPct": 0.88,
+      "winner": {
+        "party": "UPFA",
+        "votes": 38028,
+        "pct": 58.86
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 25932,
+        "pct": 40.14
+      },
+      "margin": 18.72,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 38028,
+          "pct": 58.86
+        },
+        {
+          "party": "NDF",
+          "votes": 25932,
+          "pct": 40.14
+        },
+        {
+          "party": "FSP",
+          "votes": 96,
+          "pct": 0.15
+        },
+        {
+          "party": "PNF",
+          "votes": 92,
+          "pct": 0.14
+        },
+        {
+          "party": "I-AMI",
+          "votes": 72,
+          "pct": 0.11
+        }
+      ],
+      "otherVotes": 383
+    },
+    "EC-07P": {
+      "valid": 30131,
+      "rejected": 410,
+      "polled": 30541,
+      "electors": 30883,
+      "turnoutPct": 98.9,
+      "rejectedPct": 1.34,
+      "winner": {
+        "party": "UPFA",
+        "votes": 16116,
+        "pct": 53.49
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 13879,
+        "pct": 46.06
+      },
+      "margin": 7.42,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 16116,
+          "pct": 53.49
+        },
+        {
+          "party": "NDF",
+          "votes": 13879,
+          "pct": 46.06
+        },
+        {
+          "party": "FSP",
+          "votes": 40,
+          "pct": 0.13
+        },
+        {
+          "party": "JSP",
+          "votes": 17,
+          "pct": 0.06
+        },
+        {
+          "party": "PNF",
+          "votes": 14,
+          "pct": 0.05
+        }
+      ],
+      "otherVotes": 65
+    },
+    "EC-08": {
+      "valid": 515150,
+      "rejected": 4891,
+      "polled": 520041,
+      "electors": 648213,
+      "turnoutPct": 80.2,
+      "rejectedPct": 0.94,
+      "winner": {
+        "party": "UPFA",
+        "votes": 297823,
+        "pct": 57.81
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 212435,
+        "pct": 41.24
+      },
+      "margin": 16.58,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 297823,
+          "pct": 57.81
+        },
+        {
+          "party": "NDF",
+          "votes": 212435,
+          "pct": 41.24
+        },
+        {
+          "party": "PNF",
+          "votes": 804,
+          "pct": 0.16
+        },
+        {
+          "party": "ONF",
+          "votes": 662,
+          "pct": 0.13
+        },
+        {
+          "party": "SLLP",
+          "votes": 448,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 2978
+    },
+    "EC-08A": {
+      "valid": 77138,
+      "rejected": 990,
+      "polled": 78128,
+      "electors": 97610,
+      "turnoutPct": 80,
+      "rejectedPct": 1.27,
+      "winner": {
+        "party": "UPFA",
+        "votes": 44273,
+        "pct": 57.39
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 31716,
+        "pct": 41.12
+      },
+      "margin": 16.28,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 44273,
+          "pct": 57.39
+        },
+        {
+          "party": "NDF",
+          "votes": 31716,
+          "pct": 41.12
+        },
+        {
+          "party": "PNF",
+          "votes": 182,
+          "pct": 0.24
+        },
+        {
+          "party": "ONF",
+          "votes": 145,
+          "pct": 0.19
+        },
+        {
+          "party": "SLLP",
+          "votes": 102,
+          "pct": 0.13
+        }
+      ],
+      "otherVotes": 720
+    },
+    "EC-08B": {
+      "valid": 72695,
+      "rejected": 748,
+      "polled": 73443,
+      "electors": 91791,
+      "turnoutPct": 80,
+      "rejectedPct": 1.02,
+      "winner": {
+        "party": "UPFA",
+        "votes": 46635,
+        "pct": 64.15
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 25164,
+        "pct": 34.62
+      },
+      "margin": 29.54,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 46635,
+          "pct": 64.15
+        },
+        {
+          "party": "NDF",
+          "votes": 25164,
+          "pct": 34.62
+        },
+        {
+          "party": "ONF",
+          "votes": 145,
+          "pct": 0.2
+        },
+        {
+          "party": "PNF",
+          "votes": 144,
+          "pct": 0.2
+        },
+        {
+          "party": "SLLP",
+          "votes": 80,
+          "pct": 0.11
+        }
+      ],
+      "otherVotes": 527
+    },
+    "EC-08C": {
+      "valid": 74285,
+      "rejected": 575,
+      "polled": 74860,
+      "electors": 93769,
+      "turnoutPct": 79.8,
+      "rejectedPct": 0.77,
+      "winner": {
+        "party": "UPFA",
+        "votes": 42860,
+        "pct": 57.7
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 30647,
+        "pct": 41.26
+      },
+      "margin": 16.44,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 42860,
+          "pct": 57.7
+        },
+        {
+          "party": "NDF",
+          "votes": 30647,
+          "pct": 41.26
+        },
+        {
+          "party": "PNF",
+          "votes": 138,
+          "pct": 0.19
+        },
+        {
+          "party": "ONF",
+          "votes": 116,
+          "pct": 0.16
+        },
+        {
+          "party": "ULPP",
+          "votes": 72,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 452
+    },
+    "EC-08D": {
+      "valid": 63560,
+      "rejected": 639,
+      "polled": 64199,
+      "electors": 81524,
+      "turnoutPct": 78.7,
+      "rejectedPct": 1,
+      "winner": {
+        "party": "UPFA",
+        "votes": 40084,
+        "pct": 63.06
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 22939,
+        "pct": 36.09
+      },
+      "margin": 26.97,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 40084,
+          "pct": 63.06
+        },
+        {
+          "party": "NDF",
+          "votes": 22939,
+          "pct": 36.09
+        },
+        {
+          "party": "PNF",
+          "votes": 103,
+          "pct": 0.16
+        },
+        {
+          "party": "ONF",
+          "votes": 72,
+          "pct": 0.11
+        },
+        {
+          "party": "SLLP",
+          "votes": 45,
+          "pct": 0.07
+        }
+      ],
+      "otherVotes": 317
+    },
+    "EC-08E": {
+      "valid": 60339,
+      "rejected": 473,
+      "polled": 60812,
+      "electors": 78690,
+      "turnoutPct": 77.3,
+      "rejectedPct": 0.78,
+      "winner": {
+        "party": "UPFA",
+        "votes": 35795,
+        "pct": 59.32
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 24092,
+        "pct": 39.93
+      },
+      "margin": 19.4,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 35795,
+          "pct": 59.32
+        },
+        {
+          "party": "NDF",
+          "votes": 24092,
+          "pct": 39.93
+        },
+        {
+          "party": "PNF",
+          "votes": 79,
+          "pct": 0.13
+        },
+        {
+          "party": "ONF",
+          "votes": 68,
+          "pct": 0.11
+        },
+        {
+          "party": "SLLP",
+          "votes": 45,
+          "pct": 0.07
+        }
+      ],
+      "otherVotes": 260
+    },
+    "EC-08F": {
+      "valid": 69836,
+      "rejected": 652,
+      "polled": 70488,
+      "electors": 86984,
+      "turnoutPct": 81,
+      "rejectedPct": 0.92,
+      "winner": {
+        "party": "NDF",
+        "votes": 35248,
+        "pct": 50.47
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 34191,
+        "pct": 48.96
+      },
+      "margin": 1.51,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 35248,
+          "pct": 50.47
+        },
+        {
+          "party": "UPFA",
+          "votes": 34191,
+          "pct": 48.96
+        },
+        {
+          "party": "PNF",
+          "votes": 52,
+          "pct": 0.07
+        },
+        {
+          "party": "SLLP",
+          "votes": 50,
+          "pct": 0.07
+        },
+        {
+          "party": "ONF",
+          "votes": 34,
+          "pct": 0.05
+        }
+      ],
+      "otherVotes": 261
+    },
+    "EC-08G": {
+      "valid": 73545,
+      "rejected": 534,
+      "polled": 74079,
+      "electors": 93450,
+      "turnoutPct": 79.3,
+      "rejectedPct": 0.72,
+      "winner": {
+        "party": "UPFA",
+        "votes": 40715,
+        "pct": 55.36
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 32247,
+        "pct": 43.85
+      },
+      "margin": 11.51,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 40715,
+          "pct": 55.36
+        },
+        {
+          "party": "NDF",
+          "votes": 32247,
+          "pct": 43.85
+        },
+        {
+          "party": "PNF",
+          "votes": 99,
+          "pct": 0.13
+        },
+        {
+          "party": "ONF",
+          "votes": 71,
+          "pct": 0.1
+        },
+        {
+          "party": "SLLP",
+          "votes": 56,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 357
+    },
+    "EC-08P": {
+      "valid": 23752,
+      "rejected": 280,
+      "polled": 24032,
+      "electors": 24395,
+      "turnoutPct": 98.5,
+      "rejectedPct": 1.17,
+      "winner": {
+        "party": "UPFA",
+        "votes": 13270,
+        "pct": 55.87
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 10382,
+        "pct": 43.71
+      },
+      "margin": 12.16,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 13270,
+          "pct": 55.87
+        },
+        {
+          "party": "NDF",
+          "votes": 10382,
+          "pct": 43.71
+        },
+        {
+          "party": "FSP",
+          "votes": 22,
+          "pct": 0.09
+        },
+        {
+          "party": "JSP",
+          "votes": 12,
+          "pct": 0.05
+        },
+        {
+          "party": "ONF",
+          "votes": 11,
+          "pct": 0.05
+        }
+      ],
+      "otherVotes": 55
+    },
+    "EC-09": {
+      "valid": 386076,
+      "rejected": 3351,
+      "polled": 389427,
+      "electors": 479433,
+      "turnoutPct": 81.2,
+      "rejectedPct": 0.86,
+      "winner": {
+        "party": "UPFA",
+        "votes": 243295,
+        "pct": 63.02
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 138708,
+        "pct": 35.93
+      },
+      "margin": 27.09,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 243295,
+          "pct": 63.02
+        },
+        {
+          "party": "NDF",
+          "votes": 138708,
+          "pct": 35.93
+        },
+        {
+          "party": "PNF",
+          "votes": 734,
+          "pct": 0.19
+        },
+        {
+          "party": "ONF",
+          "votes": 565,
+          "pct": 0.15
+        },
+        {
+          "party": "UPF",
+          "votes": 376,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 2398
+    },
+    "EC-09A": {
+      "valid": 80837,
+      "rejected": 658,
+      "polled": 81495,
+      "electors": 100711,
+      "turnoutPct": 80.9,
+      "rejectedPct": 0.81,
+      "winner": {
+        "party": "UPFA",
+        "votes": 52202,
+        "pct": 64.58
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 27601,
+        "pct": 34.14
+      },
+      "margin": 30.43,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 52202,
+          "pct": 64.58
+        },
+        {
+          "party": "NDF",
+          "votes": 27601,
+          "pct": 34.14
+        },
+        {
+          "party": "PNF",
+          "votes": 205,
+          "pct": 0.25
+        },
+        {
+          "party": "ONF",
+          "votes": 155,
+          "pct": 0.19
+        },
+        {
+          "party": "NSH",
+          "votes": 81,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 593
+    },
+    "EC-09B": {
+      "valid": 62083,
+      "rejected": 553,
+      "polled": 62636,
+      "electors": 78234,
+      "turnoutPct": 80.1,
+      "rejectedPct": 0.88,
+      "winner": {
+        "party": "UPFA",
+        "votes": 39513,
+        "pct": 63.65
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 21912,
+        "pct": 35.29
+      },
+      "margin": 28.35,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 39513,
+          "pct": 63.65
+        },
+        {
+          "party": "NDF",
+          "votes": 21912,
+          "pct": 35.29
+        },
+        {
+          "party": "PNF",
+          "votes": 107,
+          "pct": 0.17
+        },
+        {
+          "party": "ONF",
+          "votes": 93,
+          "pct": 0.15
+        },
+        {
+          "party": "UPF",
+          "votes": 65,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 393
+    },
+    "EC-09C": {
+      "valid": 96248,
+      "rejected": 851,
+      "polled": 97099,
+      "electors": 120148,
+      "turnoutPct": 80.8,
+      "rejectedPct": 0.88,
+      "winner": {
+        "party": "UPFA",
+        "votes": 62739,
+        "pct": 65.18
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 32598,
+        "pct": 33.87
+      },
+      "margin": 31.32,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 62739,
+          "pct": 65.18
+        },
+        {
+          "party": "NDF",
+          "votes": 32598,
+          "pct": 33.87
+        },
+        {
+          "party": "PNF",
+          "votes": 162,
+          "pct": 0.17
+        },
+        {
+          "party": "ONF",
+          "votes": 136,
+          "pct": 0.14
+        },
+        {
+          "party": "UPF",
+          "votes": 85,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 528
+    },
+    "EC-09D": {
+      "valid": 130935,
+      "rejected": 1102,
+      "polled": 132037,
+      "electors": 163818,
+      "turnoutPct": 80.6,
+      "rejectedPct": 0.83,
+      "winner": {
+        "party": "UPFA",
+        "votes": 78546,
+        "pct": 59.99
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 50977,
+        "pct": 38.93
+      },
+      "margin": 21.06,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 78546,
+          "pct": 59.99
+        },
+        {
+          "party": "NDF",
+          "votes": 50977,
+          "pct": 38.93
+        },
+        {
+          "party": "PNF",
+          "votes": 250,
+          "pct": 0.19
+        },
+        {
+          "party": "ONF",
+          "votes": 176,
+          "pct": 0.13
+        },
+        {
+          "party": "UPF",
+          "votes": 147,
+          "pct": 0.11
+        }
+      ],
+      "otherVotes": 839
+    },
+    "EC-09P": {
+      "valid": 15973,
+      "rejected": 187,
+      "polled": 16160,
+      "electors": 16522,
+      "turnoutPct": 97.8,
+      "rejectedPct": 1.16,
+      "winner": {
+        "party": "UPFA",
+        "votes": 10295,
+        "pct": 64.45
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 5620,
+        "pct": 35.18
+      },
+      "margin": 29.27,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 10295,
+          "pct": 64.45
+        },
+        {
+          "party": "NDF",
+          "votes": 5620,
+          "pct": 35.18
+        },
+        {
+          "party": "FSP",
+          "votes": 13,
+          "pct": 0.08
+        },
+        {
+          "party": "PNF",
+          "votes": 10,
+          "pct": 0.06
+        },
+        {
+          "party": "USP",
+          "votes": 7,
+          "pct": 0.04
+        }
+      ],
+      "otherVotes": 28
+    },
+    "EC-10": {
+      "valid": 340751,
+      "rejected": 10038,
+      "polled": 350789,
+      "electors": 546265,
+      "turnoutPct": 64.2,
+      "rejectedPct": 2.86,
+      "winner": {
+        "party": "NDF",
+        "votes": 253574,
+        "pct": 74.42
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 74454,
+        "pct": 21.85
+      },
+      "margin": 52.57,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 253574,
+          "pct": 74.42
+        },
+        {
+          "party": "UPFA",
+          "votes": 74454,
+          "pct": 21.85
+        },
+        {
+          "party": "UPF",
+          "votes": 1620,
+          "pct": 0.48
+        },
+        {
+          "party": "SLLP",
+          "votes": 1398,
+          "pct": 0.41
+        },
+        {
+          "party": "ONF",
+          "votes": 1150,
+          "pct": 0.34
+        }
+      ],
+      "otherVotes": 8555
+    },
+    "EC-10A": {
+      "valid": 14678,
+      "rejected": 495,
+      "polled": 15173,
+      "electors": 22057,
+      "turnoutPct": 68.8,
+      "rejectedPct": 3.26,
+      "winner": {
+        "party": "NDF",
+        "votes": 8144,
+        "pct": 55.48
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 5959,
+        "pct": 40.6
+      },
+      "margin": 14.89,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 8144,
+          "pct": 55.48
+        },
+        {
+          "party": "UPFA",
+          "votes": 5959,
+          "pct": 40.6
+        },
+        {
+          "party": "SLLP",
+          "votes": 70,
+          "pct": 0.48
+        },
+        {
+          "party": "UPF",
+          "votes": 67,
+          "pct": 0.46
+        },
+        {
+          "party": "SEP",
+          "votes": 63,
+          "pct": 0.43
+        }
+      ],
+      "otherVotes": 375
+    },
+    "EC-10B": {
+      "valid": 29997,
+      "rejected": 1043,
+      "polled": 31040,
+      "electors": 47621,
+      "turnoutPct": 65.2,
+      "rejectedPct": 3.36,
+      "winner": {
+        "party": "NDF",
+        "votes": 20873,
+        "pct": 69.58
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 7791,
+        "pct": 25.97
+      },
+      "margin": 43.61,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 20873,
+          "pct": 69.58
+        },
+        {
+          "party": "UPFA",
+          "votes": 7791,
+          "pct": 25.97
+        },
+        {
+          "party": "UPF",
+          "votes": 163,
+          "pct": 0.54
+        },
+        {
+          "party": "SLLP",
+          "votes": 133,
+          "pct": 0.44
+        },
+        {
+          "party": "USP",
+          "votes": 122,
+          "pct": 0.41
+        }
+      ],
+      "otherVotes": 915
+    },
+    "EC-10C": {
+      "valid": 25616,
+      "rejected": 822,
+      "polled": 26438,
+      "electors": 63217,
+      "turnoutPct": 41.8,
+      "rejectedPct": 3.11,
+      "winner": {
+        "party": "NDF",
+        "votes": 18729,
+        "pct": 73.11
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 5705,
+        "pct": 22.27
+      },
+      "margin": 50.84,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 18729,
+          "pct": 73.11
+        },
+        {
+          "party": "UPFA",
+          "votes": 5705,
+          "pct": 22.27
+        },
+        {
+          "party": "UPF",
+          "votes": 169,
+          "pct": 0.66
+        },
+        {
+          "party": "SLLP",
+          "votes": 125,
+          "pct": 0.49
+        },
+        {
+          "party": "USP",
+          "votes": 105,
+          "pct": 0.41
+        }
+      ],
+      "otherVotes": 783
+    },
+    "EC-10D": {
+      "valid": 35627,
+      "rejected": 960,
+      "polled": 36587,
+      "electors": 54567,
+      "turnoutPct": 67,
+      "rejectedPct": 2.62,
+      "winner": {
+        "party": "NDF",
+        "votes": 26958,
+        "pct": 75.67
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 7225,
+        "pct": 20.28
+      },
+      "margin": 55.39,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 26958,
+          "pct": 75.67
+        },
+        {
+          "party": "UPFA",
+          "votes": 7225,
+          "pct": 20.28
+        },
+        {
+          "party": "SLLP",
+          "votes": 178,
+          "pct": 0.5
+        },
+        {
+          "party": "UPF",
+          "votes": 155,
+          "pct": 0.44
+        },
+        {
+          "party": "I-AMI",
+          "votes": 137,
+          "pct": 0.38
+        }
+      ],
+      "otherVotes": 974
+    },
+    "EC-10E": {
+      "valid": 35074,
+      "rejected": 1138,
+      "polled": 36212,
+      "electors": 55891,
+      "turnoutPct": 64.8,
+      "rejectedPct": 3.14,
+      "winner": {
+        "party": "NDF",
+        "votes": 27161,
+        "pct": 77.44
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 6211,
+        "pct": 17.71
+      },
+      "margin": 59.73,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 27161,
+          "pct": 77.44
+        },
+        {
+          "party": "UPFA",
+          "votes": 6211,
+          "pct": 17.71
+        },
+        {
+          "party": "UPF",
+          "votes": 213,
+          "pct": 0.61
+        },
+        {
+          "party": "SLLP",
+          "votes": 193,
+          "pct": 0.55
+        },
+        {
+          "party": "ONF",
+          "votes": 180,
+          "pct": 0.51
+        }
+      ],
+      "otherVotes": 1116
+    },
+    "EC-10F": {
+      "valid": 23052,
+      "rejected": 574,
+      "polled": 23626,
+      "electors": 39204,
+      "turnoutPct": 60.3,
+      "rejectedPct": 2.43,
+      "winner": {
+        "party": "NDF",
+        "votes": 18137,
+        "pct": 78.68
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 3937,
+        "pct": 17.08
+      },
+      "margin": 61.6,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 18137,
+          "pct": 78.68
+        },
+        {
+          "party": "UPFA",
+          "votes": 3937,
+          "pct": 17.08
+        },
+        {
+          "party": "UPF",
+          "votes": 125,
+          "pct": 0.54
+        },
+        {
+          "party": "SLLP",
+          "votes": 108,
+          "pct": 0.47
+        },
+        {
+          "party": "ONF",
+          "votes": 93,
+          "pct": 0.4
+        }
+      ],
+      "otherVotes": 652
+    },
+    "EC-10G": {
+      "valid": 22320,
+      "rejected": 576,
+      "polled": 22896,
+      "electors": 36138,
+      "turnoutPct": 63.4,
+      "rejectedPct": 2.52,
+      "winner": {
+        "party": "NDF",
+        "votes": 17388,
+        "pct": 77.9
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 4213,
+        "pct": 18.88
+      },
+      "margin": 59.03,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 17388,
+          "pct": 77.9
+        },
+        {
+          "party": "UPFA",
+          "votes": 4213,
+          "pct": 18.88
+        },
+        {
+          "party": "UPF",
+          "votes": 96,
+          "pct": 0.43
+        },
+        {
+          "party": "SLLP",
+          "votes": 87,
+          "pct": 0.39
+        },
+        {
+          "party": "ONF",
+          "votes": 65,
+          "pct": 0.29
+        }
+      ],
+      "otherVotes": 471
+    },
+    "EC-10H": {
+      "valid": 30456,
+      "rejected": 953,
+      "polled": 31409,
+      "electors": 51702,
+      "turnoutPct": 60.8,
+      "rejectedPct": 3.03,
+      "winner": {
+        "party": "NDF",
+        "votes": 23520,
+        "pct": 77.23
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 5599,
+        "pct": 18.38
+      },
+      "margin": 58.84,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 23520,
+          "pct": 77.23
+        },
+        {
+          "party": "UPFA",
+          "votes": 5599,
+          "pct": 18.38
+        },
+        {
+          "party": "UPF",
+          "votes": 215,
+          "pct": 0.71
+        },
+        {
+          "party": "SLLP",
+          "votes": 142,
+          "pct": 0.47
+        },
+        {
+          "party": "PNF",
+          "votes": 127,
+          "pct": 0.42
+        }
+      ],
+      "otherVotes": 853
+    },
+    "EC-10I": {
+      "valid": 31212,
+      "rejected": 660,
+      "polled": 31872,
+      "electors": 46699,
+      "turnoutPct": 68.2,
+      "rejectedPct": 2.07,
+      "winner": {
+        "party": "NDF",
+        "votes": 24929,
+        "pct": 79.87
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 5405,
+        "pct": 17.32
+      },
+      "margin": 62.55,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 24929,
+          "pct": 79.87
+        },
+        {
+          "party": "UPFA",
+          "votes": 5405,
+          "pct": 17.32
+        },
+        {
+          "party": "UPF",
+          "votes": 112,
+          "pct": 0.36
+        },
+        {
+          "party": "SLLP",
+          "votes": 110,
+          "pct": 0.35
+        },
+        {
+          "party": "USP",
+          "votes": 79,
+          "pct": 0.25
+        }
+      ],
+      "otherVotes": 577
+    },
+    "EC-10J": {
+      "valid": 23096,
+      "rejected": 423,
+      "polled": 23519,
+      "electors": 33050,
+      "turnoutPct": 71.2,
+      "rejectedPct": 1.8,
+      "winner": {
+        "party": "NDF",
+        "votes": 17994,
+        "pct": 77.91
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 4502,
+        "pct": 19.49
+      },
+      "margin": 58.42,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 17994,
+          "pct": 77.91
+        },
+        {
+          "party": "UPFA",
+          "votes": 4502,
+          "pct": 19.49
+        },
+        {
+          "party": "SLLP",
+          "votes": 81,
+          "pct": 0.35
+        },
+        {
+          "party": "UPF",
+          "votes": 71,
+          "pct": 0.31
+        },
+        {
+          "party": "USP",
+          "votes": 66,
+          "pct": 0.29
+        }
+      ],
+      "otherVotes": 382
+    },
+    "EC-10K": {
+      "valid": 53886,
+      "rejected": 1940,
+      "polled": 55826,
+      "electors": 79093,
+      "turnoutPct": 70.6,
+      "rejectedPct": 3.48,
+      "winner": {
+        "party": "NDF",
+        "votes": 38856,
+        "pct": 72.11
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 13300,
+        "pct": 24.68
+      },
+      "margin": 47.43,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 38856,
+          "pct": 72.11
+        },
+        {
+          "party": "UPFA",
+          "votes": 13300,
+          "pct": 24.68
+        },
+        {
+          "party": "UPF",
+          "votes": 215,
+          "pct": 0.4
+        },
+        {
+          "party": "ONF",
+          "votes": 184,
+          "pct": 0.34
+        },
+        {
+          "party": "PNF",
+          "votes": 180,
+          "pct": 0.33
+        }
+      ],
+      "otherVotes": 1151
+    },
+    "EC-10P": {
+      "valid": 15737,
+      "rejected": 454,
+      "polled": 16191,
+      "electors": 17026,
+      "turnoutPct": 95.1,
+      "rejectedPct": 2.8,
+      "winner": {
+        "party": "NDF",
+        "votes": 10885,
+        "pct": 69.17
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 4607,
+        "pct": 29.27
+      },
+      "margin": 39.89,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 10885,
+          "pct": 69.17
+        },
+        {
+          "party": "UPFA",
+          "votes": 4607,
+          "pct": 29.27
+        },
+        {
+          "party": "NSSP",
+          "votes": 73,
+          "pct": 0.46
+        },
+        {
+          "party": "ONF",
+          "votes": 24,
+          "pct": 0.15
+        },
+        {
+          "party": "I-AMI",
+          "votes": 22,
+          "pct": 0.14
+        }
+      ],
+      "otherVotes": 126
+    },
+    "EC-11": {
+      "valid": 180225,
+      "rejected": 3416,
+      "polled": 183641,
+      "electors": 261422,
+      "turnoutPct": 70.2,
+      "rejectedPct": 1.86,
+      "winner": {
+        "party": "NDF",
+        "votes": 141417,
+        "pct": 78.47
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 34377,
+        "pct": 19.07
+      },
+      "margin": 59.39,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 141417,
+          "pct": 78.47
+        },
+        {
+          "party": "UPFA",
+          "votes": 34377,
+          "pct": 19.07
+        },
+        {
+          "party": "SLLP",
+          "votes": 574,
+          "pct": 0.32
+        },
+        {
+          "party": "UPF",
+          "votes": 563,
+          "pct": 0.31
+        },
+        {
+          "party": "ULPP",
+          "votes": 453,
+          "pct": 0.25
+        }
+      ],
+      "otherVotes": 2841
+    },
+    "EC-11A": {
+      "valid": 53500,
+      "rejected": 895,
+      "polled": 54395,
+      "electors": 79433,
+      "turnoutPct": 68.5,
+      "rejectedPct": 1.65,
+      "winner": {
+        "party": "NDF",
+        "votes": 45543,
+        "pct": 85.13
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 6824,
+        "pct": 12.76
+      },
+      "margin": 72.37,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 45543,
+          "pct": 85.13
+        },
+        {
+          "party": "UPFA",
+          "votes": 6824,
+          "pct": 12.76
+        },
+        {
+          "party": "UPF",
+          "votes": 160,
+          "pct": 0.3
+        },
+        {
+          "party": "SLLP",
+          "votes": 159,
+          "pct": 0.3
+        },
+        {
+          "party": "ULPP",
+          "votes": 136,
+          "pct": 0.25
+        }
+      ],
+      "otherVotes": 678
+    },
+    "EC-11B": {
+      "valid": 74080,
+      "rejected": 1371,
+      "polled": 75451,
+      "electors": 109705,
+      "turnoutPct": 68.8,
+      "rejectedPct": 1.82,
+      "winner": {
+        "party": "NDF",
+        "votes": 55683,
+        "pct": 75.17
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 16678,
+        "pct": 22.51
+      },
+      "margin": 52.65,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 55683,
+          "pct": 75.17
+        },
+        {
+          "party": "UPFA",
+          "votes": 16678,
+          "pct": 22.51
+        },
+        {
+          "party": "SLLP",
+          "votes": 213,
+          "pct": 0.29
+        },
+        {
+          "party": "UPF",
+          "votes": 212,
+          "pct": 0.29
+        },
+        {
+          "party": "ULPP",
+          "votes": 164,
+          "pct": 0.22
+        }
+      ],
+      "otherVotes": 1130
+    },
+    "EC-11C": {
+      "valid": 44889,
+      "rejected": 1052,
+      "polled": 45941,
+      "electors": 63920,
+      "turnoutPct": 71.9,
+      "rejectedPct": 2.29,
+      "winner": {
+        "party": "NDF",
+        "votes": 35441,
+        "pct": 78.95
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 7935,
+        "pct": 17.68
+      },
+      "margin": 61.28,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 35441,
+          "pct": 78.95
+        },
+        {
+          "party": "UPFA",
+          "votes": 7935,
+          "pct": 17.68
+        },
+        {
+          "party": "SLLP",
+          "votes": 195,
+          "pct": 0.43
+        },
+        {
+          "party": "UPF",
+          "votes": 185,
+          "pct": 0.41
+        },
+        {
+          "party": "ONF",
+          "votes": 176,
+          "pct": 0.39
+        }
+      ],
+      "otherVotes": 957
+    },
+    "EC-11P": {
+      "valid": 7756,
+      "rejected": 98,
+      "polled": 7854,
+      "electors": 8364,
+      "turnoutPct": 93.9,
+      "rejectedPct": 1.25,
+      "winner": {
+        "party": "NDF",
+        "votes": 4750,
+        "pct": 61.24
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 2940,
+        "pct": 37.91
+      },
+      "margin": 23.34,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 4750,
+          "pct": 61.24
+        },
+        {
+          "party": "UPFA",
+          "votes": 2940,
+          "pct": 37.91
+        },
+        {
+          "party": "NSSP",
+          "votes": 12,
+          "pct": 0.15
+        },
+        {
+          "party": "I-AMI",
+          "votes": 8,
+          "pct": 0.1
+        },
+        {
+          "party": "PNF",
+          "votes": 7,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 39
+    },
+    "EC-12": {
+      "valid": 256586,
+      "rejected": 2580,
+      "polled": 259166,
+      "electors": 373982,
+      "turnoutPct": 69.3,
+      "rejectedPct": 1,
+      "winner": {
+        "party": "NDF",
+        "votes": 209422,
+        "pct": 81.62
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 41631,
+        "pct": 16.22
+      },
+      "margin": 65.39,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 209422,
+          "pct": 81.62
+        },
+        {
+          "party": "UPFA",
+          "votes": 41631,
+          "pct": 16.22
+        },
+        {
+          "party": "SLLP",
+          "votes": 882,
+          "pct": 0.34
+        },
+        {
+          "party": "UPF",
+          "votes": 698,
+          "pct": 0.27
+        },
+        {
+          "party": "ULPP",
+          "votes": 641,
+          "pct": 0.25
+        }
+      ],
+      "otherVotes": 3312
+    },
+    "EC-12A": {
+      "valid": 72075,
+      "rejected": 747,
+      "polled": 72822,
+      "electors": 105056,
+      "turnoutPct": 69.3,
+      "rejectedPct": 1.03,
+      "winner": {
+        "party": "NDF",
+        "votes": 60342,
+        "pct": 83.72
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 10337,
+        "pct": 14.34
+      },
+      "margin": 69.38,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 60342,
+          "pct": 83.72
+        },
+        {
+          "party": "UPFA",
+          "votes": 10337,
+          "pct": 14.34
+        },
+        {
+          "party": "SLLP",
+          "votes": 259,
+          "pct": 0.36
+        },
+        {
+          "party": "ULPP",
+          "votes": 208,
+          "pct": 0.29
+        },
+        {
+          "party": "UPF",
+          "votes": 154,
+          "pct": 0.21
+        }
+      ],
+      "otherVotes": 775
+    },
+    "EC-12B": {
+      "valid": 121637,
+      "rejected": 1106,
+      "polled": 122743,
+      "electors": 172499,
+      "turnoutPct": 71.2,
+      "rejectedPct": 0.9,
+      "winner": {
+        "party": "NDF",
+        "votes": 97779,
+        "pct": 80.39
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 21473,
+        "pct": 17.65
+      },
+      "margin": 62.73,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 97779,
+          "pct": 80.39
+        },
+        {
+          "party": "UPFA",
+          "votes": 21473,
+          "pct": 17.65
+        },
+        {
+          "party": "SLLP",
+          "votes": 351,
+          "pct": 0.29
+        },
+        {
+          "party": "UPF",
+          "votes": 276,
+          "pct": 0.23
+        },
+        {
+          "party": "ULPP",
+          "votes": 269,
+          "pct": 0.22
+        }
+      ],
+      "otherVotes": 1489
+    },
+    "EC-12C": {
+      "valid": 54412,
+      "rejected": 627,
+      "polled": 55039,
+      "electors": 87612,
+      "turnoutPct": 62.8,
+      "rejectedPct": 1.14,
+      "winner": {
+        "party": "NDF",
+        "votes": 44485,
+        "pct": 81.76
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 8216,
+        "pct": 15.1
+      },
+      "margin": 66.66,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 44485,
+          "pct": 81.76
+        },
+        {
+          "party": "UPFA",
+          "votes": 8216,
+          "pct": 15.1
+        },
+        {
+          "party": "SLLP",
+          "votes": 266,
+          "pct": 0.49
+        },
+        {
+          "party": "UPF",
+          "votes": 262,
+          "pct": 0.48
+        },
+        {
+          "party": "ULPP",
+          "votes": 163,
+          "pct": 0.3
+        }
+      ],
+      "otherVotes": 1020
+    },
+    "EC-12P": {
+      "valid": 8462,
+      "rejected": 100,
+      "polled": 8562,
+      "electors": 8815,
+      "turnoutPct": 97.1,
+      "rejectedPct": 1.17,
+      "winner": {
+        "party": "NDF",
+        "votes": 6816,
+        "pct": 80.55
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 1605,
+        "pct": 18.97
+      },
+      "margin": 61.58,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 6816,
+          "pct": 80.55
+        },
+        {
+          "party": "UPFA",
+          "votes": 1605,
+          "pct": 18.97
+        },
+        {
+          "party": "I-AMI",
+          "votes": 8,
+          "pct": 0.09
+        },
+        {
+          "party": "NSSP",
+          "votes": 8,
+          "pct": 0.09
+        },
+        {
+          "party": "UPF",
+          "votes": 6,
+          "pct": 0.07
+        }
+      ],
+      "otherVotes": 19
+    },
+    "EC-13": {
+      "valid": 357817,
+      "rejected": 2625,
+      "polled": 360442,
+      "electors": 488067,
+      "turnoutPct": 73.9,
+      "rejectedPct": 0.73,
+      "winner": {
+        "party": "NDF",
+        "votes": 233360,
+        "pct": 65.22
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 121027,
+        "pct": 33.82
+      },
+      "margin": 31.39,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 233360,
+          "pct": 65.22
+        },
+        {
+          "party": "UPFA",
+          "votes": 121027,
+          "pct": 33.82
+        },
+        {
+          "party": "SLLP",
+          "votes": 543,
+          "pct": 0.15
+        },
+        {
+          "party": "PNF",
+          "votes": 446,
+          "pct": 0.12
+        },
+        {
+          "party": "ULPP",
+          "votes": 438,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 2003
+    },
+    "EC-13A": {
+      "valid": 125064,
+      "rejected": 911,
+      "polled": 125975,
+      "electors": 161999,
+      "turnoutPct": 77.8,
+      "rejectedPct": 0.72,
+      "winner": {
+        "party": "UPFA",
+        "votes": 76409,
+        "pct": 61.1
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 47658,
+        "pct": 38.11
+      },
+      "margin": 22.99,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 76409,
+          "pct": 61.1
+        },
+        {
+          "party": "NDF",
+          "votes": 47658,
+          "pct": 38.11
+        },
+        {
+          "party": "PNF",
+          "votes": 238,
+          "pct": 0.19
+        },
+        {
+          "party": "ONF",
+          "votes": 166,
+          "pct": 0.13
+        },
+        {
+          "party": "FSP",
+          "votes": 104,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 489
+    },
+    "EC-13B": {
+      "valid": 55333,
+      "rejected": 412,
+      "polled": 55745,
+      "electors": 80357,
+      "turnoutPct": 69.4,
+      "rejectedPct": 0.74,
+      "winner": {
+        "party": "NDF",
+        "votes": 46827,
+        "pct": 84.63
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 7797,
+        "pct": 14.09
+      },
+      "margin": 70.54,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 46827,
+          "pct": 84.63
+        },
+        {
+          "party": "UPFA",
+          "votes": 7797,
+          "pct": 14.09
+        },
+        {
+          "party": "SLLP",
+          "votes": 124,
+          "pct": 0.22
+        },
+        {
+          "party": "ULPP",
+          "votes": 121,
+          "pct": 0.22
+        },
+        {
+          "party": "UPF",
+          "votes": 92,
+          "pct": 0.17
+        }
+      ],
+      "otherVotes": 372
+    },
+    "EC-13C": {
+      "valid": 50561,
+      "rejected": 342,
+      "polled": 50903,
+      "electors": 71254,
+      "turnoutPct": 71.4,
+      "rejectedPct": 0.67,
+      "winner": {
+        "party": "NDF",
+        "votes": 45411,
+        "pct": 89.81
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 4683,
+        "pct": 9.26
+      },
+      "margin": 80.55,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 45411,
+          "pct": 89.81
+        },
+        {
+          "party": "UPFA",
+          "votes": 4683,
+          "pct": 9.26
+        },
+        {
+          "party": "SLLP",
+          "votes": 94,
+          "pct": 0.19
+        },
+        {
+          "party": "ULPP",
+          "votes": 68,
+          "pct": 0.13
+        },
+        {
+          "party": "UPF",
+          "votes": 61,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 244
+    },
+    "EC-13D": {
+      "valid": 105148,
+      "rejected": 802,
+      "polled": 105950,
+      "electors": 152147,
+      "turnoutPct": 69.6,
+      "rejectedPct": 0.76,
+      "winner": {
+        "party": "NDF",
+        "votes": 81547,
+        "pct": 77.55
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 22425,
+        "pct": 21.33
+      },
+      "margin": 56.23,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 81547,
+          "pct": 77.55
+        },
+        {
+          "party": "UPFA",
+          "votes": 22425,
+          "pct": 21.33
+        },
+        {
+          "party": "SLLP",
+          "votes": 235,
+          "pct": 0.22
+        },
+        {
+          "party": "ULPP",
+          "votes": 165,
+          "pct": 0.16
+        },
+        {
+          "party": "UPF",
+          "votes": 140,
+          "pct": 0.13
+        }
+      ],
+      "otherVotes": 636
+    },
+    "EC-13P": {
+      "valid": 21711,
+      "rejected": 158,
+      "polled": 21869,
+      "electors": 22310,
+      "turnoutPct": 98,
+      "rejectedPct": 0.72,
+      "winner": {
+        "party": "NDF",
+        "votes": 11917,
+        "pct": 54.89
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 9713,
+        "pct": 44.74
+      },
+      "margin": 10.15,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 11917,
+          "pct": 54.89
+        },
+        {
+          "party": "UPFA",
+          "votes": 9713,
+          "pct": 44.74
+        },
+        {
+          "party": "PNF",
+          "votes": 14,
+          "pct": 0.06
+        },
+        {
+          "party": "SLLP",
+          "votes": 9,
+          "pct": 0.04
+        },
+        {
+          "party": "I-AMI",
+          "votes": 9,
+          "pct": 0.04
+        }
+      ],
+      "otherVotes": 49
+    },
+    "EC-14": {
+      "valid": 195356,
+      "rejected": 1805,
+      "polled": 197161,
+      "electors": 271953,
+      "turnoutPct": 72.5,
+      "rejectedPct": 0.92,
+      "winner": {
+        "party": "NDF",
+        "votes": 140338,
+        "pct": 71.84
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 52111,
+        "pct": 26.67
+      },
+      "margin": 45.16,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 140338,
+          "pct": 71.84
+        },
+        {
+          "party": "UPFA",
+          "votes": 52111,
+          "pct": 26.67
+        },
+        {
+          "party": "SLLP",
+          "votes": 387,
+          "pct": 0.2
+        },
+        {
+          "party": "ULPP",
+          "votes": 341,
+          "pct": 0.17
+        },
+        {
+          "party": "UPF",
+          "votes": 327,
+          "pct": 0.17
+        }
+      ],
+      "otherVotes": 1852
+    },
+    "EC-14A": {
+      "valid": 52261,
+      "rejected": 442,
+      "polled": 52703,
+      "electors": 74070,
+      "turnoutPct": 71.2,
+      "rejectedPct": 0.84,
+      "winner": {
+        "party": "UPFA",
+        "votes": 26716,
+        "pct": 51.12
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 24833,
+        "pct": 47.52
+      },
+      "margin": 3.6,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 26716,
+          "pct": 51.12
+        },
+        {
+          "party": "NDF",
+          "votes": 24833,
+          "pct": 47.52
+        },
+        {
+          "party": "FSP",
+          "votes": 118,
+          "pct": 0.23
+        },
+        {
+          "party": "PNF",
+          "votes": 102,
+          "pct": 0.2
+        },
+        {
+          "party": "ONF",
+          "votes": 75,
+          "pct": 0.14
+        }
+      ],
+      "otherVotes": 417
+    },
+    "EC-14B": {
+      "valid": 62759,
+      "rejected": 816,
+      "polled": 63575,
+      "electors": 86978,
+      "turnoutPct": 73.1,
+      "rejectedPct": 1.28,
+      "winner": {
+        "party": "NDF",
+        "votes": 49650,
+        "pct": 79.11
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 12056,
+        "pct": 19.21
+      },
+      "margin": 59.9,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 49650,
+          "pct": 79.11
+        },
+        {
+          "party": "UPFA",
+          "votes": 12056,
+          "pct": 19.21
+        },
+        {
+          "party": "SLLP",
+          "votes": 140,
+          "pct": 0.22
+        },
+        {
+          "party": "ULPP",
+          "votes": 114,
+          "pct": 0.18
+        },
+        {
+          "party": "UPF",
+          "votes": 113,
+          "pct": 0.18
+        }
+      ],
+      "otherVotes": 686
+    },
+    "EC-14C": {
+      "valid": 65719,
+      "rejected": 461,
+      "polled": 66180,
+      "electors": 95804,
+      "turnoutPct": 69.1,
+      "rejectedPct": 0.7,
+      "winner": {
+        "party": "NDF",
+        "votes": 57532,
+        "pct": 87.54
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 7132,
+        "pct": 10.85
+      },
+      "margin": 76.69,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 57532,
+          "pct": 87.54
+        },
+        {
+          "party": "UPFA",
+          "votes": 7132,
+          "pct": 10.85
+        },
+        {
+          "party": "SLLP",
+          "votes": 174,
+          "pct": 0.26
+        },
+        {
+          "party": "ULPP",
+          "votes": 160,
+          "pct": 0.24
+        },
+        {
+          "party": "UPF",
+          "votes": 142,
+          "pct": 0.22
+        }
+      ],
+      "otherVotes": 579
+    },
+    "EC-14P": {
+      "valid": 14617,
+      "rejected": 86,
+      "polled": 14703,
+      "electors": 15101,
+      "turnoutPct": 97.4,
+      "rejectedPct": 0.58,
+      "winner": {
+        "party": "NDF",
+        "votes": 8323,
+        "pct": 56.94
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 6207,
+        "pct": 42.46
+      },
+      "margin": 14.48,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 8323,
+          "pct": 56.94
+        },
+        {
+          "party": "UPFA",
+          "votes": 6207,
+          "pct": 42.46
+        },
+        {
+          "party": "FSP",
+          "votes": 21,
+          "pct": 0.14
+        },
+        {
+          "party": "UPF",
+          "votes": 12,
+          "pct": 0.08
+        },
+        {
+          "party": "PNF",
+          "votes": 11,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 43
+    },
+    "EC-15": {
+      "valid": 1041624,
+      "rejected": 9285,
+      "polled": 1050909,
+      "electors": 1333377,
+      "turnoutPct": 78.8,
+      "rejectedPct": 0.88,
+      "winner": {
+        "party": "UPFA",
+        "votes": 556868,
+        "pct": 53.46
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 476602,
+        "pct": 45.76
+      },
+      "margin": 7.71,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 556868,
+          "pct": 53.46
+        },
+        {
+          "party": "NDF",
+          "votes": 476602,
+          "pct": 45.76
+        },
+        {
+          "party": "PNF",
+          "votes": 1374,
+          "pct": 0.13
+        },
+        {
+          "party": "ONF",
+          "votes": 1138,
+          "pct": 0.11
+        },
+        {
+          "party": "UPF",
+          "votes": 839,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 4803
+    },
+    "EC-15A": {
+      "valid": 78530,
+      "rejected": 602,
+      "polled": 79132,
+      "electors": 103488,
+      "turnoutPct": 76.5,
+      "rejectedPct": 0.76,
+      "winner": {
+        "party": "UPFA",
+        "votes": 46848,
+        "pct": 59.66
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 31027,
+        "pct": 39.51
+      },
+      "margin": 20.15,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 46848,
+          "pct": 59.66
+        },
+        {
+          "party": "NDF",
+          "votes": 31027,
+          "pct": 39.51
+        },
+        {
+          "party": "PNF",
+          "votes": 139,
+          "pct": 0.18
+        },
+        {
+          "party": "ONF",
+          "votes": 109,
+          "pct": 0.14
+        },
+        {
+          "party": "SLLP",
+          "votes": 63,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 344
+    },
+    "EC-15B": {
+      "valid": 72143,
+      "rejected": 658,
+      "polled": 72801,
+      "electors": 94910,
+      "turnoutPct": 76.7,
+      "rejectedPct": 0.9,
+      "winner": {
+        "party": "UPFA",
+        "votes": 40015,
+        "pct": 55.47
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 31444,
+        "pct": 43.59
+      },
+      "margin": 11.88,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 40015,
+          "pct": 55.47
+        },
+        {
+          "party": "NDF",
+          "votes": 31444,
+          "pct": 43.59
+        },
+        {
+          "party": "PNF",
+          "votes": 138,
+          "pct": 0.19
+        },
+        {
+          "party": "ONF",
+          "votes": 121,
+          "pct": 0.17
+        },
+        {
+          "party": "UPF",
+          "votes": 73,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 352
+    },
+    "EC-15C": {
+      "valid": 86090,
+      "rejected": 654,
+      "polled": 86744,
+      "electors": 113858,
+      "turnoutPct": 76.2,
+      "rejectedPct": 0.75,
+      "winner": {
+        "party": "UPFA",
+        "votes": 49289,
+        "pct": 57.25
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 36058,
+        "pct": 41.88
+      },
+      "margin": 15.37,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 49289,
+          "pct": 57.25
+        },
+        {
+          "party": "NDF",
+          "votes": 36058,
+          "pct": 41.88
+        },
+        {
+          "party": "ONF",
+          "votes": 126,
+          "pct": 0.15
+        },
+        {
+          "party": "PNF",
+          "votes": 125,
+          "pct": 0.15
+        },
+        {
+          "party": "SLLP",
+          "votes": 73,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 419
+    },
+    "EC-15D": {
+      "valid": 73148,
+      "rejected": 847,
+      "polled": 73995,
+      "electors": 97886,
+      "turnoutPct": 75.6,
+      "rejectedPct": 1.14,
+      "winner": {
+        "party": "UPFA",
+        "votes": 38538,
+        "pct": 52.68
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 33944,
+        "pct": 46.4
+      },
+      "margin": 6.28,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 38538,
+          "pct": 52.68
+        },
+        {
+          "party": "NDF",
+          "votes": 33944,
+          "pct": 46.4
+        },
+        {
+          "party": "PNF",
+          "votes": 112,
+          "pct": 0.15
+        },
+        {
+          "party": "ONF",
+          "votes": 94,
+          "pct": 0.13
+        },
+        {
+          "party": "UPF",
+          "votes": 70,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 390
+    },
+    "EC-15E": {
+      "valid": 59564,
+      "rejected": 448,
+      "polled": 60012,
+      "electors": 76817,
+      "turnoutPct": 78.1,
+      "rejectedPct": 0.75,
+      "winner": {
+        "party": "UPFA",
+        "votes": 34499,
+        "pct": 57.92
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 24562,
+        "pct": 41.24
+      },
+      "margin": 16.68,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 34499,
+          "pct": 57.92
+        },
+        {
+          "party": "NDF",
+          "votes": 24562,
+          "pct": 41.24
+        },
+        {
+          "party": "PNF",
+          "votes": 88,
+          "pct": 0.15
+        },
+        {
+          "party": "ONF",
+          "votes": 73,
+          "pct": 0.12
+        },
+        {
+          "party": "I-AMI",
+          "votes": 52,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 290
+    },
+    "EC-15F": {
+      "valid": 57776,
+      "rejected": 403,
+      "polled": 58179,
+      "electors": 74100,
+      "turnoutPct": 78.5,
+      "rejectedPct": 0.69,
+      "winner": {
+        "party": "UPFA",
+        "votes": 32197,
+        "pct": 55.73
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 25172,
+        "pct": 43.57
+      },
+      "margin": 12.16,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 32197,
+          "pct": 55.73
+        },
+        {
+          "party": "NDF",
+          "votes": 25172,
+          "pct": 43.57
+        },
+        {
+          "party": "PNF",
+          "votes": 68,
+          "pct": 0.12
+        },
+        {
+          "party": "ONF",
+          "votes": 60,
+          "pct": 0.1
+        },
+        {
+          "party": "UPF",
+          "votes": 47,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 232
+    },
+    "EC-15G": {
+      "valid": 69222,
+      "rejected": 517,
+      "polled": 69739,
+      "electors": 88306,
+      "turnoutPct": 79,
+      "rejectedPct": 0.74,
+      "winner": {
+        "party": "UPFA",
+        "votes": 37574,
+        "pct": 54.28
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 31166,
+        "pct": 45.02
+      },
+      "margin": 9.26,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 37574,
+          "pct": 54.28
+        },
+        {
+          "party": "NDF",
+          "votes": 31166,
+          "pct": 45.02
+        },
+        {
+          "party": "PNF",
+          "votes": 83,
+          "pct": 0.12
+        },
+        {
+          "party": "ONF",
+          "votes": 58,
+          "pct": 0.08
+        },
+        {
+          "party": "SLLP",
+          "votes": 47,
+          "pct": 0.07
+        }
+      ],
+      "otherVotes": 294
+    },
+    "EC-15H": {
+      "valid": 76163,
+      "rejected": 768,
+      "polled": 76931,
+      "electors": 94505,
+      "turnoutPct": 81.4,
+      "rejectedPct": 1,
+      "winner": {
+        "party": "UPFA",
+        "votes": 41990,
+        "pct": 55.13
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 33655,
+        "pct": 44.19
+      },
+      "margin": 10.94,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 41990,
+          "pct": 55.13
+        },
+        {
+          "party": "NDF",
+          "votes": 33655,
+          "pct": 44.19
+        },
+        {
+          "party": "PNF",
+          "votes": 87,
+          "pct": 0.11
+        },
+        {
+          "party": "UPF",
+          "votes": 69,
+          "pct": 0.09
+        },
+        {
+          "party": "ONF",
+          "votes": 53,
+          "pct": 0.07
+        }
+      ],
+      "otherVotes": 309
+    },
+    "EC-15I": {
+      "valid": 77294,
+      "rejected": 568,
+      "polled": 77862,
+      "electors": 100474,
+      "turnoutPct": 77.5,
+      "rejectedPct": 0.73,
+      "winner": {
+        "party": "UPFA",
+        "votes": 39115,
+        "pct": 50.61
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 37528,
+        "pct": 48.55
+      },
+      "margin": 2.05,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 39115,
+          "pct": 50.61
+        },
+        {
+          "party": "NDF",
+          "votes": 37528,
+          "pct": 48.55
+        },
+        {
+          "party": "PNF",
+          "votes": 91,
+          "pct": 0.12
+        },
+        {
+          "party": "UPF",
+          "votes": 89,
+          "pct": 0.12
+        },
+        {
+          "party": "ONF",
+          "votes": 82,
+          "pct": 0.11
+        }
+      ],
+      "otherVotes": 389
+    },
+    "EC-15J": {
+      "valid": 74891,
+      "rejected": 621,
+      "polled": 75512,
+      "electors": 94560,
+      "turnoutPct": 79.9,
+      "rejectedPct": 0.82,
+      "winner": {
+        "party": "UPFA",
+        "votes": 41422,
+        "pct": 55.31
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 32964,
+        "pct": 44.02
+      },
+      "margin": 11.29,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 41422,
+          "pct": 55.31
+        },
+        {
+          "party": "NDF",
+          "votes": 32964,
+          "pct": 44.02
+        },
+        {
+          "party": "PNF",
+          "votes": 106,
+          "pct": 0.14
+        },
+        {
+          "party": "ONF",
+          "votes": 72,
+          "pct": 0.1
+        },
+        {
+          "party": "I-AMI",
+          "votes": 46,
+          "pct": 0.06
+        }
+      ],
+      "otherVotes": 281
+    },
+    "EC-15K": {
+      "valid": 59919,
+      "rejected": 435,
+      "polled": 60354,
+      "electors": 77321,
+      "turnoutPct": 78.1,
+      "rejectedPct": 0.72,
+      "winner": {
+        "party": "UPFA",
+        "votes": 31108,
+        "pct": 51.92
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 28365,
+        "pct": 47.34
+      },
+      "margin": 4.58,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 31108,
+          "pct": 51.92
+        },
+        {
+          "party": "NDF",
+          "votes": 28365,
+          "pct": 47.34
+        },
+        {
+          "party": "PNF",
+          "votes": 69,
+          "pct": 0.12
+        },
+        {
+          "party": "ONF",
+          "votes": 55,
+          "pct": 0.09
+        },
+        {
+          "party": "UPF",
+          "votes": 55,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 267
+    },
+    "EC-15L": {
+      "valid": 69815,
+      "rejected": 583,
+      "polled": 70398,
+      "electors": 89332,
+      "turnoutPct": 78.8,
+      "rejectedPct": 0.83,
+      "winner": {
+        "party": "NDF",
+        "votes": 37895,
+        "pct": 54.28
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 31429,
+        "pct": 45.02
+      },
+      "margin": 9.26,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 37895,
+          "pct": 54.28
+        },
+        {
+          "party": "UPFA",
+          "votes": 31429,
+          "pct": 45.02
+        },
+        {
+          "party": "PNF",
+          "votes": 72,
+          "pct": 0.1
+        },
+        {
+          "party": "UPF",
+          "votes": 51,
+          "pct": 0.07
+        },
+        {
+          "party": "ONF",
+          "votes": 49,
+          "pct": 0.07
+        }
+      ],
+      "otherVotes": 319
+    },
+    "EC-15M": {
+      "valid": 69481,
+      "rejected": 834,
+      "polled": 70315,
+      "electors": 90682,
+      "turnoutPct": 77.5,
+      "rejectedPct": 1.19,
+      "winner": {
+        "party": "NDF",
+        "votes": 35591,
+        "pct": 51.22
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 33243,
+        "pct": 47.84
+      },
+      "margin": 3.38,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 35591,
+          "pct": 51.22
+        },
+        {
+          "party": "UPFA",
+          "votes": 33243,
+          "pct": 47.84
+        },
+        {
+          "party": "PNF",
+          "votes": 92,
+          "pct": 0.13
+        },
+        {
+          "party": "ONF",
+          "votes": 82,
+          "pct": 0.12
+        },
+        {
+          "party": "SLLP",
+          "votes": 64,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 409
+    },
+    "EC-15N": {
+      "valid": 52409,
+      "rejected": 512,
+      "polled": 52921,
+      "electors": 70204,
+      "turnoutPct": 75.4,
+      "rejectedPct": 0.97,
+      "winner": {
+        "party": "UPFA",
+        "votes": 28010,
+        "pct": 53.45
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 23847,
+        "pct": 45.5
+      },
+      "margin": 7.94,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 28010,
+          "pct": 53.45
+        },
+        {
+          "party": "NDF",
+          "votes": 23847,
+          "pct": 45.5
+        },
+        {
+          "party": "ONF",
+          "votes": 85,
+          "pct": 0.16
+        },
+        {
+          "party": "PNF",
+          "votes": 79,
+          "pct": 0.15
+        },
+        {
+          "party": "UPF",
+          "votes": 63,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 325
+    },
+    "EC-15P": {
+      "valid": 65179,
+      "rejected": 835,
+      "polled": 66014,
+      "electors": 66934,
+      "turnoutPct": 98.6,
+      "rejectedPct": 1.26,
+      "winner": {
+        "party": "NDF",
+        "votes": 33384,
+        "pct": 51.22
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 31591,
+        "pct": 48.47
+      },
+      "margin": 2.75,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 33384,
+          "pct": 51.22
+        },
+        {
+          "party": "UPFA",
+          "votes": 31591,
+          "pct": 48.47
+        },
+        {
+          "party": "JSP",
+          "votes": 30,
+          "pct": 0.05
+        },
+        {
+          "party": "FSP",
+          "votes": 27,
+          "pct": 0.04
+        },
+        {
+          "party": "PNF",
+          "votes": 25,
+          "pct": 0.04
+        }
+      ],
+      "otherVotes": 122
+    },
+    "EC-16": {
+      "valid": 403850,
+      "rejected": 4300,
+      "polled": 408150,
+      "electors": 562984,
+      "turnoutPct": 72.5,
+      "rejectedPct": 1.05,
+      "winner": {
+        "party": "NDF",
+        "votes": 202073,
+        "pct": 50.04
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 197751,
+        "pct": 48.97
+      },
+      "margin": 1.07,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 202073,
+          "pct": 50.04
+        },
+        {
+          "party": "UPFA",
+          "votes": 197751,
+          "pct": 48.97
+        },
+        {
+          "party": "PNF",
+          "votes": 579,
+          "pct": 0.14
+        },
+        {
+          "party": "ONF",
+          "votes": 491,
+          "pct": 0.12
+        },
+        {
+          "party": "UPF",
+          "votes": 437,
+          "pct": 0.11
+        }
+      ],
+      "otherVotes": 2519
+    },
+    "EC-16A": {
+      "valid": 84277,
+      "rejected": 1151,
+      "polled": 85428,
+      "electors": 125702,
+      "turnoutPct": 68,
+      "rejectedPct": 1.35,
+      "winner": {
+        "party": "NDF",
+        "votes": 58844,
+        "pct": 69.82
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 24235,
+        "pct": 28.76
+      },
+      "margin": 41.07,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 58844,
+          "pct": 69.82
+        },
+        {
+          "party": "UPFA",
+          "votes": 24235,
+          "pct": 28.76
+        },
+        {
+          "party": "UPF",
+          "votes": 161,
+          "pct": 0.19
+        },
+        {
+          "party": "SLLP",
+          "votes": 156,
+          "pct": 0.19
+        },
+        {
+          "party": "ULPP",
+          "votes": 131,
+          "pct": 0.16
+        }
+      ],
+      "otherVotes": 750
+    },
+    "EC-16B": {
+      "valid": 84093,
+      "rejected": 778,
+      "polled": 84871,
+      "electors": 112978,
+      "turnoutPct": 75.1,
+      "rejectedPct": 0.92,
+      "winner": {
+        "party": "UPFA",
+        "votes": 52225,
+        "pct": 62.1
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 31026,
+        "pct": 36.89
+      },
+      "margin": 25.21,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 52225,
+          "pct": 62.1
+        },
+        {
+          "party": "NDF",
+          "votes": 31026,
+          "pct": 36.89
+        },
+        {
+          "party": "PNF",
+          "votes": 168,
+          "pct": 0.2
+        },
+        {
+          "party": "ONF",
+          "votes": 149,
+          "pct": 0.18
+        },
+        {
+          "party": "UPF",
+          "votes": 88,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 437
+    },
+    "EC-16C": {
+      "valid": 86985,
+      "rejected": 985,
+      "polled": 87970,
+      "electors": 118171,
+      "turnoutPct": 74.4,
+      "rejectedPct": 1.12,
+      "winner": {
+        "party": "UPFA",
+        "votes": 43928,
+        "pct": 50.5
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 42187,
+        "pct": 48.5
+      },
+      "margin": 2,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 43928,
+          "pct": 50.5
+        },
+        {
+          "party": "NDF",
+          "votes": 42187,
+          "pct": 48.5
+        },
+        {
+          "party": "PNF",
+          "votes": 146,
+          "pct": 0.17
+        },
+        {
+          "party": "ONF",
+          "votes": 91,
+          "pct": 0.1
+        },
+        {
+          "party": "SLLP",
+          "votes": 91,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 542
+    },
+    "EC-16D": {
+      "valid": 63539,
+      "rejected": 558,
+      "polled": 64097,
+      "electors": 89975,
+      "turnoutPct": 71.2,
+      "rejectedPct": 0.87,
+      "winner": {
+        "party": "UPFA",
+        "votes": 33119,
+        "pct": 52.12
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 29934,
+        "pct": 47.11
+      },
+      "margin": 5.01,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 33119,
+          "pct": 52.12
+        },
+        {
+          "party": "NDF",
+          "votes": 29934,
+          "pct": 47.11
+        },
+        {
+          "party": "PNF",
+          "votes": 76,
+          "pct": 0.12
+        },
+        {
+          "party": "SLLP",
+          "votes": 52,
+          "pct": 0.08
+        },
+        {
+          "party": "I-AMI",
+          "votes": 52,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 306
+    },
+    "EC-16E": {
+      "valid": 75339,
+      "rejected": 722,
+      "polled": 76061,
+      "electors": 106183,
+      "turnoutPct": 71.6,
+      "rejectedPct": 0.95,
+      "winner": {
+        "party": "UPFA",
+        "votes": 39523,
+        "pct": 52.46
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 35218,
+        "pct": 46.75
+      },
+      "margin": 5.71,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 39523,
+          "pct": 52.46
+        },
+        {
+          "party": "NDF",
+          "votes": 35218,
+          "pct": 46.75
+        },
+        {
+          "party": "PNF",
+          "votes": 82,
+          "pct": 0.11
+        },
+        {
+          "party": "FSP",
+          "votes": 82,
+          "pct": 0.11
+        },
+        {
+          "party": "ONF",
+          "votes": 75,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 359
+    },
+    "EC-16P": {
+      "valid": 9617,
+      "rejected": 106,
+      "polled": 9723,
+      "electors": 9975,
+      "turnoutPct": 97.5,
+      "rejectedPct": 1.09,
+      "winner": {
+        "party": "NDF",
+        "votes": 4864,
+        "pct": 50.58
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 4721,
+        "pct": 49.09
+      },
+      "margin": 1.49,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 4864,
+          "pct": 50.58
+        },
+        {
+          "party": "UPFA",
+          "votes": 4721,
+          "pct": 49.09
+        },
+        {
+          "party": "FSP",
+          "votes": 7,
+          "pct": 0.07
+        },
+        {
+          "party": "I-AMI",
+          "votes": 6,
+          "pct": 0.06
+        },
+        {
+          "party": "JSP",
+          "votes": 4,
+          "pct": 0.04
+        }
+      ],
+      "otherVotes": 15
+    },
+    "EC-17": {
+      "valid": 524633,
+      "rejected": 4500,
+      "polled": 529133,
+      "electors": 680877,
+      "turnoutPct": 77.7,
+      "rejectedPct": 0.85,
+      "winner": {
+        "party": "UPFA",
+        "votes": 281161,
+        "pct": 53.59
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 238407,
+        "pct": 45.44
+      },
+      "margin": 8.15,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 281161,
+          "pct": 53.59
+        },
+        {
+          "party": "NDF",
+          "votes": 238407,
+          "pct": 45.44
+        },
+        {
+          "party": "PNF",
+          "votes": 901,
+          "pct": 0.17
+        },
+        {
+          "party": "ONF",
+          "votes": 685,
+          "pct": 0.13
+        },
+        {
+          "party": "UPF",
+          "votes": 548,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 2931
+    },
+    "EC-17A": {
+      "valid": 60620,
+      "rejected": 426,
+      "polled": 61046,
+      "electors": 81996,
+      "turnoutPct": 74.4,
+      "rejectedPct": 0.7,
+      "winner": {
+        "party": "UPFA",
+        "votes": 35772,
+        "pct": 59.01
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 24261,
+        "pct": 40.02
+      },
+      "margin": 18.99,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 35772,
+          "pct": 59.01
+        },
+        {
+          "party": "NDF",
+          "votes": 24261,
+          "pct": 40.02
+        },
+        {
+          "party": "PNF",
+          "votes": 121,
+          "pct": 0.2
+        },
+        {
+          "party": "ONF",
+          "votes": 99,
+          "pct": 0.16
+        },
+        {
+          "party": "UPF",
+          "votes": 71,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 296
+    },
+    "EC-17B": {
+      "valid": 60201,
+      "rejected": 468,
+      "polled": 60669,
+      "electors": 81099,
+      "turnoutPct": 74.8,
+      "rejectedPct": 0.77,
+      "winner": {
+        "party": "UPFA",
+        "votes": 31847,
+        "pct": 52.9
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 27662,
+        "pct": 45.95
+      },
+      "margin": 6.95,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 31847,
+          "pct": 52.9
+        },
+        {
+          "party": "NDF",
+          "votes": 27662,
+          "pct": 45.95
+        },
+        {
+          "party": "PNF",
+          "votes": 109,
+          "pct": 0.18
+        },
+        {
+          "party": "ONF",
+          "votes": 97,
+          "pct": 0.16
+        },
+        {
+          "party": "SLLP",
+          "votes": 82,
+          "pct": 0.14
+        }
+      ],
+      "otherVotes": 404
+    },
+    "EC-17C": {
+      "valid": 75347,
+      "rejected": 651,
+      "polled": 75998,
+      "electors": 97576,
+      "turnoutPct": 77.9,
+      "rejectedPct": 0.86,
+      "winner": {
+        "party": "UPFA",
+        "votes": 38947,
+        "pct": 51.69
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 35779,
+        "pct": 47.49
+      },
+      "margin": 4.2,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 38947,
+          "pct": 51.69
+        },
+        {
+          "party": "NDF",
+          "votes": 35779,
+          "pct": 47.49
+        },
+        {
+          "party": "PNF",
+          "votes": 110,
+          "pct": 0.15
+        },
+        {
+          "party": "ONF",
+          "votes": 76,
+          "pct": 0.1
+        },
+        {
+          "party": "UPF",
+          "votes": 61,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 374
+    },
+    "EC-17D": {
+      "valid": 76957,
+      "rejected": 720,
+      "polled": 77677,
+      "electors": 102691,
+      "turnoutPct": 75.6,
+      "rejectedPct": 0.93,
+      "winner": {
+        "party": "UPFA",
+        "votes": 42349,
+        "pct": 55.03
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 33791,
+        "pct": 43.91
+      },
+      "margin": 11.12,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 42349,
+          "pct": 55.03
+        },
+        {
+          "party": "NDF",
+          "votes": 33791,
+          "pct": 43.91
+        },
+        {
+          "party": "PNF",
+          "votes": 148,
+          "pct": 0.19
+        },
+        {
+          "party": "ONF",
+          "votes": 103,
+          "pct": 0.13
+        },
+        {
+          "party": "UPF",
+          "votes": 92,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 474
+    },
+    "EC-17E": {
+      "valid": 96580,
+      "rejected": 771,
+      "polled": 97351,
+      "electors": 125162,
+      "turnoutPct": 77.8,
+      "rejectedPct": 0.79,
+      "winner": {
+        "party": "UPFA",
+        "votes": 54008,
+        "pct": 55.92
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 41612,
+        "pct": 43.09
+      },
+      "margin": 12.83,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 54008,
+          "pct": 55.92
+        },
+        {
+          "party": "NDF",
+          "votes": 41612,
+          "pct": 43.09
+        },
+        {
+          "party": "PNF",
+          "votes": 172,
+          "pct": 0.18
+        },
+        {
+          "party": "ONF",
+          "votes": 130,
+          "pct": 0.13
+        },
+        {
+          "party": "ULPP",
+          "votes": 112,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 546
+    },
+    "EC-17F": {
+      "valid": 49390,
+      "rejected": 406,
+      "polled": 49796,
+      "electors": 64778,
+      "turnoutPct": 76.9,
+      "rejectedPct": 0.82,
+      "winner": {
+        "party": "UPFA",
+        "votes": 26032,
+        "pct": 52.71
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 22860,
+        "pct": 46.28
+      },
+      "margin": 6.42,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 26032,
+          "pct": 52.71
+        },
+        {
+          "party": "NDF",
+          "votes": 22860,
+          "pct": 46.28
+        },
+        {
+          "party": "PNF",
+          "votes": 88,
+          "pct": 0.18
+        },
+        {
+          "party": "ONF",
+          "votes": 78,
+          "pct": 0.16
+        },
+        {
+          "party": "UPF",
+          "votes": 54,
+          "pct": 0.11
+        }
+      ],
+      "otherVotes": 278
+    },
+    "EC-17G": {
+      "valid": 62666,
+      "rejected": 559,
+      "polled": 63225,
+      "electors": 83431,
+      "turnoutPct": 75.8,
+      "rejectedPct": 0.88,
+      "winner": {
+        "party": "UPFA",
+        "votes": 32563,
+        "pct": 51.96
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 29410,
+        "pct": 46.93
+      },
+      "margin": 5.03,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 32563,
+          "pct": 51.96
+        },
+        {
+          "party": "NDF",
+          "votes": 29410,
+          "pct": 46.93
+        },
+        {
+          "party": "PNF",
+          "votes": 122,
+          "pct": 0.19
+        },
+        {
+          "party": "UPF",
+          "votes": 87,
+          "pct": 0.14
+        },
+        {
+          "party": "ONF",
+          "votes": 78,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 406
+    },
+    "EC-17P": {
+      "valid": 42872,
+      "rejected": 499,
+      "polled": 43371,
+      "electors": 44144,
+      "turnoutPct": 98.2,
+      "rejectedPct": 1.15,
+      "winner": {
+        "party": "NDF",
+        "votes": 23032,
+        "pct": 53.72
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 19643,
+        "pct": 45.82
+      },
+      "margin": 7.9,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 23032,
+          "pct": 53.72
+        },
+        {
+          "party": "UPFA",
+          "votes": 19643,
+          "pct": 45.82
+        },
+        {
+          "party": "PNF",
+          "votes": 31,
+          "pct": 0.07
+        },
+        {
+          "party": "I-AMI",
+          "votes": 31,
+          "pct": 0.07
+        },
+        {
+          "party": "ONF",
+          "votes": 24,
+          "pct": 0.06
+        }
+      ],
+      "otherVotes": 111
+    },
+    "EC-18": {
+      "valid": 255996,
+      "rejected": 1790,
+      "polled": 257786,
+      "electors": 321338,
+      "turnoutPct": 80.2,
+      "rejectedPct": 0.69,
+      "winner": {
+        "party": "NDF",
+        "votes": 147974,
+        "pct": 57.8
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 105640,
+        "pct": 41.27
+      },
+      "margin": 16.54,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 147974,
+          "pct": 57.8
+        },
+        {
+          "party": "UPFA",
+          "votes": 105640,
+          "pct": 41.27
+        },
+        {
+          "party": "PNF",
+          "votes": 370,
+          "pct": 0.14
+        },
+        {
+          "party": "FSP",
+          "votes": 336,
+          "pct": 0.13
+        },
+        {
+          "party": "ULPP",
+          "votes": 298,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 1378
+    },
+    "EC-18A": {
+      "valid": 65198,
+      "rejected": 491,
+      "polled": 65689,
+      "electors": 83395,
+      "turnoutPct": 78.8,
+      "rejectedPct": 0.75,
+      "winner": {
+        "party": "NDF",
+        "votes": 32744,
+        "pct": 50.22
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 31747,
+        "pct": 48.69
+      },
+      "margin": 1.53,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 32744,
+          "pct": 50.22
+        },
+        {
+          "party": "UPFA",
+          "votes": 31747,
+          "pct": 48.69
+        },
+        {
+          "party": "PNF",
+          "votes": 137,
+          "pct": 0.21
+        },
+        {
+          "party": "FSP",
+          "votes": 120,
+          "pct": 0.18
+        },
+        {
+          "party": "ONF",
+          "votes": 91,
+          "pct": 0.14
+        }
+      ],
+      "otherVotes": 359
+    },
+    "EC-18B": {
+      "valid": 61007,
+      "rejected": 307,
+      "polled": 61314,
+      "electors": 77505,
+      "turnoutPct": 79.1,
+      "rejectedPct": 0.5,
+      "winner": {
+        "party": "NDF",
+        "votes": 32875,
+        "pct": 53.89
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 27623,
+        "pct": 45.28
+      },
+      "margin": 8.61,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 32875,
+          "pct": 53.89
+        },
+        {
+          "party": "UPFA",
+          "votes": 27623,
+          "pct": 45.28
+        },
+        {
+          "party": "PNF",
+          "votes": 73,
+          "pct": 0.12
+        },
+        {
+          "party": "ONF",
+          "votes": 73,
+          "pct": 0.12
+        },
+        {
+          "party": "ULPP",
+          "votes": 73,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 290
+    },
+    "EC-18C": {
+      "valid": 115935,
+      "rejected": 850,
+      "polled": 116785,
+      "electors": 146225,
+      "turnoutPct": 79.9,
+      "rejectedPct": 0.73,
+      "winner": {
+        "party": "NDF",
+        "votes": 72875,
+        "pct": 62.86
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 41961,
+        "pct": 36.19
+      },
+      "margin": 26.66,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 72875,
+          "pct": 62.86
+        },
+        {
+          "party": "UPFA",
+          "votes": 41961,
+          "pct": 36.19
+        },
+        {
+          "party": "ULPP",
+          "votes": 165,
+          "pct": 0.14
+        },
+        {
+          "party": "PNF",
+          "votes": 149,
+          "pct": 0.13
+        },
+        {
+          "party": "FSP",
+          "votes": 145,
+          "pct": 0.13
+        }
+      ],
+      "otherVotes": 640
+    },
+    "EC-18P": {
+      "valid": 13856,
+      "rejected": 142,
+      "polled": 13998,
+      "electors": 14213,
+      "turnoutPct": 98.5,
+      "rejectedPct": 1.01,
+      "winner": {
+        "party": "NDF",
+        "votes": 9480,
+        "pct": 68.42
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 4309,
+        "pct": 31.1
+      },
+      "margin": 37.32,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 9480,
+          "pct": 68.42
+        },
+        {
+          "party": "UPFA",
+          "votes": 4309,
+          "pct": 31.1
+        },
+        {
+          "party": "PNF",
+          "votes": 11,
+          "pct": 0.08
+        },
+        {
+          "party": "FSP",
+          "votes": 11,
+          "pct": 0.08
+        },
+        {
+          "party": "UPF",
+          "votes": 10,
+          "pct": 0.07
+        }
+      ],
+      "otherVotes": 35
+    },
+    "EC-19": {
+      "valid": 507070,
+      "rejected": 7871,
+      "polled": 514941,
+      "electors": 647628,
+      "turnoutPct": 79.5,
+      "rejectedPct": 1.53,
+      "winner": {
+        "party": "NDF",
+        "votes": 249524,
+        "pct": 49.21
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 249243,
+        "pct": 49.15
+      },
+      "margin": 0.06,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 249524,
+          "pct": 49.21
+        },
+        {
+          "party": "UPFA",
+          "votes": 249243,
+          "pct": 49.15
+        },
+        {
+          "party": "PNF",
+          "votes": 1052,
+          "pct": 0.21
+        },
+        {
+          "party": "ONF",
+          "votes": 1052,
+          "pct": 0.21
+        },
+        {
+          "party": "UPF",
+          "votes": 1038,
+          "pct": 0.2
+        }
+      ],
+      "otherVotes": 5161
+    },
+    "EC-19A": {
+      "valid": 75351,
+      "rejected": 930,
+      "polled": 76281,
+      "electors": 95715,
+      "turnoutPct": 79.7,
+      "rejectedPct": 1.22,
+      "winner": {
+        "party": "UPFA",
+        "votes": 42718,
+        "pct": 56.69
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 31495,
+        "pct": 41.8
+      },
+      "margin": 14.89,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 42718,
+          "pct": 56.69
+        },
+        {
+          "party": "NDF",
+          "votes": 31495,
+          "pct": 41.8
+        },
+        {
+          "party": "ONF",
+          "votes": 213,
+          "pct": 0.28
+        },
+        {
+          "party": "PNF",
+          "votes": 191,
+          "pct": 0.25
+        },
+        {
+          "party": "UPF",
+          "votes": 151,
+          "pct": 0.2
+        }
+      ],
+      "otherVotes": 583
+    },
+    "EC-19B": {
+      "valid": 39379,
+      "rejected": 822,
+      "polled": 40201,
+      "electors": 51295,
+      "turnoutPct": 78.4,
+      "rejectedPct": 2.04,
+      "winner": {
+        "party": "UPFA",
+        "votes": 23518,
+        "pct": 59.72
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 15128,
+        "pct": 38.42
+      },
+      "margin": 21.31,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 23518,
+          "pct": 59.72
+        },
+        {
+          "party": "NDF",
+          "votes": 15128,
+          "pct": 38.42
+        },
+        {
+          "party": "ONF",
+          "votes": 112,
+          "pct": 0.28
+        },
+        {
+          "party": "PNF",
+          "votes": 110,
+          "pct": 0.28
+        },
+        {
+          "party": "UPF",
+          "votes": 82,
+          "pct": 0.21
+        }
+      ],
+      "otherVotes": 429
+    },
+    "EC-19C": {
+      "valid": 46996,
+      "rejected": 900,
+      "polled": 47896,
+      "electors": 62901,
+      "turnoutPct": 76.1,
+      "rejectedPct": 1.88,
+      "winner": {
+        "party": "NDF",
+        "votes": 25598,
+        "pct": 54.47
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 20202,
+        "pct": 42.99
+      },
+      "margin": 11.48,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 25598,
+          "pct": 54.47
+        },
+        {
+          "party": "UPFA",
+          "votes": 20202,
+          "pct": 42.99
+        },
+        {
+          "party": "UPF",
+          "votes": 186,
+          "pct": 0.4
+        },
+        {
+          "party": "PNF",
+          "votes": 132,
+          "pct": 0.28
+        },
+        {
+          "party": "ONF",
+          "votes": 128,
+          "pct": 0.27
+        }
+      ],
+      "otherVotes": 750
+    },
+    "EC-19D": {
+      "valid": 43234,
+      "rejected": 630,
+      "polled": 43864,
+      "electors": 55185,
+      "turnoutPct": 79.5,
+      "rejectedPct": 1.44,
+      "winner": {
+        "party": "NDF",
+        "votes": 22659,
+        "pct": 52.41
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 20062,
+        "pct": 46.4
+      },
+      "margin": 6.01,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 22659,
+          "pct": 52.41
+        },
+        {
+          "party": "UPFA",
+          "votes": 20062,
+          "pct": 46.4
+        },
+        {
+          "party": "PNF",
+          "votes": 68,
+          "pct": 0.16
+        },
+        {
+          "party": "UPF",
+          "votes": 61,
+          "pct": 0.14
+        },
+        {
+          "party": "ONF",
+          "votes": 51,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 333
+    },
+    "EC-19E": {
+      "valid": 54322,
+      "rejected": 1040,
+      "polled": 55362,
+      "electors": 69909,
+      "turnoutPct": 79.2,
+      "rejectedPct": 1.88,
+      "winner": {
+        "party": "NDF",
+        "votes": 27797,
+        "pct": 51.17
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 25420,
+        "pct": 46.8
+      },
+      "margin": 4.38,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 27797,
+          "pct": 51.17
+        },
+        {
+          "party": "UPFA",
+          "votes": 25420,
+          "pct": 46.8
+        },
+        {
+          "party": "PNF",
+          "votes": 149,
+          "pct": 0.27
+        },
+        {
+          "party": "ONF",
+          "votes": 126,
+          "pct": 0.23
+        },
+        {
+          "party": "UPF",
+          "votes": 118,
+          "pct": 0.22
+        }
+      ],
+      "otherVotes": 712
+    },
+    "EC-19F": {
+      "valid": 48966,
+      "rejected": 621,
+      "polled": 49587,
+      "electors": 62689,
+      "turnoutPct": 79.1,
+      "rejectedPct": 1.25,
+      "winner": {
+        "party": "UPFA",
+        "votes": 25337,
+        "pct": 51.74
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 22894,
+        "pct": 46.75
+      },
+      "margin": 4.99,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 25337,
+          "pct": 51.74
+        },
+        {
+          "party": "NDF",
+          "votes": 22894,
+          "pct": 46.75
+        },
+        {
+          "party": "PNF",
+          "votes": 101,
+          "pct": 0.21
+        },
+        {
+          "party": "ONF",
+          "votes": 91,
+          "pct": 0.19
+        },
+        {
+          "party": "SLLP",
+          "votes": 81,
+          "pct": 0.17
+        }
+      ],
+      "otherVotes": 462
+    },
+    "EC-19G": {
+      "valid": 58075,
+      "rejected": 664,
+      "polled": 58739,
+      "electors": 74436,
+      "turnoutPct": 78.9,
+      "rejectedPct": 1.13,
+      "winner": {
+        "party": "NDF",
+        "votes": 29431,
+        "pct": 50.68
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 27874,
+        "pct": 48
+      },
+      "margin": 2.68,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 29431,
+          "pct": 50.68
+        },
+        {
+          "party": "UPFA",
+          "votes": 27874,
+          "pct": 48
+        },
+        {
+          "party": "UPF",
+          "votes": 115,
+          "pct": 0.2
+        },
+        {
+          "party": "PNF",
+          "votes": 93,
+          "pct": 0.16
+        },
+        {
+          "party": "ONF",
+          "votes": 91,
+          "pct": 0.16
+        }
+      ],
+      "otherVotes": 471
+    },
+    "EC-19H": {
+      "valid": 64981,
+      "rejected": 966,
+      "polled": 65947,
+      "electors": 83147,
+      "turnoutPct": 79.3,
+      "rejectedPct": 1.46,
+      "winner": {
+        "party": "NDF",
+        "votes": 32766,
+        "pct": 50.42
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 31272,
+        "pct": 48.12
+      },
+      "margin": 2.3,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 32766,
+          "pct": 50.42
+        },
+        {
+          "party": "UPFA",
+          "votes": 31272,
+          "pct": 48.12
+        },
+        {
+          "party": "ONF",
+          "votes": 122,
+          "pct": 0.19
+        },
+        {
+          "party": "UPF",
+          "votes": 106,
+          "pct": 0.16
+        },
+        {
+          "party": "PNF",
+          "votes": 105,
+          "pct": 0.16
+        }
+      ],
+      "otherVotes": 610
+    },
+    "EC-19I": {
+      "valid": 49507,
+      "rejected": 874,
+      "polled": 50381,
+      "electors": 65209,
+      "turnoutPct": 77.3,
+      "rejectedPct": 1.73,
+      "winner": {
+        "party": "NDF",
+        "votes": 28725,
+        "pct": 58.02
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 19725,
+        "pct": 39.84
+      },
+      "margin": 18.18,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 28725,
+          "pct": 58.02
+        },
+        {
+          "party": "UPFA",
+          "votes": 19725,
+          "pct": 39.84
+        },
+        {
+          "party": "UPF",
+          "votes": 141,
+          "pct": 0.28
+        },
+        {
+          "party": "SLLP",
+          "votes": 123,
+          "pct": 0.25
+        },
+        {
+          "party": "ONF",
+          "votes": 107,
+          "pct": 0.22
+        }
+      ],
+      "otherVotes": 686
+    },
+    "EC-19P": {
+      "valid": 26259,
+      "rejected": 424,
+      "polled": 26683,
+      "electors": 27142,
+      "turnoutPct": 98.3,
+      "rejectedPct": 1.59,
+      "winner": {
+        "party": "UPFA",
+        "votes": 13115,
+        "pct": 49.94
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 13031,
+        "pct": 49.62
+      },
+      "margin": 0.32,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 13115,
+          "pct": 49.94
+        },
+        {
+          "party": "NDF",
+          "votes": 13031,
+          "pct": 49.62
+        },
+        {
+          "party": "FSP",
+          "votes": 24,
+          "pct": 0.09
+        },
+        {
+          "party": "I-AMI",
+          "votes": 13,
+          "pct": 0.05
+        },
+        {
+          "party": "ONF",
+          "votes": 11,
+          "pct": 0.04
+        }
+      ],
+      "otherVotes": 65
+    },
+    "EC-20": {
+      "valid": 281116,
+      "rejected": 3449,
+      "polled": 284565,
+      "electors": 356146,
+      "turnoutPct": 79.9,
+      "rejectedPct": 1.21,
+      "winner": {
+        "party": "UPFA",
+        "votes": 172745,
+        "pct": 61.45
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 105276,
+        "pct": 37.45
+      },
+      "margin": 24,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 172745,
+          "pct": 61.45
+        },
+        {
+          "party": "NDF",
+          "votes": 105276,
+          "pct": 37.45
+        },
+        {
+          "party": "PNF",
+          "votes": 567,
+          "pct": 0.2
+        },
+        {
+          "party": "ONF",
+          "votes": 508,
+          "pct": 0.18
+        },
+        {
+          "party": "UPF",
+          "votes": 275,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 1745
+    },
+    "EC-20A": {
+      "valid": 62565,
+      "rejected": 775,
+      "polled": 63340,
+      "electors": 83003,
+      "turnoutPct": 76.3,
+      "rejectedPct": 1.22,
+      "winner": {
+        "party": "UPFA",
+        "votes": 37987,
+        "pct": 60.72
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 23704,
+        "pct": 37.89
+      },
+      "margin": 22.83,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 37987,
+          "pct": 60.72
+        },
+        {
+          "party": "NDF",
+          "votes": 23704,
+          "pct": 37.89
+        },
+        {
+          "party": "PNF",
+          "votes": 140,
+          "pct": 0.22
+        },
+        {
+          "party": "ONF",
+          "votes": 138,
+          "pct": 0.22
+        },
+        {
+          "party": "UPF",
+          "votes": 87,
+          "pct": 0.14
+        }
+      ],
+      "otherVotes": 509
+    },
+    "EC-20B": {
+      "valid": 81716,
+      "rejected": 1113,
+      "polled": 82829,
+      "electors": 107678,
+      "turnoutPct": 76.9,
+      "rejectedPct": 1.34,
+      "winner": {
+        "party": "UPFA",
+        "votes": 50408,
+        "pct": 61.69
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 30381,
+        "pct": 37.18
+      },
+      "margin": 24.51,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 50408,
+          "pct": 61.69
+        },
+        {
+          "party": "NDF",
+          "votes": 30381,
+          "pct": 37.18
+        },
+        {
+          "party": "PNF",
+          "votes": 179,
+          "pct": 0.22
+        },
+        {
+          "party": "ONF",
+          "votes": 150,
+          "pct": 0.18
+        },
+        {
+          "party": "UPF",
+          "votes": 93,
+          "pct": 0.11
+        }
+      ],
+      "otherVotes": 505
+    },
+    "EC-20C": {
+      "valid": 120988,
+      "rejected": 1349,
+      "polled": 122337,
+      "electors": 149116,
+      "turnoutPct": 82,
+      "rejectedPct": 1.1,
+      "winner": {
+        "party": "UPFA",
+        "votes": 76069,
+        "pct": 62.87
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 43678,
+        "pct": 36.1
+      },
+      "margin": 26.77,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 76069,
+          "pct": 62.87
+        },
+        {
+          "party": "NDF",
+          "votes": 43678,
+          "pct": 36.1
+        },
+        {
+          "party": "PNF",
+          "votes": 241,
+          "pct": 0.2
+        },
+        {
+          "party": "ONF",
+          "votes": 210,
+          "pct": 0.17
+        },
+        {
+          "party": "FSP",
+          "votes": 120,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 670
+    },
+    "EC-20P": {
+      "valid": 15847,
+      "rejected": 212,
+      "polled": 16059,
+      "electors": 16349,
+      "turnoutPct": 98.2,
+      "rejectedPct": 1.32,
+      "winner": {
+        "party": "UPFA",
+        "votes": 8281,
+        "pct": 52.26
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 7513,
+        "pct": 47.41
+      },
+      "margin": 4.85,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 8281,
+          "pct": 52.26
+        },
+        {
+          "party": "NDF",
+          "votes": 7513,
+          "pct": 47.41
+        },
+        {
+          "party": "ONF",
+          "votes": 10,
+          "pct": 0.06
+        },
+        {
+          "party": "PNF",
+          "votes": 7,
+          "pct": 0.04
+        },
+        {
+          "party": "FSP",
+          "votes": 7,
+          "pct": 0.04
+        }
+      ],
+      "otherVotes": 29
+    },
+    "EC-21": {
+      "valid": 680084,
+      "rejected": 7656,
+      "polled": 687740,
+      "electors": 831712,
+      "turnoutPct": 82.7,
+      "rejectedPct": 1.11,
+      "winner": {
+        "party": "UPFA",
+        "votes": 379053,
+        "pct": 55.74
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 292514,
+        "pct": 43.01
+      },
+      "margin": 12.72,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 379053,
+          "pct": 55.74
+        },
+        {
+          "party": "NDF",
+          "votes": 292514,
+          "pct": 43.01
+        },
+        {
+          "party": "PNF",
+          "votes": 1379,
+          "pct": 0.2
+        },
+        {
+          "party": "ONF",
+          "votes": 1217,
+          "pct": 0.18
+        },
+        {
+          "party": "SLLP",
+          "votes": 787,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 5134
+    },
+    "EC-21A": {
+      "valid": 78443,
+      "rejected": 638,
+      "polled": 79081,
+      "electors": 96170,
+      "turnoutPct": 82.2,
+      "rejectedPct": 0.81,
+      "winner": {
+        "party": "UPFA",
+        "votes": 45606,
+        "pct": 58.14
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 32106,
+        "pct": 40.93
+      },
+      "margin": 17.21,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 45606,
+          "pct": 58.14
+        },
+        {
+          "party": "NDF",
+          "votes": 32106,
+          "pct": 40.93
+        },
+        {
+          "party": "PNF",
+          "votes": 140,
+          "pct": 0.18
+        },
+        {
+          "party": "ONF",
+          "votes": 92,
+          "pct": 0.12
+        },
+        {
+          "party": "SLLP",
+          "votes": 65,
+          "pct": 0.08
+        }
+      ],
+      "otherVotes": 434
+    },
+    "EC-21B": {
+      "valid": 99552,
+      "rejected": 1074,
+      "polled": 100626,
+      "electors": 121108,
+      "turnoutPct": 83.1,
+      "rejectedPct": 1.07,
+      "winner": {
+        "party": "UPFA",
+        "votes": 54989,
+        "pct": 55.24
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 43608,
+        "pct": 43.8
+      },
+      "margin": 11.43,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 54989,
+          "pct": 55.24
+        },
+        {
+          "party": "NDF",
+          "votes": 43608,
+          "pct": 43.8
+        },
+        {
+          "party": "PNF",
+          "votes": 169,
+          "pct": 0.17
+        },
+        {
+          "party": "ONF",
+          "votes": 134,
+          "pct": 0.13
+        },
+        {
+          "party": "ULPP",
+          "votes": 90,
+          "pct": 0.09
+        }
+      ],
+      "otherVotes": 562
+    },
+    "EC-21C": {
+      "valid": 69062,
+      "rejected": 834,
+      "polled": 69896,
+      "electors": 83934,
+      "turnoutPct": 83.3,
+      "rejectedPct": 1.19,
+      "winner": {
+        "party": "UPFA",
+        "votes": 34975,
+        "pct": 50.64
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 33095,
+        "pct": 47.92
+      },
+      "margin": 2.72,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 34975,
+          "pct": 50.64
+        },
+        {
+          "party": "NDF",
+          "votes": 33095,
+          "pct": 47.92
+        },
+        {
+          "party": "PNF",
+          "votes": 137,
+          "pct": 0.2
+        },
+        {
+          "party": "ONF",
+          "votes": 118,
+          "pct": 0.17
+        },
+        {
+          "party": "ULPP",
+          "votes": 109,
+          "pct": 0.16
+        }
+      ],
+      "otherVotes": 628
+    },
+    "EC-21D": {
+      "valid": 86474,
+      "rejected": 1009,
+      "polled": 87483,
+      "electors": 106575,
+      "turnoutPct": 82.1,
+      "rejectedPct": 1.15,
+      "winner": {
+        "party": "UPFA",
+        "votes": 44798,
+        "pct": 51.81
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 40501,
+        "pct": 46.84
+      },
+      "margin": 4.97,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 44798,
+          "pct": 51.81
+        },
+        {
+          "party": "NDF",
+          "votes": 40501,
+          "pct": 46.84
+        },
+        {
+          "party": "PNF",
+          "votes": 168,
+          "pct": 0.19
+        },
+        {
+          "party": "ONF",
+          "votes": 151,
+          "pct": 0.17
+        },
+        {
+          "party": "ULPP",
+          "votes": 114,
+          "pct": 0.13
+        }
+      ],
+      "otherVotes": 742
+    },
+    "EC-21E": {
+      "valid": 82589,
+      "rejected": 1023,
+      "polled": 83612,
+      "electors": 102618,
+      "turnoutPct": 81.5,
+      "rejectedPct": 1.22,
+      "winner": {
+        "party": "UPFA",
+        "votes": 42940,
+        "pct": 51.99
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 38366,
+        "pct": 46.45
+      },
+      "margin": 5.54,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 42940,
+          "pct": 51.99
+        },
+        {
+          "party": "NDF",
+          "votes": 38366,
+          "pct": 46.45
+        },
+        {
+          "party": "PNF",
+          "votes": 209,
+          "pct": 0.25
+        },
+        {
+          "party": "ONF",
+          "votes": 183,
+          "pct": 0.22
+        },
+        {
+          "party": "SLLP",
+          "votes": 136,
+          "pct": 0.16
+        }
+      ],
+      "otherVotes": 755
+    },
+    "EC-21F": {
+      "valid": 79772,
+      "rejected": 956,
+      "polled": 80728,
+      "electors": 96156,
+      "turnoutPct": 84,
+      "rejectedPct": 1.18,
+      "winner": {
+        "party": "UPFA",
+        "votes": 46275,
+        "pct": 58.01
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 32188,
+        "pct": 40.35
+      },
+      "margin": 17.66,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 46275,
+          "pct": 58.01
+        },
+        {
+          "party": "NDF",
+          "votes": 32188,
+          "pct": 40.35
+        },
+        {
+          "party": "PNF",
+          "votes": 202,
+          "pct": 0.25
+        },
+        {
+          "party": "ONF",
+          "votes": 179,
+          "pct": 0.22
+        },
+        {
+          "party": "SLLP",
+          "votes": 126,
+          "pct": 0.16
+        }
+      ],
+      "otherVotes": 802
+    },
+    "EC-21G": {
+      "valid": 52580,
+      "rejected": 511,
+      "polled": 53091,
+      "electors": 62773,
+      "turnoutPct": 84.6,
+      "rejectedPct": 0.96,
+      "winner": {
+        "party": "UPFA",
+        "votes": 32336,
+        "pct": 61.5
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 19508,
+        "pct": 37.1
+      },
+      "margin": 24.4,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 32336,
+          "pct": 61.5
+        },
+        {
+          "party": "NDF",
+          "votes": 19508,
+          "pct": 37.1
+        },
+        {
+          "party": "PNF",
+          "votes": 138,
+          "pct": 0.26
+        },
+        {
+          "party": "ONF",
+          "votes": 127,
+          "pct": 0.24
+        },
+        {
+          "party": "ULPP",
+          "votes": 55,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 416
+    },
+    "EC-21H": {
+      "valid": 110636,
+      "rejected": 1285,
+      "polled": 111921,
+      "electors": 140748,
+      "turnoutPct": 79.5,
+      "rejectedPct": 1.15,
+      "winner": {
+        "party": "UPFA",
+        "votes": 65270,
+        "pct": 59
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 44089,
+        "pct": 39.85
+      },
+      "margin": 19.14,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 65270,
+          "pct": 59
+        },
+        {
+          "party": "NDF",
+          "votes": 44089,
+          "pct": 39.85
+        },
+        {
+          "party": "ONF",
+          "votes": 223,
+          "pct": 0.2
+        },
+        {
+          "party": "PNF",
+          "votes": 207,
+          "pct": 0.19
+        },
+        {
+          "party": "FSP",
+          "votes": 115,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 732
+    },
+    "EC-21P": {
+      "valid": 20976,
+      "rejected": 326,
+      "polled": 21302,
+      "electors": 21630,
+      "turnoutPct": 98.5,
+      "rejectedPct": 1.53,
+      "winner": {
+        "party": "UPFA",
+        "votes": 11864,
+        "pct": 56.56
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 9053,
+        "pct": 43.16
+      },
+      "margin": 13.4,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 11864,
+          "pct": 56.56
+        },
+        {
+          "party": "NDF",
+          "votes": 9053,
+          "pct": 43.16
+        },
+        {
+          "party": "FSP",
+          "votes": 13,
+          "pct": 0.06
+        },
+        {
+          "party": "ONF",
+          "votes": 10,
+          "pct": 0.05
+        },
+        {
+          "party": "PNF",
+          "votes": 9,
+          "pct": 0.04
+        }
+      ],
+      "otherVotes": 27
+    },
+    "EC-22": {
+      "valid": 536771,
+      "rejected": 6515,
+      "polled": 543286,
+      "electors": 680414,
+      "turnoutPct": 79.8,
+      "rejectedPct": 1.2,
+      "winner": {
+        "party": "UPFA",
+        "votes": 278130,
+        "pct": 51.82
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 252533,
+        "pct": 47.05
+      },
+      "margin": 4.77,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 278130,
+          "pct": 51.82
+        },
+        {
+          "party": "NDF",
+          "votes": 252533,
+          "pct": 47.05
+        },
+        {
+          "party": "PNF",
+          "votes": 837,
+          "pct": 0.16
+        },
+        {
+          "party": "ONF",
+          "votes": 719,
+          "pct": 0.13
+        },
+        {
+          "party": "SLLP",
+          "votes": 603,
+          "pct": 0.11
+        }
+      ],
+      "otherVotes": 3949
+    },
+    "EC-22A": {
+      "valid": 69672,
+      "rejected": 715,
+      "polled": 70387,
+      "electors": 87800,
+      "turnoutPct": 80.2,
+      "rejectedPct": 1.02,
+      "winner": {
+        "party": "UPFA",
+        "votes": 36838,
+        "pct": 52.87
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 32163,
+        "pct": 46.16
+      },
+      "margin": 6.71,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 36838,
+          "pct": 52.87
+        },
+        {
+          "party": "NDF",
+          "votes": 32163,
+          "pct": 46.16
+        },
+        {
+          "party": "PNF",
+          "votes": 108,
+          "pct": 0.16
+        },
+        {
+          "party": "ONF",
+          "votes": 76,
+          "pct": 0.11
+        },
+        {
+          "party": "UPF",
+          "votes": 72,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 415
+    },
+    "EC-22B": {
+      "valid": 51911,
+      "rejected": 855,
+      "polled": 52766,
+      "electors": 67375,
+      "turnoutPct": 78.3,
+      "rejectedPct": 1.62,
+      "winner": {
+        "party": "UPFA",
+        "votes": 28608,
+        "pct": 55.11
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 22699,
+        "pct": 43.73
+      },
+      "margin": 11.38,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 28608,
+          "pct": 55.11
+        },
+        {
+          "party": "NDF",
+          "votes": 22699,
+          "pct": 43.73
+        },
+        {
+          "party": "PNF",
+          "votes": 80,
+          "pct": 0.15
+        },
+        {
+          "party": "FSP",
+          "votes": 76,
+          "pct": 0.15
+        },
+        {
+          "party": "I-AMI",
+          "votes": 66,
+          "pct": 0.13
+        }
+      ],
+      "otherVotes": 382
+    },
+    "EC-22C": {
+      "valid": 54827,
+      "rejected": 630,
+      "polled": 55457,
+      "electors": 71183,
+      "turnoutPct": 77.9,
+      "rejectedPct": 1.14,
+      "winner": {
+        "party": "UPFA",
+        "votes": 30452,
+        "pct": 55.54
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 23853,
+        "pct": 43.51
+      },
+      "margin": 12.04,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 30452,
+          "pct": 55.54
+        },
+        {
+          "party": "NDF",
+          "votes": 23853,
+          "pct": 43.51
+        },
+        {
+          "party": "ONF",
+          "votes": 76,
+          "pct": 0.14
+        },
+        {
+          "party": "FSP",
+          "votes": 71,
+          "pct": 0.13
+        },
+        {
+          "party": "PNF",
+          "votes": 66,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 309
+    },
+    "EC-22D": {
+      "valid": 50628,
+      "rejected": 457,
+      "polled": 51085,
+      "electors": 65337,
+      "turnoutPct": 78.2,
+      "rejectedPct": 0.89,
+      "winner": {
+        "party": "UPFA",
+        "votes": 27400,
+        "pct": 54.12
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 22690,
+        "pct": 44.82
+      },
+      "margin": 9.3,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 27400,
+          "pct": 54.12
+        },
+        {
+          "party": "NDF",
+          "votes": 22690,
+          "pct": 44.82
+        },
+        {
+          "party": "PNF",
+          "votes": 80,
+          "pct": 0.16
+        },
+        {
+          "party": "ONF",
+          "votes": 75,
+          "pct": 0.15
+        },
+        {
+          "party": "ULPP",
+          "votes": 53,
+          "pct": 0.1
+        }
+      ],
+      "otherVotes": 330
+    },
+    "EC-22E": {
+      "valid": 69389,
+      "rejected": 778,
+      "polled": 70167,
+      "electors": 90627,
+      "turnoutPct": 77.4,
+      "rejectedPct": 1.11,
+      "winner": {
+        "party": "NDF",
+        "votes": 40066,
+        "pct": 57.74
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 28561,
+        "pct": 41.16
+      },
+      "margin": 16.58,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 40066,
+          "pct": 57.74
+        },
+        {
+          "party": "UPFA",
+          "votes": 28561,
+          "pct": 41.16
+        },
+        {
+          "party": "UPF",
+          "votes": 87,
+          "pct": 0.13
+        },
+        {
+          "party": "SLLP",
+          "votes": 85,
+          "pct": 0.12
+        },
+        {
+          "party": "PNF",
+          "votes": 79,
+          "pct": 0.11
+        }
+      ],
+      "otherVotes": 511
+    },
+    "EC-22F": {
+      "valid": 40641,
+      "rejected": 417,
+      "polled": 41058,
+      "electors": 53207,
+      "turnoutPct": 77.2,
+      "rejectedPct": 1.02,
+      "winner": {
+        "party": "UPFA",
+        "votes": 20742,
+        "pct": 51.04
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 19297,
+        "pct": 47.48
+      },
+      "margin": 3.56,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 20742,
+          "pct": 51.04
+        },
+        {
+          "party": "NDF",
+          "votes": 19297,
+          "pct": 47.48
+        },
+        {
+          "party": "PNF",
+          "votes": 91,
+          "pct": 0.22
+        },
+        {
+          "party": "ONF",
+          "votes": 77,
+          "pct": 0.19
+        },
+        {
+          "party": "I-AMI",
+          "votes": 59,
+          "pct": 0.15
+        }
+      ],
+      "otherVotes": 375
+    },
+    "EC-22G": {
+      "valid": 58703,
+      "rejected": 809,
+      "polled": 59512,
+      "electors": 74244,
+      "turnoutPct": 80.2,
+      "rejectedPct": 1.36,
+      "winner": {
+        "party": "UPFA",
+        "votes": 30890,
+        "pct": 52.62
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 26970,
+        "pct": 45.94
+      },
+      "margin": 6.68,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 30890,
+          "pct": 52.62
+        },
+        {
+          "party": "NDF",
+          "votes": 26970,
+          "pct": 45.94
+        },
+        {
+          "party": "PNF",
+          "votes": 116,
+          "pct": 0.2
+        },
+        {
+          "party": "SLLP",
+          "votes": 107,
+          "pct": 0.18
+        },
+        {
+          "party": "ULPP",
+          "votes": 104,
+          "pct": 0.18
+        }
+      ],
+      "otherVotes": 516
+    },
+    "EC-22H": {
+      "valid": 58581,
+      "rejected": 577,
+      "polled": 59158,
+      "electors": 73498,
+      "turnoutPct": 80.5,
+      "rejectedPct": 0.98,
+      "winner": {
+        "party": "UPFA",
+        "votes": 30922,
+        "pct": 52.79
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 26984,
+        "pct": 46.06
+      },
+      "margin": 6.72,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 30922,
+          "pct": 52.79
+        },
+        {
+          "party": "NDF",
+          "votes": 26984,
+          "pct": 46.06
+        },
+        {
+          "party": "PNF",
+          "votes": 98,
+          "pct": 0.17
+        },
+        {
+          "party": "ONF",
+          "votes": 76,
+          "pct": 0.13
+        },
+        {
+          "party": "FSP",
+          "votes": 71,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 430
+    },
+    "EC-22I": {
+      "valid": 53172,
+      "rejected": 717,
+      "polled": 53889,
+      "electors": 66607,
+      "turnoutPct": 80.9,
+      "rejectedPct": 1.33,
+      "winner": {
+        "party": "UPFA",
+        "votes": 28741,
+        "pct": 54.05
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 23648,
+        "pct": 44.47
+      },
+      "margin": 9.58,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 28741,
+          "pct": 54.05
+        },
+        {
+          "party": "NDF",
+          "votes": 23648,
+          "pct": 44.47
+        },
+        {
+          "party": "PNF",
+          "votes": 104,
+          "pct": 0.2
+        },
+        {
+          "party": "ONF",
+          "votes": 93,
+          "pct": 0.17
+        },
+        {
+          "party": "SLLP",
+          "votes": 86,
+          "pct": 0.16
+        }
+      ],
+      "otherVotes": 500
+    },
+    "EC-22P": {
+      "valid": 29247,
+      "rejected": 560,
+      "polled": 29807,
+      "electors": 30536,
+      "turnoutPct": 97.6,
+      "rejectedPct": 1.88,
+      "winner": {
+        "party": "UPFA",
+        "votes": 14976,
+        "pct": 51.21
+      },
+      "runnerUp": {
+        "party": "NDF",
+        "votes": 14163,
+        "pct": 48.43
+      },
+      "margin": 2.78,
+      "topParties": [
+        {
+          "party": "UPFA",
+          "votes": 14976,
+          "pct": 51.21
+        },
+        {
+          "party": "NDF",
+          "votes": 14163,
+          "pct": 48.43
+        },
+        {
+          "party": "FSP",
+          "votes": 29,
+          "pct": 0.1
+        },
+        {
+          "party": "PNF",
+          "votes": 15,
+          "pct": 0.05
+        },
+        {
+          "party": "I-AMI",
+          "votes": 11,
+          "pct": 0.04
+        }
+      ],
+      "otherVotes": 53
+    },
+    "LK": {
+      "valid": 12123452,
+      "rejected": 140925,
+      "polled": 12264377,
+      "electors": 15585942,
+      "turnoutPct": 78.7,
+      "rejectedPct": 1.15,
+      "winner": {
+        "party": "NDF",
+        "votes": 6217162,
+        "pct": 51.28
+      },
+      "runnerUp": {
+        "party": "UPFA",
+        "votes": 5768090,
+        "pct": 47.58
+      },
+      "margin": 3.7,
+      "topParties": [
+        {
+          "party": "NDF",
+          "votes": 6217162,
+          "pct": 51.28
+        },
+        {
+          "party": "UPFA",
+          "votes": 5768090,
+          "pct": 47.58
+        },
+        {
+          "party": "PNF",
+          "votes": 18174,
+          "pct": 0.15
+        },
+        {
+          "party": "ONF",
+          "votes": 15726,
+          "pct": 0.13
+        },
+        {
+          "party": "UPF",
+          "votes": 14379,
+          "pct": 0.12
+        }
+      ],
+      "otherVotes": 89921
+    }
+  }
+}

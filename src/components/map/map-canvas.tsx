@@ -56,6 +56,7 @@ import {
 } from "@/components/map/osm-layers"
 import { getDataset } from "@/data/catalog"
 import {
+  isElectionMode,
   useLayerStore,
   type ChoroplethMode,
   type SelectedFeature,
@@ -493,7 +494,8 @@ function appliesChoropleth(
   if (choropleth === "density" || choropleth === "population") {
     return id === "districts"
   }
-  if (choropleth === "pres-2024") {
+  // Any election choropleth mode — apply to electoral / polling divisions.
+  if (isElectionMode(choropleth)) {
     return id === "electoral-divisions" || id === "polling-divisions"
   }
   return false

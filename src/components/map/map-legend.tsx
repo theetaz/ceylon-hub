@@ -5,12 +5,12 @@ import { ADMIN_LAYER_THEMES } from "@/components/map/admin-layers"
 import {
   getChoroplethLabel,
   getChoroplethStops,
-  PARTY_PALETTE,
 } from "@/components/map/choropleth"
 import { OSM_COLORS } from "@/components/map/osm-layers"
 import { useTheme } from "@/components/theme-provider"
 import { CATALOG } from "@/data/catalog"
-import { useLayerStore } from "@/stores/layers"
+import { getElection, OTHER_PARTY } from "@/data/elections"
+import { isElectionMode, useLayerStore } from "@/stores/layers"
 
 function resolveMode(theme: string): "light" | "dark" {
   if (theme === "dark") return "dark"
@@ -40,37 +40,48 @@ function ChoroplethScale() {
     </div>
   )
 
-  if (choroplethMode === "pres-2024") {
-    const entries = Object.entries(PARTY_PALETTE)
-    return (
-      <div className="mt-1 space-y-1.5 border-t pt-2">
-        {label}
-        <ul className="space-y-0.5 text-xs">
-          {entries.map(([code, meta]) => (
-            <li
-              key={code}
-              className="flex items-center justify-between gap-2"
-            >
+  if (isElectionMode(choroplethMode)) {
+    const election = getElection(choroplethMode)
+    if (election) {
+      const entries = Object.entries(election.parties)
+      return (
+        <div className="mt-1 space-y-1.5 border-t pt-2">
+          {label}
+          <ul className="space-y-0.5 text-xs">
+            {entries.map(([code, meta]) => (
+              <li
+                key={code}
+                className="flex items-center justify-between gap-2"
+              >
+                <span className="flex min-w-0 items-center gap-1.5">
+                  <span
+                    aria-hidden
+                    className="size-2.5 shrink-0 rounded-sm"
+                    style={{ backgroundColor: meta.color }}
+                  />
+                  <span className="truncate text-muted-foreground">
+                    {meta.candidate}
+                  </span>
+                </span>
+                <span className="shrink-0 font-mono text-[10px] tabular-nums text-muted-foreground/70">
+                  {code}
+                </span>
+              </li>
+            ))}
+            <li className="flex items-center justify-between gap-2">
               <span className="flex min-w-0 items-center gap-1.5">
                 <span
                   aria-hidden
                   className="size-2.5 shrink-0 rounded-sm"
-                  style={{ backgroundColor: meta.color }}
+                  style={{ backgroundColor: OTHER_PARTY.color }}
                 />
-                <span className="truncate text-muted-foreground">
-                  {meta.candidate === "Other candidates"
-                    ? "Other"
-                    : meta.candidate}
-                </span>
-              </span>
-              <span className="shrink-0 font-mono text-[10px] tabular-nums text-muted-foreground/70">
-                {code.startsWith("IND") ? code : code}
+                <span className="truncate text-muted-foreground">Other</span>
               </span>
             </li>
-          ))}
-        </ul>
-      </div>
-    )
+          </ul>
+        </div>
+      )
+    }
   }
 
   const stops = getChoroplethStops(choroplethMode)

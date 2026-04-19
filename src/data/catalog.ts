@@ -141,7 +141,55 @@ export const CATALOG: Dataset[] = [
     title: "2024 presidential results",
     shortTitle: "Pres 2024",
     description:
-      "Color each electoral division by the winning party in the 22 September 2024 presidential election. Underlying vote counts appear in the info panel.",
+      "Color each electoral division by the winning party in the 22 September 2024 presidential election. AKD / NPP 15 divisions, Sajith / SJB 7. Vote counts appear in the info panel.",
+    category: "electoral",
+    status: "ready",
+    kind: "choropleth",
+    featureCount: 22,
+    source: {
+      name: "Election Commission of Sri Lanka via nuuuwan/lk_elections",
+      url: "https://github.com/nuuuwan/lk_elections",
+    },
+    license: "Open data",
+  },
+  {
+    id: "pres-2019",
+    title: "2019 presidential results",
+    shortTitle: "Pres 2019",
+    description:
+      "Color each electoral division by the winning party in the 16 November 2019 presidential election. Gotabaya Rajapaksa (SLPP) won.",
+    category: "electoral",
+    status: "ready",
+    kind: "choropleth",
+    featureCount: 22,
+    source: {
+      name: "Election Commission of Sri Lanka via nuuuwan/lk_elections",
+      url: "https://github.com/nuuuwan/lk_elections",
+    },
+    license: "Open data",
+  },
+  {
+    id: "pres-2015",
+    title: "2015 presidential results",
+    shortTitle: "Pres 2015",
+    description:
+      "8 January 2015 presidential election — Maithripala Sirisena (NDF common opposition) defeated Mahinda Rajapaksa (UPFA).",
+    category: "electoral",
+    status: "ready",
+    kind: "choropleth",
+    featureCount: 22,
+    source: {
+      name: "Election Commission of Sri Lanka via nuuuwan/lk_elections",
+      url: "https://github.com/nuuuwan/lk_elections",
+    },
+    license: "Open data",
+  },
+  {
+    id: "parl-2024",
+    title: "2024 parliamentary results",
+    shortTitle: "Parl 2024",
+    description:
+      "14 November 2024 parliamentary election — winning party per electoral division. NPP won a supermajority.",
     category: "electoral",
     status: "ready",
     kind: "choropleth",

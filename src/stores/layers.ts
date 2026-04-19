@@ -1,16 +1,27 @@
 import { create } from "zustand"
 
 import { readyDatasets } from "@/data/catalog"
+import { ELECTIONS } from "@/data/elections"
 
 export type SelectedFeature = {
   datasetId: string
   id: string | number
   name: string
-  level: number
+  level: number | string
   properties: Record<string, unknown>
 }
 
-export type ChoroplethMode = "none" | "density" | "population" | "pres-2024"
+// Choropleth mode can be the classic metric modes or any election id.
+// Anything starting with "pres-" or "parl-" is treated as an election.
+export type ChoroplethMode =
+  | "none"
+  | "density"
+  | "population"
+  | string // election ids — allowed strings
+
+export function isElectionMode(mode: ChoroplethMode): boolean {
+  return ELECTIONS.some((e) => e.id === mode)
+}
 
 type LayerState = {
   visible: Record<string, boolean>
@@ -38,6 +49,9 @@ const CHOROPLETH_CYCLE: ChoroplethMode[] = [
   "density",
   "population",
   "pres-2024",
+  "pres-2019",
+  "pres-2015",
+  "parl-2024",
 ]
 
 export const useLayerStore = create<LayerState>((set) => ({
@@ -57,9 +71,8 @@ export const useLayerStore = create<LayerState>((set) => ({
   setChoroplethMode: (mode) =>
     set((state) => {
       if (mode === "none") return { choroplethMode: mode }
-      if (mode === "pres-2024") {
-        // Election choropleth acts on electoral divisions — auto-enable
-        // that layer while we're at it.
+      if (isElectionMode(mode)) {
+        // Election choropleths act on electoral divisions.
         return {
           choroplethMode: mode,
           visible: { ...state.visible, "electoral-divisions": true },
@@ -75,13 +88,7 @@ export const useLayerStore = create<LayerState>((set) => ({
     set((state) => {
       const idx = CHOROPLETH_CYCLE.indexOf(state.choroplethMode)
       const next = CHOROPLETH_CYCLE[(idx + 1) % CHOROPLETH_CYCLE.length]
-      return {
-        choroplethMode: next,
-        visible:
-          next === "none"
-            ? state.visible
-            : { ...state.visible, districts: true },
-      }
+      return { choroplethMode: next }
     }),
   setExtrusion: (value) =>
     set((state) => ({

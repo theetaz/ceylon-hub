@@ -1,18 +1,12 @@
 #!/usr/bin/env node
 /**
- * Fetch 2024 Sri Lanka Presidential election results (from
- * nuuuwan/lk_elections), parse, and save a structured JSON keyed by
- * electoral / polling division id.
+ * Fetch every Sri Lanka election configured in election-config.mjs
+ * (via nuuuwan/lk_elections, which in turn scrapes the Election
+ * Commission of Sri Lanka), and write one structured JSON per election
+ * to scripts/data/election-<id>.json.
  *
- * Output: scripts/data/election-presidential-2024.json
  * Consumed by: enrich-boundaries.mjs (joins onto electoral-divisions
  * and polling-divisions GeoJSONs).
- *
- * Source: nuuuwan/lk_elections
- *   https://raw.githubusercontent.com/nuuuwan/lk_elections/master/
- *   public/data/elections/government-elections-presidential.regions-ec.2024.tsv
- *
- * Data ultimately sourced from the Election Commission of Sri Lanka.
  *
  * Run: npm run data:election
  */
@@ -20,48 +14,10 @@ import { writeFile } from "node:fs/promises"
 import { resolve, dirname } from "node:path"
 import { fileURLToPath } from "node:url"
 
+import { ELECTIONS } from "./election-config.mjs"
+
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
-const OUT = resolve(__dirname, "election-presidential-2024.json")
-
-const URL_2024 =
-  "https://raw.githubusercontent.com/nuuuwan/lk_elections/master/public/data/elections/government-elections-presidential.regions-ec.2024.tsv"
-
-// Major parties / candidates in the 2024 presidential election. Any code
-// not in this table is lumped into 'OTHER'.
-const PARTIES = {
-  NPP: {
-    name: "National People's Power",
-    candidate: "Anura Kumara Dissanayake",
-    color: "#dc2626",
-  },
-  SJB: {
-    name: "Samagi Jana Balawegaya",
-    candidate: "Sajith Premadasa",
-    color: "#16a34a",
-  },
-  IND16: {
-    name: "New Democratic Front (Ranil Wickremesinghe)",
-    candidate: "Ranil Wickremesinghe",
-    color: "#0ea5e9",
-  },
-  SLPP: {
-    name: "Sri Lanka Podujana Peramuna",
-    candidate: "Namal Rajapaksa",
-    color: "#b45309",
-  },
-  IND9: {
-    name: "Independent (Dilith Jayaweera)",
-    candidate: "Dilith Jayaweera",
-    color: "#7c3aed",
-  },
-}
-
-const OTHER = {
-  name: "Other",
-  candidate: "Other candidates",
-  color: "#94a3b8",
-}
 
 async function fetchTsv(url) {
   const res = await fetch(url, {
@@ -77,14 +33,14 @@ async function fetchTsv(url) {
 function parseTsv(text) {
   const lines = text.trim().split(/\r?\n/)
   const header = lines[0].split("\t")
-  return lines.slice(1).map((line) => {
+  return { header, rows: lines.slice(1).map((line) => {
     const cells = line.split("\t")
     const row = {}
     header.forEach((col, i) => {
       row[col] = cells[i] ?? ""
     })
     return row
-  })
+  })}
 }
 
 function toInt(value) {
@@ -93,14 +49,14 @@ function toInt(value) {
   return Number.isFinite(n) ? Math.round(n) : 0
 }
 
-function summarize(row, parties) {
+function summarize(row, partyCols) {
   const valid = toInt(row.valid)
   const rejected = toInt(row.rejected)
   const polled = toInt(row.polled)
   const electors = toInt(row.electors)
 
   const byParty = {}
-  for (const party of parties) {
+  for (const party of partyCols) {
     byParty[party] = toInt(row[party])
   }
 
@@ -158,11 +114,10 @@ function summarize(row, parties) {
   }
 }
 
-async function main() {
-  console.log("Fetching 2024 presidential election results…")
-  const text = await fetchTsv(URL_2024)
-  const rows = parseTsv(text)
-  const header = text.split(/\r?\n/)[0].split("\t")
+async function fetchOne(election) {
+  process.stdout.write(`${election.id}… `)
+  const text = await fetchTsv(election.url)
+  const { header, rows } = parseTsv(text)
   const partyCols = header.filter(
     (c) => !["entity_id", "valid", "rejected", "polled", "electors"].includes(c)
   )
@@ -174,26 +129,7 @@ async function main() {
     byEntityId[id] = summarize(row, partyCols)
   }
 
-  const payload = {
-    source: {
-      name: "Election Commission of Sri Lanka via nuuuwan/lk_elections",
-      url: URL_2024,
-      license: "Open data",
-    },
-    election: "Presidential 2024",
-    electionDate: "2024-09-21",
-    fetchedAt: new Date().toISOString(),
-    parties: { ...PARTIES, OTHER },
-    entities: byEntityId,
-  }
-
-  await writeFile(OUT, JSON.stringify(payload, null, 2))
-
-  const edRows = Object.keys(byEntityId).filter((id) => /^EC-\d+$/.test(id))
-  const pdRows = Object.keys(byEntityId).filter((id) => /^EC-\d+[A-Za-z]+$/.test(id))
-
-  // Country-level tally — aggregate ED rows only (each ED already sums
-  // its own PDs + postal/displaced votes, so this avoids double-counting).
+  // Country-level tally — sum only ED rows to avoid double-counting.
   const countryTotals = {}
   for (const col of partyCols) {
     let total = 0
@@ -204,12 +140,38 @@ async function main() {
     countryTotals[col] = total
   }
   const ranked = Object.entries(countryTotals).sort(([, a], [, b]) => b - a)
-  const countryWinner = ranked[0]
-  const runnerUp = ranked[1]
+  const [winnerParty, winnerVotes] = ranked[0]
 
+  const payload = {
+    source: {
+      name: "Election Commission of Sri Lanka via nuuuwan/lk_elections",
+      url: election.url,
+      license: "Open data",
+    },
+    id: election.id,
+    type: election.type,
+    year: election.year,
+    label: election.label,
+    date: election.date,
+    fetchedAt: new Date().toISOString(),
+    parties: election.parties,
+    countryWinner: { party: winnerParty, votes: winnerVotes },
+    entities: byEntityId,
+  }
+
+  const outPath = resolve(__dirname, `election-${election.id}.json`)
+  await writeFile(outPath, JSON.stringify(payload, null, 2))
   console.log(
-    `Wrote ${OUT}\n  entities: ${Object.keys(byEntityId).length} (${edRows.length} ED, ${pdRows.length} PD, ${Object.keys(byEntityId).length - edRows.length - pdRows.length} other)\n  country winner: ${countryWinner[0]} ${countryWinner[1].toLocaleString()}  runner-up: ${runnerUp[0]} ${runnerUp[1].toLocaleString()}`
+    `${Object.keys(byEntityId).length} entities · country: ${winnerParty} ${winnerVotes.toLocaleString()}`
   )
+}
+
+async function main() {
+  console.log(`Fetching ${ELECTIONS.length} elections…`)
+  for (const election of ELECTIONS) {
+    await fetchOne(election)
+  }
+  console.log("\nDone.")
 }
 
 main().catch((err) => {

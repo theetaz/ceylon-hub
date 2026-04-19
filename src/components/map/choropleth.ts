@@ -1,6 +1,12 @@
 import type { DataDrivenPropertyValueSpecification } from "maplibre-gl"
 
-import type { ChoroplethMode } from "@/stores/layers"
+import {
+  getElection,
+  OTHER_PARTY,
+  winnerPropertyFor,
+  type PartyMeta,
+} from "@/data/elections"
+import { isElectionMode, type ChoroplethMode } from "@/stores/layers"
 
 export type ChoroplethStop = {
   value: number
@@ -8,46 +14,7 @@ export type ChoroplethStop = {
   label: string
 }
 
-export type PartyMeta = {
-  name: string
-  candidate: string
-  color: string
-}
-
-// 2024 presidential top parties + fallback. Palette for the election
-// choropleth and the feature-sheet legend.
-export const PARTY_PALETTE: Record<string, PartyMeta> = {
-  NPP: {
-    name: "National People's Power",
-    candidate: "Anura Kumara Dissanayake",
-    color: "#dc2626",
-  },
-  SJB: {
-    name: "Samagi Jana Balawegaya",
-    candidate: "Sajith Premadasa",
-    color: "#16a34a",
-  },
-  IND16: {
-    name: "New Democratic Front (UNP-backed)",
-    candidate: "Ranil Wickremesinghe",
-    color: "#0ea5e9",
-  },
-  SLPP: {
-    name: "Sri Lanka Podujana Peramuna",
-    candidate: "Namal Rajapaksa",
-    color: "#b45309",
-  },
-  IND9: {
-    name: "Independent (Dilith Jayaweera)",
-    candidate: "Dilith Jayaweera",
-    color: "#7c3aed",
-  },
-  OTHER: {
-    name: "Other",
-    candidate: "Other candidates",
-    color: "#94a3b8",
-  },
-}
+export type { PartyMeta }
 
 // Sequential palette (ColorBrewer YlOrRd-ish) tuned for Sri Lanka districts.
 // Density range: Mullaitivu ~45 to Colombo ~3,400 /km².
@@ -87,7 +54,8 @@ export function getChoroplethProperty(mode: ChoroplethMode) {
 export function getChoroplethLabel(mode: ChoroplethMode) {
   if (mode === "density") return "Population density (per km²)"
   if (mode === "population") return "Population (2023)"
-  if (mode === "pres-2024") return "2024 Presidential — winning party"
+  const election = getElection(mode)
+  if (election) return `${election.label} — winning party`
   return ""
 }
 
@@ -95,18 +63,19 @@ export function buildChoroplethFillColor(
   mode: ChoroplethMode,
   fallback: string
 ): DataDrivenPropertyValueSpecification<string> {
-  if (mode === "pres-2024") {
-    // color by winner party — mirrored to top-level winnerParty at ETL time.
+  if (isElectionMode(mode)) {
+    const election = getElection(mode)
+    if (!election) return fallback
+    const winnerProp = winnerPropertyFor(election.id)
     const matchArgs: Array<string> = []
-    for (const [code, meta] of Object.entries(PARTY_PALETTE)) {
-      if (code === "OTHER") continue
+    for (const [code, meta] of Object.entries(election.parties)) {
       matchArgs.push(code, meta.color)
     }
     return [
       "match",
-      ["coalesce", ["get", "winnerParty"], "OTHER"],
+      ["coalesce", ["get", winnerProp], "OTHER"],
       ...matchArgs,
-      PARTY_PALETTE.OTHER.color,
+      OTHER_PARTY.color,
     ] as unknown as DataDrivenPropertyValueSpecification<string>
   }
 

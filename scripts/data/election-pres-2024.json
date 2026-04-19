@@ -4,40 +4,42 @@
     "url": "https://raw.githubusercontent.com/nuuuwan/lk_elections/master/public/data/elections/government-elections-presidential.regions-ec.2024.tsv",
     "license": "Open data"
   },
-  "election": "Presidential 2024",
-  "electionDate": "2024-09-21",
-  "fetchedAt": "2026-04-19T23:17:55.668Z",
+  "id": "pres-2024",
+  "type": "presidential",
+  "year": 2024,
+  "label": "2024 Presidential",
+  "date": "2024-09-21",
+  "fetchedAt": "2026-04-19T23:45:58.768Z",
   "parties": {
     "NPP": {
-      "name": "National People's Power",
       "candidate": "Anura Kumara Dissanayake",
+      "name": "National People's Power",
       "color": "#dc2626"
     },
     "SJB": {
-      "name": "Samagi Jana Balawegaya",
       "candidate": "Sajith Premadasa",
+      "name": "Samagi Jana Balawegaya",
       "color": "#16a34a"
     },
     "IND16": {
-      "name": "New Democratic Front (Ranil Wickremesinghe)",
       "candidate": "Ranil Wickremesinghe",
+      "name": "New Democratic Front (UNP-backed)",
       "color": "#0ea5e9"
     },
     "SLPP": {
-      "name": "Sri Lanka Podujana Peramuna",
       "candidate": "Namal Rajapaksa",
+      "name": "Sri Lanka Podujana Peramuna",
       "color": "#b45309"
     },
     "IND9": {
-      "name": "Independent (Dilith Jayaweera)",
       "candidate": "Dilith Jayaweera",
+      "name": "Independent",
       "color": "#7c3aed"
-    },
-    "OTHER": {
-      "name": "Other",
-      "candidate": "Other candidates",
-      "color": "#94a3b8"
     }
+  },
+  "countryWinner": {
+    "party": "NPP",
+    "votes": 5634915
   },
   "entities": {
     "EC-01": {

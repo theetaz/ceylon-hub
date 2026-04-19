@@ -67,6 +67,8 @@ function formatNumber(n) {
 }
 
 async function main() {
+  const { ELECTIONS } = await import("./election-config.mjs")
+
   const [
     provinces,
     districts,
@@ -75,7 +77,7 @@ async function main() {
     polling,
     population,
     ethnicityReligion,
-    election,
+    ...electionsData
   ] = await Promise.all([
     readJSON(resolve(OUT, "provinces.geojson")),
     readJSON(resolve(OUT, "districts.geojson")),
@@ -84,7 +86,9 @@ async function main() {
     readJSON(resolve(OUT, "polling-divisions.geojson")),
     readJSON(resolve(__dirname, "population-2023.json")),
     readJSON(resolve(__dirname, "ethnicity-religion-2012.json")),
-    readJSON(resolve(__dirname, "election-presidential-2024.json")),
+    ...ELECTIONS.map((e) =>
+      readJSON(resolve(__dirname, `election-${e.id}.json`))
+    ),
   ])
 
   const popByDistrict = population.districts
@@ -225,24 +229,31 @@ async function main() {
     district.properties.dsDivisionCount = children.length
   }
 
-  // --- Electoral + polling divisions: join 2024 presidential results
-  console.log("Enriching electoral / polling divisions…")
-  const electionEntities = election.entities ?? {}
-  const attachElection = (feature) => {
-    const entry = electionEntities[feature.properties.id]
-    if (!entry) return
+  // --- Electoral + polling divisions: join every election we have
+  console.log(`Enriching electoral / polling divisions with ${electionsData.length} election(s)…`)
+
+  const attachElections = (feature) => {
+    const elections = {}
+    const flat = {}
+    for (let i = 0; i < ELECTIONS.length; i++) {
+      const def = ELECTIONS[i]
+      const payload = electionsData[i]
+      const entry = payload.entities?.[feature.properties.id]
+      if (!entry) continue
+      elections[def.id] = entry
+      // Flat mirrors so MapLibre fill-color expressions can read the
+      // winner directly via ["get", "winner_pres_2024"] etc.
+      const safeKey = `winner_${def.id.replace(/-/g, "_")}`
+      flat[safeKey] = entry.winner?.party ?? null
+    }
     feature.properties = {
       ...feature.properties,
-      election2024: entry,
-      // Flat mirrors of the winner for MapLibre expressions (nested get is finicky)
-      winnerParty: entry.winner?.party ?? null,
-      winnerVotes: entry.winner?.votes ?? null,
-      winnerPct: entry.winner?.pct ?? null,
-      turnoutPct: entry.turnoutPct ?? null,
+      elections,
+      ...flat,
     }
   }
-  for (const feature of electoral.features) attachElection(feature)
-  for (const feature of polling.features) attachElection(feature)
+  for (const feature of electoral.features) attachElections(feature)
+  for (const feature of polling.features) attachElections(feature)
 
   await Promise.all([
     writeJSON(resolve(OUT, "provinces.geojson"), provinces),

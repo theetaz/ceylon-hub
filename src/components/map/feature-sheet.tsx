@@ -21,7 +21,7 @@ import type {
   Polygon,
 } from "geojson"
 
-import { PARTY_PALETTE } from "@/components/map/choropleth"
+import { ELECTIONS, getElection, OTHER_PARTY } from "@/data/elections"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
@@ -76,7 +76,7 @@ type AdminProperties = {
   ethnicity?: GroupBreakdown | null
   religion?: GroupBreakdown | null
   censusYear?: number | null
-  election2024?: ElectionResult | null
+  elections?: Record<string, ElectionResult> | null
 }
 
 type AdminFeature = Feature<Polygon | MultiPolygon, AdminProperties>
@@ -458,22 +458,27 @@ const OSM_ICONS: Record<OsmDatasetId, typeof IconMap2> = {
   cities: IconMap2,
 }
 
-function partyMeta(code: string) {
-  return PARTY_PALETTE[code] ?? PARTY_PALETTE.OTHER
-}
-
-function ElectionBlock({ result }: { result: ElectionResult }) {
+function ElectionBlock({
+  electionId,
+  result,
+}: {
+  electionId: string
+  result: ElectionResult
+}) {
+  const election = getElection(electionId)
   if (!result.winner) return null
+  const partyMeta = (code: string) =>
+    election?.parties[code] ?? OTHER_PARTY
   const winner = partyMeta(result.winner.party)
 
   return (
     <div className="space-y-3 rounded-lg border bg-muted/30 p-3">
       <div className="flex items-baseline justify-between">
         <div className="text-xs font-semibold tracking-wide text-muted-foreground uppercase">
-          Presidential 2024
+          {election?.label ?? electionId}
         </div>
         <div className="text-[10px] text-muted-foreground">
-          22 Sep 2024
+          {election?.date ?? ""}
         </div>
       </div>
 
@@ -578,9 +583,10 @@ function ElectionBlock({ result }: { result: ElectionResult }) {
   )
 }
 
-function levelIcon(level: number) {
+function levelIcon(level: number | string) {
   if (level === 1) return IconMap2
   if (level === 2) return IconBuildingCommunity
+  if (level === "ED" || level === "PD") return IconMap2
   return IconUsers
 }
 
@@ -1058,9 +1064,16 @@ export function FeatureSheet() {
 
                 <DemographicsBlock properties={props} />
 
-                {props.election2024 && (
-                  <ElectionBlock result={props.election2024} />
-                )}
+                {props.elections &&
+                  ELECTIONS.filter(
+                    (e) => props.elections?.[e.id]
+                  ).map((e) => (
+                    <ElectionBlock
+                      key={e.id}
+                      electionId={e.id}
+                      result={props.elections![e.id]}
+                    />
+                  ))}
 
                 {props.ethnicity && (
                   <GroupBar
