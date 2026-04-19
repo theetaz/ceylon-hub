@@ -1,16 +1,32 @@
 import * as React from "react"
 import maplibregl from "maplibre-gl"
+import { mask as turfMask } from "@turf/mask"
 import type {
+  Feature,
   FeatureCollection,
   MultiPolygon,
   Polygon,
-  Position,
 } from "geojson"
-import type { RasterTileSource, StyleSpecification } from "maplibre-gl"
+import type {
+  MapGeoJSONFeature,
+  MapMouseEvent,
+  RasterTileSource,
+  StyleSpecification,
+} from "maplibre-gl"
 
 import "maplibre-gl/dist/maplibre-gl.css"
 
 import { useTheme } from "@/components/theme-provider"
+import {
+  ADMIN_DATASET_IDS,
+  ADMIN_LAYER_THEMES,
+  fillLayerSpec,
+  layerIds,
+  lineLayerSpec,
+  type AdminDatasetId,
+} from "@/components/map/admin-layers"
+import { getDataset } from "@/data/catalog"
+import { useLayerStore, type SelectedFeature } from "@/stores/layers"
 
 const SRI_LANKA_CENTER: [number, number] = [80.7718, 7.8731]
 const SRI_LANKA_BOUNDS: [[number, number], [number, number]] = [
@@ -121,35 +137,13 @@ function resolveMode(theme: string): BasemapMode {
     : "light"
 }
 
-function collectPolygonRings(geometry: Polygon | MultiPolygon): Position[][] {
-  if (geometry.type === "Polygon") return geometry.coordinates
-  return geometry.coordinates.flat()
-}
-
 function buildMask(
   country: FeatureCollection<Polygon | MultiPolygon>
-): FeatureCollection<Polygon> {
-  const worldRing: Position[] = [
-    [-180, -85],
-    [180, -85],
-    [180, 85],
-    [-180, 85],
-    [-180, -85],
-  ]
-  const holes = country.features.flatMap((f) => collectPolygonRings(f.geometry))
-
+): FeatureCollection<Polygon | MultiPolygon> {
+  const masked = turfMask(country)
   return {
     type: "FeatureCollection",
-    features: [
-      {
-        type: "Feature",
-        properties: {},
-        geometry: {
-          type: "Polygon",
-          coordinates: [worldRing, ...holes],
-        },
-      },
-    ],
+    features: [masked as Feature<Polygon | MultiPolygon>],
   }
 }
 
@@ -160,10 +154,19 @@ async function loadBoundary() {
   return { mask: buildMask(country), outline: country }
 }
 
-function addOverlays(
+async function loadAdminDataset(path: string) {
+  const res = await fetch(path)
+  if (!res.ok) throw new Error(`Dataset load failed: ${res.status}`)
+  return (await res.json()) as FeatureCollection<
+    Polygon | MultiPolygon,
+    { id: string; name: string; level: number }
+  >
+}
+
+function addCountryOverlays(
   map: maplibregl.Map,
   data: {
-    mask: FeatureCollection<Polygon>
+    mask: FeatureCollection<Polygon | MultiPolygon>
     outline: FeatureCollection<Polygon | MultiPolygon>
   },
   mode: BasemapMode
@@ -203,7 +206,63 @@ function addOverlays(
   }
 }
 
-function applyMode(map: maplibregl.Map, mode: BasemapMode) {
+function addAdminLayer(
+  map: maplibregl.Map,
+  id: AdminDatasetId,
+  data: FeatureCollection,
+  mode: BasemapMode
+) {
+  const ids = layerIds(id)
+  const theme = ADMIN_LAYER_THEMES[id][mode]
+
+  if (!map.getSource(ids.source)) {
+    map.addSource(ids.source, {
+      type: "geojson",
+      data,
+      promoteId: "id",
+    })
+  }
+  if (!map.getLayer(ids.fill)) {
+    map.addLayer(fillLayerSpec(id, theme))
+  }
+  if (!map.getLayer(ids.line)) {
+    map.addLayer(lineLayerSpec(id, theme))
+  }
+}
+
+function applyAdminTheme(map: maplibregl.Map, mode: BasemapMode) {
+  for (const id of ADMIN_DATASET_IDS) {
+    const ids = layerIds(id)
+    const theme = ADMIN_LAYER_THEMES[id][mode]
+    if (map.getLayer(ids.fill)) {
+      map.setPaintProperty(ids.fill, "fill-color", theme.fillColor)
+      map.setPaintProperty(ids.fill, "fill-opacity", [
+        "case",
+        ["boolean", ["feature-state", "hover"], false],
+        theme.fillHoverOpacity,
+        theme.fillOpacity,
+      ])
+    }
+    if (map.getLayer(ids.line)) {
+      map.setPaintProperty(ids.line, "line-color", [
+        "case",
+        ["boolean", ["feature-state", "selected"], false],
+        theme.selectedLineColor,
+        theme.lineColor,
+      ])
+      map.setPaintProperty(ids.line, "line-width", [
+        "case",
+        ["boolean", ["feature-state", "selected"], false],
+        theme.selectedLineWidth,
+        ["boolean", ["feature-state", "hover"], false],
+        theme.lineHoverWidth,
+        theme.lineWidth,
+      ])
+    }
+  }
+}
+
+function applyBasemapMode(map: maplibregl.Map, mode: BasemapMode) {
   const basemap = BASEMAPS[mode]
 
   const source = map.getSource(BASEMAP_SOURCE_ID) as RasterTileSource | undefined
@@ -238,6 +297,34 @@ function applyMode(map: maplibregl.Map, mode: BasemapMode) {
     map.setPaintProperty(OUTLINE_LAYER_ID, "line-width", basemap.outlineWidth)
     map.setPaintProperty(OUTLINE_LAYER_ID, "line-opacity", basemap.outlineOpacity)
   }
+
+  applyAdminTheme(map, mode)
+}
+
+function setLayerVisible(
+  map: maplibregl.Map,
+  id: AdminDatasetId,
+  visible: boolean
+) {
+  const ids = layerIds(id)
+  const value = visible ? "visible" : "none"
+  if (map.getLayer(ids.fill)) map.setLayoutProperty(ids.fill, "visibility", value)
+  if (map.getLayer(ids.line)) map.setLayoutProperty(ids.line, "visibility", value)
+}
+
+function featureToSelected(
+  datasetId: AdminDatasetId,
+  feature: Feature | MapGeoJSONFeature
+): SelectedFeature {
+  const props = (feature.properties ?? {}) as Record<string, unknown>
+  const id = (feature.id ?? props.id ?? "") as string | number
+  return {
+    datasetId,
+    id,
+    name: (props.name as string) ?? "Unnamed",
+    level: (props.level as number) ?? 0,
+    properties: props,
+  }
 }
 
 function fitSriLanka(map: maplibregl.Map, duration = 0) {
@@ -248,7 +335,13 @@ export function MapCanvas() {
   const { theme } = useTheme()
   const containerRef = React.useRef<HTMLDivElement | null>(null)
   const mapRef = React.useRef<maplibregl.Map | null>(null)
-  const readyRef = React.useRef(false)
+  const hoverStateRef = React.useRef<
+    Map<AdminDatasetId, string | number | null>
+  >(new Map())
+
+  const visible = useLayerStore((s) => s.visible)
+  const selected = useLayerStore((s) => s.selected)
+  const setSelected = useLayerStore((s) => s.setSelected)
 
   React.useEffect(() => {
     if (!containerRef.current || mapRef.current) return
@@ -279,28 +372,99 @@ export function MapCanvas() {
     const onResize = () => fitSriLanka(map, 200)
     window.addEventListener("resize", onResize)
 
-    let cancelled = false
-    map.once("load", () => {
-      if (cancelled) return
-      loadBoundary()
-        .then((data) => {
-          if (cancelled || !mapRef.current) return
-          addOverlays(map, data, resolveMode(theme))
-          readyRef.current = true
-        })
-        .catch((err: unknown) => {
-          console.warn("Failed to load Sri Lanka boundary", err)
-        })
+    const resizeObserver = new ResizeObserver(() => {
+      map.resize()
+      fitSriLanka(map, 200)
     })
+    resizeObserver.observe(containerRef.current)
+
+    let cancelled = false
+    const loadOverlays = async () => {
+      if (cancelled) return
+
+      try {
+        const countryData = await loadBoundary()
+        if (cancelled || !mapRef.current) return
+        addCountryOverlays(map, countryData, resolveMode(theme))
+      } catch (err) {
+        console.warn("Failed to load country boundary", err)
+      }
+
+      const currentVisible = useLayerStore.getState().visible
+
+      await Promise.all(
+        ADMIN_DATASET_IDS.map(async (id) => {
+          const dataset = getDataset(id)
+          if (!dataset?.path) return
+          try {
+            const data = await loadAdminDataset(dataset.path)
+            if (cancelled || !mapRef.current) return
+            addAdminLayer(map, id, data, resolveMode(theme))
+            setLayerVisible(map, id, Boolean(currentVisible[id]))
+            wireAdminInteractivity(map, id)
+          } catch (err) {
+            console.warn(`Failed to load ${id}`, err)
+          }
+        })
+      )
+    }
+
+    if (map.isStyleLoaded()) {
+      void loadOverlays()
+    } else {
+      map.once("load", () => {
+        void loadOverlays()
+      })
+    }
+
+    const wireAdminInteractivity = (m: maplibregl.Map, id: AdminDatasetId) => {
+      const ids = layerIds(id)
+      const sourceId = ids.source
+
+      const onMouseMove = (
+        event: MapMouseEvent & { features?: MapGeoJSONFeature[] }
+      ) => {
+        const feature = event.features?.[0]
+        if (!feature || feature.id == null) return
+        m.getCanvas().style.cursor = "pointer"
+        const prev = hoverStateRef.current.get(id)
+        if (prev != null && prev !== feature.id) {
+          m.setFeatureState({ source: sourceId, id: prev }, { hover: false })
+        }
+        hoverStateRef.current.set(id, feature.id)
+        m.setFeatureState({ source: sourceId, id: feature.id }, { hover: true })
+      }
+
+      const onMouseLeave = () => {
+        m.getCanvas().style.cursor = ""
+        const prev = hoverStateRef.current.get(id)
+        if (prev != null) {
+          m.setFeatureState({ source: sourceId, id: prev }, { hover: false })
+        }
+        hoverStateRef.current.set(id, null)
+      }
+
+      const onClick = (
+        event: MapMouseEvent & { features?: MapGeoJSONFeature[] }
+      ) => {
+        const feature = event.features?.[0]
+        if (!feature) return
+        setSelected(featureToSelected(id, feature))
+      }
+
+      m.on("mousemove", ids.fill, onMouseMove)
+      m.on("mouseleave", ids.fill, onMouseLeave)
+      m.on("click", ids.fill, onClick)
+    }
 
     mapRef.current = map
 
     return () => {
       cancelled = true
+      resizeObserver.disconnect()
       window.removeEventListener("resize", onResize)
       map.remove()
       mapRef.current = null
-      readyRef.current = false
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -308,10 +472,45 @@ export function MapCanvas() {
   React.useEffect(() => {
     const map = mapRef.current
     if (!map) return
-    const apply = () => applyMode(map, resolveMode(theme))
+    const apply = () => applyBasemapMode(map, resolveMode(theme))
     if (map.loaded()) apply()
     else map.once("load", apply)
   }, [theme])
+
+  React.useEffect(() => {
+    const map = mapRef.current
+    if (!map) return
+    for (const id of ADMIN_DATASET_IDS) {
+      const isVisible = Boolean(visible[id])
+      if (map.getLayer(layerIds(id).fill)) {
+        setLayerVisible(map, id, isVisible)
+      }
+    }
+  }, [visible])
+
+  React.useEffect(() => {
+    const map = mapRef.current
+    if (!map) return
+
+    for (const id of ADMIN_DATASET_IDS) {
+      const sourceId = layerIds(id).source
+      if (!map.getSource(sourceId)) continue
+      if (selected?.datasetId === id && selected.id != null) {
+        try {
+          map.removeFeatureState({ source: sourceId })
+        } catch {
+          // ignore
+        }
+        map.setFeatureState({ source: sourceId, id: selected.id }, { selected: true })
+      } else {
+        try {
+          map.removeFeatureState({ source: sourceId })
+        } catch {
+          // ignore
+        }
+      }
+    }
+  }, [selected])
 
   return (
     <div className="absolute inset-0">
