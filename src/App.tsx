@@ -1,11 +1,10 @@
 import { AppShell } from "@/components/layout/app-shell"
+import { MapCanvas } from "@/components/map/map-canvas"
 
 export function App() {
   return (
     <AppShell>
-      <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
-        Map canvas coming next…
-      </div>
+      <MapCanvas />
     </AppShell>
   )
 }
