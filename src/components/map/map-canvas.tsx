@@ -48,12 +48,14 @@ type BasemapConfig = {
   rasterSaturation: number
 }
 
+const TILE_SCALE = "@2x"
+
 const BASEMAPS: Record<BasemapMode, BasemapConfig> = {
   light: {
     tiles: [
-      "https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png",
-      "https://b.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png",
-      "https://c.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png",
+      `https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}${TILE_SCALE}.png`,
+      `https://b.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}${TILE_SCALE}.png`,
+      `https://c.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}${TILE_SCALE}.png`,
     ],
     seaColor: "#b3dcf2",
     outlineColor: "#1f3a4d",
@@ -66,9 +68,9 @@ const BASEMAPS: Record<BasemapMode, BasemapConfig> = {
   },
   dark: {
     tiles: [
-      "https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
-      "https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
-      "https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
+      `https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}${TILE_SCALE}.png`,
+      `https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}${TILE_SCALE}.png`,
+      `https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}${TILE_SCALE}.png`,
     ],
     seaColor: "#0d1a27",
     outlineColor: "#7fb3d6",
