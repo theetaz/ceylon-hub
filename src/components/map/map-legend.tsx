@@ -71,7 +71,9 @@ export function MapLegend() {
     (d) =>
       d.status === "ready" &&
       Boolean(visible[d.id]) &&
-      d.id !== "population-choropleth"
+      d.kind !== "choropleth" &&
+      d.kind !== "embedded" &&
+      d.kind !== "extrusion"
   )
 
   const hasContent = activeLayers.length > 0 || choroplethMode !== "none"

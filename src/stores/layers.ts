@@ -16,11 +16,13 @@ type LayerState = {
   visible: Record<string, boolean>
   selected: SelectedFeature | null
   choroplethMode: ChoroplethMode
+  extrusion: boolean
   toggle: (id: string) => void
   setVisible: (id: string, visible: boolean) => void
   setSelected: (feature: SelectedFeature | null) => void
   setChoroplethMode: (mode: ChoroplethMode) => void
   cycleChoroplethMode: () => void
+  setExtrusion: (value: boolean) => void
 }
 
 const initialVisibility = () => {
@@ -37,6 +39,7 @@ export const useLayerStore = create<LayerState>((set) => ({
   visible: initialVisibility(),
   selected: null,
   choroplethMode: "none",
+  extrusion: false,
   toggle: (id) =>
     set((state) => ({
       visible: { ...state.visible, [id]: !state.visible[id] },
@@ -67,4 +70,11 @@ export const useLayerStore = create<LayerState>((set) => ({
             : { ...state.visible, districts: true },
       }
     }),
+  setExtrusion: (value) =>
+    set((state) => ({
+      extrusion: value,
+      visible: value
+        ? { ...state.visible, districts: true }
+        : state.visible,
+    })),
 }))

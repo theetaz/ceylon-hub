@@ -42,6 +42,10 @@ import {
   roadsLineLayer,
   roadsTheme,
 } from "@/components/map/roads-layer"
+import {
+  EXTRUSION_LAYER_ID,
+  extrusionLayer,
+} from "@/components/map/extrusion-layer"
 import { getDataset } from "@/data/catalog"
 import {
   useLayerStore,
@@ -294,6 +298,21 @@ function setRoadsVisible(map: maplibregl.Map, visible: boolean) {
   }
 }
 
+function ensureExtrusionLayer(map: maplibregl.Map, mode: BasemapMode) {
+  if (map.getLayer(EXTRUSION_LAYER_ID)) return
+  if (!map.getSource(layerIds("districts").source)) return
+  map.addLayer(extrusionLayer(mode))
+}
+
+function setExtrusionVisible(map: maplibregl.Map, visible: boolean) {
+  if (!map.getLayer(EXTRUSION_LAYER_ID)) return
+  map.setLayoutProperty(
+    EXTRUSION_LAYER_ID,
+    "visibility",
+    visible ? "visible" : "none"
+  )
+}
+
 function addCountryOverlays(
   map: maplibregl.Map,
   data: {
@@ -490,6 +509,7 @@ export function MapCanvas() {
   const selected = useLayerStore((s) => s.selected)
   const setSelected = useLayerStore((s) => s.setSelected)
   const choroplethMode = useLayerStore((s) => s.choroplethMode)
+  const extrusion = useLayerStore((s) => s.extrusion)
 
   React.useEffect(() => {
     if (!containerRef.current || mapRef.current) return
@@ -600,6 +620,16 @@ export function MapCanvas() {
       } catch (err) {
         console.warn("Failed to load roads", err)
       }
+
+      // Re-apply the current admin theme now that layers exist, so any
+      // choropleth mode toggled before the data loaded takes effect.
+      if (!cancelled && mapRef.current) {
+        applyAdminTheme(
+          map,
+          resolveMode(theme),
+          useLayerStore.getState().choroplethMode
+        )
+      }
     }
 
     if (map.isStyleLoaded()) {
@@ -675,7 +705,9 @@ export function MapCanvas() {
     if (!map) return
     const apply = () =>
       applyAdminTheme(map, resolveMode(theme), choroplethMode)
-    if (map.loaded()) apply()
+    // applyAdminTheme only touches layers that exist — safe to call
+    // repeatedly as sources come online.
+    if (map.isStyleLoaded()) apply()
     else map.once("load", apply)
   }, [choroplethMode, theme])
 
@@ -695,6 +727,33 @@ export function MapCanvas() {
       setRoadsVisible(map, Boolean(visible.roads))
     }
   }, [visible])
+
+  React.useEffect(() => {
+    const map = mapRef.current
+    if (!map) return
+    const apply = () => {
+      ensureExtrusionLayer(map, resolveMode(theme))
+      setExtrusionVisible(map, extrusion)
+      // Hide flat district fill while extruded so we see the columns clearly.
+      const flatFill = layerIds("districts").fill
+      if (map.getLayer(flatFill)) {
+        map.setLayoutProperty(
+          flatFill,
+          "visibility",
+          extrusion ? "none" : visible.districts ? "visible" : "none"
+        )
+      }
+      // Tilt or flatten the camera
+      map.easeTo({
+        pitch: extrusion ? 50 : 0,
+        bearing: extrusion ? -20 : 0,
+        duration: 800,
+      })
+    }
+    if (map.isStyleLoaded()) apply()
+    else map.once("load", apply)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [extrusion])
 
   React.useEffect(() => {
     const map = mapRef.current

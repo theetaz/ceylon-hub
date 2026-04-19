@@ -23,6 +23,8 @@ import { useLayerStore, type SelectedFeature } from "@/stores/layers"
 type AgeBucket = { female: number; male: number; total: number }
 type AgeBreakdown = Record<string, AgeBucket>
 
+type GroupBreakdown = Record<string, number>
+
 type AdminProperties = {
   id: string | number
   name: string
@@ -41,6 +43,9 @@ type AdminProperties = {
   density?: number | null
   districtCount?: number
   dsDivisionCount?: number
+  ethnicity?: GroupBreakdown | null
+  religion?: GroupBreakdown | null
+  censusYear?: number | null
 }
 
 type AdminFeature = Feature<Polygon | MultiPolygon, AdminProperties>
@@ -134,6 +139,121 @@ function summarizeAges(age: AgeBreakdown | null | undefined) {
   const elderly = sum(AGE_GROUPS.elderly)
   const total = children + working + elderly
   return { children, working, elderly, total }
+}
+
+const ETHNICITY_LABELS: Record<string, string> = {
+  sinhala: "Sinhala",
+  sriLankanTamil: "Sri Lankan Tamil",
+  indianTamil: "Indian Tamil",
+  moor: "Moor",
+  burgher: "Burgher",
+  malay: "Malay",
+  other: "Other",
+}
+
+const RELIGION_LABELS: Record<string, string> = {
+  buddhist: "Buddhist",
+  hindu: "Hindu",
+  muslim: "Muslim",
+  romanCatholic: "Roman Catholic",
+  otherChristian: "Other Christian",
+  other: "Other",
+}
+
+const ETHNICITY_COLORS: Record<string, string> = {
+  sinhala: "#f59e0b",
+  sriLankanTamil: "#8b5cf6",
+  indianTamil: "#6366f1",
+  moor: "#10b981",
+  burgher: "#ec4899",
+  malay: "#06b6d4",
+  other: "#64748b",
+}
+
+const RELIGION_COLORS: Record<string, string> = {
+  buddhist: "#f59e0b",
+  hindu: "#8b5cf6",
+  muslim: "#10b981",
+  romanCatholic: "#3b82f6",
+  otherChristian: "#06b6d4",
+  other: "#64748b",
+}
+
+function GroupBar({
+  title,
+  year,
+  breakdown,
+  labels,
+  colors,
+}: {
+  title: string
+  year?: number | null
+  breakdown: GroupBreakdown
+  labels: Record<string, string>
+  colors: Record<string, string>
+}) {
+  const total = Object.entries(breakdown)
+    .filter(([k]) => k !== "total")
+    .reduce((sum, [, v]) => sum + (typeof v === "number" ? v : 0), 0)
+  if (!total) return null
+  const entries = Object.entries(breakdown)
+    .filter(
+      ([k, v]) => k !== "total" && typeof v === "number" && v > 0
+    )
+    .sort(([, a], [, b]) => (b as number) - (a as number))
+
+  return (
+    <div className="space-y-2 rounded-lg border bg-muted/30 p-3">
+      <div className="flex items-baseline justify-between">
+        <div className="text-xs font-semibold tracking-wide text-muted-foreground uppercase">
+          {title}
+        </div>
+        {year && (
+          <div className="text-[10px] text-muted-foreground">
+            {year} census
+          </div>
+        )}
+      </div>
+      <div className="flex h-2 overflow-hidden rounded-full bg-muted">
+        {entries.map(([k, v]) => (
+          <div
+            key={k}
+            className="h-full"
+            style={{
+              width: `${((v as number) / total) * 100}%`,
+              backgroundColor: colors[k] ?? "#64748b",
+            }}
+            title={`${labels[k] ?? k}: ${(v as number).toLocaleString()}`}
+          />
+        ))}
+      </div>
+      <ul className="grid grid-cols-1 gap-1 text-xs">
+        {entries.map(([k, v]) => {
+          const pct = ((v as number) / total) * 100
+          return (
+            <li
+              key={k}
+              className="flex items-center justify-between gap-2"
+            >
+              <span className="flex min-w-0 items-center gap-1.5">
+                <span
+                  aria-hidden
+                  className="size-2 shrink-0 rounded-sm"
+                  style={{ backgroundColor: colors[k] ?? "#64748b" }}
+                />
+                <span className="truncate text-muted-foreground">
+                  {labels[k] ?? k}
+                </span>
+              </span>
+              <span className="shrink-0 font-mono tabular-nums text-muted-foreground">
+                {pct >= 0.5 ? `${pct.toFixed(1)}%` : "< 0.5%"}
+              </span>
+            </li>
+          )
+        })}
+      </ul>
+    </div>
+  )
 }
 
 function DemographicsBlock({ properties }: { properties: AdminProperties }) {
@@ -487,6 +607,26 @@ export function FeatureSheet() {
                 </dl>
 
                 <DemographicsBlock properties={props} />
+
+                {props.ethnicity && (
+                  <GroupBar
+                    title="Ethnicity"
+                    year={props.censusYear}
+                    breakdown={props.ethnicity}
+                    labels={ETHNICITY_LABELS}
+                    colors={ETHNICITY_COLORS}
+                  />
+                )}
+
+                {props.religion && (
+                  <GroupBar
+                    title="Religion"
+                    year={props.censusYear}
+                    breakdown={props.religion}
+                    labels={RELIGION_LABELS}
+                    colors={RELIGION_COLORS}
+                  />
+                )}
 
                 {selected.level === 1 && (
                   <>

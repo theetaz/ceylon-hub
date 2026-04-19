@@ -27,6 +27,8 @@ export function AppSidebar() {
   const toggle = useLayerStore((s) => s.toggle)
   const choroplethMode = useLayerStore((s) => s.choroplethMode)
   const setChoroplethMode = useLayerStore((s) => s.setChoroplethMode)
+  const extrusion = useLayerStore((s) => s.extrusion)
+  const setExtrusion = useLayerStore((s) => s.setExtrusion)
 
   return (
     <Sidebar collapsible="icon">
@@ -58,13 +60,21 @@ export function AppSidebar() {
                 <SidebarMenu>
                   {datasets.map((dataset) => {
                     const isReady = dataset.status === "ready"
+                    const isEmbedded = dataset.kind === "embedded"
+                    const isExtrusion = dataset.kind === "extrusion"
                     const choroplethFor = CHOROPLETH_DATASETS[dataset.id]
-                    const isVisible = choroplethFor
-                      ? choroplethMode === choroplethFor
-                      : Boolean(visible[dataset.id])
+                    const isVisible = isEmbedded
+                      ? true
+                      : isExtrusion
+                        ? extrusion
+                        : choroplethFor
+                          ? choroplethMode === choroplethFor
+                          : Boolean(visible[dataset.id])
                     const handleToggle = () => {
-                      if (!isReady) return
-                      if (choroplethFor) {
+                      if (!isReady || isEmbedded) return
+                      if (isExtrusion) {
+                        setExtrusion(!extrusion)
+                      } else if (choroplethFor) {
                         setChoroplethMode(
                           choroplethMode === choroplethFor
                             ? "none"
@@ -109,7 +119,7 @@ export function AppSidebar() {
                               </Badge>
                             )}
                           </span>
-                          {isReady && (
+                          {isReady && !isEmbedded && (
                             <Switch
                               checked={isVisible}
                               onCheckedChange={handleToggle}
@@ -117,6 +127,14 @@ export function AppSidebar() {
                               className="ml-auto scale-75"
                               aria-label={`Toggle ${dataset.title}`}
                             />
+                          )}
+                          {isEmbedded && (
+                            <Badge
+                              variant="outline"
+                              className="h-4 shrink-0 px-1 text-[9px] font-normal uppercase tracking-wide"
+                            >
+                              Info
+                            </Badge>
                           )}
                         </div>
                       </SidebarMenuItem>

@@ -18,6 +18,8 @@ export type DatasetCategory =
 
 export type DatasetStatus = "ready" | "pending"
 
+export type DatasetKind = "layer" | "choropleth" | "embedded" | "extrusion"
+
 export type Dataset = {
   id: string
   title: string
@@ -25,6 +27,8 @@ export type Dataset = {
   description: string
   category: DatasetCategory
   status: DatasetStatus
+  /** layer = toggleable map layer; choropleth = rendering mode; embedded = always-on info-panel data */
+  kind?: DatasetKind
   path?: string
   featureCount?: number
   source: {
@@ -105,6 +109,23 @@ export const CATALOG: Dataset[] = [
       "Color districts by population per km² using a graduated orange scale.",
     category: "population",
     status: "ready",
+    kind: "choropleth",
+    featureCount: 25,
+    source: {
+      name: "OCHA — Sri Lanka Subnational Population Statistics (HDX)",
+      url: "https://data.humdata.org/dataset/cod-ps-lka",
+    },
+    license: "CC BY-IGO",
+  },
+  {
+    id: "population-extrusion",
+    title: "3D population columns",
+    shortTitle: "3D population",
+    description:
+      "Extrude each district to a height proportional to population. Camera tilts automatically when enabled.",
+    category: "population",
+    status: "ready",
+    kind: "extrusion",
     featureCount: 25,
     source: {
       name: "OCHA — Sri Lanka Subnational Population Statistics (HDX)",
@@ -116,11 +137,14 @@ export const CATALOG: Dataset[] = [
     id: "demographics-ethnicity",
     title: "Ethnicity and religion",
     shortTitle: "Ethnicity",
-    description: "Ethnic and religious composition by district (pending).",
+    description:
+      "Ethnic and religious composition (2012 census) — shown in the info panel for provinces and districts.",
     category: "population",
-    status: "pending",
+    status: "ready",
+    kind: "embedded",
+    featureCount: 25,
     source: {
-      name: "Dept. of Census & Statistics",
+      name: "Dept. of Census & Statistics (2012)",
       url: "http://www.statistics.gov.lk/",
     },
     license: "Open data",

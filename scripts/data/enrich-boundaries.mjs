@@ -67,17 +67,21 @@ function formatNumber(n) {
 }
 
 async function main() {
-  const [provinces, districts, dsDivisions, population] = await Promise.all([
-    readJSON(resolve(OUT, "provinces.geojson")),
-    readJSON(resolve(OUT, "districts.geojson")),
-    readJSON(resolve(OUT, "ds-divisions.geojson")),
-    readJSON(resolve(__dirname, "population-2023.json")),
-  ])
+  const [provinces, districts, dsDivisions, population, ethnicityReligion] =
+    await Promise.all([
+      readJSON(resolve(OUT, "provinces.geojson")),
+      readJSON(resolve(OUT, "districts.geojson")),
+      readJSON(resolve(OUT, "ds-divisions.geojson")),
+      readJSON(resolve(__dirname, "population-2023.json")),
+      readJSON(resolve(__dirname, "ethnicity-religion-2012.json")),
+    ])
 
   const popByDistrict = population.districts
   const popByProvince = population.provinces
   const popYear = population.year
   const popSource = population.source
+  const ethnicityByDistrict = ethnicityReligion.ethnicity
+  const religionByDistrict = ethnicityReligion.religion
 
   // --- Districts: assign parent province + population + area + density
   console.log("Enriching districts…")
@@ -95,6 +99,8 @@ async function main() {
     const popEntry = popByDistrict[lookupKey]
     const totalPop = popEntry?.total ?? null
     const areaKm2 = turfArea(district) / 1_000_000
+    const ethnicity = ethnicityByDistrict[lookupKey] ?? null
+    const religion = religionByDistrict[lookupKey] ?? null
     district.properties = {
       ...district.properties,
       parentId: parent.properties.id,
@@ -107,6 +113,9 @@ async function main() {
       pcode: popEntry?.pcode ?? null,
       areaKm2: Number(areaKm2.toFixed(2)),
       density: totalPop ? Number((totalPop / areaKm2).toFixed(1)) : null,
+      ethnicity,
+      religion,
+      censusYear: ethnicity || religion ? ethnicityReligion.year : null,
     }
     districtToProvince.set(district.properties.id, parent.properties.id)
   }
@@ -157,6 +166,23 @@ async function main() {
         0
       )
     const totalArea = turfArea(province) / 1_000_000
+
+    // Aggregate child district ethnicity / religion
+    const sumGroup = (field) => {
+      const result = {}
+      for (const d of childDistricts) {
+        const entry = d.properties[field]
+        if (!entry) continue
+        for (const [k, v] of Object.entries(entry)) {
+          if (typeof v !== "number") continue
+          result[k] = (result[k] ?? 0) + v
+        }
+      }
+      return Object.keys(result).length ? result : null
+    }
+    const provinceEthnicity = sumGroup("ethnicity")
+    const provinceReligion = sumGroup("religion")
+
     province.properties = {
       ...province.properties,
       districtCount: childDistricts.length,
@@ -171,6 +197,12 @@ async function main() {
       density: totalPop
         ? Number((totalPop / totalArea).toFixed(1))
         : null,
+      ethnicity: provinceEthnicity,
+      religion: provinceReligion,
+      censusYear:
+        provinceEthnicity || provinceReligion
+          ? ethnicityReligion.year
+          : null,
     }
   }
 
