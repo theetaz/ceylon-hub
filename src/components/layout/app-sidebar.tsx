@@ -1,4 +1,5 @@
-import { IconMap2 } from "@tabler/icons-react"
+import { IconInfoCircle, IconMap2 } from "@tabler/icons-react"
+import { Link } from "react-router-dom"
 
 import { Badge } from "@/components/ui/badge"
 import {
@@ -119,6 +120,14 @@ export function AppSidebar() {
                               </Badge>
                             )}
                           </span>
+                          <Link
+                            to={`/dataset/${dataset.id}`}
+                            onClick={(event) => event.stopPropagation()}
+                            aria-label={`About ${dataset.title}`}
+                            className="shrink-0 rounded p-0.5 text-muted-foreground/60 transition-colors hover:bg-accent hover:text-foreground"
+                          >
+                            <IconInfoCircle className="size-3.5" />
+                          </Link>
                           {isReady && !isEmbedded && (
                             <Switch
                               checked={isVisible}

@@ -354,6 +354,36 @@ function setOsmDatasetVisible(
   }
 }
 
+function wireOsmInteractivity(
+  map: maplibregl.Map,
+  id: OsmLayerId,
+  onSelect: (props: Record<string, unknown>) => void
+) {
+  const config = OSM_DATASETS[id]
+  for (const entry of config.layers) {
+    // Skip purely cosmetic layers (outline / casing) — one click per dataset.
+    const spec = entry.spec("light")
+    if (spec.id.endsWith("-outline")) continue
+
+    const setCursor = () => {
+      map.getCanvas().style.cursor = "pointer"
+    }
+    const resetCursor = () => {
+      map.getCanvas().style.cursor = ""
+    }
+    const onClick = (
+      event: MapMouseEvent & { features?: MapGeoJSONFeature[] }
+    ) => {
+      const feature = event.features?.[0]
+      if (!feature?.properties) return
+      onSelect(feature.properties as Record<string, unknown>)
+    }
+    map.on("mousemove", spec.id, setCursor)
+    map.on("mouseleave", spec.id, resetCursor)
+    map.on("click", spec.id, onClick)
+  }
+}
+
 function applyOsmTheme(map: maplibregl.Map, mode: BasemapMode) {
   for (const config of Object.values(OSM_DATASETS)) {
     for (const entry of config.layers) {
@@ -712,6 +742,22 @@ export function MapCanvas() {
             if (cancelled || !mapRef.current) return
             addOsmDataset(map, id, data, resolveMode(theme))
             setOsmDatasetVisible(map, id, Boolean(currentVisible[id]))
+            wireOsmInteractivity(map, id, (props) => {
+              const name =
+                (props.name as string) ??
+                (props.kind as string) ??
+                `${id} feature`
+              setSelected({
+                datasetId: id,
+                id:
+                  (props.id as string | number) ??
+                  (props.osmId as number) ??
+                  name,
+                name,
+                level: 0,
+                properties: props,
+              })
+            })
           } catch (err) {
             console.warn(`Failed to load ${id}`, err)
           }

@@ -1,10 +1,12 @@
-import { IconLayersIntersect } from "@tabler/icons-react"
+import { IconInfoCircle, IconLayersIntersect } from "@tabler/icons-react"
+import { Link } from "react-router-dom"
 
 import { ADMIN_LAYER_THEMES } from "@/components/map/admin-layers"
 import {
   getChoroplethLabel,
   getChoroplethStops,
 } from "@/components/map/choropleth"
+import { OSM_COLORS } from "@/components/map/osm-layers"
 import { useTheme } from "@/components/theme-provider"
 import { CATALOG } from "@/data/catalog"
 import { useLayerStore } from "@/stores/layers"
@@ -90,12 +92,14 @@ export function MapLegend() {
             </div>
             <ul className="flex flex-col gap-1.5">
               {activeLayers.map((dataset) => {
-                const themeForLayer = ADMIN_LAYER_THEMES[dataset.id]?.[mode]
-                const swatch = themeForLayer?.lineColor ?? "var(--primary)"
+                const adminColor =
+                  ADMIN_LAYER_THEMES[dataset.id]?.[mode]?.lineColor
+                const osmColor = OSM_COLORS[dataset.id as keyof typeof OSM_COLORS]?.[mode]
+                const swatch = adminColor ?? osmColor ?? "var(--primary)"
                 return (
                   <li
                     key={dataset.id}
-                    className="flex items-center justify-between gap-2 text-sm"
+                    className="flex items-center justify-between gap-1 text-sm"
                   >
                     <button
                       type="button"
@@ -112,6 +116,13 @@ export function MapLegend() {
                     <span className="shrink-0 font-mono text-xs tabular-nums text-muted-foreground">
                       {dataset.featureCount?.toLocaleString() ?? "—"}
                     </span>
+                    <Link
+                      to={`/dataset/${dataset.id}`}
+                      aria-label={`About ${dataset.title}`}
+                      className="shrink-0 rounded p-0.5 text-muted-foreground/60 hover:bg-accent hover:text-foreground"
+                    >
+                      <IconInfoCircle className="size-3.5" />
+                    </Link>
                   </li>
                 )
               })}

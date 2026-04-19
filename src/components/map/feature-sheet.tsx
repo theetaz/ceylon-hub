@@ -1,10 +1,18 @@
 import * as React from "react"
+import { Link } from "react-router-dom"
 import {
   IconBuildingCommunity,
+  IconBuildingHospital,
   IconExternalLink,
+  IconInfoCircle,
   IconMap2,
+  IconPlane,
   IconRoad,
+  IconSchool,
+  IconShieldCheck,
+  IconTrain,
   IconUsers,
+  IconWaveSine,
 } from "@tabler/icons-react"
 import type {
   Feature,
@@ -387,6 +395,52 @@ type RoadProperties = {
   osmId?: number
 }
 
+type OsmFeatureProperties = {
+  id?: string
+  osmId?: number
+  osmType?: "node" | "way" | "relation"
+  name?: string | null
+  nameSi?: string | null
+  nameTa?: string | null
+  kind?: string | null
+  operator?: string | null
+  beds?: number | null
+  healthcare?: string | null
+  iata?: string | null
+  icao?: string | null
+  military?: boolean
+  gauge?: string | null
+  electrified?: string | null
+  waterway?: string | null
+  water?: string | null
+  protectionType?: string | null
+}
+
+const OSM_DATASET_IDS = [
+  "railways",
+  "airports",
+  "hospitals",
+  "education",
+  "waterways",
+  "protected-areas",
+  "cities",
+] as const
+type OsmDatasetId = (typeof OSM_DATASET_IDS)[number]
+
+function isOsmDataset(id: string | undefined): id is OsmDatasetId {
+  return !!id && (OSM_DATASET_IDS as readonly string[]).includes(id)
+}
+
+const OSM_ICONS: Record<OsmDatasetId, typeof IconMap2> = {
+  railways: IconTrain,
+  airports: IconPlane,
+  hospitals: IconBuildingHospital,
+  education: IconSchool,
+  waterways: IconWaveSine,
+  "protected-areas": IconShieldCheck,
+  cities: IconMap2,
+}
+
 function levelIcon(level: number) {
   if (level === 1) return IconMap2
   if (level === 2) return IconBuildingCommunity
@@ -406,6 +460,120 @@ function highwayLabel(highway: string | null | undefined) {
     default:
       return highway ?? "Road"
   }
+}
+
+function OsmInfo({
+  properties,
+  datasetId,
+}: {
+  properties: OsmFeatureProperties
+  datasetId: OsmDatasetId
+}) {
+  const osmType = properties.osmType ?? "way"
+  const osmLink = properties.osmId
+    ? `https://www.openstreetmap.org/${osmType}/${properties.osmId}`
+    : null
+
+  return (
+    <>
+      <dl className="grid grid-cols-1 gap-2">
+        {properties.name && (
+          <StatRow label="Name" value={properties.name} />
+        )}
+        {properties.nameSi && properties.nameSi !== properties.name && (
+          <StatRow
+            label="Name (Sinhala)"
+            value={<span lang="si">{properties.nameSi}</span>}
+          />
+        )}
+        {properties.nameTa && properties.nameTa !== properties.name && (
+          <StatRow
+            label="Name (Tamil)"
+            value={<span lang="ta">{properties.nameTa}</span>}
+          />
+        )}
+        {properties.kind && (
+          <StatRow label="Type" value={properties.kind.replace(/_/g, " ")} />
+        )}
+
+        {datasetId === "airports" && (
+          <>
+            {properties.iata && (
+              <StatRow label="IATA" value={properties.iata} />
+            )}
+            {properties.icao && (
+              <StatRow label="ICAO" value={properties.icao} />
+            )}
+            {properties.military && <StatRow label="Access" value="Military" />}
+          </>
+        )}
+
+        {datasetId === "hospitals" && (
+          <>
+            {properties.operator && (
+              <StatRow label="Operator" value={properties.operator} />
+            )}
+            {properties.beds != null && (
+              <StatRow
+                label="Beds"
+                value={formatNumber(properties.beds)}
+              />
+            )}
+            {properties.healthcare && (
+              <StatRow label="Healthcare" value={properties.healthcare} />
+            )}
+          </>
+        )}
+
+        {datasetId === "education" && properties.operator && (
+          <StatRow label="Operator" value={properties.operator} />
+        )}
+
+        {datasetId === "railways" && (
+          <>
+            {properties.gauge && (
+              <StatRow label="Gauge" value={`${properties.gauge} mm`} />
+            )}
+            {properties.electrified && (
+              <StatRow label="Electrified" value={properties.electrified} />
+            )}
+          </>
+        )}
+
+        {datasetId === "waterways" && (
+          <>
+            {properties.waterway && (
+              <StatRow label="Waterway" value={properties.waterway} />
+            )}
+            {properties.water && (
+              <StatRow label="Water type" value={properties.water} />
+            )}
+          </>
+        )}
+
+        {datasetId === "protected-areas" && properties.protectionType && (
+          <StatRow
+            label="Protection class"
+            value={properties.protectionType}
+          />
+        )}
+      </dl>
+
+      {osmLink && (
+        <div className="text-xs">
+          <a
+            href={osmLink}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1 text-muted-foreground underline underline-offset-2 hover:text-foreground"
+          >
+            View on OpenStreetMap
+            <IconExternalLink className="size-3" />
+          </a>
+        </div>
+      )}
+    </>
+  )
 }
 
 function RoadInfo({
@@ -568,13 +736,17 @@ export function FeatureSheet() {
 
   const dataset = selected ? getDataset(selected.datasetId) : undefined
   const isRoad = selected?.datasetId === "roads"
+  const isOsm = isOsmDataset(selected?.datasetId)
   const props = (selected?.properties ?? {}) as AdminProperties
   const roadProps = (selected?.properties ?? {}) as RoadProperties
+  const osmProps = (selected?.properties ?? {}) as OsmFeatureProperties
 
   const Icon = selected
     ? isRoad
       ? IconRoad
-      : levelIcon(selected.level)
+      : isOsm
+        ? OSM_ICONS[selected.datasetId as OsmDatasetId]
+        : levelIcon(selected.level)
     : IconMap2
 
   const parentProvince = React.useMemo(() => {
@@ -646,9 +818,19 @@ export function FeatureSheet() {
                     <Badge variant="secondary" className="h-4 px-1 text-[10px]">
                       {isRoad
                         ? highwayLabel(roadProps.highway)
-                        : levelLabel(selected.level)}
+                        : isOsm
+                          ? (osmProps.kind ?? dataset?.shortTitle ?? "OSM")
+                          : levelLabel(selected.level)}
                     </Badge>
-                    {dataset && <span>· {dataset.title}</span>}
+                    {dataset && (
+                      <Link
+                        to={`/dataset/${dataset.id}`}
+                        className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground"
+                      >
+                        <IconInfoCircle className="size-3" />
+                        {dataset.title}
+                      </Link>
+                    )}
                   </SheetDescription>
                 </div>
               </div>
@@ -693,6 +875,11 @@ export function FeatureSheet() {
                   <RoadInfo
                     properties={roadProps}
                     osmId={roadProps.osmId}
+                  />
+                ) : isOsm ? (
+                  <OsmInfo
+                    properties={osmProps}
+                    datasetId={selected.datasetId as OsmDatasetId}
                   />
                 ) : (
                   <>
