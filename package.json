@@ -10,7 +10,8 @@
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit",
     "preview": "vite preview",
-    "deploy": "npm run build && wrangler pages deploy dist --project-name=ceylon-hub --branch=main"
+    "deploy": "npm run build && wrangler pages deploy dist --project-name=ceylon-hub --branch=main",
+    "data:boundaries": "node scripts/data/fetch-admin-boundaries.mjs"
   },
   "dependencies": {
     "@fontsource-variable/jetbrains-mono": "^5.2.8",

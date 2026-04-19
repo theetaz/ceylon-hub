@@ -154,7 +154,7 @@ function buildMask(
 }
 
 async function loadBoundary() {
-  const res = await fetch("/geo/sri-lanka.geojson")
+  const res = await fetch("/geo/country.geojson")
   if (!res.ok) throw new Error(`Boundary load failed: ${res.status}`)
   const country = (await res.json()) as FeatureCollection<Polygon | MultiPolygon>
   return { mask: buildMask(country), outline: country }
