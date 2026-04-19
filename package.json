@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "format": "prettier --write \"**/*.{ts,tsx}\"",
     "typecheck": "tsc --noEmit",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name=ceylon-hub --branch=main"
   },
   "dependencies": {
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
@@ -39,6 +40,7 @@
     "prettier-plugin-tailwindcss": "^0.7.2",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.57.1",
-    "vite": "^7.3.1"
+    "vite": "^7.3.1",
+    "wrangler": "^4.83.0"
   }
 }

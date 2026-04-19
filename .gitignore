@@ -39,3 +39,6 @@ CLAUDE.md
 .env.*
 !.env.example
 
+# Wrangler
+.wrangler/
+
