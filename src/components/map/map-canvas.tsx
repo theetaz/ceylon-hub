@@ -34,6 +34,14 @@ import {
   citiesLabelLayer,
   citiesTheme,
 } from "@/components/map/cities-layer"
+import {
+  ROADS_CASING_LAYER_ID,
+  ROADS_LINE_LAYER_ID,
+  ROADS_SOURCE_ID,
+  roadsCasingLayer,
+  roadsLineLayer,
+  roadsTheme,
+} from "@/components/map/roads-layer"
 import { getDataset } from "@/data/catalog"
 import {
   useLayerStore,
@@ -230,6 +238,62 @@ function setCitiesVisible(map: maplibregl.Map, visible: boolean) {
   }
 }
 
+async function loadRoadsDataset(path: string) {
+  const res = await fetch(path)
+  if (!res.ok) throw new Error(`Roads load failed: ${res.status}`)
+  return await res.json()
+}
+
+function addRoadsLayer(
+  map: maplibregl.Map,
+  data: unknown,
+  mode: BasemapMode,
+  beforeLayer?: string
+) {
+  if (!map.getSource(ROADS_SOURCE_ID)) {
+    map.addSource(ROADS_SOURCE_ID, {
+      type: "geojson",
+      data: data as GeoJSON.FeatureCollection,
+      promoteId: "id",
+    })
+  }
+  if (!map.getLayer(ROADS_CASING_LAYER_ID)) {
+    map.addLayer(roadsCasingLayer(mode), beforeLayer)
+  }
+  if (!map.getLayer(ROADS_LINE_LAYER_ID)) {
+    map.addLayer(roadsLineLayer(mode), beforeLayer)
+  }
+}
+
+function applyRoadsTheme(map: maplibregl.Map, mode: BasemapMode) {
+  if (!map.getLayer(ROADS_LINE_LAYER_ID)) return
+  const theme = roadsTheme(mode)
+  map.setPaintProperty(ROADS_CASING_LAYER_ID, "line-color", theme.casing)
+  map.setPaintProperty(ROADS_LINE_LAYER_ID, "line-color", [
+    "match",
+    ["get", "highway"],
+    "motorway",
+    theme.motorway,
+    "trunk",
+    theme.trunk,
+    "primary",
+    theme.primary,
+    "secondary",
+    theme.secondary,
+    theme.secondary,
+  ])
+}
+
+function setRoadsVisible(map: maplibregl.Map, visible: boolean) {
+  const value = visible ? "visible" : "none"
+  if (map.getLayer(ROADS_CASING_LAYER_ID)) {
+    map.setLayoutProperty(ROADS_CASING_LAYER_ID, "visibility", value)
+  }
+  if (map.getLayer(ROADS_LINE_LAYER_ID)) {
+    map.setLayoutProperty(ROADS_LINE_LAYER_ID, "visibility", value)
+  }
+}
+
 function addCountryOverlays(
   map: maplibregl.Map,
   data: {
@@ -381,6 +445,7 @@ function applyBasemapMode(map: maplibregl.Map, mode: BasemapMode) {
 
   applyAdminTheme(map, mode, useLayerStore.getState().choroplethMode)
   applyCitiesTheme(map, mode)
+  applyRoadsTheme(map, mode)
 }
 
 function setLayerVisible(
@@ -516,6 +581,25 @@ export function MapCanvas() {
       } catch (err) {
         console.warn("Failed to load cities", err)
       }
+
+      try {
+        const roadsDataset = getDataset("roads")
+        if (roadsDataset?.path) {
+          const data = await loadRoadsDataset(roadsDataset.path)
+          if (!cancelled && mapRef.current) {
+            // Insert roads below the cities layer so labels stay on top.
+            addRoadsLayer(
+              map,
+              data,
+              resolveMode(theme),
+              map.getLayer(CITIES_CIRCLE_LAYER_ID) ? CITIES_CIRCLE_LAYER_ID : undefined
+            )
+            setRoadsVisible(map, Boolean(currentVisible.roads))
+          }
+        }
+      } catch (err) {
+        console.warn("Failed to load roads", err)
+      }
     }
 
     if (map.isStyleLoaded()) {
@@ -606,6 +690,9 @@ export function MapCanvas() {
     }
     if (map.getLayer(CITIES_CIRCLE_LAYER_ID)) {
       setCitiesVisible(map, Boolean(visible.cities))
+    }
+    if (map.getLayer(ROADS_LINE_LAYER_ID)) {
+      setRoadsVisible(map, Boolean(visible.roads))
     }
   }, [visible])
 

@@ -14,8 +14,9 @@
     "data:boundaries": "node scripts/data/fetch-admin-boundaries.mjs",
     "data:population": "node scripts/data/fetch-population.mjs",
     "data:cities": "node scripts/data/fetch-cities.mjs",
+    "data:roads": "node scripts/data/fetch-roads.mjs",
     "data:enrich": "node scripts/data/enrich-boundaries.mjs",
-    "data:refresh": "npm run data:boundaries && npm run data:population && npm run data:cities && npm run data:enrich"
+    "data:refresh": "npm run data:boundaries && npm run data:population && npm run data:cities && npm run data:roads && npm run data:enrich"
   },
   "dependencies": {
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
@@ -40,6 +41,7 @@
     "@turf/boolean-point-in-polygon": "^7.3.5",
     "@turf/centroid": "^7.3.5",
     "@turf/point-on-feature": "^7.3.5",
+    "@turf/simplify": "^7.3.5",
     "@types/node": "^24.12.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
