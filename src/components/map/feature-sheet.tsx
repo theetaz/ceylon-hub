@@ -1,6 +1,14 @@
-import { IconMap2 } from "@tabler/icons-react"
+import * as React from "react"
+import { IconBuildingCommunity, IconMap2, IconUsers } from "@tabler/icons-react"
+import type {
+  Feature,
+  FeatureCollection,
+  MultiPolygon,
+  Polygon,
+} from "geojson"
 
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import {
   Sheet,
@@ -10,12 +18,234 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet"
 import { getDataset } from "@/data/catalog"
-import { useLayerStore } from "@/stores/layers"
+import { useLayerStore, type SelectedFeature } from "@/stores/layers"
+
+type AdminProperties = {
+  id: string | number
+  name: string
+  level: number
+  parentId?: string
+  parentName?: string
+  provinceId?: string
+  provinceName?: string
+  population?: number | null
+  areaKm2?: number
+  density?: number | null
+  districtCount?: number
+  dsDivisionCount?: number
+}
+
+type AdminFeature = Feature<Polygon | MultiPolygon, AdminProperties>
+type AdminFeatureCollection = FeatureCollection<
+  Polygon | MultiPolygon,
+  AdminProperties
+>
+
+function compareName(a: AdminFeature, b: AdminFeature) {
+  return a.properties.name.localeCompare(b.properties.name)
+}
+
+function useEnrichedDatasets() {
+  const [provinces, setProvinces] = React.useState<AdminFeature[]>([])
+  const [districts, setDistricts] = React.useState<AdminFeature[]>([])
+  const [dsDivisions, setDsDivisions] = React.useState<AdminFeature[]>([])
+
+  React.useEffect(() => {
+    let cancelled = false
+    Promise.all([
+      fetch("/geo/provinces.geojson").then((r) => r.json()),
+      fetch("/geo/districts.geojson").then((r) => r.json()),
+      fetch("/geo/ds-divisions.geojson").then((r) => r.json()),
+    ])
+      .then(
+        ([p, d, ds]: [
+          AdminFeatureCollection,
+          AdminFeatureCollection,
+          AdminFeatureCollection,
+        ]) => {
+          if (cancelled) return
+          setProvinces(p.features)
+          setDistricts(d.features)
+          setDsDivisions(ds.features)
+        }
+      )
+      .catch((err) => {
+        console.warn("Failed to load enriched boundary metadata", err)
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  return { provinces, districts, dsDivisions }
+}
+
+function formatNumber(value: number | null | undefined) {
+  if (value == null) return "—"
+  return value.toLocaleString("en-US")
+}
+
+function formatArea(km2: number | undefined) {
+  if (km2 == null) return "—"
+  return `${km2.toLocaleString("en-US", { maximumFractionDigits: 0 })} km²`
+}
+
+function formatDensity(density: number | null | undefined) {
+  if (density == null) return "—"
+  return `${density.toLocaleString("en-US", { maximumFractionDigits: 0 })} / km²`
+}
+
+function StatRow({
+  label,
+  value,
+}: {
+  label: string
+  value: React.ReactNode
+}) {
+  return (
+    <div className="flex items-center justify-between gap-4 text-sm">
+      <dt className="text-muted-foreground">{label}</dt>
+      <dd className="font-mono tabular-nums">{value}</dd>
+    </div>
+  )
+}
+
+function levelIcon(level: number) {
+  if (level === 1) return IconMap2
+  if (level === 2) return IconBuildingCommunity
+  return IconUsers
+}
+
+function levelLabel(level: number) {
+  if (level === 1) return "Province"
+  if (level === 2) return "District"
+  if (level === 3) return "DS Division"
+  return `Level ${level}`
+}
+
+function ChildrenList({
+  title,
+  items,
+  emptyMessage,
+  onSelect,
+  limit = 50,
+}: {
+  title: string
+  items: AdminFeature[]
+  emptyMessage: string
+  onSelect: (feature: AdminFeature) => void
+  limit?: number
+}) {
+  if (items.length === 0) {
+    return (
+      <div className="text-xs text-muted-foreground">{emptyMessage}</div>
+    )
+  }
+  const visible = items.slice(0, limit)
+  const extra = items.length - visible.length
+
+  return (
+    <div className="space-y-2">
+      <div className="flex items-center justify-between text-xs text-muted-foreground uppercase tracking-wide">
+        <span>{title}</span>
+        <span className="font-mono">{items.length}</span>
+      </div>
+      <ul className="space-y-1">
+        {visible.map((f) => {
+          const pop = f.properties.population
+          return (
+            <li key={String(f.properties.id)}>
+              <button
+                type="button"
+                onClick={() => onSelect(f)}
+                className="flex w-full items-center justify-between gap-3 rounded-md px-2 py-1.5 text-left text-sm hover:bg-accent"
+              >
+                <span className="truncate">{f.properties.name}</span>
+                <span className="shrink-0 font-mono text-xs tabular-nums text-muted-foreground">
+                  {pop != null ? formatNumber(pop) : ""}
+                </span>
+              </button>
+            </li>
+          )
+        })}
+      </ul>
+      {extra > 0 && (
+        <div className="text-xs text-muted-foreground">
+          +{extra} more…
+        </div>
+      )}
+    </div>
+  )
+}
+
+function featureToSelected(
+  datasetId: string,
+  feature: AdminFeature
+): SelectedFeature {
+  const { id, name, level, ...rest } = feature.properties
+  return {
+    datasetId,
+    id,
+    name,
+    level,
+    properties: { id, name, level, ...rest } as Record<string, unknown>,
+  }
+}
 
 export function FeatureSheet() {
   const selected = useLayerStore((s) => s.selected)
   const setSelected = useLayerStore((s) => s.setSelected)
+  const { provinces, districts, dsDivisions } = useEnrichedDatasets()
+
   const dataset = selected ? getDataset(selected.datasetId) : undefined
+  const props = (selected?.properties ?? {}) as AdminProperties
+
+  const Icon = selected ? levelIcon(selected.level) : IconMap2
+
+  const parentProvince = React.useMemo(() => {
+    if (!selected) return undefined
+    if (selected.level === 2 && props.parentId) {
+      return provinces.find((p) => p.properties.id === props.parentId)
+    }
+    if (selected.level === 3 && props.provinceId) {
+      return provinces.find((p) => p.properties.id === props.provinceId)
+    }
+    return undefined
+  }, [selected, props, provinces])
+
+  const parentDistrict = React.useMemo(() => {
+    if (!selected || selected.level !== 3) return undefined
+    return districts.find((d) => d.properties.id === props.parentId)
+  }, [selected, props, districts])
+
+  const childDistricts = React.useMemo(() => {
+    if (!selected || selected.level !== 1) return []
+    return districts
+      .filter((d) => d.properties.parentId === selected.id)
+      .sort(compareName)
+  }, [selected, districts])
+
+  const childDsDivisions = React.useMemo(() => {
+    if (!selected) return []
+    if (selected.level === 1) {
+      return dsDivisions
+        .filter((d) => d.properties.provinceId === selected.id)
+        .sort(compareName)
+    }
+    if (selected.level === 2) {
+      return dsDivisions
+        .filter((d) => d.properties.parentId === selected.id)
+        .sort(compareName)
+    }
+    return []
+  }, [selected, dsDivisions])
+
+  const selectChild = React.useCallback(
+    (datasetId: string, feature: AdminFeature) => {
+      setSelected(featureToSelected(datasetId, feature))
+    },
+    [setSelected]
+  )
 
   return (
     <Sheet
@@ -24,72 +254,145 @@ export function FeatureSheet() {
         if (!open) setSelected(null)
       }}
     >
-      <SheetContent side="right" className="w-full sm:max-w-md">
+      <SheetContent
+        side="right"
+        className="flex w-full flex-col gap-0 sm:max-w-md"
+      >
         {selected && (
           <>
-            <SheetHeader>
-              <div className="flex items-center gap-2">
-                <div className="flex size-9 items-center justify-center rounded-md bg-primary/10 text-primary">
-                  <IconMap2 className="size-5" />
+            <SheetHeader className="border-b">
+              <div className="flex items-start gap-3">
+                <div className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                  <Icon className="size-5" />
                 </div>
                 <div className="min-w-0 flex-1">
                   <SheetTitle className="truncate">{selected.name}</SheetTitle>
-                  <SheetDescription className="flex items-center gap-2 text-xs">
-                    {dataset?.title ?? "Unknown layer"}
+                  <SheetDescription className="flex flex-wrap items-center gap-2 text-xs">
                     <Badge variant="secondary" className="h-4 px-1 text-[10px]">
-                      Level {selected.level}
+                      {levelLabel(selected.level)}
                     </Badge>
+                    {dataset && <span>· {dataset.title}</span>}
                   </SheetDescription>
                 </div>
               </div>
+
+              {(parentProvince || parentDistrict) && (
+                <div className="mt-2 flex flex-wrap items-center gap-1 text-xs text-muted-foreground">
+                  <span>in</span>
+                  {parentDistrict && (
+                    <Button
+                      variant="link"
+                      size="sm"
+                      className="h-auto px-1 py-0 text-xs"
+                      onClick={() =>
+                        selectChild("districts", parentDistrict)
+                      }
+                    >
+                      {parentDistrict.properties.name}
+                    </Button>
+                  )}
+                  {parentDistrict && parentProvince && (
+                    <span className="text-muted-foreground/60">·</span>
+                  )}
+                  {parentProvince && (
+                    <Button
+                      variant="link"
+                      size="sm"
+                      className="h-auto px-1 py-0 text-xs"
+                      onClick={() =>
+                        selectChild("provinces", parentProvince)
+                      }
+                    >
+                      {parentProvince.properties.name}
+                    </Button>
+                  )}
+                </div>
+              )}
             </SheetHeader>
 
-            <div className="px-6 pb-6">
-              <Separator className="my-4" />
+            <div className="flex-1 overflow-y-auto">
+              <div className="p-6 space-y-4">
+                <dl className="grid grid-cols-1 gap-2">
+                  {selected.level === 1 && (
+                    <>
+                      <StatRow
+                        label="Districts"
+                        value={formatNumber(props.districtCount)}
+                      />
+                      <StatRow
+                        label="DS divisions"
+                        value={formatNumber(props.dsDivisionCount)}
+                      />
+                    </>
+                  )}
+                  {selected.level === 2 && (
+                    <StatRow
+                      label="DS divisions"
+                      value={formatNumber(props.dsDivisionCount)}
+                    />
+                  )}
+                  <StatRow
+                    label="Population (2012)"
+                    value={formatNumber(props.population)}
+                  />
+                  <StatRow label="Area" value={formatArea(props.areaKm2)} />
+                  <StatRow
+                    label="Density"
+                    value={formatDensity(props.density)}
+                  />
+                </dl>
 
-              <dl className="grid grid-cols-1 gap-3 text-sm">
-                <div className="flex items-center justify-between gap-4">
-                  <dt className="text-muted-foreground">ID</dt>
-                  <dd className="truncate font-mono text-xs">
-                    {String(selected.id)}
-                  </dd>
-                </div>
-                {typeof selected.properties.iso === "string" && (
-                  <div className="flex items-center justify-between gap-4">
-                    <dt className="text-muted-foreground">ISO</dt>
-                    <dd className="font-mono text-xs">
-                      {selected.properties.iso}
-                    </dd>
+                {selected.level === 1 && (
+                  <>
+                    <Separator />
+                    <ChildrenList
+                      title="Districts"
+                      items={childDistricts}
+                      emptyMessage="No districts matched."
+                      onSelect={(f) => selectChild("districts", f)}
+                    />
+                  </>
+                )}
+
+                {(selected.level === 1 || selected.level === 2) &&
+                  childDsDivisions.length > 0 && (
+                    <>
+                      <Separator />
+                      <ChildrenList
+                        title="DS divisions"
+                        items={childDsDivisions}
+                        emptyMessage="No DS divisions matched."
+                        onSelect={(f) => selectChild("ds-divisions", f)}
+                        limit={selected.level === 1 ? 10 : 50}
+                      />
+                    </>
+                  )}
+
+                <Separator />
+
+                <div className="space-y-1 text-xs text-muted-foreground">
+                  <div className="flex items-center justify-between">
+                    <span>ID</span>
+                    <span className="font-mono">{String(selected.id)}</span>
                   </div>
-                )}
-                <div className="flex items-center justify-between gap-4">
-                  <dt className="text-muted-foreground">Layer</dt>
-                  <dd>{dataset?.shortTitle ?? selected.datasetId}</dd>
+                  {dataset && (
+                    <div className="flex items-center justify-between">
+                      <span>Source</span>
+                      <a
+                        href={dataset.source.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="underline underline-offset-2"
+                      >
+                        {dataset.source.name}
+                      </a>
+                    </div>
+                  )}
+                  <div className="flex items-center justify-between">
+                    <span>License</span>
+                    <span>{dataset?.license ?? "—"}</span>
+                  </div>
                 </div>
-              </dl>
-
-              <Separator className="my-4" />
-
-              <div className="space-y-2 text-xs text-muted-foreground">
-                <p>
-                  More attributes (population, area, demographics) will appear
-                  here as datasets come online.
-                </p>
-                {dataset && (
-                  <p>
-                    Source:{" "}
-                    <a
-                      href={dataset.source.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="underline underline-offset-2"
-                    >
-                      {dataset.source.name}
-                    </a>
-                    {" · "}
-                    {dataset.license}
-                  </p>
-                )}
               </div>
             </div>
           </>

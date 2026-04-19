@@ -11,7 +11,9 @@
     "typecheck": "tsc --noEmit",
     "preview": "vite preview",
     "deploy": "npm run build && wrangler pages deploy dist --project-name=ceylon-hub --branch=main",
-    "data:boundaries": "node scripts/data/fetch-admin-boundaries.mjs"
+    "data:boundaries": "node scripts/data/fetch-admin-boundaries.mjs",
+    "data:enrich": "node scripts/data/enrich-boundaries.mjs",
+    "data:refresh": "npm run data:boundaries && npm run data:enrich"
   },
   "dependencies": {
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
@@ -32,6 +34,10 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
+    "@turf/area": "^7.3.5",
+    "@turf/boolean-point-in-polygon": "^7.3.5",
+    "@turf/centroid": "^7.3.5",
+    "@turf/point-on-feature": "^7.3.5",
     "@types/node": "^24.12.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
