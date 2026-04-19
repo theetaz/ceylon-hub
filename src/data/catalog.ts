@@ -1,4 +1,5 @@
 import {
+  IconBallpen,
   IconBuildingCommunity,
   IconBuildingSkyscraper,
   IconCurrencyDollar,
@@ -11,6 +12,7 @@ import {
 
 export type DatasetCategory =
   | "admin"
+  | "electoral"
   | "population"
   | "infrastructure"
   | "environment"
@@ -46,6 +48,7 @@ export type CategoryMeta = {
 
 export const CATEGORIES: CategoryMeta[] = [
   { id: "admin", label: "Administrative", icon: IconMap2 },
+  { id: "electoral", label: "Electoral", icon: IconBallpen },
   { id: "population", label: "Population", icon: IconUsers },
   { id: "infrastructure", label: "Infrastructure", icon: IconRoad },
   { id: "environment", label: "Environment", icon: IconLeaf },
@@ -100,6 +103,38 @@ export const CATALOG: Dataset[] = [
     status: "pending",
     source: { name: "geoBoundaries (ADM4)", url: "https://www.geoboundaries.org/" },
     license: "CC BY 3.0 IGO",
+  },
+  {
+    id: "electoral-divisions",
+    title: "Electoral divisions",
+    shortTitle: "Electoral",
+    description:
+      "22 electoral districts that elect Members of Parliament to the Sri Lankan Parliament.",
+    category: "electoral",
+    status: "ready",
+    path: "/geo/electoral-divisions.geojson",
+    featureCount: 22,
+    source: {
+      name: "Sri Lanka Survey Department via nuuuwan/sl-topojson",
+      url: "https://github.com/nuuuwan/sl-topojson",
+    },
+    license: "Open data (via nuuuwan)",
+  },
+  {
+    id: "polling-divisions",
+    title: "Polling divisions",
+    shortTitle: "Polling",
+    description:
+      "160 polling divisions — the finer-grained subdivisions that together make up each electoral district.",
+    category: "electoral",
+    status: "ready",
+    path: "/geo/polling-divisions.geojson",
+    featureCount: 160,
+    source: {
+      name: "Sri Lanka Survey Department via nuuuwan/sl-topojson",
+      url: "https://github.com/nuuuwan/sl-topojson",
+    },
+    license: "Open data (via nuuuwan)",
   },
   {
     id: "population-choropleth",
@@ -289,6 +324,7 @@ export type IconMap = Record<DatasetCategory, Icon>
 
 export const CATEGORY_ICONS: IconMap = {
   admin: IconBuildingCommunity,
+  electoral: IconBallpen,
   population: IconUsers,
   infrastructure: IconBuildingSkyscraper,
   environment: IconLeaf,

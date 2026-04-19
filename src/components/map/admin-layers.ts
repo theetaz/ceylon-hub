@@ -38,6 +38,50 @@ export const ADMIN_LAYER_THEMES: Record<string, AdminLayerTheming> = {
       selectedLineWidth: 2.8,
     },
   },
+  "electoral-divisions": {
+    light: {
+      fillColor: "#be185d",
+      fillOpacity: 0.05,
+      fillHoverOpacity: 0.22,
+      lineColor: "#be185d",
+      lineWidth: 1.3,
+      lineHoverWidth: 2.2,
+      selectedLineColor: "#500724",
+      selectedLineWidth: 2.8,
+    },
+    dark: {
+      fillColor: "#f472b6",
+      fillOpacity: 0.05,
+      fillHoverOpacity: 0.2,
+      lineColor: "#f472b6",
+      lineWidth: 1.2,
+      lineHoverWidth: 2.2,
+      selectedLineColor: "#fce7f3",
+      selectedLineWidth: 2.6,
+    },
+  },
+  "polling-divisions": {
+    light: {
+      fillColor: "#ea580c",
+      fillOpacity: 0.04,
+      fillHoverOpacity: 0.18,
+      lineColor: "#c2410c",
+      lineWidth: 0.6,
+      lineHoverWidth: 1.4,
+      selectedLineColor: "#7c2d12",
+      selectedLineWidth: 2.4,
+    },
+    dark: {
+      fillColor: "#fb923c",
+      fillOpacity: 0.04,
+      fillHoverOpacity: 0.18,
+      lineColor: "#fdba74",
+      lineWidth: 0.55,
+      lineHoverWidth: 1.3,
+      selectedLineColor: "#fed7aa",
+      selectedLineWidth: 2.2,
+    },
+  },
   districts: {
     light: {
       fillColor: "#6366f1",
@@ -84,7 +128,13 @@ export const ADMIN_LAYER_THEMES: Record<string, AdminLayerTheming> = {
   },
 }
 
-export const ADMIN_DATASET_IDS = ["provinces", "districts", "ds-divisions"] as const
+export const ADMIN_DATASET_IDS = [
+  "provinces",
+  "districts",
+  "ds-divisions",
+  "electoral-divisions",
+  "polling-divisions",
+] as const
 
 export type AdminDatasetId = (typeof ADMIN_DATASET_IDS)[number]
 
