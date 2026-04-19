@@ -25,8 +25,21 @@ import {
   lineLayerSpec,
   type AdminDatasetId,
 } from "@/components/map/admin-layers"
+import { buildChoroplethFillColor } from "@/components/map/choropleth"
+import {
+  CITIES_CIRCLE_LAYER_ID,
+  CITIES_LABEL_LAYER_ID,
+  CITIES_SOURCE_ID,
+  citiesCircleLayer,
+  citiesLabelLayer,
+  citiesTheme,
+} from "@/components/map/cities-layer"
 import { getDataset } from "@/data/catalog"
-import { useLayerStore, type SelectedFeature } from "@/stores/layers"
+import {
+  useLayerStore,
+  type ChoroplethMode,
+  type SelectedFeature,
+} from "@/stores/layers"
 
 const SRI_LANKA_CENTER: [number, number] = [80.7718, 7.8731]
 const SRI_LANKA_BOUNDS: [[number, number], [number, number]] = [
@@ -103,6 +116,7 @@ function buildInitialStyle(mode: BasemapMode): StyleSpecification {
   const basemap = BASEMAPS[mode]
   return {
     version: 8,
+    glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
     sources: {
       [BASEMAP_SOURCE_ID]: {
         type: "raster",
@@ -161,6 +175,59 @@ async function loadAdminDataset(path: string) {
     Polygon | MultiPolygon,
     { id: string; name: string; level: number }
   >
+}
+
+async function loadCitiesDataset(path: string) {
+  const res = await fetch(path)
+  if (!res.ok) throw new Error(`Cities load failed: ${res.status}`)
+  return await res.json()
+}
+
+function addCitiesLayer(
+  map: maplibregl.Map,
+  data: unknown,
+  mode: BasemapMode
+) {
+  if (!map.getSource(CITIES_SOURCE_ID)) {
+    map.addSource(CITIES_SOURCE_ID, {
+      type: "geojson",
+      data: data as GeoJSON.FeatureCollection,
+      promoteId: "id",
+    })
+  }
+  if (!map.getLayer(CITIES_CIRCLE_LAYER_ID)) {
+    map.addLayer(citiesCircleLayer(mode))
+  }
+  if (!map.getLayer(CITIES_LABEL_LAYER_ID)) {
+    map.addLayer(citiesLabelLayer(mode))
+  }
+}
+
+function applyCitiesTheme(map: maplibregl.Map, mode: BasemapMode) {
+  if (!map.getLayer(CITIES_CIRCLE_LAYER_ID)) return
+  const theme = citiesTheme(mode)
+  map.setPaintProperty(CITIES_CIRCLE_LAYER_ID, "circle-color", theme.circleColor)
+  map.setPaintProperty(
+    CITIES_CIRCLE_LAYER_ID,
+    "circle-stroke-color",
+    theme.circleStroke
+  )
+  map.setPaintProperty(CITIES_LABEL_LAYER_ID, "text-color", theme.labelColor)
+  map.setPaintProperty(
+    CITIES_LABEL_LAYER_ID,
+    "text-halo-color",
+    theme.labelHalo
+  )
+}
+
+function setCitiesVisible(map: maplibregl.Map, visible: boolean) {
+  const value = visible ? "visible" : "none"
+  if (map.getLayer(CITIES_CIRCLE_LAYER_ID)) {
+    map.setLayoutProperty(CITIES_CIRCLE_LAYER_ID, "visibility", value)
+  }
+  if (map.getLayer(CITIES_LABEL_LAYER_ID)) {
+    map.setLayoutProperty(CITIES_LABEL_LAYER_ID, "visibility", value)
+  }
 }
 
 function addCountryOverlays(
@@ -230,17 +297,31 @@ function addAdminLayer(
   }
 }
 
-function applyAdminTheme(map: maplibregl.Map, mode: BasemapMode) {
+function applyAdminTheme(
+  map: maplibregl.Map,
+  mode: BasemapMode,
+  choropleth: ChoroplethMode = "none"
+) {
   for (const id of ADMIN_DATASET_IDS) {
     const ids = layerIds(id)
     const theme = ADMIN_LAYER_THEMES[id][mode]
     if (map.getLayer(ids.fill)) {
-      map.setPaintProperty(ids.fill, "fill-color", theme.fillColor)
+      const fillColor =
+        id === "districts" && choropleth !== "none"
+          ? buildChoroplethFillColor(choropleth, theme.fillColor)
+          : theme.fillColor
+      const baseOpacity =
+        id === "districts" && choropleth !== "none" ? 0.75 : theme.fillOpacity
+      const hoverOpacity =
+        id === "districts" && choropleth !== "none"
+          ? 0.9
+          : theme.fillHoverOpacity
+      map.setPaintProperty(ids.fill, "fill-color", fillColor)
       map.setPaintProperty(ids.fill, "fill-opacity", [
         "case",
         ["boolean", ["feature-state", "hover"], false],
-        theme.fillHoverOpacity,
-        theme.fillOpacity,
+        hoverOpacity,
+        baseOpacity,
       ])
     }
     if (map.getLayer(ids.line)) {
@@ -298,7 +379,8 @@ function applyBasemapMode(map: maplibregl.Map, mode: BasemapMode) {
     map.setPaintProperty(OUTLINE_LAYER_ID, "line-opacity", basemap.outlineOpacity)
   }
 
-  applyAdminTheme(map, mode)
+  applyAdminTheme(map, mode, useLayerStore.getState().choroplethMode)
+  applyCitiesTheme(map, mode)
 }
 
 function setLayerVisible(
@@ -342,6 +424,7 @@ export function MapCanvas() {
   const visible = useLayerStore((s) => s.visible)
   const selected = useLayerStore((s) => s.selected)
   const setSelected = useLayerStore((s) => s.setSelected)
+  const choroplethMode = useLayerStore((s) => s.choroplethMode)
 
   React.useEffect(() => {
     if (!containerRef.current || mapRef.current) return
@@ -372,9 +455,22 @@ export function MapCanvas() {
     const onResize = () => fitSriLanka(map, 200)
     window.addEventListener("resize", onResize)
 
-    const resizeObserver = new ResizeObserver(() => {
+    let lastW = 0
+    let lastH = 0
+    let initialObserved = false
+    const resizeObserver = new ResizeObserver((entries) => {
+      const entry = entries[0]
+      if (!entry) return
+      const { width, height } = entry.contentRect
+      if (width === lastW && height === lastH) return
+      lastW = width
+      lastH = height
       map.resize()
-      fitSriLanka(map, 200)
+      if (initialObserved) {
+        fitSriLanka(map, 200)
+      } else {
+        initialObserved = true
+      }
     })
     resizeObserver.observe(containerRef.current)
 
@@ -407,6 +503,19 @@ export function MapCanvas() {
           }
         })
       )
+
+      try {
+        const citiesDataset = getDataset("cities")
+        if (citiesDataset?.path) {
+          const data = await loadCitiesDataset(citiesDataset.path)
+          if (!cancelled && mapRef.current) {
+            addCitiesLayer(map, data, resolveMode(theme))
+            setCitiesVisible(map, Boolean(currentVisible.cities))
+          }
+        }
+      } catch (err) {
+        console.warn("Failed to load cities", err)
+      }
     }
 
     if (map.isStyleLoaded()) {
@@ -480,11 +589,23 @@ export function MapCanvas() {
   React.useEffect(() => {
     const map = mapRef.current
     if (!map) return
+    const apply = () =>
+      applyAdminTheme(map, resolveMode(theme), choroplethMode)
+    if (map.loaded()) apply()
+    else map.once("load", apply)
+  }, [choroplethMode, theme])
+
+  React.useEffect(() => {
+    const map = mapRef.current
+    if (!map) return
     for (const id of ADMIN_DATASET_IDS) {
       const isVisible = Boolean(visible[id])
       if (map.getLayer(layerIds(id).fill)) {
         setLayerVisible(map, id, isVisible)
       }
+    }
+    if (map.getLayer(CITIES_CIRCLE_LAYER_ID)) {
+      setCitiesVisible(map, Boolean(visible.cities))
     }
   }, [visible])
 

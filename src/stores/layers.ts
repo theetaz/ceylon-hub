@@ -10,12 +10,17 @@ export type SelectedFeature = {
   properties: Record<string, unknown>
 }
 
+export type ChoroplethMode = "none" | "density" | "population"
+
 type LayerState = {
   visible: Record<string, boolean>
   selected: SelectedFeature | null
+  choroplethMode: ChoroplethMode
   toggle: (id: string) => void
   setVisible: (id: string, visible: boolean) => void
   setSelected: (feature: SelectedFeature | null) => void
+  setChoroplethMode: (mode: ChoroplethMode) => void
+  cycleChoroplethMode: () => void
 }
 
 const initialVisibility = () => {
@@ -26,9 +31,12 @@ const initialVisibility = () => {
   return visible
 }
 
+const CHOROPLETH_CYCLE: ChoroplethMode[] = ["none", "density", "population"]
+
 export const useLayerStore = create<LayerState>((set) => ({
   visible: initialVisibility(),
   selected: null,
+  choroplethMode: "none",
   toggle: (id) =>
     set((state) => ({
       visible: { ...state.visible, [id]: !state.visible[id] },
@@ -38,4 +46,25 @@ export const useLayerStore = create<LayerState>((set) => ({
       visible: { ...state.visible, [id]: visible },
     })),
   setSelected: (feature) => set({ selected: feature }),
+  setChoroplethMode: (mode) =>
+    set((state) => ({
+      choroplethMode: mode,
+      // Ensure districts layer is visible whenever choropleth is active.
+      visible:
+        mode === "none"
+          ? state.visible
+          : { ...state.visible, districts: true },
+    })),
+  cycleChoroplethMode: () =>
+    set((state) => {
+      const idx = CHOROPLETH_CYCLE.indexOf(state.choroplethMode)
+      const next = CHOROPLETH_CYCLE[(idx + 1) % CHOROPLETH_CYCLE.length]
+      return {
+        choroplethMode: next,
+        visible:
+          next === "none"
+            ? state.visible
+            : { ...state.visible, districts: true },
+      }
+    }),
 }))

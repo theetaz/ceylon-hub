@@ -18,9 +18,15 @@ import { CATALOG, CATEGORIES } from "@/data/catalog"
 import { useLayerStore } from "@/stores/layers"
 import { cn } from "@/lib/utils"
 
+const CHOROPLETH_DATASETS: Record<string, "density" | "population"> = {
+  "population-choropleth": "density",
+}
+
 export function AppSidebar() {
   const visible = useLayerStore((s) => s.visible)
   const toggle = useLayerStore((s) => s.toggle)
+  const choroplethMode = useLayerStore((s) => s.choroplethMode)
+  const setChoroplethMode = useLayerStore((s) => s.setChoroplethMode)
 
   return (
     <Sidebar collapsible="icon">
@@ -52,8 +58,22 @@ export function AppSidebar() {
                 <SidebarMenu>
                   {datasets.map((dataset) => {
                     const isReady = dataset.status === "ready"
-                    const isVisible = Boolean(visible[dataset.id])
-                    const handleToggle = () => isReady && toggle(dataset.id)
+                    const choroplethFor = CHOROPLETH_DATASETS[dataset.id]
+                    const isVisible = choroplethFor
+                      ? choroplethMode === choroplethFor
+                      : Boolean(visible[dataset.id])
+                    const handleToggle = () => {
+                      if (!isReady) return
+                      if (choroplethFor) {
+                        setChoroplethMode(
+                          choroplethMode === choroplethFor
+                            ? "none"
+                            : choroplethFor
+                        )
+                      } else {
+                        toggle(dataset.id)
+                      }
+                    }
                     return (
                       <SidebarMenuItem key={dataset.id}>
                         <div
@@ -92,7 +112,7 @@ export function AppSidebar() {
                           {isReady && (
                             <Switch
                               checked={isVisible}
-                              onCheckedChange={() => toggle(dataset.id)}
+                              onCheckedChange={handleToggle}
                               onClick={(event) => event.stopPropagation()}
                               className="ml-auto scale-75"
                               aria-label={`Toggle ${dataset.title}`}

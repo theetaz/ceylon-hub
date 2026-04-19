@@ -13,8 +13,9 @@
     "deploy": "npm run build && wrangler pages deploy dist --project-name=ceylon-hub --branch=main",
     "data:boundaries": "node scripts/data/fetch-admin-boundaries.mjs",
     "data:population": "node scripts/data/fetch-population.mjs",
+    "data:cities": "node scripts/data/fetch-cities.mjs",
     "data:enrich": "node scripts/data/enrich-boundaries.mjs",
-    "data:refresh": "npm run data:boundaries && npm run data:population && npm run data:enrich"
+    "data:refresh": "npm run data:boundaries && npm run data:population && npm run data:cities && npm run data:enrich"
   },
   "dependencies": {
     "@fontsource-variable/jetbrains-mono": "^5.2.8",

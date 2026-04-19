@@ -99,12 +99,13 @@ export const CATALOG: Dataset[] = [
   },
   {
     id: "population-choropleth",
-    title: "Population density choropleth",
+    title: "Population density",
     shortTitle: "Pop. density",
     description:
-      "Color districts by population density. Underlying 2023 data already appears in the info panel.",
+      "Color districts by population per km² using a graduated orange scale.",
     category: "population",
-    status: "pending",
+    status: "ready",
+    featureCount: 25,
     source: {
       name: "OCHA — Sri Lanka Subnational Population Statistics (HDX)",
       url: "https://data.humdata.org/dataset/cod-ps-lka",
@@ -128,9 +129,12 @@ export const CATALOG: Dataset[] = [
     id: "cities",
     title: "Cities and towns",
     shortTitle: "Cities",
-    description: "Populated places from OpenStreetMap.",
+    description:
+      "Populated places from OpenStreetMap. Labels gate by zoom — only cities at country view, towns mid-zoom, suburbs when zoomed in.",
     category: "infrastructure",
-    status: "pending",
+    status: "ready",
+    path: "/geo/cities.geojson",
+    featureCount: 553,
     source: { name: "OpenStreetMap", url: "https://www.openstreetmap.org/" },
     license: "ODbL",
   },
